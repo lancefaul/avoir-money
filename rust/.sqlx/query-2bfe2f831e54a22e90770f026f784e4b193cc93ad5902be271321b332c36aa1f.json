@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Transaction\" SET \"toBalanceBefore\" = ?, \"toBalanceAfter\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "2bfe2f831e54a22e90770f026f784e4b193cc93ad5902be271321b332c36aa1f"
+}

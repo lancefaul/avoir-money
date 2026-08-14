@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"InsurancePolicy\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "5256486444ddeb67dd72433a0eeba5f299addf26aab1bfeb838736f278a1b3c6"
+}

@@ -1,0 +1,247 @@
+{
+ "generatedBy": "packages/core/dist",
+ "exhaustive": true,
+ "count": 30,
+ "vectors": [
+  {
+   "in": {
+    "type": "EXPENSE",
+    "inbound": false,
+    "tradeDirection": null
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "inbound": false,
+    "tradeDirection": "BUY"
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "inbound": false,
+    "tradeDirection": "SELL"
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "inbound": true,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "inbound": true,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "inbound": true,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "inbound": false,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "inbound": false,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "inbound": false,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "inbound": true,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "inbound": true,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "inbound": true,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "inbound": false,
+    "tradeDirection": null
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "inbound": false,
+    "tradeDirection": "BUY"
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "inbound": false,
+    "tradeDirection": "SELL"
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "inbound": true,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "inbound": true,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "inbound": true,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "inbound": false,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "inbound": false,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "inbound": false,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "inbound": true,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "inbound": true,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "inbound": true,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "inbound": false,
+    "tradeDirection": null
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "inbound": false,
+    "tradeDirection": "BUY"
+   },
+   "out": "charge"
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "inbound": false,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "inbound": true,
+    "tradeDirection": null
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "inbound": true,
+    "tradeDirection": "BUY"
+   },
+   "out": "credit"
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "inbound": true,
+    "tradeDirection": "SELL"
+   },
+   "out": "credit"
+  }
+ ]
+}

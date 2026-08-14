@@ -1,0 +1,110 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"payPeriodId\" AS \"period_id!\", \"accountId\" AS \"account_id!\",\n                  \"openingBalance\" AS \"opening!: i64\", \"closingBalance\" AS \"closing!: i64\",\n                  \"totalIncome\" AS \"income!: i64\", \"totalExpenses\" AS \"expenses!: i64\",\n                  \"createdAt\" AS \"created_at!\"\n             FROM \"BalanceSnapshot\" WHERE \"payPeriodId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "period_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "payPeriodId"
+          }
+        }
+      },
+      {
+        "name": "account_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "opening!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "openingBalance"
+          }
+        }
+      },
+      {
+        "name": "closing!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "closingBalance"
+          }
+        }
+      },
+      {
+        "name": "income!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "totalIncome"
+          }
+        }
+      },
+      {
+        "name": "expenses!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "totalExpenses"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "08c4d73066b79487b846b4d3be0159e0115932d3940fa82f368f825467522577"
+}

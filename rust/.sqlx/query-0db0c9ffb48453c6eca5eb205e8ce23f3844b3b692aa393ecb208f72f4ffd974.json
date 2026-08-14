@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"UtilityReading\"\n              SET \"billDate\" = COALESCE(?, \"billDate\"),\n                  \"usage\" = COALESCE(?, \"usage\"),\n                  \"cost\" = COALESCE(?, \"cost\"),\n                  \"unitCost\" = COALESCE(?, \"unitCost\"),\n                  \"details\" = COALESCE(?, \"details\"),\n                  \"convenienceFee\" = COALESCE(?, \"convenienceFee\"),\n                  \"convenienceFeeType\" = COALESCE(?, \"convenienceFeeType\"),\n                  \"otherFees\" = COALESCE(?, \"otherFees\"),\n                  \"dueDate\" = COALESCE(?, \"dueDate\"),\n                  \"serviceId\" = COALESCE(?, \"serviceId\")\n            WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 11
+    },
+    "nullable": []
+  },
+  "hash": "0db0c9ffb48453c6eca5eb205e8ce23f3844b3b692aa393ecb208f72f4ffd974"
+}

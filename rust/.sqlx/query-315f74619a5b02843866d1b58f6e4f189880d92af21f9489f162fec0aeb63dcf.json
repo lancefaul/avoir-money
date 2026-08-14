@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"BudgetVersion\" SET \"amount\" = ?1, \"monthlyEquivalent\" = ?2 WHERE \"id\" = ?3",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "315f74619a5b02843866d1b58f6e4f189880d92af21f9489f162fec0aeb63dcf"
+}

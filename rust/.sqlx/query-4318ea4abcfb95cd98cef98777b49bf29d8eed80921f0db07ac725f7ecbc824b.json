@@ -1,0 +1,134 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"id\" AS \"id!\", t.\"date\" AS \"date!\", t.\"amount\" AS \"amount!: i64\",\n                      t.\"costBasisAllocated\" AS \"basis: i64\",\n                      a.\"name\" AS account_name,\n                      d.\"direction\" AS \"direction!\", d.\"assetType\" AS \"asset_type!\",\n                      d.\"ticker\", d.\"quantity\" AS \"quantity!\", d.\"bitcoinUnit\" AS unit\n                 FROM \"Transaction\" t\n                 JOIN \"TradeDetail\" d ON d.\"transactionId\" = t.\"id\"\n                 LEFT JOIN \"Account\" a ON a.\"id\" = t.\"accountId\"\n                WHERE t.\"type\" = 'TRADE'\n                  AND (?1 IS NULL OR d.\"assetType\" = ?1)\n                  AND (?2 IS NULL OR t.\"date\" < ?2 OR (t.\"date\" = ?2 AND t.\"id\" < ?3))\n                ORDER BY t.\"date\" DESC, t.\"id\" DESC\n                LIMIT ?4",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "basis: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "costBasisAllocated"
+          }
+        }
+      },
+      {
+        "name": "account_name",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "direction!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "direction"
+          }
+        }
+      },
+      {
+        "name": "asset_type!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "assetType"
+          }
+        }
+      },
+      {
+        "name": "ticker",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "ticker"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "unit",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true
+    ]
+  },
+  "hash": "4318ea4abcfb95cd98cef98777b49bf29d8eed80921f0db07ac725f7ecbc824b"
+}

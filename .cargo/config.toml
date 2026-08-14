@@ -1,0 +1,35 @@
+# Keep sqlx's compile-time query checking OFFLINE by default.
+#
+# **At the repo root, not in `rust/`, and that placement is the whole point.**
+# Cargo discovers config by walking up from the directory the command was run
+# in. A config under `rust/` therefore covers the workspace and misses
+# `desktop/`, which builds the very same `avoir-db` and `avoir-api` crates —
+# so `cd desktop && cargo check` went straight back to resolving the root
+# `.env`. It survived only because the desktop crate enables sqlx's `sqlite`
+# feature and not `postgres`, so the driver could not be constructed at all.
+# Being saved by a missing feature flag is not being safe.
+#
+# Without this, a bare `cargo check` / `cargo clippy` / `cargo test` connects to
+# a live database — and the one it picks is the PRODUCTION Postgres on port
+# 5432. `rust/.env` names the SQLite build database, but the sqlx macro does its
+# own dotenv lookup and resolves the repo-root `.env` (the Prisma/production
+# URL) instead. Verified on 2026-08-10 from the server's own log:
+# `budget-tracker-db` recorded the syntax errors, `budget-tracker-db-test`
+# recorded nothing.
+#
+# Nothing was written — every statement uses `?` placeholders, which Postgres
+# rejects at parse time — but a build command that opens a connection to the
+# live financial database is exactly what the DB safety rules in OPERATIONS.md
+# exist to prevent, and "it only ever fails to parse" is not a property worth
+# depending on.
+#
+# `[env]` entries do NOT override a variable that is already set, which is what
+# makes this safe rather than merely convenient: `cargo sqlx prepare` exports
+# `SQLX_OFFLINE=false` for its own child build, so regenerating `.sqlx` still
+# works normally and still verifies against the real schema. Only the commands
+# that had no business connecting are affected.
+#
+# CI already sets SQLX_OFFLINE=true explicitly (.github/workflows/ci.yml); this
+# closes the same hole locally.
+[env]
+SQLX_OFFLINE = "true"

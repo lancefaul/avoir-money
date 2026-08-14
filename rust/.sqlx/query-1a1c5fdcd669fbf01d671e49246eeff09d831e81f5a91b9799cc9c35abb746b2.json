@@ -1,0 +1,110 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT d.\"direction\" AS \"direction!: String\", d.\"assetType\" AS \"asset_type!: String\",\n                  d.\"ticker\" AS ticker, d.\"quantity\" AS \"quantity!: String\",\n                  d.\"bitcoinUnit\" AS bitcoin_unit, d.\"custodianId\" AS custodian_id,\n                  d.\"walletId\" AS wallet_id, t.\"amount\" AS \"amount!: i64\"\n           FROM \"TradeDetail\" d\n           JOIN \"Transaction\" t ON t.\"id\" = d.\"transactionId\"\n           WHERE d.\"transactionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "direction!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "direction"
+          }
+        }
+      },
+      {
+        "name": "asset_type!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "assetType"
+          }
+        }
+      },
+      {
+        "name": "ticker",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "ticker"
+          }
+        }
+      },
+      {
+        "name": "quantity!: String",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "bitcoin_unit",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      },
+      {
+        "name": "custodian_id",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "custodianId"
+          }
+        }
+      },
+      {
+        "name": "wallet_id",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "1a1c5fdcd669fbf01d671e49246eeff09d831e81f5a91b9799cc9c35abb746b2"
+}

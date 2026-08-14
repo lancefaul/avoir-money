@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"InvestmentHolding\" SET \"quantity\" = '0', \"costBasis\" = NULL",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "a40ea552624ede14c14cbf77dd426ecc26b50da804659b02ce09d3b894f5225e"
+}

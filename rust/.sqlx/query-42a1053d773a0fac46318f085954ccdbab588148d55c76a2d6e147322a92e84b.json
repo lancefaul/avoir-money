@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"yearPlanId\" AS \"year_plan_id!\", \"removedAt\" AS \"removed: String\"\n             FROM \"CategoryBudget\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "year_plan_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "yearPlanId"
+          }
+        }
+      },
+      {
+        "name": "removed: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "removedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      true
+    ]
+  },
+  "hash": "42a1053d773a0fac46318f085954ccdbab588148d55c76a2d6e147322a92e84b"
+}

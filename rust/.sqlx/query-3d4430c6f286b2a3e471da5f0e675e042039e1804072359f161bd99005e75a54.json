@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"amount\" AS \"amount!: i64\", \"frequency\" AS \"frequency!\",\n                      \"activeMonths\" AS \"active_months: String\"\n                 FROM \"BudgetVersion\"\n                 JOIN \"CategoryBudget\" cb ON cb.\"id\" = \"BudgetVersion\".\"categoryBudgetId\"\n                WHERE cb.\"yearPlanId\" = ?1 AND cb.\"budgetId\" = ?2\n                ORDER BY \"effectiveDate\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "amount!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "active_months: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "activeMonths"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "3d4430c6f286b2a3e471da5f0e675e042039e1804072359f161bd99005e75a54"
+}

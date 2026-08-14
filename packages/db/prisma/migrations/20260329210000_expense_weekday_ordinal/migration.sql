@@ -1,0 +1,2 @@
+ALTER TABLE "Expense" ADD COLUMN "dueWeekday" INTEGER;
+ALTER TABLE "Expense" ADD COLUMN "dueOrdinal" INTEGER;

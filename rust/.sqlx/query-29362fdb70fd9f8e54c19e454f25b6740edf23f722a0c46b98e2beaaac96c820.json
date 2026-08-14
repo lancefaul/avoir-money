@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"ScheduledTransaction\"\n                         (\"id\",\"sourceType\",\"sourceId\",\"dueDate\",\"expectedAmount\",\"status\",\n                          \"expenseId\",\"incomeId\",\"createdAt\",\"updatedAt\")\n                       VALUES (?,?,?,?,?,'PENDING',?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 9
+    },
+    "nullable": []
+  },
+  "hash": "29362fdb70fd9f8e54c19e454f25b6740edf23f722a0c46b98e2beaaac96c820"
+}

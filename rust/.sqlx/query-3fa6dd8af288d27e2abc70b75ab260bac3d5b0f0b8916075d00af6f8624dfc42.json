@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" FROM \"InvestmentHolding\"\n            WHERE \"ticker\" IS ? AND \"custodianId\" = ? ORDER BY \"createdAt\" ASC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "3fa6dd8af288d27e2abc70b75ab260bac3d5b0f0b8916075d00af6f8624dfc42"
+}

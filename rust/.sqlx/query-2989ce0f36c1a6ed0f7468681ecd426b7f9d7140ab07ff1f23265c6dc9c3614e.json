@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"secret\", \"hint\" AS \"hint!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"ConnectedService\" WHERE \"provider\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "secret",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ConnectedService",
+            "name": "secret"
+          }
+        }
+      },
+      {
+        "name": "hint!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ConnectedService",
+            "name": "hint"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ConnectedService",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "2989ce0f36c1a6ed0f7468681ecd426b7f9d7140ab07ff1f23265c6dc9c3614e"
+}

@@ -1,0 +1,49 @@
+# Build context exclusions.
+#
+# Without this file `COPY . .` bakes the entire working tree into the image —
+# which on first run meant .env (API_KEY, INTEGRATION_SECRET, FINNHUB_API_KEY),
+# the whole .git history, and 20MB of database dumps from backups/. An image is
+# a distributable artefact; anything copied into it should be assumed shareable.
+
+# ── Secrets and local config ──
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# ── Real data — never leaves this machine ──
+backups/
+*.dump
+*.csv
+*.xlsx
+*.xls
+
+# ── Repository and tooling state ──
+.git/
+.github/
+.husky/
+.turbo/
+.claude/
+.kiro/
+.vscode/
+
+# ── Build and dependency output (rebuilt inside the image) ──
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+coverage/
+**/coverage/
+**/.turbo/
+*.tsbuildinfo
+
+# ── Test artefacts ──
+**/test-results/
+**/playwright-report/
+**/.playwright/
+
+# ── Editor/OS noise ──
+.DS_Store
+*.log

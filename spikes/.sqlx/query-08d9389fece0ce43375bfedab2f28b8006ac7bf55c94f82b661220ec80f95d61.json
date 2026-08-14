@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO txn (id, account_id, type, date, created_at, net_amount) VALUES ('bad','NO-SUCH-ACCOUNT','EXPENSE','2026-01-09','2026-01-09T00:00:00',1)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "08d9389fece0ce43375bfedab2f28b8006ac7bf55c94f82b661220ec80f95d61"
+}

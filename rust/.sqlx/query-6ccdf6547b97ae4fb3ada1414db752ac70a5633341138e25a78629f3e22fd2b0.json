@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"statementRowId\" AS \"row_id!\", \"transactionId\" AS \"tx_id!\"\n             FROM \"ReconciliationMatch\"\n            WHERE \"sessionId\" = ? AND \"matchType\" = 'MANUAL'",
+  "describe": {
+    "columns": [
+      {
+        "name": "row_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "statementRowId"
+          }
+        }
+      },
+      {
+        "name": "tx_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "transactionId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "6ccdf6547b97ae4fb3ada1414db752ac70a5633341138e25a78629f3e22fd2b0"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Expense\" SET\n                     \"name\" = COALESCE(?1, \"name\"),\n                     \"amount\" = COALESCE(?2, \"amount\"),\n                     \"frequency\" = COALESCE(?3, \"frequency\"),\n                     \"budgetId\" = COALESCE(?4, \"budgetId\"),\n                     \"accountId\" = CASE WHEN ?5 = 1 THEN ?6 ELSE \"accountId\" END,\n                     \"isAutomatic\" = COALESCE(?7, \"isAutomatic\"),\n                     \"skipWeekend\" = COALESCE(?8, \"skipWeekend\"),\n                     \"dueDay\" = CASE WHEN ?9 = 1 THEN ?10 ELSE \"dueDay\" END,\n                     \"dueWeekday\" = CASE WHEN ?11 = 1 THEN ?12 ELSE \"dueWeekday\" END,\n                     \"dueOrdinal\" = CASE WHEN ?13 = 1 THEN ?14 ELSE \"dueOrdinal\" END,\n                     \"amountSchedule\" = CASE WHEN ?15 = 1 THEN ?16 ELSE \"amountSchedule\" END,\n                     \"startDate\" = CASE WHEN ?17 = 1 THEN ?18 ELSE \"startDate\" END,\n                     \"endDate\" = CASE WHEN ?19 = 1 THEN ?20 ELSE \"endDate\" END,\n                     \"note\" = CASE WHEN ?21 = 1 THEN ?22 ELSE \"note\" END,\n                     \"managementUrl\" = CASE WHEN ?23 = 1 THEN ?24 ELSE \"managementUrl\" END,\n                     \"updatedAt\" = ?25\n                   WHERE \"id\" = ?26",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 26
+    },
+    "nullable": []
+  },
+  "hash": "9c44509ab5cc57a514993a83a2f0c4840401cbcd83046db12379a33cc2151c4e"
+}

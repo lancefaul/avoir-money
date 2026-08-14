@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"ConnectedService\" WHERE \"provider\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "b1fbc5dad7c22f0b0a0d610723f1a8b0e551f6686a70a4b2b725274599d38d66"
+}

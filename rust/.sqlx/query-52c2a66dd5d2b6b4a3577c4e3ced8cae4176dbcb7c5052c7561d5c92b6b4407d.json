@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Account\" SET \"archived\" = ?, \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "52c2a66dd5d2b6b4a3577c4e3ced8cae4176dbcb7c5052c7561d5c92b6b4407d"
+}
