@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"quantity\" AS \"quantity!\" FROM \"InvestmentHolding\" WHERE \"walletId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "quantity!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "40034733b460ca5ad958be665fbd7f77cc10c57dd17c1fc7eae4f6dd963146e7"
+}

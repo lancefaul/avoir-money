@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"sourceType\" AS \"source_type!\", \"sourceId\" AS \"source_id!\",\n                  \"dueDate\" AS \"due_date!\"\n             FROM \"ScheduledTransaction\"\n            WHERE \"dueDate\" >= ?1 AND \"dueDate\" <= ?2\n              AND \"status\" IN ('PAID','PARTIAL')",
+  "describe": {
+    "columns": [
+      {
+        "name": "source_type!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceType"
+          }
+        }
+      },
+      {
+        "name": "source_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceId"
+          }
+        }
+      },
+      {
+        "name": "due_date!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "6171bee54e6c08919c832a6b399c20a06410aae173ff68e2ff603c4ed7da0c20"
+}

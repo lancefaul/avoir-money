@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+/* ─── Font families ─── */
+@theme {
+  --font-sans: 'DM Sans Variable', 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  /* Override text-sm to match base 1rem */
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.5rem;
+}
+
+/* Tabular nums globally */
+*,
+*::before,
+*::after {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Body defaults to DM Sans (the DS ui font) */
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+/* Scrollbar styles are handled by @budget-tracker/ui theme globals */

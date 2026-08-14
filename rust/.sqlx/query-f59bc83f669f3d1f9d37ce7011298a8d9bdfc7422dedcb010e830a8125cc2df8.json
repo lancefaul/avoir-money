@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"UtilityReading\"\n             (\"id\",\"billDate\",\"usage\",\"cost\",\"unitCost\",\"details\",\"createdAt\",\n              \"convenienceFee\",\"convenienceFeeType\",\"otherFees\",\"dueDate\",\"serviceId\")\n           VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 12
+    },
+    "nullable": []
+  },
+  "hash": "f59bc83f669f3d1f9d37ce7011298a8d9bdfc7422dedcb010e830a8125cc2df8"
+}

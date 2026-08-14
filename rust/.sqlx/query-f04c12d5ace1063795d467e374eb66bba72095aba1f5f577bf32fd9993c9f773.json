@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"UtilityProvider\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "f04c12d5ace1063795d467e374eb66bba72095aba1f5f577bf32fd9993c9f773"
+}

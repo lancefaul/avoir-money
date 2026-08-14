@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\", \"type\" AS \"sched_type!: String\",\n                  \"anchorDate\" AS \"anchor!: String\",\n                  \"firstPayDay\" AS first_pay_day, \"secondPayDay\" AS second_pay_day\n           FROM \"PaySchedule\" WHERE \"isDefault\" = 1 LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "sched_type!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "anchor!: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "anchorDate"
+          }
+        }
+      },
+      {
+        "name": "first_pay_day",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "firstPayDay"
+          }
+        }
+      },
+      {
+        "name": "second_pay_day",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "secondPayDay"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "7bd868facf6f6c0e9b964f82c232671133f861888d53fedd370838a6feeecc5e"
+}

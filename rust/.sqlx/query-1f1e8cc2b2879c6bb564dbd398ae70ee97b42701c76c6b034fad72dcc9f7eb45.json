@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"debtId\" AS \"debt_id!\", \"monthlyAmount\" AS \"amount!: i64\",\n                  \"periodStartDate\" AS \"start!\", \"periodEndDate\" AS \"end!\",\n                  \"createdAt\" AS \"created!\", \"updatedAt\" AS \"updated!\"\n             FROM \"EscrowRecord\" WHERE \"debtId\" = ?\n            ORDER BY \"periodStartDate\" DESC, \"createdAt\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "debt_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "debtId"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "monthlyAmount"
+          }
+        }
+      },
+      {
+        "name": "start!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "periodStartDate"
+          }
+        }
+      },
+      {
+        "name": "end!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "periodEndDate"
+          }
+        }
+      },
+      {
+        "name": "created!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "1f1e8cc2b2879c6bb564dbd398ae70ee97b42701c76c6b034fad72dcc9f7eb45"
+}

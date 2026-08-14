@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"PaySchedule\"\n              SET \"name\" = COALESCE(?1, \"name\"),\n                  \"type\" = COALESCE(?2, \"type\"),\n                  \"anchorDate\" = COALESCE(?3, \"anchorDate\"),\n                  \"firstPayDay\" = CASE WHEN ?4 THEN ?5 ELSE \"firstPayDay\" END,\n                  \"secondPayDay\" = CASE WHEN ?6 THEN ?7 ELSE \"secondPayDay\" END,\n                  \"isDefault\" = COALESCE(?8, \"isDefault\"),\n                  \"updatedAt\" = ?9\n            WHERE \"id\" = ?10",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "45ddeb64cfa58ee53b453a08441c3dfcc7e7c6511828d39028801e1d4fdd3a05"
+}

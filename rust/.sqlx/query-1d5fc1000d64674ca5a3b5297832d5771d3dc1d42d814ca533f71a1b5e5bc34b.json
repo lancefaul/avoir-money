@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"UtilityService\" SET \"expenseId\" = NULL, \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "1d5fc1000d64674ca5a3b5297832d5771d3dc1d42d814ca533f71a1b5e5bc34b"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Income\" SET\n                     \"name\" = COALESCE(?1, \"name\"),\n                     \"amount\" = COALESCE(?2, \"amount\"),\n                     \"frequency\" = COALESCE(?3, \"frequency\"),\n                     \"budgetId\" = COALESCE(?4, \"budgetId\"),\n                     \"accountId\" = CASE WHEN ?5 = 1 THEN ?6 ELSE \"accountId\" END,\n                     \"amountSchedule\" = CASE WHEN ?7 = 1 THEN ?8 ELSE \"amountSchedule\" END,\n                     \"startDate\" = CASE WHEN ?9 = 1 THEN ?10 ELSE \"startDate\" END,\n                     \"endDate\" = CASE WHEN ?11 = 1 THEN ?12 ELSE \"endDate\" END,\n                     \"note\" = CASE WHEN ?13 = 1 THEN ?14 ELSE \"note\" END,\n                     \"managementUrl\" = CASE WHEN ?15 = 1 THEN ?16 ELSE \"managementUrl\" END,\n                     \"updatedAt\" = ?17\n                   WHERE \"id\" = ?18",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 18
+    },
+    "nullable": []
+  },
+  "hash": "40ada7b0f706c48db7803d3161dc2d4d64d35df3be3ae847a13171318ac739ed"
+}

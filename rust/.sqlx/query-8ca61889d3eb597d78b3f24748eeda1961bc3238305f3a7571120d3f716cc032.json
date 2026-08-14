@@ -1,0 +1,165 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT cb.\"id\" AS \"id!\", cb.\"yearPlanId\" AS \"year_plan_id!\",\n                  cb.\"budgetId\" AS \"budget_id!\", cb.\"highWaterMark\" AS \"hwm!: i64\",\n                  cb.\"doneForYear\" AS \"done!: i64\", cb.\"removedAt\" AS \"removed: String\",\n                  cb.\"createdAt\" AS \"created!\", cb.\"updatedAt\" AS \"updated!\",\n                  b.\"name\" AS \"budget_name!\", g.\"name\" AS \"group_name!\",\n                  yp.\"year\" AS \"year!: i64\", yp.\"status\" AS \"status!\",\n                  (SELECT COUNT(*) FROM \"BudgetExpenseLink\" l\n                    WHERE l.\"categoryBudgetId\" = cb.\"id\") AS \"links!: i64\"\n             FROM \"CategoryBudget\" cb\n             JOIN \"Budget\" b ON b.\"id\" = cb.\"budgetId\"\n             JOIN \"BudgetGroup\" g ON g.\"id\" = b.\"groupId\"\n             JOIN \"YearPlan\" yp ON yp.\"id\" = cb.\"yearPlanId\"\n            WHERE cb.\"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "year_plan_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "yearPlanId"
+          }
+        }
+      },
+      {
+        "name": "budget_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "hwm!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "highWaterMark"
+          }
+        }
+      },
+      {
+        "name": "done!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "doneForYear"
+          }
+        }
+      },
+      {
+        "name": "removed: String",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "removedAt"
+          }
+        }
+      },
+      {
+        "name": "created!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "updatedAt"
+          }
+        }
+      },
+      {
+        "name": "budget_name!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "group_name!",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGroup",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "year!: i64",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "YearPlan",
+            "name": "year"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "YearPlan",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "links!: i64",
+        "ordinal": 12,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "8ca61889d3eb597d78b3f24748eeda1961bc3238305f3a7571120d3f716cc032"
+}

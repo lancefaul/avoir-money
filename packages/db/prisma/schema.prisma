@@ -1,0 +1,950 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Core Entities ───
+
+model Account {
+  id               String   @id @default(cuid())
+  name             String
+  type             String // Checking, Savings, Credit Card, Gift Card, Cash, HSA
+  /// Which card ART this account renders with, if any.
+  ///
+  /// Chosen by the user, not inferred. The card layouts used to be selected by
+  /// matching the account NAME — `name.includes('amazon')` and seven more —
+  /// which meant the list of supported designs was really a list of the
+  /// author's own accounts, and read that way to anyone with the source. A
+  /// stored brand makes it a catalogue the user picks from.
+  ///
+  /// Null renders the generic layout for the account's `type`, which is what
+  /// every account gets until someone chooses otherwise.
+  brand            String?
+  balance          Decimal  @default(0)
+  /// The balance this account carried BEFORE any tracked transaction — what the
+  /// "Starting Balance" field on the create form captures. It previously had no
+  /// home: the form wrote it straight into `balance`, where transactions then
+  /// mutated it beyond recovery, and `recalculateAccountBalance` (which sums from
+  /// zero) erased it outright. Storing it separately makes the ledger invariant
+  /// checkable: openingBalance + SUM(transactions) == balance.
+  openingBalance   Decimal  @default(0)
+  archived         Boolean  @default(false)
+  hasRewards       Boolean  @default(false)
+  /// Set on a rewards account: points at its parent card. @unique enforces one
+  /// rewards account per card. Null on ordinary accounts. A rewards account is
+  /// type "Rewards" and an ordinary ledger account (balance = SUM of its rows).
+  parentAccountId  String?  @unique
+  earnsInterest    Boolean  @default(false)
+  interestRate     Decimal  @default(0) @db.Decimal(5, 2)
+  interestRateType String   @default("APY") // APY or APR
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  transactions           Transaction[]           @relation("TransactionAccount")
+  transfersTo            Transaction[]           @relation("TransactionToAccount")
+  expenses               Expense[]
+  incomes                Income[]
+  debts                  Debt[]
+  reconciliationSessions ReconciliationSession[]
+  parentAccount          Account?                @relation("CardRewards", fields: [parentAccountId], references: [id], onDelete: Cascade)
+  rewardsAccount         Account?                @relation("CardRewards")
+
+  @@index([archived])
+}
+
+model BudgetGroup {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  color     String   @default("#94a3b8") // Hex color for charts
+  createdAt DateTime @default(now())
+
+  budgets Budget[]
+}
+
+model Budget {
+  id        String      @id @default(cuid())
+  name      String
+  groupId   String
+  group     BudgetGroup @relation(fields: [groupId], references: [id], onDelete: Restrict)
+  icon      String?
+  isCustom  Boolean     @default(false)
+  isSystem  Boolean     @default(false)
+  deletedAt DateTime?
+  createdAt DateTime    @default(now())
+
+  expenses          Expense[]
+  incomeEntries     Income[]
+  budgetGoals       BudgetGoal[]
+  transactions      Transaction[]
+  categoryBudgets   CategoryBudget[]
+  insurancePolicies InsurancePolicy[]
+}
+
+// ─── Income ───
+
+model Income {
+  id             String    @id @default(cuid())
+  name           String // "Paycheck - Deposit to Checking"
+  amount         Decimal
+  frequency      Frequency
+  budgetId       String
+  budget         Budget    @relation(fields: [budgetId], references: [id], onDelete: Restrict)
+  accountId      String? // Which account receives this income
+  account        Account?  @relation(fields: [accountId], references: [id], onDelete: SetNull)
+  amountSchedule Json? // Per-month amounts: {"1": 5000, "2": 5200, ...}
+  startDate      DateTime? // For recurring: when it starts
+  endDate        DateTime? // For recurring: when it ends (null = ongoing)
+  pausedUntil    DateTime? // null = active, future date = paused until, 9999-12-31 = indefinite
+  archivedAt     DateTime? // null = active, non-null = archived at this UTC timestamp
+  note           String?
+  managementUrl  String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  transactions          Transaction[]
+  scheduledTransactions ScheduledTransaction[]
+}
+
+enum Frequency {
+  ONE_TIME
+  WEEKLY
+  BIWEEKLY
+  SEMI_MONTHLY
+  MONTHLY
+  QUARTERLY
+  BIANNUAL
+  ANNUAL
+}
+
+// ─── Expenses ───
+
+model Expense {
+  id             String    @id @default(cuid())
+  name           String // "Home Mortgage", "City Power"
+  amount         Decimal // Base/expected amount
+  frequency      Frequency
+  budgetId       String
+  budget         Budget    @relation(fields: [budgetId], references: [id], onDelete: Restrict)
+  accountId      String? // Which account pays this
+  account        Account?  @relation(fields: [accountId], references: [id], onDelete: SetNull)
+  isAutomatic    Boolean   @default(false) // Auto-pay vs manual
+  dueDay         Int? // Day of month (1-31)
+  dueWeekday     Int? // Day of week (0=Sun, 1=Mon, ..., 6=Sat) for ordinal rules
+  dueOrdinal     Int? // Which occurrence: 1=first, 2=second, 3=third, 4=fourth, -1=last
+  amountSchedule Json? // Per-month amounts: {"1": 80, "2": 40, ...} — overrides base amount
+  startDate      DateTime?
+  endDate        DateTime?
+  pausedUntil    DateTime? // null = active, future date = paused until, 9999-12-31 = indefinite
+  archivedAt     DateTime? // null = active, non-null = archived at this UTC timestamp
+  skipWeekend    Boolean   @default(true) // When true, shift weekend occurrences to Monday
+  note           String?
+  managementUrl  String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  transactions          Transaction[]
+  utilityServices       UtilityService[]
+  debts                 Debt[]
+  scheduledTransactions ScheduledTransaction[]
+  budgetExpenseLink     BudgetExpenseLink?
+}
+
+// ─── Transaction Descriptions ───
+
+model TransactionDescription {
+  id           String        @id @default(cuid())
+  name         String        @unique
+  createdAt    DateTime      @default(now())
+  transactions Transaction[]
+}
+
+// ─── Transactions (actual recorded amounts per pay period) ───
+
+model Transaction {
+  id                 String                  @id @default(cuid())
+  type               String // EXPENSE, INCOME, or TRANSFER
+  name               String // Description/name of the transaction
+  amount             Decimal // Actual amount paid/received
+  netAmount          Decimal                 @default(0) // Actual cash charged; equals amount (the rewardsApplied discount was retired)
+  date               DateTime
+  payPeriodId        String?
+  payPeriod          PayPeriod?              @relation(fields: [payPeriodId], references: [id], onDelete: SetNull)
+  expenseId          String?
+  expense            Expense?                @relation(fields: [expenseId], references: [id], onDelete: SetNull)
+  incomeId           String?
+  income             Income?                 @relation(fields: [incomeId], references: [id], onDelete: SetNull)
+  accountId          String? // Primary account (optional — null for bitcoin transactions)
+  account            Account?                @relation("TransactionAccount", fields: [accountId], references: [id], onDelete: Restrict)
+  toAccountId        String? // Destination account (transfers only)
+  toAccount          Account?                @relation("TransactionToAccount", fields: [toAccountId], references: [id], onDelete: SetNull)
+  budgetId           String? // Budget (for non-linked transactions, or override)
+  budget             Budget?                 @relation(fields: [budgetId], references: [id], onDelete: SetNull)
+  descriptionId      String? // Link to TransactionDescription for grouping
+  description        TransactionDescription? @relation(fields: [descriptionId], references: [id], onDelete: SetNull)
+  note               String?
+  occurrenceDate     DateTime? // Which recurring occurrence this transaction pays for
+  imported           Boolean                 @default(false)
+  /// Marks an INCOME row as cash back / a rebate rather than money earned.
+  ///
+  /// A real column rather than a budget assignment because the two answer
+  /// different questions: a budget says which pot the money belongs to, this
+  /// says what kind of money it is. Budget is also not free to carry it — the
+  /// system-budget hook overwrites `budgetId` on every INCOME create, so the
+  /// flag would have to survive a write it does not control.
+  isCashBack         Boolean                 @default(false)
+  costBasisAllocated Decimal? // Proportional cost basis deducted from holding on SELL trades
+  createdAt          DateTime                @default(now())
+
+  // Transaction splitting: parent-child relationship
+  parentId String?
+  parent   Transaction?  @relation("TransactionChildren", fields: [parentId], references: [id], onDelete: Cascade)
+  children Transaction[] @relation("TransactionChildren")
+
+  /// Groups the payment legs (and the balance-neutral budget Anchor) of one
+  /// multi-account purchase — payment-split, ADR-030. A shared key, not a
+  /// relation: the group has no parent row of its own, so cascade is handled in
+  /// the delete path rather than by an FK.
+  purchaseGroupId String?
+
+  // Tax fields for child transactions
+  preTaxAmount Decimal? // Pre-tax amount for child transactions
+  taxAmount    Decimal? // Computed or entered tax amount
+  taxRate      Decimal? // Tax rate percentage (if entered as rate)
+
+  // Running balance ledger fields
+  balanceBefore   Decimal?
+  balanceAfter    Decimal?
+  toBalanceBefore Decimal?
+  toBalanceAfter  Decimal?
+
+  /// Set when a reconciliation session that matched this transaction closes.
+  /// Denormalized from the match graph so the ledger can filter unreconciled
+  /// rows without joining; written only at close.
+  reconciledAt DateTime?
+
+  debtPayments         DebtPayment[]
+  scheduledTransaction ScheduledTransaction?
+
+  // Investment detail (1:1) — typed replacements for the tradeMetadata / bitcoinMetadata JSON blobs
+  tradeDetail          TradeDetail?
+  bitcoinPaymentDetail BitcoinPaymentDetail?
+
+  reconciliationMatches ReconciliationMatch[]
+  /// Set when this transaction IS the escape-hatch adjustment for a session.
+  adjustmentForSession  ReconciliationSession? @relation("ReconciliationAdjustment")
+
+  @@index([date])
+  @@index([payPeriodId])
+  @@index([expenseId])
+  @@index([incomeId])
+  @@index([budgetId])
+  @@index([descriptionId])
+  @@index([reconciledAt])
+  @@index([purchaseGroupId])
+}
+
+// ─── Pay Schedule (user-configurable) ───
+
+model PaySchedule {
+  id           String          @id @default(cuid())
+  name         String          @default("Primary") // "Primary", "Side Hustle", etc.
+  type         PayScheduleType @default(BIWEEKLY)
+  anchorDate   DateTime // Reference date for period calculation
+  firstPayDay  Int? // SEMI_MONTHLY: first pay day (e.g., 1); MONTHLY: pay day
+  secondPayDay Int? // SEMI_MONTHLY: second pay day (e.g., 15)
+  isDefault    Boolean         @default(false)
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+
+  payPeriods PayPeriod[]
+}
+
+enum PayScheduleType {
+  WEEKLY // 52 periods/year, every 7 days from anchor
+  BIWEEKLY // 26 periods/year, every 14 days from anchor
+  SEMI_MONTHLY // 24 periods/year, 1st & 15th (or custom days)
+  MONTHLY // 12 periods/year, same day each month
+}
+
+// ─── Pay Periods (generated from schedule) ───
+
+model PayPeriod {
+  id         String      @id @default(cuid())
+  scheduleId String
+  schedule   PaySchedule @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+  startDate  DateTime // First day of this period
+  endDate    DateTime // Last day of this period (inclusive)
+  payDate    DateTime // Actual pay date (may differ from startDate)
+  year       Int
+  periodNum  Int // Period number within the year
+
+  transactions     Transaction[]
+  balanceSnapshots BalanceSnapshot[]
+
+  @@unique([scheduleId, year, periodNum])
+  @@index([startDate])
+  @@index([endDate])
+}
+
+model BalanceSnapshot {
+  id             String    @id @default(cuid())
+  payPeriodId    String
+  payPeriod      PayPeriod @relation(fields: [payPeriodId], references: [id], onDelete: Cascade)
+  accountId      String
+  openingBalance Decimal
+  closingBalance Decimal
+  totalIncome    Decimal
+  totalExpenses  Decimal
+  createdAt      DateTime  @default(now())
+}
+
+// ─── Utilities (detailed tracking from Utilities sheet) ───
+
+enum ServiceType {
+  ELECTRIC
+  GAS
+  WATER
+  GARBAGE
+  SEWAGE
+  INTERNET
+  CELLULAR
+}
+
+enum Metering {
+  METERED
+  UNMETERED
+}
+
+model UtilityProvider {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  services UtilityService[]
+}
+
+model UtilityService {
+  id          String          @id @default(cuid())
+  providerId  String
+  provider    UtilityProvider @relation(fields: [providerId], references: [id], onDelete: Restrict)
+  serviceType ServiceType
+  metering    Metering
+  expenseId   String?
+  expense     Expense?        @relation(fields: [expenseId], references: [id], onDelete: SetNull)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  readings UtilityReading[]
+
+  @@unique([providerId, serviceType])
+  @@index([providerId])
+}
+
+model UtilityReading {
+  id                 String         @id @default(cuid())
+  billDate           DateTime
+  dueDate            DateTime? // When the bill is due (used to match transaction)
+  usage              Decimal? // kWh, CCF, gallons
+  cost               Decimal
+  unitCost           Decimal? // $/kWh, $/CCF, $/gal
+  convenienceFee     Decimal? // Convenience fee amount (dollar or %)
+  convenienceFeeType String? // "dollar" or "percent"
+  otherFees          Decimal? // Other miscellaneous fees
+  details            Json? // Flexible: gas breakdown, water components, etc.
+  serviceId          String
+  service            UtilityService @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+  createdAt          DateTime       @default(now())
+
+  @@index([serviceId])
+  @@index([billDate])
+}
+
+// ─── Healthcare Deductibles (from Historical sheet) ───
+
+model HealthcareYear {
+  id                String    @id @default(cuid())
+  year              Int       @unique
+  employer          String // "Acme", "Globex"
+  medicalPremium    Decimal
+  medicalDeductible Decimal // Plan deductible limit
+  medicalOOPM       Decimal // Out-of-pocket max
+  dentalPremium     Decimal
+  visionPremium     Decimal
+  deductibleMetDate DateTime? // Date deductible was met
+  oopmMetDate       DateTime? // Date OOPM was met
+  paidOutOfPocket   Decimal   @default(0)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+}
+
+// ─── Insurance Policies ───
+
+enum PolicyType {
+  MEDICAL
+  DENTAL
+  VISION
+}
+
+enum PolicyStatus {
+  ACTIVE
+  ENDED
+  CLOSED
+}
+
+model InsurancePolicy {
+  id                 String       @id @default(cuid())
+  type               PolicyType
+  year               Int
+  employer           String
+  premium            Decimal      @default(0)
+  deductibleLimit    Decimal?
+  oopmLimit          Decimal?
+  status             PolicyStatus @default(ACTIVE)
+  endedOn            DateTime?
+  closedOn           DateTime?
+  deductibleOverride Boolean      @default(false)
+  oopmOverride       Boolean      @default(false)
+  metadata           Json         @default("{}")
+  budgetId           String? // Per-policy system budget
+  budget             Budget?      @relation(fields: [budgetId], references: [id], onDelete: SetNull)
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+
+  budgetLinks PolicyBudgetLink[]
+}
+
+model PolicyBudgetLink {
+  id        String          @id @default(cuid())
+  policyId  String
+  policy    InsurancePolicy @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  budgetId  String
+  createdAt DateTime        @default(now())
+
+  @@unique([policyId, budgetId])
+}
+
+// ─── Investments (BTC, stocks from spreadsheet) ───
+
+model InvestmentHolding {
+  id          String         @id @default(cuid())
+  name        String // "Rewards Wallet BTC", "Hardware Wallet BTC", "Fidelity $TCKB"
+  ticker      String? // "BTC", "TCKB", "TCKR", "TCKC"
+  type        InvestmentType
+  quantity    Decimal // Units/shares/sats
+  costBasis   Decimal?
+  custodianId String?
+  custodian   Custodian?     @relation(fields: [custodianId], references: [id], onDelete: SetNull)
+  walletId    String?
+  wallet      Wallet?        @relation(fields: [walletId], references: [id], onDelete: SetNull)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  snapshots     InvestmentSnapshot[]
+  transfersFrom InvestmentTransfer[] @relation("TransferFrom")
+  transfersTo   InvestmentTransfer[] @relation("TransferTo")
+}
+
+enum InvestmentType {
+  STOCK
+  BITCOIN
+}
+
+model InvestmentSnapshot {
+  id        String            @id @default(cuid())
+  holdingId String
+  holding   InvestmentHolding @relation(fields: [holdingId], references: [id], onDelete: Cascade)
+  date      DateTime
+  quantity  Decimal
+  value     Decimal? // Market value at snapshot time
+  createdAt DateTime          @default(now())
+}
+
+// ─── Investment Transfers (audit log) ───
+
+model InvestmentTransfer {
+  id               String            @id @default(cuid())
+  type             String // "BITCOIN" or "STOCK"
+  fromHoldingId    String
+  fromHolding      InvestmentHolding @relation("TransferFrom", fields: [fromHoldingId], references: [id], onDelete: Restrict)
+  toHoldingId      String
+  toHolding        InvestmentHolding @relation("TransferTo", fields: [toHoldingId], references: [id], onDelete: Restrict)
+  quantity         Decimal
+  // Bitcoin-specific
+  bitcoinPrice     Decimal?
+  feeAmount        Decimal?
+  feeUnit          String? // "Bitcoin", "Sats", "USD"
+  feeBtc           Decimal? // Fee converted to BTC
+  // Stock-specific
+  ticker           String?
+  feeTransactionId String? // FK to Transaction for stock fees
+  createdAt        DateTime          @default(now())
+}
+
+// ─── Budget Goals ───
+
+model BudgetGoal {
+  id            String    @id @default(cuid())
+  name          String // "Emergency Fund", "Pay off Family SUV"
+  type          GoalType
+  targetAmount  Decimal
+  currentAmount Decimal   @default(0)
+  budgetId      String?
+  budget        Budget?   @relation(fields: [budgetId], references: [id], onDelete: SetNull)
+  deadline      DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+enum GoalType {
+  SAVINGS
+  DEBT_PAYOFF
+  INVESTMENT
+  SPENDING_LIMIT
+  CUSTOM
+}
+
+// ─── Scheduled Transactions ───
+
+enum ScheduleStatus {
+  PENDING
+  PAID
+  PARTIAL
+  SKIPPED
+  SNOOZED
+}
+
+enum ScheduleSourceType {
+  EXPENSE
+  INCOME
+}
+
+model ScheduledTransaction {
+  id             String             @id @default(cuid())
+  sourceType     ScheduleSourceType
+  sourceId       String // Logical FK to Expense or Income
+  dueDate        DateTime // UTC midnight
+  expectedAmount Decimal
+  actualAmount   Decimal?
+  status         ScheduleStatus     @default(PENDING)
+  transactionId  String?            @unique
+  transaction    Transaction?       @relation(fields: [transactionId], references: [id], onDelete: SetNull)
+  snoozedUntil   DateTime?
+  note           String?
+
+  // Typed relations (exactly one is set based on sourceType)
+  expenseId String?
+  expense   Expense? @relation(fields: [expenseId], references: [id], onDelete: Cascade)
+  incomeId  String?
+  income    Income?  @relation(fields: [incomeId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([sourceType, sourceId, dueDate])
+  @@index([sourceType, sourceId, status])
+  @@index([dueDate])
+  @@index([status])
+}
+
+enum CustodyType {
+  CUSTODIAL
+  NON_CUSTODIAL
+}
+
+enum StorageType {
+  HOT
+  COLD
+}
+
+// ─── Trade Entities ───
+
+model Custodian {
+  id            String   @id @default(cuid())
+  name          String   @unique
+  managementUrl String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  holdings     InvestmentHolding[]
+  tradeDetails TradeDetail[]
+}
+
+model Wallet {
+  id            String       @id @default(cuid())
+  name          String       @unique
+  managementUrl String?
+  custodyType   CustodyType  @default(NON_CUSTODIAL)
+  storageType   StorageType?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  holdings              InvestmentHolding[]
+  tradeDetails          TradeDetail[]
+  bitcoinPaymentDetails BitcoinPaymentDetail[]
+}
+
+// ─── Investment transaction detail (typed, FK-backed replacements for JSON metadata) ───
+
+/// Trade-specific detail for a TRADE transaction (1:1). Replaces Transaction.tradeMetadata JSON.
+model TradeDetail {
+  id            String      @id @default(cuid())
+  transactionId String      @unique
+  transaction   Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  direction     String // BUY | SELL
+  assetType     String // Stock | Bitcoin
+  ticker        String? // stock trades only
+  quantity      Decimal
+  unitPrice     Decimal
+  bitcoinUnit   String? // bitcoin trades only: Bitcoin | Sats
+  custodianId   String? // stock trades → real FK (was buried in JSON)
+  custodian     Custodian?  @relation(fields: [custodianId], references: [id], onDelete: Restrict)
+  walletId      String? // bitcoin trades → real FK
+  wallet        Wallet?     @relation(fields: [walletId], references: [id], onDelete: Restrict)
+
+  @@index([custodianId])
+  @@index([walletId])
+}
+
+/// Bitcoin payment detail for a non-trade Bitcoin income/expense/refund (1:1). Replaces Transaction.bitcoinMetadata JSON.
+model BitcoinPaymentDetail {
+  id            String      @id @default(cuid())
+  transactionId String      @unique
+  transaction   Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  walletId      String // real FK, required
+  wallet        Wallet      @relation(fields: [walletId], references: [id], onDelete: Restrict)
+  quantity      Decimal
+  unitPrice     Decimal
+  bitcoinUnit   String // Bitcoin | Sats
+  incomeType    String? // Payment | Rewards
+
+  @@index([walletId])
+}
+
+// ─── Debt Tracking ───
+
+model Debt {
+  id              String    @id @default(cuid())
+  name            String
+  type            String // MORTGAGE, AUTO_LOAN, STUDENT_LOAN, CREDIT_CARD, PERSONAL_LOAN, OTHER
+  originalBalance Decimal
+  currentBalance  Decimal
+  apr             Decimal // Annual percentage rate (0-100)
+  minimumPayment  Decimal
+  frequency       Frequency
+  startDate       DateTime
+  maturityDate    DateTime?
+  termMonths      Int?
+  linkedExpenseId String?
+  linkedExpense   Expense?  @relation(fields: [linkedExpenseId], references: [id], onDelete: SetNull)
+  linkedAccountId String?
+  linkedAccount   Account?  @relation(fields: [linkedAccountId], references: [id], onDelete: SetNull)
+  paidOff         Boolean   @default(false)
+  escrowEnabled   Boolean   @default(false)
+  note            String?
+  managementUrl   String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  payments      DebtPayment[]
+  escrowRecords EscrowRecord[]
+}
+
+model EscrowRecord {
+  id              String   @id @default(cuid())
+  debtId          String
+  debt            Debt     @relation(fields: [debtId], references: [id], onDelete: Cascade)
+  monthlyAmount   Decimal
+  periodStartDate DateTime
+  periodEndDate   DateTime
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  /// One escrow figure per period. Editing a mortgage re-posts the escrow with
+  /// the period already in the form, and that write used to insert every time —
+  /// production reached five rows for 2026-08-01, two of them the same edit
+  /// made twice. The "current escrow" lookup then ordered by periodStartDate
+  /// alone, all five tied, and SQL returned an arbitrary (stale) one, so an
+  /// edit appeared not to save. The read now tie-breaks on createdAt (ADR-032)
+  /// and the write upserts on this pair; this constraint is what makes the
+  /// duplicate state unrepresentable rather than merely handled.
+  @@unique([debtId, periodStartDate])
+}
+
+model DebtPayment {
+  id              String       @id @default(cuid())
+  debtId          String
+  debt            Debt         @relation(fields: [debtId], references: [id], onDelete: Cascade)
+  transactionId   String?
+  transaction     Transaction? @relation(fields: [transactionId], references: [id], onDelete: SetNull)
+  principalAmount Decimal
+  interestAmount  Decimal
+  date            DateTime
+  createdAt       DateTime     @default(now())
+}
+
+// ─── Category Budgets ───
+
+enum PlanStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+enum BudgetFrequency {
+  WEEKLY
+  BIWEEKLY
+  SEMI_MONTHLY
+  MONTHLY
+  QUARTERLY
+  BIANNUAL
+  ANNUAL
+  YEARLY
+}
+
+model YearPlan {
+  id        String     @id @default(cuid())
+  year      Int        @unique
+  status    PlanStatus @default(DRAFT)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  categoryBudgets CategoryBudget[]
+}
+
+model CategoryBudget {
+  id            String    @id @default(cuid())
+  yearPlanId    String
+  yearPlan      YearPlan  @relation(fields: [yearPlanId], references: [id], onDelete: Cascade)
+  budgetId      String
+  budget        Budget    @relation(fields: [budgetId], references: [id], onDelete: Restrict)
+  highWaterMark Decimal   @default(0)
+  doneForYear   Boolean   @default(false)
+  removedAt     DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  versions           BudgetVersion[]
+  budgetExpenseLinks BudgetExpenseLink[]
+
+  @@unique([yearPlanId, budgetId])
+}
+
+model BudgetVersion {
+  id                String          @id @default(cuid())
+  categoryBudgetId  String
+  categoryBudget    CategoryBudget  @relation(fields: [categoryBudgetId], references: [id], onDelete: Cascade)
+  amount            Decimal
+  frequency         BudgetFrequency
+  monthlyEquivalent Decimal
+  activeMonths      Int[]           @default([])
+  manualOverride    Boolean         @default(false)
+  effectiveDate     DateTime
+  createdAt         DateTime        @default(now())
+
+  @@unique([categoryBudgetId, effectiveDate])
+}
+
+model BudgetExpenseLink {
+  id               String         @id @default(cuid())
+  categoryBudgetId String
+  categoryBudget   CategoryBudget @relation(fields: [categoryBudgetId], references: [id], onDelete: Cascade)
+  expenseId        String         @unique
+  expense          Expense        @relation(fields: [expenseId], references: [id], onDelete: Cascade)
+  createdAt        DateTime       @default(now())
+
+  @@unique([categoryBudgetId, expenseId])
+}
+
+// ─── Data Backups ───
+
+enum BackupFrequency {
+  DAILY
+  WEEKLY
+}
+
+enum BackupStatus {
+  COMPLETED
+  FAILED
+  RESTORING
+}
+
+/// Where a backup came from, which decides whether retention may delete it.
+///
+/// Retention keeps the newest N and drops the rest, which is right for routine
+/// backups and wrong for the other two: a PRE_RESTORE snapshot is the rollback
+/// point for the restore that just ran, and an IMPORTED dump was supplied by
+/// hand precisely because it existed nowhere else. Evicting either to make room
+/// for a routine backup would delete the only copy of something unrecoverable.
+enum BackupSource {
+  MANUAL
+  PRE_RESTORE
+  IMPORTED
+}
+
+/// A third-party service the user has connected with their own API key.
+///
+/// One row per provider so adding a second integration needs no migration.
+/// The key is stored ENCRYPTED (AES-256-GCM, see lib/secret-box.ts) rather than
+/// in plain text, because the database is dumped to files that are downloaded
+/// over the API, uploaded from other machines, and kept in cloud storage — a
+/// plaintext key would travel in all of them. Encryption does not protect
+/// against someone holding both the dump and the server's environment; it
+/// protects the dump travelling on its own, which is the case that exists.
+model ConnectedService {
+  id        String   @id @default(cuid())
+  /// Lowercase provider slug, e.g. "finnhub". One row per provider.
+  provider  String   @unique
+  /// Base64 AES-256-GCM ciphertext of the API key. Never returned to a client.
+  secretCipher String
+  /// Base64 random IV, one per encryption.
+  secretIv     String
+  /// Base64 GCM auth tag, which is what makes tampering detectable.
+  secretTag    String
+  /// Last 4 characters of the plaintext key, so the UI can show which key is
+  /// configured without the server ever handing back the key itself.
+  hint      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BackupConfig {
+  id             String          @id @default(cuid())
+  enabled        Boolean         @default(false)
+  path           String          @default("")
+  frequency      BackupFrequency @default(DAILY)
+  retentionCount Int             @default(7)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+model Backup {
+  id          String       @id @default(cuid())
+  filename    String
+  filepath    String
+  sizeBytes   BigInt
+  status      BackupStatus @default(COMPLETED)
+  /// Retention deletes only MANUAL rows — see BackupSource.
+  source      BackupSource @default(MANUAL)
+  error       String?
+  completedAt DateTime?
+  createdAt   DateTime     @default(now())
+
+  @@index([createdAt])
+}
+
+// ─── Reconciliation ───────────────────────────────────────────────────────────
+//
+// The app cannot detect its own errors: the ledger invariant
+// (openingBalance + SUM(transactions) == balance) proves self-consistency, not
+// correctness — a wrong transaction plus a compensating opening satisfies it
+// perfectly. Reconciliation introduces the one number that comes from outside
+// the app, the bank's statement ending balance, and refuses to close a period
+// until the app agrees with it.
+//
+// See .kiro/specs/reconciliation/design.md
+
+enum ReconciliationStatus {
+  DRAFT
+  RECONCILED
+}
+
+enum MatchType {
+  EXACT // amount and date agree
+  SUM // several app rows sum to one statement row
+  FUZZY // amount agrees, date outside tolerance, name used as tiebreaker
+  MANUAL // user paired them by hand
+}
+
+model ReconciliationSession {
+  id        String  @id @default(cuid())
+  accountId String
+  account   Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  /// UTC midnight. Derived from the statement's posted-date coverage, not
+  /// transaction-date coverage — a transaction dated 06/29 can post 07/01, and
+  /// windowing on transaction dates produces false phantoms.
+  periodStart DateTime
+  periodEnd   DateTime
+
+  /// The external anchor: the bank's ending balance for this period. The only
+  /// figure in the system not derived from the app's own data.
+  statementEndingBalance Decimal
+
+  status ReconciliationStatus @default(DRAFT)
+
+  /// Residual at the moment of close. Non-zero only when an adjustment was made.
+  residualAtClose Decimal   @default(0)
+  reconciledAt    DateTime?
+
+  /// The escape hatch, when a period genuinely could not be balanced. A real
+  /// Transaction so the adjustment is permanently visible in the register —
+  /// never a silent move of openingBalance.
+  adjustmentTransactionId String?      @unique
+  adjustmentTransaction   Transaction? @relation("ReconciliationAdjustment", fields: [adjustmentTransactionId], references: [id], onDelete: SetNull)
+  adjustmentReason        String?
+
+  statementRows StatementRow[]
+  matches       ReconciliationMatch[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([accountId, periodEnd])
+  @@index([accountId, status])
+}
+
+model StatementRow {
+  id        String                @id @default(cuid())
+  sessionId String
+  session   ReconciliationSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  postedDate      DateTime
+  transactionDate DateTime
+  description     String
+  /// Normalized through the account's sign convention at import time.
+  amount          Decimal
+  /// Verbatim CSV line — the dedupe key and audit trail.
+  ///
+  /// Deliberately NOT unique per session. Two identical lines in one export are
+  /// two real charges: buying the same item twice on one day prints the same
+  /// bytes twice, and a unique constraint discarded the second silently. The
+  /// import instead compares how many times a line appears in the file against
+  /// how many are already stored, which keeps re-importing the same file a
+  /// no-op without pretending repeat charges cannot happen.
+  rawLine         String
+
+  matches ReconciliationMatch[]
+
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+}
+
+/// Join table. Supports 1:1, N:1 (several app rows summing to one bank row),
+/// and 1:N. A scalar list of ids was rejected on the ADR-027 precedent:
+/// untyped references without foreign keys are what produced the casts and
+/// unenforceable delete guards that migration existed to remove.
+model ReconciliationMatch {
+  id        String                @id @default(cuid())
+  sessionId String
+  session   ReconciliationSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  statementRowId String
+  statementRow   StatementRow @relation(fields: [statementRowId], references: [id], onDelete: Cascade)
+
+  transactionId String
+  transaction   Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+
+  matchType MatchType
+
+  createdAt DateTime @default(now())
+
+  @@unique([statementRowId, transactionId])
+  @@index([sessionId])
+  @@index([transactionId])
+}

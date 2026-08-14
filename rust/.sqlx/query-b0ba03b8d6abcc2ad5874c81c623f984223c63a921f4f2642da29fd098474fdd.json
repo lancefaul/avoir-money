@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Debt\" SET \"linkedExpenseId\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "b0ba03b8d6abcc2ad5874c81c623f984223c63a921f4f2642da29fd098474fdd"
+}

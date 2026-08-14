@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"InsurancePolicy\" SET \"status\" = 'CLOSED', \"closedOn\" = ?1, \"updatedAt\" = ?2\n                WHERE \"id\" = ?3",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "bb3e214e1b14f856bab1063a8624bde590d97f21d2cf921c1e247e8a58eea269"
+}

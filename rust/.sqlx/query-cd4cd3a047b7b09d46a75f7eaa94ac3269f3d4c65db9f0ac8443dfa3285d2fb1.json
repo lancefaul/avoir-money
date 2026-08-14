@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"amount\" AS \"amount!: i64\", \"postedDate\" AS \"posted_date!\"\n             FROM \"StatementRow\" WHERE \"id\" = ? AND \"sessionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "amount!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "posted_date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "postedDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "cd4cd3a047b7b09d46a75f7eaa94ac3269f3d4c65db9f0ac8443dfa3285d2fb1"
+}

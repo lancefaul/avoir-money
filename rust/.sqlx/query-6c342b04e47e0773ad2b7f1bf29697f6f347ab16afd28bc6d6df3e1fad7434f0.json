@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Wallet\"\n             (\"id\",\"name\",\"managementUrl\",\"custodyType\",\"storageType\",\"createdAt\",\"updatedAt\")\n           VALUES (?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "6c342b04e47e0773ad2b7f1bf29697f6f347ab16afd28bc6d6df3e1fad7434f0"
+}

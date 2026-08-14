@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"InvestmentSnapshot\" WHERE \"holdingId\" = ? AND \"date\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "4e218e3691cc358accc9b74d1b6115cdc7544ff1b262c0164de17ec822a6f861"
+}

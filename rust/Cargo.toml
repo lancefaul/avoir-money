@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["export", "schema-gen", "import", "core", "db", "api", "server"]
+
+[workspace.package]
+edition = "2021"
+publish = false
+
+[workspace.dependencies]
+sqlx = { version = "0.9", features = ["runtime-tokio", "postgres", "chrono", "json"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+chrono = "0.4"
+rust_decimal = "1.42"
+anyhow = "1"
+proptest = "1.11"
+
+[workspace.lints.clippy]
+# Money literals are grouped as DOLLARS_CENTS on purpose: `5_000_00` reads as
+# $5,000.00, where clippy would prefer `500_000`, which reads as nothing in
+# particular. Every monetary value in this workspace is integer cents, so the
+# dollar-aligned grouping is what makes a wrong literal visible.
+inconsistent_digit_grouping = "allow"

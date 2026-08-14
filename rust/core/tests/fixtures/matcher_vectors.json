@@ -1,0 +1,962 @@
+{
+ "generatedBy": "packages/core/dist",
+ "count": 20,
+ "totalFindings": 28,
+ "cases": [
+  {
+   "name": "exact match",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "COSTCO WHSE #0429",
+      "amount": 84.32,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Costco",
+      "amount": 84.32,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "matched": 1
+    },
+    "findings": [
+     {
+      "kind": "matched",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "match a few days late",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-13",
+      "description": "COSTCO",
+      "amount": 84.32,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Costco",
+      "amount": 84.32,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "matched": 1
+    },
+    "findings": [
+     {
+      "kind": "matched",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "name disagrees but amount is exact",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "SQ *UNKNOWN VENDOR",
+      "amount": 12.5,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Farmers Market",
+      "amount": 12.5,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "name_mismatch": 1
+    },
+    "findings": [
+     {
+      "kind": "name_mismatch",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": "bank calls it \"SQ *UNKNOWN VENDOR\", app has \"Farmers Market\""
+     }
+    ]
+   }
+  },
+  {
+   "name": "probable typo within tolerance",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Netflix",
+      "amount": 15.99,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Netflix",
+      "amount": 15.5,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": -0.49,
+    "summary": {
+     "amount_mismatch": 1
+    },
+    "findings": [
+     {
+      "kind": "amount_mismatch",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": -0.49,
+      "note": "statement 15.99 vs app 15.50"
+     }
+    ]
+   }
+  },
+  {
+   "name": "sign flip",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Refund Store",
+      "amount": 30,
+      "direction": "credit"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Refund Store",
+      "amount": 30,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 60,
+    "summary": {
+     "sign_flip": 1
+    },
+    "findings": [
+     {
+      "kind": "sign_flip",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 60,
+      "note": "direction differs — app has charge, statement has credit"
+     }
+    ]
+   }
+  },
+  {
+   "name": "dated far apart but exact",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-25",
+      "description": "Annual Fee",
+      "amount": 95,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-01",
+      "name": "Annual Fee",
+      "amount": 95,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "date_far": 1
+    },
+    "findings": [
+     {
+      "kind": "date_far",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": "dated 24 days apart"
+     }
+    ]
+   }
+  },
+  {
+   "name": "trade drift with no name agreement",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+      "amount": 120.02,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Buy TCKC",
+      "amount": 120,
+      "direction": "charge",
+      "isTrade": true
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": -0.02,
+    "summary": {
+     "amount_mismatch": 1
+    },
+    "findings": [
+     {
+      "kind": "amount_mismatch",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": -0.02,
+      "note": "statement 120.02 vs app 120.00 — a trade's recorded unit price × quantity drifts from the settled amount"
+     }
+    ]
+   }
+  },
+  {
+   "name": "trade drift beyond the nickel is reported",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Purchase of Something Long",
+      "amount": 120.02,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Buy XYZ",
+      "amount": 119.3,
+      "direction": "charge",
+      "isTrade": true
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": -0.72,
+    "summary": {
+     "missing_in_app": 1,
+     "missing_in_bank_phantom": 1
+    },
+    "findings": [
+     {
+      "kind": "missing_in_app",
+      "statementId": "S1",
+      "appId": null,
+      "statementIds": [],
+      "appIds": [],
+      "delta": -120.02,
+      "note": null
+     },
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 119.3,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "one statement line, three app rows",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "CITY UTILITIES",
+      "amount": 136.9,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Water",
+      "amount": 50,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-10",
+      "name": "Sewage",
+      "amount": 46.9,
+      "direction": "charge"
+     },
+     {
+      "id": "A3",
+      "date": "2026-06-10",
+      "name": "Garbage",
+      "amount": 40,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "missing_in_app": 1,
+     "missing_in_bank_phantom": 3
+    },
+    "findings": [
+     {
+      "kind": "missing_in_app",
+      "statementId": "S1",
+      "appId": null,
+      "statementIds": [],
+      "appIds": [],
+      "delta": -136.9,
+      "note": null
+     },
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 50,
+      "note": null
+     },
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A2",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 46.9,
+      "note": null
+     },
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A3",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 40,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "one app row, two statement lines",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Amazon",
+      "amount": 30,
+      "direction": "charge"
+     },
+     {
+      "id": "S2",
+      "date": "2026-06-11",
+      "description": "Amazon",
+      "amount": 46,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Amazon refund",
+      "amount": 76,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "grouped_in_bank": 1
+    },
+    "findings": [
+     {
+      "kind": "grouped_in_bank",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [
+       "S1",
+       "S2"
+      ],
+      "appIds": [],
+      "delta": 0,
+      "note": "one app row of 76.00 covers 2 statement lines summing to it exactly"
+     }
+    ]
+   }
+  },
+  {
+   "name": "missing from the app",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Mystery Charge",
+      "amount": 22,
+      "direction": "charge"
+     }
+    ],
+    "app": [],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": -22,
+    "summary": {
+     "missing_in_app": 1
+    },
+    "findings": [
+     {
+      "kind": "missing_in_app",
+      "statementId": "S1",
+      "appId": null,
+      "statementIds": [],
+      "appIds": [],
+      "delta": -22,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "phantom in the app",
+   "in": {
+    "statement": [],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-05-02",
+      "name": "Old Entry",
+      "amount": 22,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 22,
+    "summary": {
+     "missing_in_bank_phantom": 1
+    },
+    "findings": [
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 22,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "pending near the period end",
+   "in": {
+    "statement": [],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-28",
+      "name": "Just Entered",
+      "amount": 22,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "missing_in_bank_pending": 1
+    },
+    "findings": [
+     {
+      "kind": "missing_in_bank_pending",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": "within grace window — likely not posted yet"
+     }
+    ]
+   }
+  },
+  {
+   "name": "duplicate whose twin matched",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Gym",
+      "amount": 39.99,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Gym",
+      "amount": 39.99,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-12",
+      "name": "Gym",
+      "amount": 39.99,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 39.99,
+    "summary": {
+     "matched": 1,
+     "duplicate_in_app": 1
+    },
+    "findings": [
+     {
+      "kind": "matched",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": null
+     },
+     {
+      "kind": "duplicate_in_app",
+      "statementId": null,
+      "appId": "A2",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 39.99,
+      "note": "an identical app transaction already matched this statement line"
+     }
+    ]
+   }
+  },
+  {
+   "name": "two identical charges on one day",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Coffee",
+      "amount": 3.48,
+      "direction": "charge"
+     },
+     {
+      "id": "S2",
+      "date": "2026-06-10",
+      "description": "Coffee",
+      "amount": 3.48,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Coffee",
+      "amount": 3.48,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-10",
+      "name": "Coffee",
+      "amount": 3.48,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "matched": 2
+    },
+    "findings": [
+     {
+      "kind": "matched",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": null
+     },
+     {
+      "kind": "matched",
+      "statementId": "S2",
+      "appId": "A2",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "credits and charges do not cross",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Store",
+      "amount": 40,
+      "direction": "credit"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Store",
+      "amount": 40,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-10",
+      "name": "Store",
+      "amount": 40,
+      "direction": "credit"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 40,
+    "summary": {
+     "matched": 1,
+     "duplicate_in_app": 1
+    },
+    "findings": [
+     {
+      "kind": "matched",
+      "statementId": "S1",
+      "appId": "A2",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": null
+     },
+     {
+      "kind": "duplicate_in_app",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 40,
+      "note": "an identical app transaction already matched this statement line"
+     }
+    ]
+   }
+  },
+  {
+   "name": "exact-but-late beats close-but-near within posting lag",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "Vendor",
+      "amount": 25.44,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-05",
+      "name": "Vendor",
+      "amount": 25.44,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-10",
+      "name": "Vendor",
+      "amount": 25,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 25,
+    "summary": {
+     "date_far": 1,
+     "missing_in_bank_phantom": 1
+    },
+    "findings": [
+     {
+      "kind": "date_far",
+      "statementId": "S1",
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 0,
+      "note": "dated 5 days apart"
+     },
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A2",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 25,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "beyond posting lag, close-and-near beats exact-and-far",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-20",
+      "description": "Vendor",
+      "amount": 25.44,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-05",
+      "name": "Vendor",
+      "amount": 25.44,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-20",
+      "name": "Vendor",
+      "amount": 25,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 25,
+    "summary": {
+     "amount_mismatch": 1,
+     "missing_in_bank_phantom": 1
+    },
+    "findings": [
+     {
+      "kind": "amount_mismatch",
+      "statementId": "S1",
+      "appId": "A2",
+      "statementIds": [],
+      "appIds": [],
+      "delta": -0.44,
+      "note": "statement 25.44 vs app 25.00"
+     },
+     {
+      "kind": "missing_in_bank_phantom",
+      "statementId": null,
+      "appId": "A1",
+      "statementIds": [],
+      "appIds": [],
+      "delta": 25.44,
+      "note": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "empty on both sides",
+   "in": {
+    "statement": [],
+    "app": [],
+    "endDate": "2026-06-30",
+    "options": null
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {},
+    "findings": []
+   }
+  },
+  {
+   "name": "sum gate disabled",
+   "in": {
+    "statement": [
+     {
+      "id": "S1",
+      "date": "2026-06-10",
+      "description": "ZZZ",
+      "amount": 90,
+      "direction": "charge"
+     }
+    ],
+    "app": [
+     {
+      "id": "A1",
+      "date": "2026-06-10",
+      "name": "Alpha",
+      "amount": 40,
+      "direction": "charge"
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-10",
+      "name": "Beta",
+      "amount": 50,
+      "direction": "charge"
+     }
+    ],
+    "endDate": "2026-06-30",
+    "options": {
+     "sumNameThreshold": 0
+    }
+   },
+   "out": {
+    "remainder": 0,
+    "summary": {
+     "grouped_in_app": 1
+    },
+    "findings": [
+     {
+      "kind": "grouped_in_app",
+      "statementId": "S1",
+      "appId": null,
+      "statementIds": [],
+      "appIds": [
+       "A1",
+       "A2"
+      ],
+      "delta": 0,
+      "note": "one statement line of 90.00 entered as 2 app rows summing to it exactly"
+     }
+    ]
+   }
+  }
+ ]
+}

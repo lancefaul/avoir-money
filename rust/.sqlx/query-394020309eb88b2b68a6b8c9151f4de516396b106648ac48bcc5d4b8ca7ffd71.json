@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"ScheduledTransaction\"\n            WHERE \"sourceType\" = 'EXPENSE' AND \"sourceId\" = ? AND \"status\" = 'PENDING'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "394020309eb88b2b68a6b8c9151f4de516396b106648ac48bcc5d4b8ca7ffd71"
+}

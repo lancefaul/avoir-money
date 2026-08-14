@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\", \"debtId\" AS \"debt_id!: String\",\n                  \"principalAmount\" AS \"principal!: i64\"\n           FROM \"DebtPayment\" WHERE \"transactionId\" = ? LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "DebtPayment",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "debt_id!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "DebtPayment",
+            "name": "debtId"
+          }
+        }
+      },
+      {
+        "name": "principal!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "DebtPayment",
+            "name": "principalAmount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "5ce232b152a31dea58f0801cebae50536d747e3ca6b729e9c2bbd833a1dc46e8"
+}

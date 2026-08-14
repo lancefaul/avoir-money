@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Debt\" SET\n             \"name\" = COALESCE(?1, \"name\"),\n             \"type\" = COALESCE(?2, \"type\"),\n             \"originalBalance\" = COALESCE(?3, \"originalBalance\"),\n             \"currentBalance\" = COALESCE(?4, \"currentBalance\"),\n             \"apr\" = COALESCE(?5, \"apr\"),\n             \"minimumPayment\" = COALESCE(?6, \"minimumPayment\"),\n             \"frequency\" = COALESCE(?7, \"frequency\"),\n             \"startDate\" = COALESCE(?8, \"startDate\"),\n             \"maturityDate\" = CASE WHEN ?9 = 1 THEN ?10 ELSE \"maturityDate\" END,\n             \"termMonths\" = CASE WHEN ?11 = 1 THEN ?12 ELSE \"termMonths\" END,\n             \"linkedExpenseId\" = CASE WHEN ?13 = 1 THEN ?14 ELSE \"linkedExpenseId\" END,\n             \"linkedAccountId\" = CASE WHEN ?15 = 1 THEN ?16 ELSE \"linkedAccountId\" END,\n             \"paidOff\" = COALESCE(?17, \"paidOff\"),\n             \"escrowEnabled\" = COALESCE(?18, \"escrowEnabled\"),\n             \"note\" = CASE WHEN ?19 = 1 THEN ?20 ELSE \"note\" END,\n             \"managementUrl\" = CASE WHEN ?21 = 1 THEN ?22 ELSE \"managementUrl\" END,\n             \"updatedAt\" = ?23\n           WHERE \"id\" = ?24",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 24
+    },
+    "nullable": []
+  },
+  "hash": "1ca530342618db01ee4c343d97931c10546775d1ad8c2a0568609f969e9a29fb"
+}

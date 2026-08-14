@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"UtilityProvider\" SET \"name\" = ?, \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "beb051452c2b0b86f427b37f9eb5c414deca3738ce3153c5b3f310c7c6ddd0d2"
+}

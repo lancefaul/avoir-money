@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE txn SET balance_before = ?, balance_after = ? WHERE id = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "60cc5e4a9d71f5ed6b82f1b091d94ffed3107642842c040b52baea7e04626906"
+}

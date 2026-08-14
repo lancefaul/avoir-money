@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"Transaction\" WHERE \"parentId\" IS NOT NULL",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "ba2a2433a419253059cd01b57326d1086be64e9e9f8df2e10bc90509764635d1"
+}

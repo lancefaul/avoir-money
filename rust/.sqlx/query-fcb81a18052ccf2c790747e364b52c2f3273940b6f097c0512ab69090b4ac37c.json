@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Account\"\n             (\"id\",\"name\",\"type\",\"balance\",\"openingBalance\",\"archived\",\"hasRewards\",\n              \"parentAccountId\",\"earnsInterest\",\"interestRate\",\"interestRateType\",\n              \"createdAt\",\"updatedAt\")\n           VALUES (?,?,'Rewards',?,?,0,0,?,0,0,'APY',?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "fcb81a18052ccf2c790747e364b52c2f3273940b6f097c0512ab69090b4ac37c"
+}

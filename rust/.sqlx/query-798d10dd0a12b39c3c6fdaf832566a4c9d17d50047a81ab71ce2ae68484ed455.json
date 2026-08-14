@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"Transaction\"\n            WHERE \"accountId\" IN (?1, ?2) OR \"toAccountId\" IN (?1, ?2)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "798d10dd0a12b39c3c6fdaf832566a4c9d17d50047a81ab71ce2ae68484ed455"
+}

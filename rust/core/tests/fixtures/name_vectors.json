@@ -1,0 +1,4875 @@
+{
+ "generatedBy": "packages/core/dist",
+ "synthetic": true,
+ "normalized": [
+  {
+   "in": "Amazon",
+   "out": "amazon"
+  },
+  {
+   "in": "Costco",
+   "out": "costco"
+  },
+  {
+   "in": "Whole Foods",
+   "out": "whole foods"
+  },
+  {
+   "in": "Netflix",
+   "out": "netflix"
+  },
+  {
+   "in": "Spotify",
+   "out": "spotify"
+  },
+  {
+   "in": "POS PURCHASE AMAZON",
+   "out": "amazon"
+  },
+  {
+   "in": "DEBIT CARD PURCHASE COSTCO",
+   "out": "costco"
+  },
+  {
+   "in": "RECURRING PAYMENT NETFLIX",
+   "out": "netflix"
+  },
+  {
+   "in": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "out": "xxxx1234 spotify"
+  },
+  {
+   "in": "COSTCO WHSE #0429",
+   "out": "costco whse"
+  },
+  {
+   "in": "WALMART 3421 SUPERCENTER",
+   "out": "walmart supercenter"
+  },
+  {
+   "in": "SHELL OIL 57445123456",
+   "out": "shell oil"
+  },
+  {
+   "in": "TST* ROSSIS CAFE 002",
+   "out": "tst rossis cafe"
+  },
+  {
+   "in": "SQ *COFFEE SHOP 12",
+   "out": "sq coffee shop 12"
+  },
+  {
+   "in": "WHOLE FOODS MKT",
+   "out": "whole foods mkt"
+  },
+  {
+   "in": "WHOLEFDS",
+   "out": "wholefds"
+  },
+  {
+   "in": "AMZN Mktp US*2A4B5",
+   "out": "amzn mktp us 2a4b5"
+  },
+  {
+   "in": "AMAZON.COM*RT4G9",
+   "out": "amazon com rt4g9"
+  },
+  {
+   "in": "Rossi's Italian Cafe",
+   "out": "rossi s italian cafe"
+  },
+  {
+   "in": "ACME CORP., LLC",
+   "out": "acme corp llc"
+  },
+  {
+   "in": "A&W Restaurant",
+   "out": "a w restaurant"
+  },
+  {
+   "in": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "out": "of acme variable rate perpetual stretch preferred stock"
+  },
+  {
+   "in": "Buy TCKC",
+   "out": "buy tckc"
+  },
+  {
+   "in": "SELL 12 SHARES VTSAX",
+   "out": "sell 12 shares vtsax"
+  },
+  {
+   "in": "Sell VTSAX",
+   "out": "sell vtsax"
+  },
+  {
+   "in": "",
+   "out": ""
+  },
+  {
+   "in": "   ",
+   "out": ""
+  },
+  {
+   "in": "123456",
+   "out": ""
+  },
+  {
+   "in": "###",
+   "out": ""
+  },
+  {
+   "in": "a",
+   "out": "a"
+  }
+ ],
+ "pairs": [
+  {
+   "a": "Amazon",
+   "b": "Amazon",
+   "sim": 1
+  },
+  {
+   "a": "Amazon",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 1
+  },
+  {
+   "a": "Amazon",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "Amazon",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "Amazon",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.9
+  },
+  {
+   "a": "Amazon",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Amazon",
+   "b": "a",
+   "sim": 0.9
+  },
+  {
+   "a": "Costco",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "Costco",
+   "sim": 1
+  },
+  {
+   "a": "Costco",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 1
+  },
+  {
+   "a": "Costco",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.9
+  },
+  {
+   "a": "Costco",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.21052631578947367
+  },
+  {
+   "a": "Costco",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.09523809523809523
+  },
+  {
+   "a": "Costco",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.1
+  },
+  {
+   "a": "Costco",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "Costco",
+   "b": "ACME CORP., LLC",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "Costco",
+   "b": "A&W Restaurant",
+   "sim": 0.1111111111111111
+  },
+  {
+   "a": "Costco",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.06779661016949153
+  },
+  {
+   "a": "Costco",
+   "b": "Buy TCKC",
+   "sim": 0.16666666666666666
+  },
+  {
+   "a": "Costco",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Costco",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Whole Foods",
+   "sim": 1
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.1
+  },
+  {
+   "a": "Whole Foods",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.15384615384615385
+  },
+  {
+   "a": "Whole Foods",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.9
+  },
+  {
+   "a": "Whole Foods",
+   "b": "WHOLEFDS",
+   "sim": 0.5882352941176471
+  },
+  {
+   "a": "Whole Foods",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "ACME CORP., LLC",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "Whole Foods",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.0625
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Whole Foods",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Netflix",
+   "sim": 1
+  },
+  {
+   "a": "Netflix",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 1
+  },
+  {
+   "a": "Netflix",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.08
+  },
+  {
+   "a": "Netflix",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.03333333333333333
+  },
+  {
+   "a": "Netflix",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Netflix",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Spotify",
+   "sim": 1
+  },
+  {
+   "a": "Spotify",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0.5714285714285714
+  },
+  {
+   "a": "Spotify",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Spotify",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Amazon",
+   "sim": 1
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 1
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.9
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "POS PURCHASE AMAZON",
+   "b": "a",
+   "sim": 0.9
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Costco",
+   "sim": 1
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 1
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.9
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.21052631578947367
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.09523809523809523
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.1
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "ACME CORP., LLC",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "A&W Restaurant",
+   "sim": 0.1111111111111111
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.06779661016949153
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Buy TCKC",
+   "sim": 0.16666666666666666
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "DEBIT CARD PURCHASE COSTCO",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Netflix",
+   "sim": 1
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 1
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.08
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.03333333333333333
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "RECURRING PAYMENT NETFLIX",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Spotify",
+   "sim": 0.5714285714285714
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 1
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.12903225806451613
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.058823529411764705
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.028985507246376812
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Costco",
+   "sim": 0.9
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Whole Foods",
+   "sim": 0.1
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.9
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "COSTCO WHSE #0429",
+   "sim": 1
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.16666666666666666
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.07692307692307693
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "WHOLEFDS",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.08
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.06896551724137931
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "ACME CORP., LLC",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "A&W Restaurant",
+   "sim": 0.17391304347826086
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.0625
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Buy TCKC",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.06896551724137931
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "Sell VTSAX",
+   "sim": 0.10526315789473684
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "COSTCO WHSE #0429",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Amazon",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 1
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.0625
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.058823529411764705
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.12121212121212122
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.10810810810810811
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "A&W Restaurant",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.19444444444444445
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.10810810810810811
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "WALMART 3421 SUPERCENTER",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "SHELL OIL 57445123456",
+   "sim": 1
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "ACME CORP., LLC",
+   "sim": 0.1
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.03225806451612903
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.2962962962962963
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "Sell VTSAX",
+   "sim": 0.35294117647058826
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "SHELL OIL 57445123456",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Costco",
+   "sim": 0.21052631578947367
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.21052631578947367
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.16666666666666666
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.0625
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 1
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.13333333333333333
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.07142857142857142
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.13793103448275862
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.5454545454545454
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "ACME CORP., LLC",
+   "sim": 0.07692307692307693
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "A&W Restaurant",
+   "sim": 0.14814814814814814
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.08823529411764706
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.12121212121212122
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "Sell VTSAX",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "TST* ROSSIS CAFE 002",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Costco",
+   "sim": 0.09523809523809523
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Whole Foods",
+   "sim": 0.15384615384615385
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.09523809523809523
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0.12903225806451613
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.07692307692307693
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.058823529411764705
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.13333333333333333
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 1
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.13333333333333333
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "WHOLEFDS",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.12903225806451613
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.17142857142857143
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "ACME CORP., LLC",
+   "sim": 0.2857142857142857
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.11428571428571428
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.22857142857142856
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "SQ *COFFEE SHOP 12",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Whole Foods",
+   "sim": 0.9
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.07142857142857142
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.13333333333333333
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "WHOLE FOODS MKT",
+   "sim": 1
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "WHOLEFDS",
+   "sim": 0.47619047619047616
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.25806451612903225
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "ACME CORP., LLC",
+   "sim": 0.07692307692307693
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.058823529411764705
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "WHOLE FOODS MKT",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Whole Foods",
+   "sim": 0.5882352941176471
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.47619047619047616
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "WHOLEFDS",
+   "sim": 1
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.06557377049180328
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "WHOLEFDS",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Amazon",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.25806451612903225
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 1
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.125
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.1111111111111111
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "ACME CORP., LLC",
+   "sim": 0.06896551724137931
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.05555555555555555
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "AMZN Mktp US*2A4B5",
+   "b": "a",
+   "sim": 0.9
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Amazon",
+   "sim": 0.9
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Costco",
+   "sim": 0.1
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0.9
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.1
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.08
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.12121212121212122
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.13793103448275862
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.12903225806451613
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.125
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 1
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "ACME CORP., LLC",
+   "sim": 0.14814814814814814
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "A&W Restaurant",
+   "sim": 0.07142857142857142
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.028985507246376812
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "AMAZON.COM*RT4G9",
+   "b": "a",
+   "sim": 0.9
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Costco",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Netflix",
+   "sim": 0.08
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.08333333333333333
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0.08
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0.058823529411764705
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.06896551724137931
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.10810810810810811
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.5454545454545454
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.17142857142857143
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.1111111111111111
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Rossi's Italian Cafe",
+   "sim": 1
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "ACME CORP., LLC",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "A&W Restaurant",
+   "sim": 0.125
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.1095890410958904
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.10526315789473684
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Rossi's Italian Cafe",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Costco",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Whole Foods",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.09090909090909091
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0.1
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.07692307692307693
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.2857142857142857
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.07692307692307693
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.06896551724137931
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.14814814814814814
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "ACME CORP., LLC",
+   "sim": 1
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.15151515151515152
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "Sell VTSAX",
+   "sim": 0.09523809523809523
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "ACME CORP., LLC",
+   "b": "a",
+   "sim": 0.9
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Costco",
+   "sim": 0.1111111111111111
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.1111111111111111
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.17391304347826086
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.14814814814814814
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.07142857142857142
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.125
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "A&W Restaurant",
+   "sim": 1
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.11940298507462686
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.125
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "A&W Restaurant",
+   "b": "a",
+   "sim": 0.9
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Costco",
+   "sim": 0.06779661016949153
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Whole Foods",
+   "sim": 0.0625
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Netflix",
+   "sim": 0.03333333333333333
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.06779661016949153
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0.03333333333333333
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0.028985507246376812
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.0625
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.19444444444444445
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0.03225806451612903
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.08823529411764706
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.11428571428571428
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.058823529411764705
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "WHOLEFDS",
+   "sim": 0.06557377049180328
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.028985507246376812
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.1095890410958904
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "ACME CORP., LLC",
+   "sim": 0.15151515151515152
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "A&W Restaurant",
+   "sim": 0.11940298507462686
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 1
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Buy TCKC",
+   "sim": 0.06557377049180328
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.136986301369863
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "Sell VTSAX",
+   "sim": 0.06349206349206349
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Costco",
+   "sim": 0.16666666666666666
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0.16666666666666666
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.06557377049180328
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Buy TCKC",
+   "sim": 1
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Buy TCKC",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0.11764705882352941
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.06896551724137931
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0.10810810810810811
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0.2962962962962963
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.12121212121212122
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0.22857142857142856
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0.06060606060606061
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.05555555555555555
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0.10526315789473684
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "ACME CORP., LLC",
+   "sim": 0.06451612903225806
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "A&W Restaurant",
+   "sim": 0.125
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.136986301369863
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 1
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "Sell VTSAX",
+   "sim": 0.6428571428571429
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "SELL 12 SHARES VTSAX",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0.10526315789473684
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0.35294117647058826
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0.08695652173913043
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "ACME CORP., LLC",
+   "sim": 0.09523809523809523
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0.06349206349206349
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0.6428571428571429
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "Sell VTSAX",
+   "sim": 1
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "Sell VTSAX",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "   ",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "123456",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Amazon",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "ACME CORP., LLC",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "A&W Restaurant",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "###",
+   "b": "a",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "Amazon",
+   "sim": 0.9
+  },
+  {
+   "a": "a",
+   "b": "Costco",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "Whole Foods",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "Netflix",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "Spotify",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "POS PURCHASE AMAZON",
+   "sim": 0.9
+  },
+  {
+   "a": "a",
+   "b": "DEBIT CARD PURCHASE COSTCO",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "RECURRING PAYMENT NETFLIX",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "CARD PURCHASE XXXX1234 SPOTIFY",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "COSTCO WHSE #0429",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "WALMART 3421 SUPERCENTER",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "SHELL OIL 57445123456",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "TST* ROSSIS CAFE 002",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "SQ *COFFEE SHOP 12",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "WHOLE FOODS MKT",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "WHOLEFDS",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "AMZN Mktp US*2A4B5",
+   "sim": 0.9
+  },
+  {
+   "a": "a",
+   "b": "AMAZON.COM*RT4G9",
+   "sim": 0.9
+  },
+  {
+   "a": "a",
+   "b": "Rossi's Italian Cafe",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "ACME CORP., LLC",
+   "sim": 0.9
+  },
+  {
+   "a": "a",
+   "b": "A&W Restaurant",
+   "sim": 0.9
+  },
+  {
+   "a": "a",
+   "b": "Purchase of Acme Variable Rate Perpetual Stretch Preferred Stock",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "Buy TCKC",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "SELL 12 SHARES VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "Sell VTSAX",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "   ",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "123456",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "###",
+   "sim": 0
+  },
+  {
+   "a": "a",
+   "b": "a",
+   "sim": 1
+  }
+ ],
+ "dayDiffs": [
+  {
+   "a": "2026-01-01",
+   "b": "2026-01-01",
+   "days": 0
+  },
+  {
+   "a": "2026-01-01",
+   "b": "2026-01-02",
+   "days": 1
+  },
+  {
+   "a": "2026-01-01",
+   "b": "2026-01-31",
+   "days": 30
+  },
+  {
+   "a": "2026-01-01",
+   "b": "2026-02-01",
+   "days": 31
+  },
+  {
+   "a": "2026-01-01",
+   "b": "2026-03-01",
+   "days": 59
+  },
+  {
+   "a": "2026-01-01",
+   "b": "2025-12-31",
+   "days": 1
+  },
+  {
+   "a": "2026-01-01",
+   "b": "2024-02-29",
+   "days": 672
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2026-01-01",
+   "days": 1
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2026-01-02",
+   "days": 0
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2026-01-31",
+   "days": 29
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2026-02-01",
+   "days": 30
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2026-03-01",
+   "days": 58
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2025-12-31",
+   "days": 2
+  },
+  {
+   "a": "2026-01-02",
+   "b": "2024-02-29",
+   "days": 673
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2026-01-01",
+   "days": 30
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2026-01-02",
+   "days": 29
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2026-01-31",
+   "days": 0
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2026-02-01",
+   "days": 1
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2026-03-01",
+   "days": 29
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2025-12-31",
+   "days": 31
+  },
+  {
+   "a": "2026-01-31",
+   "b": "2024-02-29",
+   "days": 702
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2026-01-01",
+   "days": 31
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2026-01-02",
+   "days": 30
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2026-01-31",
+   "days": 1
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2026-02-01",
+   "days": 0
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2026-03-01",
+   "days": 28
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2025-12-31",
+   "days": 32
+  },
+  {
+   "a": "2026-02-01",
+   "b": "2024-02-29",
+   "days": 703
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2026-01-01",
+   "days": 59
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2026-01-02",
+   "days": 58
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2026-01-31",
+   "days": 29
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2026-02-01",
+   "days": 28
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2026-03-01",
+   "days": 0
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2025-12-31",
+   "days": 60
+  },
+  {
+   "a": "2026-03-01",
+   "b": "2024-02-29",
+   "days": 731
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2026-01-01",
+   "days": 1
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2026-01-02",
+   "days": 2
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2026-01-31",
+   "days": 31
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2026-02-01",
+   "days": 32
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2026-03-01",
+   "days": 60
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2025-12-31",
+   "days": 0
+  },
+  {
+   "a": "2025-12-31",
+   "b": "2024-02-29",
+   "days": 671
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2026-01-01",
+   "days": 672
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2026-01-02",
+   "days": 673
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2026-01-31",
+   "days": 702
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2026-02-01",
+   "days": 703
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2026-03-01",
+   "days": 731
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2025-12-31",
+   "days": 671
+  },
+  {
+   "a": "2024-02-29",
+   "b": "2024-02-29",
+   "days": 0
+  }
+ ]
+}
