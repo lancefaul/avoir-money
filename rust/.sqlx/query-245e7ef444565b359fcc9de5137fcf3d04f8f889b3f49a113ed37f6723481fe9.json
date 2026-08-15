@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT s.\"accountId\" AS \"account_id!\", s.\"periodEnd\" AS \"period_end!\",\n                  s.\"statementEndingBalance\" AS \"statement!: i64\",\n                  a.\"openingBalance\" AS \"opening!: i64\"\n             FROM \"ReconciliationSession\" s\n             JOIN \"Account\" a ON a.\"id\" = s.\"accountId\"\n            WHERE s.\"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "period_end!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "periodEnd"
+          }
+        }
+      },
+      {
+        "name": "statement!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "statementEndingBalance"
+          }
+        }
+      },
+      {
+        "name": "opening!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "openingBalance"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "245e7ef444565b359fcc9de5137fcf3d04f8f889b3f49a113ed37f6723481fe9"
+}

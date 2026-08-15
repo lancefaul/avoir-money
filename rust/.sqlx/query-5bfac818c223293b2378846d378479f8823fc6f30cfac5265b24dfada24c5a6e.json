@@ -1,0 +1,134 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT e.\"id\" AS \"id!\", e.\"name\" AS \"name!\", e.\"frequency\" AS \"freq!\",\n                  e.\"budgetId\" AS budget_id, e.\"accountId\" AS account_id,\n                  e.\"isAutomatic\" AS \"auto!: i64\", e.\"dueDay\" AS \"due_day: i64\",\n                  e.\"amount\" AS \"amount!: i64\",\n                  t.\"netAmount\" AS \"net!: i64\", t.\"date\" AS \"tx_date!\"\n             FROM \"Expense\" e\n             JOIN \"Transaction\" t ON t.\"expenseId\" = e.\"id\"\n            WHERE e.\"frequency\" = 'ONE_TIME'\n              AND t.\"date\" >= ?1 AND t.\"date\" <= ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "freq!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "budget_id",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "auto!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "isAutomatic"
+          }
+        }
+      },
+      {
+        "name": "due_day: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueDay"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "net!: i64",
+        "ordinal": 8,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "netAmount"
+          }
+        }
+      },
+      {
+        "name": "tx_date!",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "5bfac818c223293b2378846d378479f8823fc6f30cfac5265b24dfada24c5a6e"
+}

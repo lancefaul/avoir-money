@@ -1,0 +1,53 @@
+{
+  "name": "@budget-tracker/showcase",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "doctor": "npx react-doctor@latest"
+  },
+  "dependencies": {
+    "@budget-tracker/ui": "workspace:*",
+    "@fontsource-variable/albert-sans": "5.2.8",
+    "@fontsource-variable/bitter": "5.2.10",
+    "@fontsource-variable/cormorant-garamond": "5.2.6",
+    "@fontsource-variable/dm-sans": "5.2.8",
+    "@fontsource-variable/figtree": "5.2.10",
+    "@fontsource-variable/fira-code": "5.2.7",
+    "@fontsource-variable/fraunces": "5.2.9",
+    "@fontsource-variable/geist": "5.2.9",
+    "@fontsource-variable/inconsolata": "5.2.8",
+    "@fontsource-variable/inter": "5.2.8",
+    "@fontsource-variable/jetbrains-mono": "5.2.8",
+    "@fontsource-variable/libre-franklin": "5.3.0",
+    "@fontsource-variable/lora": "5.2.8",
+    "@fontsource-variable/manrope": "5.2.8",
+    "@fontsource-variable/nunito-sans": "5.2.7",
+    "@fontsource-variable/oswald": "5.3.0",
+    "@fontsource-variable/outfit": "5.2.8",
+    "@fontsource-variable/playfair-display": "5.2.8",
+    "@fontsource-variable/plus-jakarta-sans": "5.2.8",
+    "@fontsource-variable/source-code-pro": "5.2.7",
+    "@fontsource-variable/source-sans-3": "5.2.9",
+    "@fontsource/dm-serif-display": "5.2.8",
+    "@fontsource/ibm-plex-mono": "5.2.7",
+    "@fontsource/libre-baskerville": "5.2.10",
+    "@fontsource/merriweather": "5.2.11",
+    "lucide-react": "1.8.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vanilla-extract/css": "1.20.1",
+    "@vanilla-extract/vite-plugin": "5.2.2",
+    "@vitejs/plugin-react": "4.7.0",
+    "typescript": "5.9.3",
+    "vite": "6.4.3"
+  }
+}

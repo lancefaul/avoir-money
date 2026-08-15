@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"paidOff\" AS \"paid!: i64\" FROM \"Debt\"",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "paid!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "paidOff"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "817670d09e30bbe3cf7470b07758d07da3ad5e0fb7ebc731e57315a2228287e8"
+}

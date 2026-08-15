@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"ScheduledTransaction\"\n            WHERE \"sourceType\" = ? AND \"sourceId\" = ?\n              AND (\"status\" = 'PENDING' OR (?3 = 1 AND \"status\" = 'SNOOZED'))",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "9721c95361c0c71f7c5dafba6b960fbec085f97a9519a08591c39f9681dee137"
+}

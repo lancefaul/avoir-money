@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"BudgetGoal\"\n              SET \"name\" = COALESCE(?1, \"name\"),\n                  \"type\" = COALESCE(?2, \"type\"),\n                  \"targetAmount\" = COALESCE(?3, \"targetAmount\"),\n                  \"currentAmount\" = COALESCE(?4, \"currentAmount\"),\n                  \"budgetId\" = CASE WHEN ?5 THEN ?6 ELSE \"budgetId\" END,\n                  \"deadline\" = CASE WHEN ?7 THEN ?8 ELSE \"deadline\" END,\n                  \"updatedAt\" = ?9\n            WHERE \"id\" = ?10",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "e21f81fc7a0bd4e7943811516a88809a05772f35dfd1d1553799365186b7f1c7"
+}

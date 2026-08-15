@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"CategoryBudget\" SET \"highWaterMark\" = ?1 WHERE \"id\" = ?2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "3a4257842c898935fc0450bdbb98f55cbd1c7a1fc2a688846f699c849aa49631"
+}

@@ -1,0 +1,33 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT b.\"name\" AS \"name!\", COALESCE(SUM(t.\"amount\"), 0) AS \"total!: i64\"\n             FROM \"Budget\" b\n             LEFT JOIN \"Transaction\" t\n               ON t.\"budgetId\" = b.\"id\" AND t.\"type\" = 'EXPENSE'\n              AND t.\"date\" >= ?1 AND t.\"date\" <= ?2\n            WHERE b.\"name\" IN ('Healthcare', 'Medicine')\n            GROUP BY b.\"name\"",
+  "describe": {
+    "columns": [
+      {
+        "name": "name!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "total!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "a2d03b9664f4e5d58cf769ce178773102a88b1bd173573be1fe9d740e8e41a46"
+}

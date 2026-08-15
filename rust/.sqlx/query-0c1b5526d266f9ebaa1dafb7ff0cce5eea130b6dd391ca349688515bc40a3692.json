@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"createdAt\" FROM \"Backup\"\n            WHERE \"source\" = 'SCHEDULED' AND \"status\" = 'COMPLETED'\n            ORDER BY \"createdAt\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "createdAt",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "0c1b5526d266f9ebaa1dafb7ff0cce5eea130b6dd391ca349688515bc40a3692"
+}

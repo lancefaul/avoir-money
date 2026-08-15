@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"expenseId\" AS \"expense_id: String\" FROM \"UtilityService\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "expense_id: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "expenseId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "e1bf858371157c540d2f8a79eaee2c69cebc0bc0cdaf8dec11a958783552bd11"
+}

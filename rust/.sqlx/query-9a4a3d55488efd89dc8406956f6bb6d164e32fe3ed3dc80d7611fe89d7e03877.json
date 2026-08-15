@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"openingBalance\" AS \"opening!: i64\" FROM \"Account\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "opening!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "openingBalance"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "9a4a3d55488efd89dc8406956f6bb6d164e32fe3ed3dc80d7611fe89d7e03877"
+}

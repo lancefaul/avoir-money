@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Transaction\" SET\n             \"amount\"     = COALESCE(?1, \"amount\"),\n             \"netAmount\"  = COALESCE(?1, \"netAmount\"),\n             \"name\"       = COALESCE(?2, \"name\"),\n             \"date\"       = COALESCE(?3, \"date\"),\n             \"type\"       = COALESCE(?4, \"type\"),\n             \"accountId\"      = CASE WHEN ?6  THEN NULL ELSE COALESCE(?5,  \"accountId\")      END,\n             \"toAccountId\"    = CASE WHEN ?8  THEN NULL ELSE COALESCE(?7,  \"toAccountId\")    END,\n             \"expenseId\"      = CASE WHEN ?10 THEN NULL ELSE COALESCE(?9,  \"expenseId\")      END,\n             \"incomeId\"       = CASE WHEN ?12 THEN NULL ELSE COALESCE(?11, \"incomeId\")       END,\n             \"budgetId\"       = CASE WHEN ?14 THEN NULL ELSE COALESCE(?13, \"budgetId\")       END,\n             \"note\"           = CASE WHEN ?16 THEN NULL ELSE COALESCE(?15, \"note\")           END,\n             \"occurrenceDate\" = CASE WHEN ?18 THEN NULL ELSE COALESCE(?17, \"occurrenceDate\") END,\n             \"descriptionId\"  = CASE WHEN ?20 THEN NULL ELSE COALESCE(?19, \"descriptionId\")  END\n           WHERE \"id\" = ?21",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 21
+    },
+    "nullable": []
+  },
+  "hash": "026d56f8f0111a3d409b39ead643453945472748820923aa9f09cea2680a72ff"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"ScheduledTransaction\"\n              SET \"status\" = 'SKIPPED', \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "0ceddad575872d4abfd0b7924dab176ea4f8360c49db97c7e78fca2744c9108b"
+}

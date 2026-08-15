@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"ConnectedService\"\n             (\"id\",\"provider\",\"secret\",\"hint\",\"createdAt\",\"updatedAt\")\n           VALUES (?1,?2,?3,?4,?5,?5)\n           ON CONFLICT(\"provider\") DO UPDATE SET\n             \"secret\" = ?3, \"hint\" = ?4, \"updatedAt\" = ?5",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "acc4e082399e15964455d26eff3037a382a538861cb55d09e28f85288a31f4f9"
+}

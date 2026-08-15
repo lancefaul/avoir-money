@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"custodianId\" FROM \"InvestmentHolding\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "custodianId",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "custodianId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "45cb8ab76926ec6e8bf11a80923561922cfecd48484ed8f62028a9d9f10c69a5"
+}

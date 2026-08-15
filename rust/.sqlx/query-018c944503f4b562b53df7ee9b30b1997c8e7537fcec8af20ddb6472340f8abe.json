@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"name\" AS \"name!\", \"budgetId\" AS \"budget_id!\",\n                      \"accountId\" AS \"account_id: String\"\n                 FROM \"Income\" WHERE \"id\" = (SELECT \"sourceId\" FROM \"ScheduledTransaction\" WHERE \"id\" = ?)",
+  "describe": {
+    "columns": [
+      {
+        "name": "name!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "budget_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "account_id: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "accountId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "018c944503f4b562b53df7ee9b30b1997c8e7537fcec8af20ddb6472340f8abe"
+}

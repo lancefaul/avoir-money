@@ -1,0 +1,36 @@
+node_modules/
+dist/
+.turbo/
+*.tsbuildinfo
+packages/db/node_modules/
+coverage/
+*.dump
+backups/
+*.xlsx
+*.xls
+*.csv
+pnpm-lock.yaml
+
+# Rust spike build artefacts and sqlx query cache (v0.9)
+spikes/target/
+spikes/.sqlx/
+spikes/Cargo.lock
+
+# Rust export tool
+rust/target/
+
+# Tauri desktop shell
+desktop/target/
+desktop/gen/
+
+# Generated differential-test fixture (produced by generate.mjs)
+rust/core/tests/fixtures/debt_vectors.json
+rust/core/tests/fixtures/date_vectors.json
+rust/core/tests/fixtures/sign_vectors.json
+rust/core/tests/fixtures/amort_vectors.json
+rust/core/tests/fixtures/crossfield_vectors.json
+rust/core/tests/fixtures/direction_vectors.json
+rust/core/tests/fixtures/name_vectors.json
+rust/core/tests/fixtures/leftover_vectors.json
+rust/.sqlx/
+rust/core/tests/fixtures/matcher_vectors.json

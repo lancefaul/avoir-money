@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE account SET balance = balance - ? WHERE id = 'acct-checking'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "6b97a25a442b9f149e39f93681f8f4531e7b2f922c2a55f07ca2b1ce921453b8"
+}

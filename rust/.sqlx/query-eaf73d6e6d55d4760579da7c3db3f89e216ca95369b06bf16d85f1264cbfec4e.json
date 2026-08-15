@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Backup\"\n                     (\"id\",\"filename\",\"filepath\",\"sizeBytes\",\"status\",\"source\",\"error\",\"createdAt\")\n                   VALUES (?, '', '', 0, 'FAILED', ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "eaf73d6e6d55d4760579da7c3db3f89e216ca95369b06bf16d85f1264cbfec4e"
+}

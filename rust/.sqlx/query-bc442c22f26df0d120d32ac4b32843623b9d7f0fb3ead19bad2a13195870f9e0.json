@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT d.\"quantity\" AS \"quantity!: String\", d.\"direction\" AS \"direction!: String\",\n                  d.\"bitcoinUnit\" AS unit\n           FROM \"TradeDetail\" d\n           JOIN \"Transaction\" t ON t.\"id\" = d.\"transactionId\"\n           WHERE d.\"assetType\" = 'Bitcoin' AND d.\"walletId\" = ? AND t.\"date\" <= ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "quantity!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "direction!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "direction"
+          }
+        }
+      },
+      {
+        "name": "unit",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "bc442c22f26df0d120d32ac4b32843623b9d7f0fb3ead19bad2a13195870f9e0"
+}

@@ -1,0 +1,55 @@
+# =============================================================================
+# Supply Chain Security — GitHub Actions Workflow (Reference Only)
+# =============================================================================
+#
+# This file is a REFERENCE workflow for future CI/CD setup.
+# It is NOT active — it lives in docs/, not .github/workflows/.
+#
+# To activate: copy to .github/workflows/supply-chain.yml
+#
+# See: .kiro/specs/supply-chain-hardening/requirements.md (US-5)
+# See: .kiro/specs/supply-chain-hardening/design.md (Component 7)
+# =============================================================================
+
+name: Supply Chain Security
+on:
+  pull_request:
+    paths:
+      - 'package.json'
+      - '**/package.json'
+      - 'pnpm-lock.yaml'
+      - '.npmrc'
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 9 * * 1' # Weekly Monday 9am UTC
+
+jobs:
+  supply-chain-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4 # Must match packageManager field in package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'pnpm'
+
+      - name: Install dependencies (frozen lockfile)
+        run: pnpm install --frozen-lockfile
+
+      - name: Audit for vulnerabilities
+        run: pnpm audit --audit-level=high
+
+      - name: Verify package signatures
+        run: pnpm audit --signatures
+        continue-on-error: true # Sigstore coverage is incomplete
+
+      - name: Check for lockfile drift
+        run: |
+          pnpm install --frozen-lockfile
+          git diff --exit-code pnpm-lock.yaml

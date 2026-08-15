@@ -1,0 +1,206 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"type\" AS \"ty!\", \"year\" AS \"year!: i64\",\n                  \"employer\" AS \"employer!\", \"premium\" AS \"premium!: i64\",\n                  \"deductibleLimit\" AS \"deductible_limit: i64\",\n                  \"oopmLimit\" AS \"oopm_limit: i64\", \"status\" AS \"status!\",\n                  \"endedOn\" AS ended_on, \"closedOn\" AS closed_on,\n                  \"deductibleOverride\" AS \"deductible_override!: i64\",\n                  \"oopmOverride\" AS \"oopm_override!: i64\",\n                  \"metadata\" AS \"metadata!\", \"budgetId\" AS budget_id,\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"InsurancePolicy\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "year!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "year"
+          }
+        }
+      },
+      {
+        "name": "employer!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "employer"
+          }
+        }
+      },
+      {
+        "name": "premium!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "premium"
+          }
+        }
+      },
+      {
+        "name": "deductible_limit: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "deductibleLimit"
+          }
+        }
+      },
+      {
+        "name": "oopm_limit: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "oopmLimit"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "ended_on",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "endedOn"
+          }
+        }
+      },
+      {
+        "name": "closed_on",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "closedOn"
+          }
+        }
+      },
+      {
+        "name": "deductible_override!: i64",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "deductibleOverride"
+          }
+        }
+      },
+      {
+        "name": "oopm_override!: i64",
+        "ordinal": 11,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "oopmOverride"
+          }
+        }
+      },
+      {
+        "name": "metadata!",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "metadata"
+          }
+        }
+      },
+      {
+        "name": "budget_id",
+        "ordinal": 13,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 14,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 15,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "fc044d7313c8ee16b10109785c12ea293bcf4bbef07b4dca3fae5235a3a756f2"
+}

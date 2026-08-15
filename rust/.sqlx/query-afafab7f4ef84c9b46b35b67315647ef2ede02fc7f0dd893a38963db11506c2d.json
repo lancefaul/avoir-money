@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"ScheduledTransaction\"\n              SET \"status\" = 'SNOOZED', \"snoozedUntil\" = ?, \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "afafab7f4ef84c9b46b35b67315647ef2ede02fc7f0dd893a38963db11506c2d"
+}

@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\", \"dueDate\" AS \"due!: String\",\n                  \"expectedAmount\" AS \"expected!: i64\"\n           FROM \"ScheduledTransaction\" WHERE \"transactionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "due!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "expected!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "3f94c2822a805fddd064b8f5f80a35d6c7ff198a23777bafeb9f36e5a6f71472"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"InsurancePolicy\"\n              SET \"deductibleOverride\" = COALESCE(?1, \"deductibleOverride\"),\n                  \"oopmOverride\" = COALESCE(?2, \"oopmOverride\"),\n                  \"updatedAt\" = ?3\n            WHERE \"id\" = ?4",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "0b21fd3b59e1cc95c22a2639cad13ae80bad29af556babc87fc696e65addb7a6"
+}

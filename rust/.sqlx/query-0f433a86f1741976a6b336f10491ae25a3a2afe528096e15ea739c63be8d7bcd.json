@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Expense\" SET \"accountId\" = NULL WHERE \"accountId\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "0f433a86f1741976a6b336f10491ae25a3a2afe528096e15ea739c63be8d7bcd"
+}

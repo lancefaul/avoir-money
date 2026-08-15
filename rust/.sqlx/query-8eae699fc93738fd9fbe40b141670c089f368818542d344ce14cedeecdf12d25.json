@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Expense\"\n                     (\"id\",\"name\",\"amount\",\"frequency\",\"budgetId\",\"accountId\",\"isAutomatic\",\n                      \"skipWeekend\",\"dueDay\",\"dueWeekday\",\"dueOrdinal\",\"amountSchedule\",\n                      \"startDate\",\"endDate\",\"note\",\"managementUrl\",\"createdAt\",\"updatedAt\")\n                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 18
+    },
+    "nullable": []
+  },
+  "hash": "8eae699fc93738fd9fbe40b141670c089f368818542d344ce14cedeecdf12d25"
+}
