@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"YearPlan\" SET \"status\" = 'ACTIVE', \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "b63143114942af636151b175c160d5d83fe60432dc223feb36374c070356d9f3"
+}

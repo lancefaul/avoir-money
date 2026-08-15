@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"ReconciliationMatch\" WHERE \"sessionId\" = ? AND \"matchType\" <> 'MANUAL'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "4fea92057a1a0f050b23a5101abac8b36e60162295d67102e233cdc14f88de70"
+}

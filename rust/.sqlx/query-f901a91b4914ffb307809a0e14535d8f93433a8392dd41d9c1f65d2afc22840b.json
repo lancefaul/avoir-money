@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"BudgetExpenseLink\" (\"id\",\"categoryBudgetId\",\"expenseId\",\"createdAt\")\n           VALUES (?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "f901a91b4914ffb307809a0e14535d8f93433a8392dd41d9c1f65d2afc22840b"
+}

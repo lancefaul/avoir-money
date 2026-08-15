@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"BudgetVersion\" WHERE \"categoryBudgetId\" = ?1 AND \"effectiveDate\" = ?2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "c80fe9b2a568696e970b8feda86cffdcb579a9514f482cc409bc50b542c0e5e8"
+}

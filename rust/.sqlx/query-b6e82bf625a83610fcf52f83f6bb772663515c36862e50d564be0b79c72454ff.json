@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"quantity\" AS \"quantity!\" FROM \"InvestmentHolding\" WHERE \"custodianId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "quantity!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "b6e82bf625a83610fcf52f83f6bb772663515c36862e50d564be0b79c72454ff"
+}

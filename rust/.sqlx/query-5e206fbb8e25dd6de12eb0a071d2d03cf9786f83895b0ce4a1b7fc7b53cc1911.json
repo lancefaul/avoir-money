@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"status\" AS \"status!\", \"expectedAmount\" AS \"expected!: i64\",\n                  \"sourceType\" AS \"source_type!\", \"sourceId\" AS \"source_id!\",\n                  \"dueDate\" AS \"due_date!\"\n             FROM \"ScheduledTransaction\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "status!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "expected!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      },
+      {
+        "name": "source_type!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceType"
+          }
+        }
+      },
+      {
+        "name": "source_id!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceId"
+          }
+        }
+      },
+      {
+        "name": "due_date!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "5e206fbb8e25dd6de12eb0a071d2d03cf9786f83895b0ce4a1b7fc7b53cc1911"
+}

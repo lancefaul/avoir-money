@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"id\" AS \"id!\", t.\"date\" AS \"date!\", t.\"name\" AS \"name!\",\n                  t.\"amount\" AS \"amount!: i64\",\n                  b.\"name\" AS budget_name, b.\"icon\" AS budget_icon,\n                  a.\"name\" AS account_name\n             FROM \"Transaction\" t\n             LEFT JOIN \"Budget\" b ON b.\"id\" = t.\"budgetId\"\n             LEFT JOIN \"Account\" a ON a.\"id\" = t.\"accountId\"\n            WHERE t.\"type\" = 'EXPENSE' AND t.\"budgetId\" = ?1\n              AND t.\"date\" >= ?2 AND t.\"date\" <= ?3\n            ORDER BY t.\"date\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "budget_name",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "budget_icon",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "icon"
+          }
+        }
+      },
+      {
+        "name": "account_name",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "name"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "2fa8da0589bad19ec80dbd398e4453a6813eed748ffdec72889a43c4f1cbf45c"
+}

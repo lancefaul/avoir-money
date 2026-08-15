@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"ReconciliationMatch\"\n             (\"id\",\"sessionId\",\"statementRowId\",\"transactionId\",\"matchType\",\"createdAt\")\n           VALUES (?, ?, ?, ?, 'MANUAL', ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "0128fb5401cd4ec164b49a9556c30582cf8325d0d2fd7afd823cc36dcc257a13"
+}

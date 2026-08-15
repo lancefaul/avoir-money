@@ -1,0 +1,33 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"date\" AS \"date!\", SUM(\"value\") AS \"total!: i64\"\n             FROM \"InvestmentSnapshot\"\n            WHERE \"value\" IS NOT NULL AND (?1 IS NULL OR \"date\" >= ?1)\n            GROUP BY \"date\" ORDER BY \"date\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "date!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "total!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      true
+    ]
+  },
+  "hash": "addd16b4d1da2484d3527cd73fd81d45dd2fcbf5b3d66311101dbce8eac081ba"
+}

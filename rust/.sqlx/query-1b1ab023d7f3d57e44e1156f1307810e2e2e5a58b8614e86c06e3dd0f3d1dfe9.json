@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"Budget\"\n            WHERE (?1 IS NULL OR \"groupId\" = ?1)\n              AND (?2 = 1 OR \"deletedAt\" IS NULL)\n            ORDER BY \"name\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "1b1ab023d7f3d57e44e1156f1307810e2e2e5a58b8614e86c06e3dd0f3d1dfe9"
+}

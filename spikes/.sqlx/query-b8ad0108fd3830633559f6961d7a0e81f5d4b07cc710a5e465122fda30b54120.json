@@ -1,0 +1,76 @@
+{
+  "db_name": "SQLite",
+  "query": "\n        SELECT\n            id                          AS \"id!: String\",\n            date                        AS \"date!: String\",\n            created_at                  AS \"created_at!: String\",\n            0                           AS \"is_inbound!: bool\",\n            CASE type\n                WHEN 'INCOME'   THEN  net_amount\n                WHEN 'REFUND'   THEN  net_amount\n                WHEN 'EXPENSE'  THEN -net_amount\n                WHEN 'TRANSFER' THEN -net_amount\n                WHEN 'TRADE'    THEN CASE trade_direction\n                                        WHEN 'BUY'  THEN -net_amount\n                                        WHEN 'SELL' THEN  net_amount\n                                        ELSE 0 END\n                ELSE 0\n            END                         AS \"delta!: i64\",\n            balance_before              AS \"existing_before: i64\"\n        FROM txn\n        WHERE account_id = ?1 AND parent_id IS NULL\n          AND (date > ?2 OR (date = ?2 AND created_at > ?3)\n               OR (date = ?2 AND created_at = ?3 AND id > ?4))\n\n        UNION ALL\n\n        SELECT\n            id                          AS \"id!: String\",\n            date                        AS \"date!: String\",\n            created_at                  AS \"created_at!: String\",\n            1                           AS \"is_inbound!: bool\",\n            net_amount                  AS \"delta!: i64\",\n            to_balance_before           AS \"existing_before: i64\"\n        FROM txn\n        WHERE to_account_id = ?1 AND type = 'TRANSFER' AND parent_id IS NULL\n          AND (date > ?2 OR (date = ?2 AND created_at > ?3)\n               OR (date = ?2 AND created_at = ?3 AND id > ?4))\n\n        ORDER BY date, created_at, id\n        ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "date!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "created_at!: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "created_at"
+          }
+        }
+      },
+      {
+        "name": "is_inbound!: bool",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "delta!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "existing_before: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "balance_before"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "b8ad0108fd3830633559f6961d7a0e81f5d4b07cc710a5e465122fda30b54120"
+}

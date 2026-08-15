@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"InsurancePolicy\"\n             (\"id\",\"type\",\"year\",\"employer\",\"premium\",\"deductibleLimit\",\"oopmLimit\",\n              \"metadata\",\"budgetId\",\"status\",\"deductibleOverride\",\"oopmOverride\",\n              \"createdAt\",\"updatedAt\")\n           VALUES (?,?,?,?,?,?,?,?,?, 'ACTIVE', 0, 0, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 11
+    },
+    "nullable": []
+  },
+  "hash": "c4679d083fa75f7daac8ac257b542a9ec9d0dde7b6f12303f3f2ba99e20d1f85"
+}

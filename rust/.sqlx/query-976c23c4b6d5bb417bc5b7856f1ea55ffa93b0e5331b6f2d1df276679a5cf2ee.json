@@ -1,0 +1,443 @@
+{
+  "db_name": "SQLite",
+  "query": "\n        SELECT t.\"id\" AS \"id!\", t.\"type\" AS \"type!\", t.\"name\" AS \"name!\",\n               t.\"amount\" AS \"amount!: i64\", t.\"netAmount\" AS \"net_amount!: i64\",\n               t.\"date\" AS \"date!\", t.\"payPeriodId\" AS \"pay_period_id: String\",\n               t.\"expenseId\" AS \"expense_id: String\", t.\"incomeId\" AS \"income_id: String\",\n               t.\"accountId\" AS \"account_id: String\", t.\"toAccountId\" AS \"to_account_id: String\",\n               COALESCE(t.\"budgetId\", e.\"budgetId\", i.\"budgetId\") AS \"budget_id?: String\",\n               t.\"note\" AS \"note: String\",\n               t.\"costBasisAllocated\" AS \"cost_basis_allocated: i64\",\n               t.\"balanceBefore\" AS \"balance_before: i64\", t.\"balanceAfter\" AS \"balance_after: i64\",\n               t.\"toBalanceBefore\" AS \"to_balance_before: i64\",\n               t.\"toBalanceAfter\" AS \"to_balance_after: i64\",\n               t.\"parentId\" AS \"parent_id: String\",\n               t.\"purchaseGroupId\" AS \"purchase_group_id: String\",\n               t.\"isCashBack\" AS \"is_cash_back!: i64\", t.\"createdAt\" AS \"created_at!\",\n               (SELECT COUNT(*) FROM \"Transaction\" c WHERE c.\"parentId\" = t.\"id\") AS \"child_count!: i64\",\n               (SELECT COUNT(*) FROM \"ReconciliationSession\" s WHERE s.\"adjustmentTransactionId\" = t.\"id\") AS \"is_adj!: i64\",\n               d.\"direction\" AS \"d_direction?: String\", d.\"assetType\" AS \"d_asset?: String\",\n               d.\"ticker\" AS \"d_ticker?: String\", d.\"quantity\" AS \"d_qty?: String\",\n               d.\"unitPrice\" AS \"d_price?: String\", d.\"bitcoinUnit\" AS \"d_unit?: String\",\n               d.\"custodianId\" AS \"d_cust?: String\", d.\"walletId\" AS \"d_wallet?: String\",\n               b.\"walletId\" AS \"b_wallet?: String\", b.\"quantity\" AS \"b_qty?: String\",\n               b.\"unitPrice\" AS \"b_price?: String\", b.\"bitcoinUnit\" AS \"b_unit?: String\",\n               b.\"incomeType\" AS \"b_income?: String\"\n          FROM \"Transaction\" t\n          LEFT JOIN \"TradeDetail\" d ON d.\"transactionId\" = t.\"id\"\n          LEFT JOIN \"BitcoinPaymentDetail\" b ON b.\"transactionId\" = t.\"id\"\n          LEFT JOIN \"Expense\" e ON e.\"id\" = t.\"expenseId\"\n          LEFT JOIN \"Income\"  i ON i.\"id\" = t.\"incomeId\"\n          LEFT JOIN \"Account\" a ON a.\"id\" = t.\"accountId\"\n         WHERE t.\"parentId\" IS NULL\n           AND (?1  IS NULL OR t.\"type\" = ?1)\n           AND (?2  IS NULL OR t.\"payPeriodId\" = ?2)\n           AND (?3  IS NULL OR t.\"expenseId\" = ?3)\n           AND (?4  IS NULL OR t.\"incomeId\" = ?4)\n           AND (?5  IS NULL OR t.\"purchaseGroupId\" = ?5)\n           AND (?6  IS NULL OR t.\"accountId\" = ?6\n                            OR (t.\"toAccountId\" = ?6 AND t.\"type\" = 'TRANSFER'))\n           AND (?7  IS NULL OR t.\"budgetId\" IN (SELECT value FROM json_each(?7))\n                            OR (?8 = 1 AND t.\"budgetId\" IS NULL))\n           AND (?9  IS NULL\n                OR t.\"name\" LIKE ?9 OR t.\"note\" LIKE ?9 OR a.\"name\" LIKE ?9\n                OR e.\"name\" LIKE ?9 OR i.\"name\" LIKE ?9\n                OR (?10 IS NOT NULL AND t.\"amount\"    BETWEEN ?10 AND ?11)\n                OR (?10 IS NOT NULL AND t.\"netAmount\" BETWEEN ?10 AND ?11))\n           AND (?12 IS NULL\n                OR (?12 = 1 AND (t.\"expenseId\" IS NOT NULL OR t.\"incomeId\" IS NOT NULL))\n                OR (?12 = 0 AND t.\"expenseId\" IS NULL AND t.\"incomeId\" IS NULL))\n           AND (?13 IS NULL OR t.\"date\" >= ?13)\n           AND (?14 IS NULL OR t.\"date\" <= ?14)\n           AND (?16 IS NULL OR t.\"id\" = ?16)\n         ORDER BY\n           CASE WHEN ?15 = 1 THEN t.\"date\"      END ASC,\n           CASE WHEN ?15 = 1 THEN t.\"createdAt\" END ASC,\n           CASE WHEN ?15 = 1 THEN t.\"id\"        END ASC,\n           CASE WHEN ?15 = 0 THEN t.\"date\"      END DESC,\n           CASE WHEN ?15 = 0 THEN t.\"createdAt\" END DESC,\n           CASE WHEN ?15 = 0 THEN t.\"id\"        END DESC\n        ",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "type!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "net_amount!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "netAmount"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "pay_period_id: String",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "payPeriodId"
+          }
+        }
+      },
+      {
+        "name": "expense_id: String",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "expenseId"
+          }
+        }
+      },
+      {
+        "name": "income_id: String",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "incomeId"
+          }
+        }
+      },
+      {
+        "name": "account_id: String",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "to_account_id: String",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "toAccountId"
+          }
+        }
+      },
+      {
+        "name": "budget_id?: String",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": "Expression"
+      },
+      {
+        "name": "note: String",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "note"
+          }
+        }
+      },
+      {
+        "name": "cost_basis_allocated: i64",
+        "ordinal": 13,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "costBasisAllocated"
+          }
+        }
+      },
+      {
+        "name": "balance_before: i64",
+        "ordinal": 14,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "balanceBefore"
+          }
+        }
+      },
+      {
+        "name": "balance_after: i64",
+        "ordinal": 15,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "balanceAfter"
+          }
+        }
+      },
+      {
+        "name": "to_balance_before: i64",
+        "ordinal": 16,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "toBalanceBefore"
+          }
+        }
+      },
+      {
+        "name": "to_balance_after: i64",
+        "ordinal": 17,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "toBalanceAfter"
+          }
+        }
+      },
+      {
+        "name": "parent_id: String",
+        "ordinal": 18,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "parentId"
+          }
+        }
+      },
+      {
+        "name": "purchase_group_id: String",
+        "ordinal": 19,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "purchaseGroupId"
+          }
+        }
+      },
+      {
+        "name": "is_cash_back!: i64",
+        "ordinal": 20,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "isCashBack"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 21,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "child_count!: i64",
+        "ordinal": 22,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "is_adj!: i64",
+        "ordinal": 23,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "d_direction?: String",
+        "ordinal": 24,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "direction"
+          }
+        }
+      },
+      {
+        "name": "d_asset?: String",
+        "ordinal": 25,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "assetType"
+          }
+        }
+      },
+      {
+        "name": "d_ticker?: String",
+        "ordinal": 26,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "ticker"
+          }
+        }
+      },
+      {
+        "name": "d_qty?: String",
+        "ordinal": 27,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "d_price?: String",
+        "ordinal": 28,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "unitPrice"
+          }
+        }
+      },
+      {
+        "name": "d_unit?: String",
+        "ordinal": 29,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      },
+      {
+        "name": "d_cust?: String",
+        "ordinal": 30,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "custodianId"
+          }
+        }
+      },
+      {
+        "name": "d_wallet?: String",
+        "ordinal": 31,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "b_wallet?: String",
+        "ordinal": 32,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "b_qty?: String",
+        "ordinal": 33,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "b_price?: String",
+        "ordinal": 34,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "unitPrice"
+          }
+        }
+      },
+      {
+        "name": "b_unit?: String",
+        "ordinal": 35,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      },
+      {
+        "name": "b_income?: String",
+        "ordinal": 36,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "incomeType"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 16
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "976c23c4b6d5bb417bc5b7856f1ea55ffa93b0e5331b6f2d1df276679a5cf2ee"
+}

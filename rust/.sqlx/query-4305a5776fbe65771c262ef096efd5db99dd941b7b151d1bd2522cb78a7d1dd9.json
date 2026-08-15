@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"Expense\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "4305a5776fbe65771c262ef096efd5db99dd941b7b151d1bd2522cb78a7d1dd9"
+}

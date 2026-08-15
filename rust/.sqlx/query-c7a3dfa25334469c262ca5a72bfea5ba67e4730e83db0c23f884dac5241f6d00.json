@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"scheduleId\" AS \"schedule_id!\", \"startDate\" AS \"start!\",\n                  \"endDate\" AS \"end!\", \"payDate\" AS \"pay!\", \"year\" AS \"year!: i64\",\n                  \"periodNum\" AS \"num!: i64\"\n             FROM \"PayPeriod\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "schedule_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "scheduleId"
+          }
+        }
+      },
+      {
+        "name": "start!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "pay!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "payDate"
+          }
+        }
+      },
+      {
+        "name": "year!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "year"
+          }
+        }
+      },
+      {
+        "name": "num!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "periodNum"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c7a3dfa25334469c262ca5a72bfea5ba67e4730e83db0c23f884dac5241f6d00"
+}

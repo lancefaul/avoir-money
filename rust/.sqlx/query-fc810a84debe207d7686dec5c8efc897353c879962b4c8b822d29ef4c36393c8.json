@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"ReconciliationSession\"\n              SET \"status\" = 'RECONCILED', \"reconciledAt\" = ?, \"residualAtClose\" = ?,\n                  \"updatedAt\" = ?\n            WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "fc810a84debe207d7686dec5c8efc897353c879962b4c8b822d29ef4c36393c8"
+}

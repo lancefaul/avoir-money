@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Custodian\"\n              SET \"name\" = COALESCE(?1, \"name\"),\n                  \"managementUrl\" = CASE WHEN ?2 THEN ?3 ELSE \"managementUrl\" END,\n                  \"updatedAt\" = ?4\n            WHERE \"id\" = ?5",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "caa3e12c4de84aed6b93d643baec722d470dcfde36da99ab56d944b4f5dc97e0"
+}

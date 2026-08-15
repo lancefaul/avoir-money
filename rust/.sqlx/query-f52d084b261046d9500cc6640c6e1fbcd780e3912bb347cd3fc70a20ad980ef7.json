@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"CategoryBudget\" SET \"removedAt\" = NULL, \"updatedAt\" = ?1 WHERE \"id\" = ?2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "f52d084b261046d9500cc6640c6e1fbcd780e3912bb347cd3fc70a20ad980ef7"
+}

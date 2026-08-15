@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"filepath\" AS \"filepath!\" FROM \"Backup\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "filepath!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "filepath"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "81c1cbbc6f5d582b02377a3dfebec58b4007102fe758bb4cfa248f85956557fd"
+}

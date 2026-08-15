@@ -1,0 +1,50 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+.turbo/
+*.tsbuildinfo
+
+# Prisma generated client (regenerated via pnpm db:generate)
+packages/db/node_modules/.prisma/
+
+# Spreadsheet source data (kept locally, not in version control)
+*.xlsx
+*.xls
+*.csv
+
+# Database backups
+*.dump
+backups/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage output
+coverage/
+
+# Playwright artifacts
+test-results/
+playwright-report/
+
+# Dev server logs
+*.log
+
+# Claude Code personal overrides (project-level, not team-wide)
+.claude/settings.local.json
+
+# Local-only spec companions (real financial figures, fixtures)
+# The acceptance suite asserts against real account totals (pending balances,
+# the size of the reversal), so it stays local alongside the fixtures it reads.
+# It cannot run without `fixtures/local/` anyway — it skips when they are absent.
+*.local.md
+*.local.test.ts
+fixtures/local/
+
+# Electron shell: dependencies and build output.
+# `dist/` here is the packaged app — a 119 MB AppImage and an 83 MB pacman
+# package, both reproducible from source by `electron-builder`.
+electron/node_modules/
+electron/dist/

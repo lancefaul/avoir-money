@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"serviceId\" AS \"service_id!\", \"cost\" AS \"cost!: i64\",\n                  \"convenienceFee\" AS \"fee: i64\",\n                  \"convenienceFeeType\" AS \"fee_type: String\",\n                  \"otherFees\" AS \"other: i64\",\n                  \"billDate\" AS \"bill_date!\", \"dueDate\" AS \"due_date: String\"\n             FROM \"UtilityReading\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "service_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "serviceId"
+          }
+        }
+      },
+      {
+        "name": "cost!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "cost"
+          }
+        }
+      },
+      {
+        "name": "fee: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "convenienceFee"
+          }
+        }
+      },
+      {
+        "name": "fee_type: String",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "convenienceFeeType"
+          }
+        }
+      },
+      {
+        "name": "other: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "otherFees"
+          }
+        }
+      },
+      {
+        "name": "bill_date!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "billDate"
+          }
+        }
+      },
+      {
+        "name": "due_date: String",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "dueDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true
+    ]
+  },
+  "hash": "968c8888d39d9361c5da889af59d8bf5d0b974316570bae623df6c569839e90a"
+}

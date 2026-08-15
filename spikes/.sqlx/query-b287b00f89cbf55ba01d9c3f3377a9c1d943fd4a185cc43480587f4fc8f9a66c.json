@@ -1,0 +1,122 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT id AS \"id!\", type AS \"type!\", date AS \"date!\", net_amount AS \"net_amount!\",\n                  balance_before, balance_after, to_balance_before, to_balance_after, parent_id\n           FROM txn ORDER BY date, created_at, id",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "type!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "net_amount!",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "net_amount"
+          }
+        }
+      },
+      {
+        "name": "balance_before",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "balance_before"
+          }
+        }
+      },
+      {
+        "name": "balance_after",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "balance_after"
+          }
+        }
+      },
+      {
+        "name": "to_balance_before",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "to_balance_before"
+          }
+        }
+      },
+      {
+        "name": "to_balance_after",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "to_balance_after"
+          }
+        }
+      },
+      {
+        "name": "parent_id",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "txn",
+            "name": "parent_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      true,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "b287b00f89cbf55ba01d9c3f3377a9c1d943fd4a185cc43480587f4fc8f9a66c"
+}

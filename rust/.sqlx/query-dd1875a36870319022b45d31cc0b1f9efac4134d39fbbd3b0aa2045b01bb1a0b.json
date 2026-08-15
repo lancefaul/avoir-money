@@ -1,0 +1,273 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"name\" AS \"name!\", \"amount\" AS \"amount!: i64\",\n                  \"frequency\" AS \"frequency!\", \"budgetId\" AS \"budget_id!\",\n                  \"accountId\" AS \"account_id: String\", \"isAutomatic\" AS \"is_automatic!: i64\",\n                  \"skipWeekend\" AS \"skip_weekend!: i64\", \"dueDay\" AS \"due_day: i64\",\n                  \"dueWeekday\" AS \"due_weekday: i64\", \"dueOrdinal\" AS \"due_ordinal: i64\",\n                  \"amountSchedule\" AS \"amount_schedule: String\",\n                  \"startDate\" AS \"start_date: String\", \"endDate\" AS \"end_date: String\",\n                  \"pausedUntil\" AS \"paused_until: String\", \"archivedAt\" AS \"archived_at: String\",\n                  \"note\" AS \"note: String\", \"managementUrl\" AS \"management_url: String\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\",\n                  (SELECT d.\"id\" FROM \"Debt\" d WHERE d.\"linkedExpenseId\" = \"Expense\".\"id\" LIMIT 1)\n                      AS \"linked_debt_id: String\",\n                  (SELECT COUNT(*) FROM \"BudgetExpenseLink\" l WHERE l.\"expenseId\" = \"Expense\".\"id\")\n                      AS \"link_count!: i64\"\n             FROM \"Expense\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "budget_id!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "account_id: String",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "is_automatic!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "isAutomatic"
+          }
+        }
+      },
+      {
+        "name": "skip_weekend!: i64",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "skipWeekend"
+          }
+        }
+      },
+      {
+        "name": "due_day: i64",
+        "ordinal": 8,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueDay"
+          }
+        }
+      },
+      {
+        "name": "due_weekday: i64",
+        "ordinal": 9,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueWeekday"
+          }
+        }
+      },
+      {
+        "name": "due_ordinal: i64",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueOrdinal"
+          }
+        }
+      },
+      {
+        "name": "amount_schedule: String",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amountSchedule"
+          }
+        }
+      },
+      {
+        "name": "start_date: String",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end_date: String",
+        "ordinal": 13,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "paused_until: String",
+        "ordinal": 14,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "archived_at: String",
+        "ordinal": 15,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "archivedAt"
+          }
+        }
+      },
+      {
+        "name": "note: String",
+        "ordinal": 16,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "note"
+          }
+        }
+      },
+      {
+        "name": "management_url: String",
+        "ordinal": 17,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "managementUrl"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 18,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 19,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "updatedAt"
+          }
+        }
+      },
+      {
+        "name": "linked_debt_id: String",
+        "ordinal": 20,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "link_count!: i64",
+        "ordinal": 21,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "dd1875a36870319022b45d31cc0b1f9efac4134d39fbbd3b0aa2045b01bb1a0b"
+}

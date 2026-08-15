@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"InvestmentSnapshot\"\n             (\"id\",\"holdingId\",\"date\",\"quantity\",\"value\",\"createdAt\") VALUES (?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "9eb1f9b0418ff5766d5f77d01bdd54c4f573c6d63b23af744432062f06cc4fc6"
+}

@@ -1,0 +1,117 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"id\" AS \"id!\", t.\"type\" AS \"ty!\", t.\"date\" AS \"date!\",\n                      t.\"name\" AS \"name!\", t.\"amount\" AS \"amount!: i64\",\n                      d.\"quantity\" AS \"quantity!\", d.\"bitcoinUnit\" AS \"unit!\",\n                      d.\"incomeType\" AS income_type,\n                      COALESCE(w.\"name\", 'Unknown') AS \"wallet_name!\"\n                 FROM \"Transaction\" t\n                 JOIN \"BitcoinPaymentDetail\" d ON d.\"transactionId\" = t.\"id\"\n                 LEFT JOIN \"Wallet\" w ON w.\"id\" = d.\"walletId\"\n                WHERE t.\"type\" IN ('EXPENSE','INCOME','REFUND')\n                  AND t.\"accountId\" IS NULL\n                  AND (?1 IS NULL OR t.\"date\" < ?1 OR (t.\"date\" = ?1 AND t.\"id\" < ?2))\n                ORDER BY t.\"date\" DESC, t.\"id\" DESC\n                LIMIT ?3",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "unit!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      },
+      {
+        "name": "income_type",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "incomeType"
+          }
+        }
+      },
+      {
+        "name": "wallet_name!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "4cef5899ee1740e0ca14db6b4f6dec99c9a8614ed9a6541fd07c393f9e9f3c09"
+}

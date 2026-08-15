@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"type\" AS \"ty!\", \"openingBalance\" AS \"opening!: i64\"\n                 FROM \"Account\" WHERE \"type\" IN ('Checking', 'Savings', 'Credit Card')",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "opening!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "openingBalance"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "75c2ad625a41fc754957de7918ef41dc08f1350e024503441f62f1c72770af96"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"yearPlanId\" AS \"year_plan_id!\" FROM \"CategoryBudget\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "year_plan_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "yearPlanId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "412a450b834523b1d137cbbca629355e0322d0799a186c301aeebbea1c45caa4"
+}

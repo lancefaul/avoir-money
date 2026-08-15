@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"UiPreference\" WHERE \"key\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "6db402b50b554eb9454a5c32504609eac7deb61ff3c85cb7b05dbb55516fce5e"
+}

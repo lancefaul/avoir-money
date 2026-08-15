@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: budget-tracker-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: budget
+      POSTGRES_PASSWORD: budget
+      POSTGRES_DB: budget_tracker
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  postgres-test:
+    image: postgres:16-alpine
+    container_name: budget-tracker-db-test
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: budget
+      POSTGRES_PASSWORD: budget
+      POSTGRES_DB: budget_tracker_test
+    ports:
+      - '5433:5432'
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: budget-tracker-caddy
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8080:8080'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+
+  dns:
+    image: jpillora/dnsmasq
+    container_name: budget-tracker-dns
+    restart: unless-stopped
+    ports:
+      - '53:53/udp'
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf:ro
+
+volumes:
+  postgres_data:
+  caddy_data:
