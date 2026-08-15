@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"PayPeriod\" (\"id\",\"scheduleId\",\"startDate\",\"endDate\",\"payDate\",\"year\",\"periodNum\")\n           VALUES (?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "b7335b37368156b38c82da1de558cd1b77f9ea574f91e6b212ff87015aeeebfa"
+}

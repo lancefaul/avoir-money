@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT balance AS \"balance!: i64\" FROM account WHERE id='acct-checking'",
+  "describe": {
+    "columns": [
+      {
+        "name": "balance!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "account",
+            "name": "balance"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "ca8c03a8bb5a1614255390644f49ec1cc5c2f7e550ba5c2c8b74a4e37b231ade"
+}

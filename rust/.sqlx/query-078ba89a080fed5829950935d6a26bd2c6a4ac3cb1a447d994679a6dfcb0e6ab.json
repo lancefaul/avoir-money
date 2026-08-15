@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"InvestmentTransfer\"\n             (\"id\",\"type\",\"fromHoldingId\",\"toHoldingId\",\"quantity\",\"bitcoinPrice\",\n              \"feeAmount\",\"feeUnit\",\"feeBtc\",\"ticker\",\"feeTransactionId\",\"createdAt\")\n           VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 12
+    },
+    "nullable": []
+  },
+  "hash": "078ba89a080fed5829950935d6a26bd2c6a4ac3cb1a447d994679a6dfcb0e6ab"
+}

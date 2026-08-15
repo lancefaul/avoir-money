@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT MIN(\"postedDate\") FROM \"StatementRow\" WHERE \"sessionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "MIN(\"postedDate\")",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "3e9c53178b777d59c18b7d4e9ba95a917e9bbba4783c91f60276e33621be35e1"
+}

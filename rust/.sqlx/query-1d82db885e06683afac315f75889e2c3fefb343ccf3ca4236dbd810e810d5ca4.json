@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT s.\"expectedAmount\" AS \"expected!: i64\", s.\"sourceType\" AS \"source!\",\n                      s.\"status\" AS \"status!\", s.\"dueDate\" AS \"due!\",\n                      i.\"accountId\" AS income_account\n                 FROM \"ScheduledTransaction\" s\n                 LEFT JOIN \"Income\" i ON i.\"id\" = s.\"incomeId\"\n                WHERE s.\"dueDate\" >= ?1 AND s.\"dueDate\" <= ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "expected!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      },
+      {
+        "name": "source!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceType"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "due!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "income_account",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "accountId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "1d82db885e06683afac315f75889e2c3fefb343ccf3ca4236dbd810e810d5ca4"
+}

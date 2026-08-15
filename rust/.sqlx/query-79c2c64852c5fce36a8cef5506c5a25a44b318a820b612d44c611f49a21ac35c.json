@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"sourceType\" AS \"source_type!\", \"sourceId\" AS \"source_id!\",\n                  \"dueDate\" AS \"due_date!\", \"status\" AS \"status!\",\n                  \"expectedAmount\" AS \"expected!: i64\"\n             FROM \"ScheduledTransaction\"\n            WHERE \"dueDate\" >= ?1 AND \"dueDate\" <= ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "source_type!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceType"
+          }
+        }
+      },
+      {
+        "name": "source_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceId"
+          }
+        }
+      },
+      {
+        "name": "due_date!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "expected!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "79c2c64852c5fce36a8cef5506c5a25a44b318a820b612d44c611f49a21ac35c"
+}

@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"scheduleId\" AS \"schedule_id!\", \"startDate\" AS \"start!\",\n                  \"endDate\" AS \"end!\", \"payDate\" AS \"pay!\", \"year\" AS \"year!: i64\",\n                  \"periodNum\" AS \"num!: i64\"\n             FROM \"PayPeriod\"\n            WHERE \"scheduleId\" = ?1 AND \"startDate\" <= ?2 AND \"endDate\" >= ?2\n            ORDER BY \"payDate\" ASC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "schedule_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "scheduleId"
+          }
+        }
+      },
+      {
+        "name": "start!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "pay!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "payDate"
+          }
+        }
+      },
+      {
+        "name": "year!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "year"
+          }
+        }
+      },
+      {
+        "name": "num!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "periodNum"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "b0533b1a84c22db8f359d93a148b9ab4e56d2e29cedaa48e6a1e8abd28780ae3"
+}

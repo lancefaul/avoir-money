@@ -1,0 +1,9 @@
+target/
+
+# Generated databases and export output contain real financial data.
+# The tools write outside the repo by default; this is a second line of defence.
+*.db
+*.db-journal
+export.json
+*-export.json
+*.export.json

@@ -1,0 +1,290 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT s.\"id\" AS \"id!\", s.\"sourceType\" AS \"source_type!\", s.\"dueDate\" AS \"due!\",\n                  s.\"expectedAmount\" AS \"expected!: i64\", s.\"actualAmount\" AS \"actual: i64\",\n                  s.\"status\" AS \"status!\", s.\"snoozedUntil\" AS snoozed,\n                  e.\"id\" AS expense_id, e.\"name\" AS expense_name, e.\"frequency\" AS expense_freq,\n                  e.\"budgetId\" AS expense_budget, e.\"accountId\" AS expense_account,\n                  e.\"isAutomatic\" AS \"expense_auto: i64\", e.\"archivedAt\" AS expense_archived,\n                  e.\"pausedUntil\" AS expense_paused,\n                  i.\"id\" AS income_id, i.\"name\" AS income_name, i.\"frequency\" AS income_freq,\n                  i.\"budgetId\" AS income_budget, i.\"accountId\" AS income_account,\n                  i.\"archivedAt\" AS income_archived, i.\"pausedUntil\" AS income_paused,\n                  t.\"date\" AS paid_date\n             FROM \"ScheduledTransaction\" s\n             LEFT JOIN \"Expense\" e ON e.\"id\" = s.\"expenseId\"\n             LEFT JOIN \"Income\" i ON i.\"id\" = s.\"incomeId\"\n             LEFT JOIN \"Transaction\" t ON t.\"id\" = s.\"transactionId\"\n            WHERE s.\"dueDate\" >= ?1 AND s.\"dueDate\" <= ?2\n            ORDER BY s.\"dueDate\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "source_type!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceType"
+          }
+        }
+      },
+      {
+        "name": "due!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "expected!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      },
+      {
+        "name": "actual: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "actualAmount"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "snoozed",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "snoozedUntil"
+          }
+        }
+      },
+      {
+        "name": "expense_id",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "expense_name",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "expense_freq",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "expense_budget",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "expense_account",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "expense_auto: i64",
+        "ordinal": 12,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "isAutomatic"
+          }
+        }
+      },
+      {
+        "name": "expense_archived",
+        "ordinal": 13,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "archivedAt"
+          }
+        }
+      },
+      {
+        "name": "expense_paused",
+        "ordinal": 14,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "income_id",
+        "ordinal": 15,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "income_name",
+        "ordinal": 16,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "income_freq",
+        "ordinal": 17,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "income_budget",
+        "ordinal": 18,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "income_account",
+        "ordinal": 19,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "income_archived",
+        "ordinal": 20,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "archivedAt"
+          }
+        }
+      },
+      {
+        "name": "income_paused",
+        "ordinal": 21,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "paid_date",
+        "ordinal": 22,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "c8ecc735b16b5d89dee8a48951147c36d5182999c570f0b3830a5043d761e0ac"
+}

@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"preTaxAmount\" AS \"pre_tax: i64\", \"taxAmount\" AS \"tax: i64\",\n                  \"taxRate\" AS \"rate: i64\"\n             FROM \"Transaction\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "pre_tax: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "preTaxAmount"
+          }
+        }
+      },
+      {
+        "name": "tax: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "taxAmount"
+          }
+        }
+      },
+      {
+        "name": "rate: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "taxRate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "0349705882ae71cd1b7e43f3f7fd426491fc80f21e2accd9d89c8775e3ae32bd"
+}

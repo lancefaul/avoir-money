@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"Transaction\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "a077c7d6e0f2958437b04932e8e07bfcdac006a505ef9eb1ce44a9ff5d82aa28"
+}

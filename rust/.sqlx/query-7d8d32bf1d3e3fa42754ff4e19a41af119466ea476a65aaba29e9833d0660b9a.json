@@ -1,0 +1,122 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"name\" AS \"name!\", \"type\" AS \"ty!\",\n                  \"anchorDate\" AS \"anchor_date!\", \"firstPayDay\" AS \"first: i64\",\n                  \"secondPayDay\" AS \"second: i64\", \"isDefault\" AS \"is_default!: i64\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"PaySchedule\" ORDER BY \"name\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "anchor_date!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "anchorDate"
+          }
+        }
+      },
+      {
+        "name": "first: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "firstPayDay"
+          }
+        }
+      },
+      {
+        "name": "second: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "secondPayDay"
+          }
+        }
+      },
+      {
+        "name": "is_default!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "isDefault"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "7d8d32bf1d3e3fa42754ff4e19a41af119466ea476a65aaba29e9833d0660b9a"
+}

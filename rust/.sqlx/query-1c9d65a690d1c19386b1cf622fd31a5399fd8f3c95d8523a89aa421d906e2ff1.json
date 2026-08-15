@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"scheduleId\" AS \"schedule_id!\", \"startDate\" AS \"start!\",\n                  \"endDate\" AS \"end!\", \"payDate\" AS \"pay!\", \"year\" AS \"year!: i64\",\n                  \"periodNum\" AS \"num!: i64\"\n             FROM \"PayPeriod\"\n            WHERE (?1 IS NULL OR \"scheduleId\" = ?1)\n              AND (?2 IS NULL OR \"year\" = ?2)\n              AND (?3 IS NULL OR \"payDate\" >= ?3)\n              AND (?4 IS NULL OR \"payDate\" <= ?4)\n            ORDER BY \"payDate\" ASC\n            LIMIT ?5 OFFSET ?6",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "schedule_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "scheduleId"
+          }
+        }
+      },
+      {
+        "name": "start!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "pay!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "payDate"
+          }
+        }
+      },
+      {
+        "name": "year!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "year"
+          }
+        }
+      },
+      {
+        "name": "num!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "periodNum"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "1c9d65a690d1c19386b1cf622fd31a5399fd8f3c95d8523a89aa421d906e2ff1"
+}

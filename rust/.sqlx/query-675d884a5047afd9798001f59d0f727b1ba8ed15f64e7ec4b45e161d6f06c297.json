@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"BudgetVersion\"\n             (\"id\",\"categoryBudgetId\",\"amount\",\"frequency\",\"monthlyEquivalent\",\n              \"activeMonths\",\"effectiveDate\",\"createdAt\",\"manualOverride\")\n           VALUES (?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 9
+    },
+    "nullable": []
+  },
+  "hash": "675d884a5047afd9798001f59d0f727b1ba8ed15f64e7ec4b45e161d6f06c297"
+}

@@ -1,0 +1,146 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT b.\"id\" AS \"id!\", b.\"name\" AS \"name!\", b.\"icon\" AS \"icon: String\",\n                  b.\"isCustom\" AS \"is_custom!: i64\", b.\"createdAt\" AS \"created_at!\",\n                  b.\"groupId\" AS \"group_id!\", b.\"deletedAt\" AS \"deleted_at: String\",\n                  b.\"isSystem\" AS \"is_system!: i64\",\n                  g.\"name\" AS \"group_name!\", g.\"color\" AS \"group_color!\",\n                  g.\"createdAt\" AS \"group_created_at!\"\n             FROM \"Budget\" b JOIN \"BudgetGroup\" g ON g.\"id\" = b.\"groupId\"\n            WHERE b.\"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "icon: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "icon"
+          }
+        }
+      },
+      {
+        "name": "is_custom!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "isCustom"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "group_id!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "groupId"
+          }
+        }
+      },
+      {
+        "name": "deleted_at: String",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "deletedAt"
+          }
+        }
+      },
+      {
+        "name": "is_system!: i64",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "isSystem"
+          }
+        }
+      },
+      {
+        "name": "group_name!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGroup",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "group_color!",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGroup",
+            "name": "color"
+          }
+        }
+      },
+      {
+        "name": "group_created_at!",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGroup",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "993f72da9b45147b1f0ba259f7d8d09a1123fc30a33c300dadaf40aa9c1dcac4"
+}

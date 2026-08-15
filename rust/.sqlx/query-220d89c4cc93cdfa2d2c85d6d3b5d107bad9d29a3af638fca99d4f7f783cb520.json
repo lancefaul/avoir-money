@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"InsurancePolicy\"\n              SET \"employer\" = COALESCE(?1, \"employer\"),\n                  \"premium\" = COALESCE(?2, \"premium\"),\n                  \"deductibleLimit\" = ?3,\n                  \"oopmLimit\" = ?4,\n                  \"metadata\" = COALESCE(?5, \"metadata\"),\n                  \"updatedAt\" = ?6\n            WHERE \"id\" = ?7",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "220d89c4cc93cdfa2d2c85d6d3b5d107bad9d29a3af638fca99d4f7f783cb520"
+}

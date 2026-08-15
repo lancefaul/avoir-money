@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <title>Avoir</title>
+  <rect width="1024" height="1024" rx="228" fill="#0E2A22"/>
+  <g fill="#C8A96E">
+    <polygon points="436,222 468,222 272,782 240,782"/>
+    <polygon points="432,222 528,222 768,782 656,782"/>
+    <rect x="332" y="570" width="256" height="32"/>
+    <rect x="176" y="782" width="152" height="20"/>
+    <rect x="592" y="782" width="240" height="20"/>
+  </g>
+</svg>

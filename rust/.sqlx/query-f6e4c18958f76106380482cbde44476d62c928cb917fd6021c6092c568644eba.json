@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"amount\" AS \"amount!: i64\", \"frequency\" AS \"frequency!\",\n                      \"amountSchedule\" AS \"schedule: String\",\n                      \"startDate\" AS \"start: String\", \"endDate\" AS \"end: String\",\n                      \"pausedUntil\" AS \"paused: String\"\n                 FROM \"Income\"\n                WHERE \"frequency\" <> 'ONE_TIME' AND \"archivedAt\" IS NULL\n                  AND (?1 IS NULL OR \"id\" = ?1)",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "schedule: String",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "amountSchedule"
+          }
+        }
+      },
+      {
+        "name": "start: String",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end: String",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "paused: String",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "pausedUntil"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "f6e4c18958f76106380482cbde44476d62c928cb917fd6021c6092c568644eba"
+}

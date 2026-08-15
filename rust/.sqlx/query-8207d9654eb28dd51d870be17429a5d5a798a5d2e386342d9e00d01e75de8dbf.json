@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT COALESCE(SUM(t.\"amount\"), 0) AS \"total!: i64\"\n             FROM \"Transaction\" t\n             JOIN \"Account\" a ON a.\"id\" = t.\"toAccountId\"\n            WHERE t.\"type\" = 'TRANSFER' AND a.\"type\" = 'Credit Card'\n              AND t.\"date\" >= ?1 AND t.\"date\" <= ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "total!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "8207d9654eb28dd51d870be17429a5d5a798a5d2e386342d9e00d01e75de8dbf"
+}

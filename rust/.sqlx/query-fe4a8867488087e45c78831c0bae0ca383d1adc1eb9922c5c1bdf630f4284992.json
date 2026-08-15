@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"BackupConfig\"\n              SET \"enabled\" = COALESCE(?1, \"enabled\"),\n                  \"frequency\" = COALESCE(?2, \"frequency\"),\n                  \"retentionCount\" = COALESCE(?3, \"retentionCount\"),\n                  \"updatedAt\" = ?4\n            WHERE \"id\" = ?5",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "fe4a8867488087e45c78831c0bae0ca383d1adc1eb9922c5c1bdf630f4284992"
+}

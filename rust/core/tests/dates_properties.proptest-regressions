@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 3cb99912ade7ce4a12d00f66aa65e97167a2031546bdef0e7736c11826a2735f # shrinks to cfg = (SemiMonthly, None, Some(24), Some(1)), a = 2015-01-01, b = 2015-02-01

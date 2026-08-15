@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\" FROM \"Budget\"\n           WHERE \"name\" = ?\n           ORDER BY \"isSystem\" DESC, \"createdAt\" DESC\n           LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "e0db2173891382b284e914978322edee9fd0d90fe441c0fa8f1c75d122f02f07"
+}

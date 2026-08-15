@@ -1,0 +1,69 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT p.\"id\" AS \"id!\", p.\"name\" AS \"name!\", p.\"createdAt\" AS \"created_at!\",\n                  p.\"updatedAt\" AS \"updated_at!\",\n                  (SELECT group_concat(DISTINCT s.\"serviceType\")\n                     FROM \"UtilityService\" s WHERE s.\"providerId\" = p.\"id\")\n                      AS \"service_types: String\"\n             FROM \"UtilityProvider\" p WHERE p.\"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityProvider",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityProvider",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityProvider",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityProvider",
+            "name": "updatedAt"
+          }
+        }
+      },
+      {
+        "name": "service_types: String",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "a7e1a4f83b747267daf875c491cc9424c625cfc5b75dad3d3a0cfb0515fcf24a"
+}

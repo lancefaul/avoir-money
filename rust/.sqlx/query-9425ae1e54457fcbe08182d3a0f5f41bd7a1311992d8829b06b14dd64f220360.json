@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"holdingId\" AS \"holding_id!\", \"date\" AS \"date!\",\n                      \"quantity\" AS \"quantity!\", \"value\" AS \"value: i64\",\n                      \"createdAt\" AS \"created_at!\"\n                 FROM \"InvestmentSnapshot\" WHERE \"holdingId\" = ?\n                ORDER BY \"date\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "holding_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "holdingId"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "value: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "value"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentSnapshot",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "9425ae1e54457fcbe08182d3a0f5f41bd7a1311992d8829b06b14dd64f220360"
+}

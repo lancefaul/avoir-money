@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"BudgetGoal\" SET \"budgetId\" = ? WHERE \"budgetId\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "6c78d85cf4fb4d49d9013f5cb26879e2cd0c4ac89ded2d7488ee1ee790e1736d"
+}

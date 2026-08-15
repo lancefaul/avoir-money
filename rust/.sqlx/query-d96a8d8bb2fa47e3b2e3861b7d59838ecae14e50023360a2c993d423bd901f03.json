@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Debt\" SET \"currentBalance\" = \"originalBalance\", \"paidOff\" = 0",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "d96a8d8bb2fa47e3b2e3861b7d59838ecae14e50023360a2c993d423bd901f03"
+}

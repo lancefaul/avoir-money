@@ -1,0 +1,28 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT\n                 COALESCE(SUM(\"amount\") FILTER (WHERE \"incomeId\" IS NOT NULL), 0) AS \"income!: i64\",\n                 COALESCE(SUM(\"netAmount\") FILTER (WHERE \"expenseId\" IS NOT NULL), 0) AS \"expenses!: i64\"\n               FROM \"Transaction\" WHERE \"payPeriodId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "income!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "expenses!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "b8ddf6b15d24b3e6cf142be68eac9f3cda0acc4a9556219e11affdf04cf83b7f"
+}

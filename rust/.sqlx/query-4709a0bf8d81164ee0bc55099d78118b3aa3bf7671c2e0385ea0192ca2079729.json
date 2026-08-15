@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"createdAt\" AS \"created_at!\", \"fromHoldingId\" AS \"from_id!\",\n                  \"toHoldingId\" AS \"to_id!\", \"quantity\" AS \"quantity!\"\n             FROM \"InvestmentTransfer\" WHERE \"type\" = 'BITCOIN'\n            ORDER BY \"createdAt\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "created_at!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "from_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "fromHoldingId"
+          }
+        }
+      },
+      {
+        "name": "to_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "toHoldingId"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "quantity"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "4709a0bf8d81164ee0bc55099d78118b3aa3bf7671c2e0385ea0192ca2079729"
+}

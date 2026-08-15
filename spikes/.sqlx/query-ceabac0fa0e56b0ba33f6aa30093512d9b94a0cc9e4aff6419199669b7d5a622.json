@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO txn (id, account_id, to_account_id, parent_id, type, date, created_at, net_amount)\n             VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 8
+    },
+    "nullable": []
+  },
+  "hash": "ceabac0fa0e56b0ba33f6aa30093512d9b94a0cc9e4aff6419199669b7d5a622"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"ScheduledTransaction\"\n            WHERE \"dueDate\" >= ?1 AND \"dueDate\" <= ?2\n              AND (?3 IS NULL OR \"sourceType\" = ?3)\n              AND (?4 IS NULL OR \"sourceId\" = ?4)\n            ORDER BY \"dueDate\" ASC, \"id\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "7bdb560396a0f5617542395f434ce050993a51bbe55ea264c0a44876ac0cb479"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT DISTINCT \"transactionId\" AS \"tx_id!\"\n             FROM \"ReconciliationMatch\" WHERE \"sessionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "tx_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "transactionId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "f180987d00b43fd41df459d82dc0a149060e785979512137cd15cac396a9ccdd"
+}

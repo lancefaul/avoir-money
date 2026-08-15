@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Wallet\"\n              SET \"name\" = COALESCE(?1, \"name\"),\n                  \"managementUrl\" = CASE WHEN ?2 THEN ?3 ELSE \"managementUrl\" END,\n                  \"custodyType\" = COALESCE(?4, \"custodyType\"),\n                  \"storageType\" = CASE WHEN ?5 THEN ?6 ELSE \"storageType\" END,\n                  \"updatedAt\" = ?7\n            WHERE \"id\" = ?8",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 8
+    },
+    "nullable": []
+  },
+  "hash": "80dcd25897b7be68b004f2e214bb3edc0dee70fdafa284b4ca6755f09f8bf010"
+}
