@@ -1,0 +1,7206 @@
+{
+ "generatedBy": "packages/core/dist",
+ "count": 400,
+ "vectors": [
+  {
+   "in": {
+    "balanceCents": 5421129,
+    "aprHundredths": 1493,
+    "paymentCents": 345564,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 44,
+    "originalCents": 4478641,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 311840,
+    "splitInterestCents": 33724,
+    "amortizedCents": 66243,
+    "basePaymentCents": 66243
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8135927,
+    "aprHundredths": 181,
+    "paymentCents": 943213,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 294,
+    "originalCents": 11593126,
+    "minimumCents": 102656
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 937077,
+    "splitInterestCents": 6136,
+    "amortizedCents": 24417,
+    "basePaymentCents": 102656
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9208954,
+    "aprHundredths": 2029,
+    "paymentCents": 422967,
+    "freq": "MONTHLY",
+    "termMonths": 35,
+    "originalCents": 33193683,
+    "minimumCents": 40027
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 267259,
+    "splitInterestCents": 155708,
+    "amortizedCents": 1264302,
+    "basePaymentCents": 40027
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9959455,
+    "aprHundredths": 3032,
+    "paymentCents": 676749,
+    "freq": "BIWEEKLY",
+    "termMonths": 168,
+    "originalCents": 5898744,
+    "minimumCents": 476415
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 560606,
+    "splitInterestCents": 116143,
+    "amortizedCents": 69814,
+    "basePaymentCents": 476415
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8350706,
+    "aprHundredths": 878,
+    "paymentCents": 103367,
+    "freq": null,
+    "termMonths": 429,
+    "originalCents": 35471075,
+    "minimumCents": 534293
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 42268,
+    "splitInterestCents": 61099,
+    "amortizedCents": 271427,
+    "basePaymentCents": 534293
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9781,
+    "aprHundredths": 997,
+    "paymentCents": 34293,
+    "freq": "ANNUAL",
+    "termMonths": 468,
+    "originalCents": 47130556,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 33318,
+    "splitInterestCents": 975,
+    "amortizedCents": 4817249,
+    "basePaymentCents": 4817249
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8857341,
+    "aprHundredths": 1667,
+    "paymentCents": 747188,
+    "freq": "BIANNUAL",
+    "termMonths": 423,
+    "originalCents": 28905351,
+    "minimumCents": 770493
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 8929,
+    "splitInterestCents": 738259,
+    "amortizedCents": 2417479,
+    "basePaymentCents": 770493
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1580605,
+    "aprHundredths": 3196,
+    "paymentCents": 911123,
+    "freq": "BIANNUAL",
+    "termMonths": 14,
+    "originalCents": 7263041,
+    "minimumCents": 218605
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 658542,
+    "splitInterestCents": 252581,
+    "amortizedCents": 4523464,
+    "basePaymentCents": 218605
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1964131,
+    "aprHundredths": 1944,
+    "paymentCents": 66267,
+    "freq": "BIWEEKLY",
+    "termMonths": 334,
+    "originalCents": 9546350,
+    "minimumCents": 401484
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 51581,
+    "splitInterestCents": 14686,
+    "amortizedCents": 71703,
+    "basePaymentCents": 401484
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 166053,
+    "aprHundredths": 1954,
+    "paymentCents": 210078,
+    "freq": "ANNUAL",
+    "termMonths": 478,
+    "originalCents": 12336976,
+    "minimumCents": 772451
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 177631,
+    "splitInterestCents": 32447,
+    "amortizedCents": 2412559,
+    "basePaymentCents": 772451
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7713423,
+    "aprHundredths": 1487,
+    "paymentCents": 6833,
+    "freq": "MONTHLY",
+    "termMonths": 287,
+    "originalCents": 49658552,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 95582,
+    "amortizedCents": 633843,
+    "basePaymentCents": 633843
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5369688,
+    "aprHundredths": 2813,
+    "paymentCents": 743156,
+    "freq": "BIWEEKLY",
+    "termMonths": 397,
+    "originalCents": 10576671,
+    "minimumCents": 533056
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 685060,
+    "splitInterestCents": 58096,
+    "amortizedCents": 114442,
+    "basePaymentCents": 533056
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2100805,
+    "aprHundredths": 2580,
+    "paymentCents": 661969,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 392,
+    "originalCents": 26699404,
+    "minimumCents": 450307
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 639385,
+    "splitInterestCents": 22584,
+    "amortizedCents": 287084,
+    "basePaymentCents": 450307
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1083977,
+    "aprHundredths": 2562,
+    "paymentCents": 202267,
+    "freq": "ANNUAL",
+    "termMonths": 397,
+    "originalCents": 18964348,
+    "minimumCents": 36129
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 277715,
+    "amortizedCents": 4861283,
+    "basePaymentCents": 36129
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7889205,
+    "aprHundredths": 3182,
+    "paymentCents": 350576,
+    "freq": "WEEKLY",
+    "termMonths": 38,
+    "originalCents": 43421061,
+    "minimumCents": 982280
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 302300,
+    "splitInterestCents": 48276,
+    "amortizedCents": 418735,
+    "basePaymentCents": 982280
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7706296,
+    "aprHundredths": 440,
+    "paymentCents": 714699,
+    "freq": null,
+    "termMonths": 249,
+    "originalCents": 28453877,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 686443,
+    "splitInterestCents": 28256,
+    "amortizedCents": 174463,
+    "basePaymentCents": 174463
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 167290,
+    "aprHundredths": 557,
+    "paymentCents": 93604,
+    "freq": "WEEKLY",
+    "termMonths": 472,
+    "originalCents": 10715925,
+    "minimumCents": 456169
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 93425,
+    "splitInterestCents": 179,
+    "amortizedCents": 12926,
+    "basePaymentCents": 456169
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2666060,
+    "aprHundredths": 1701,
+    "paymentCents": 239369,
+    "freq": "QUARTERLY",
+    "termMonths": 143,
+    "originalCents": 349314,
+    "minimumCents": 133781
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 125995,
+    "splitInterestCents": 113374,
+    "amortizedCents": 17182,
+    "basePaymentCents": 133781
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3045507,
+    "aprHundredths": 154,
+    "paymentCents": 14639,
+    "freq": "QUARTERLY",
+    "termMonths": 10,
+    "originalCents": 11063702,
+    "minimumCents": 329930
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 2914,
+    "splitInterestCents": 11725,
+    "amortizedCents": 3716334,
+    "basePaymentCents": 329930
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7999221,
+    "aprHundredths": 618,
+    "paymentCents": 552590,
+    "freq": null,
+    "termMonths": 192,
+    "originalCents": 26602007,
+    "minimumCents": 200308
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 511394,
+    "splitInterestCents": 41196,
+    "amortizedCents": 218490,
+    "basePaymentCents": 200308
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1064424,
+    "aprHundredths": 2562,
+    "paymentCents": 557735,
+    "freq": "WEEKLY",
+    "termMonths": 392,
+    "originalCents": 43037265,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 552491,
+    "splitInterestCents": 5244,
+    "amortizedCents": 212091,
+    "basePaymentCents": 212091
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3857410,
+    "aprHundredths": 1817,
+    "paymentCents": 280391,
+    "freq": null,
+    "termMonths": 30,
+    "originalCents": 48885015,
+    "minimumCents": 161131
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 221983,
+    "splitInterestCents": 58408,
+    "amortizedCents": 2039622,
+    "basePaymentCents": 161131
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9236893,
+    "aprHundredths": 489,
+    "paymentCents": 448234,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 281,
+    "originalCents": 31140771,
+    "minimumCents": 456890
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 429414,
+    "splitInterestCents": 18820,
+    "amortizedCents": 93112,
+    "basePaymentCents": 456890
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3038382,
+    "aprHundredths": 1985,
+    "paymentCents": 322122,
+    "freq": "BIWEEKLY",
+    "termMonths": 415,
+    "originalCents": 10813674,
+    "minimumCents": 460075
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 298925,
+    "splitInterestCents": 23197,
+    "amortizedCents": 82647,
+    "basePaymentCents": 460075
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8173705,
+    "aprHundredths": 3301,
+    "paymentCents": 661252,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 146,
+    "originalCents": 46546126,
+    "minimumCents": 500970
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 548829,
+    "splitInterestCents": 112423,
+    "amortizedCents": 652284,
+    "basePaymentCents": 500970
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6522037,
+    "aprHundredths": 1883,
+    "paymentCents": 436519,
+    "freq": "BIWEEKLY",
+    "termMonths": 18,
+    "originalCents": 12818068,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 389284,
+    "splitInterestCents": 47235,
+    "amortizedCents": 378448,
+    "basePaymentCents": 378448
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3104096,
+    "aprHundredths": 3,
+    "paymentCents": 809558,
+    "freq": "WEEKLY",
+    "termMonths": 382,
+    "originalCents": 12136118,
+    "minimumCents": 126805
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 809540,
+    "splitInterestCents": 18,
+    "amortizedCents": 7368,
+    "basePaymentCents": 126805
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2530473,
+    "aprHundredths": 2963,
+    "paymentCents": 33060,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 346,
+    "originalCents": 3991252,
+    "minimumCents": 458127
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 1819,
+    "splitInterestCents": 31241,
+    "amortizedCents": 49285,
+    "basePaymentCents": 458127
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1845753,
+    "aprHundredths": 977,
+    "paymentCents": 823357,
+    "freq": "ANNUAL",
+    "termMonths": 363,
+    "originalCents": 8341107,
+    "minimumCents": 590812
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 643027,
+    "splitInterestCents": 180330,
+    "amortizedCents": 867887,
+    "basePaymentCents": 590812
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2986943,
+    "aprHundredths": 3148,
+    "paymentCents": 249016,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 78,
+    "originalCents": 45077623,
+    "minimumCents": 984229
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 209837,
+    "splitInterestCents": 39179,
+    "amortizedCents": 680366,
+    "basePaymentCents": 984229
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7257069,
+    "aprHundredths": 1069,
+    "paymentCents": 570170,
+    "freq": "BIWEEKLY",
+    "termMonths": 211,
+    "originalCents": 30598028,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 540332,
+    "splitInterestCents": 29838,
+    "amortizedCents": 148589,
+    "basePaymentCents": 148589
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9131939,
+    "aprHundredths": 994,
+    "paymentCents": 52590,
+    "freq": "BIANNUAL",
+    "termMonths": 266,
+    "originalCents": 42780503,
+    "minimumCents": 487423
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 453857,
+    "amortizedCents": 2411577,
+    "basePaymentCents": 487423
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5419904,
+    "aprHundredths": 1476,
+    "paymentCents": 102656,
+    "freq": "BIANNUAL",
+    "termMonths": 18,
+    "originalCents": 49957050,
+    "minimumCents": 442376
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 399989,
+    "amortizedCents": 19168525,
+    "basePaymentCents": 442376
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5818921,
+    "aprHundredths": 2580,
+    "paymentCents": 440422,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 289,
+    "originalCents": 15839532,
+    "minimumCents": 570166
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 377869,
+    "splitInterestCents": 62553,
+    "amortizedCents": 170628,
+    "basePaymentCents": 570166
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4991410,
+    "aprHundredths": 645,
+    "paymentCents": 706886,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 109,
+    "originalCents": 41805933,
+    "minimumCents": 592890
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 693472,
+    "splitInterestCents": 13414,
+    "amortizedCents": 253652,
+    "basePaymentCents": 592890
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5751916,
+    "aprHundredths": 2487,
+    "paymentCents": 762811,
+    "freq": "BIWEEKLY",
+    "termMonths": 34,
+    "originalCents": 9218483,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 707792,
+    "splitInterestCents": 55019,
+    "amortizedCents": 174392,
+    "basePaymentCents": 174392
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 986387,
+    "aprHundredths": 1052,
+    "paymentCents": 829215,
+    "freq": "MONTHLY",
+    "termMonths": 296,
+    "originalCents": 28027931,
+    "minimumCents": 223619
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 820568,
+    "splitInterestCents": 8647,
+    "amortizedCents": 265778,
+    "basePaymentCents": 223619
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9744645,
+    "aprHundredths": 1193,
+    "paymentCents": 127918,
+    "freq": "MONTHLY",
+    "termMonths": 441,
+    "originalCents": 13890530,
+    "minimumCents": 441262
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 31040,
+    "splitInterestCents": 96878,
+    "amortizedCents": 139878,
+    "basePaymentCents": 441262
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5675015,
+    "aprHundredths": 2539,
+    "paymentCents": 833839,
+    "freq": "BIANNUAL",
+    "termMonths": 359,
+    "originalCents": 15686616,
+    "minimumCents": 811636
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 113396,
+    "splitInterestCents": 720443,
+    "amortizedCents": 1992948,
+    "basePaymentCents": 811636
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2451151,
+    "aprHundredths": 2822,
+    "paymentCents": 448350,
+    "freq": null,
+    "termMonths": 46,
+    "originalCents": 26176690,
+    "minimumCents": 12689
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 390707,
+    "splitInterestCents": 57643,
+    "amortizedCents": 937352,
+    "basePaymentCents": 12689
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4158775,
+    "aprHundredths": 140,
+    "paymentCents": 262690,
+    "freq": "BIWEEKLY",
+    "termMonths": 224,
+    "originalCents": 40887201,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 260451,
+    "splitInterestCents": 2239,
+    "amortizedCents": 95813,
+    "basePaymentCents": 95813
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2049426,
+    "aprHundredths": 2287,
+    "paymentCents": 981443,
+    "freq": "QUARTERLY",
+    "termMonths": 97,
+    "originalCents": 35039270,
+    "minimumCents": 693209
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 864267,
+    "splitInterestCents": 117176,
+    "amortizedCents": 2410132,
+    "basePaymentCents": 693209
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8819516,
+    "aprHundredths": 2204,
+    "paymentCents": 308451,
+    "freq": "BIWEEKLY",
+    "termMonths": 360,
+    "originalCents": 6915113,
+    "minimumCents": 362419
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 233689,
+    "splitInterestCents": 74762,
+    "amortizedCents": 58700,
+    "basePaymentCents": 362419
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9501852,
+    "aprHundredths": 703,
+    "paymentCents": 397575,
+    "freq": "WEEKLY",
+    "termMonths": 20,
+    "originalCents": 36215218,
+    "minimumCents": 129879
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 384729,
+    "splitInterestCents": 12846,
+    "amortizedCents": 441508,
+    "basePaymentCents": 129879
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6209527,
+    "aprHundredths": 2177,
+    "paymentCents": 879877,
+    "freq": "BIANNUAL",
+    "termMonths": 196,
+    "originalCents": 41179167,
+    "minimumCents": 195165
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 203970,
+    "splitInterestCents": 675907,
+    "amortizedCents": 4635567,
+    "basePaymentCents": 195165
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 479756,
+    "aprHundredths": 1575,
+    "paymentCents": 531108,
+    "freq": "WEEKLY",
+    "termMonths": 5,
+    "originalCents": 18025441,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 529655,
+    "splitInterestCents": 1453,
+    "amortizedCents": 848179,
+    "basePaymentCents": 848179
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9717908,
+    "aprHundredths": 2430,
+    "paymentCents": 415869,
+    "freq": "QUARTERLY",
+    "termMonths": 285,
+    "originalCents": 15296800,
+    "minimumCents": 549918
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 590363,
+    "amortizedCents": 932720,
+    "basePaymentCents": 549918
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7080004,
+    "aprHundredths": 1455,
+    "paymentCents": 721789,
+    "freq": "BIWEEKLY",
+    "termMonths": 199,
+    "originalCents": 42160037,
+    "minimumCents": 211907
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 682168,
+    "splitInterestCents": 39621,
+    "amortizedCents": 259338,
+    "basePaymentCents": 211907
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7693861,
+    "aprHundredths": 742,
+    "paymentCents": 559567,
+    "freq": "MONTHLY",
+    "termMonths": 219,
+    "originalCents": 21102634,
+    "minimumCents": 779159
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 511993,
+    "splitInterestCents": 47574,
+    "amortizedCents": 176151,
+    "basePaymentCents": 779159
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1182935,
+    "aprHundredths": 632,
+    "paymentCents": 11580,
+    "freq": "BIWEEKLY",
+    "termMonths": 17,
+    "originalCents": 2919348,
+    "minimumCents": 926875
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 8705,
+    "splitInterestCents": 2875,
+    "amortizedCents": 82598,
+    "basePaymentCents": 926875
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7431587,
+    "aprHundredths": 2747,
+    "paymentCents": 8904,
+    "freq": "BIANNUAL",
+    "termMonths": 245,
+    "originalCents": 17209906,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1020728,
+    "amortizedCents": 2375919,
+    "basePaymentCents": 2375919
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8876894,
+    "aprHundredths": 2125,
+    "paymentCents": 885860,
+    "freq": "BIWEEKLY",
+    "termMonths": 353,
+    "originalCents": 544316,
+    "minimumCents": 954090
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 813308,
+    "splitInterestCents": 72552,
+    "amortizedCents": 4458,
+    "basePaymentCents": 954090
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6971203,
+    "aprHundredths": 1111,
+    "paymentCents": 354478,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 146,
+    "originalCents": 45370289,
+    "minimumCents": 765481
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 322207,
+    "splitInterestCents": 32271,
+    "amortizedCents": 283668,
+    "basePaymentCents": 765481
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1905519,
+    "aprHundredths": 167,
+    "paymentCents": 122896,
+    "freq": "BIWEEKLY",
+    "termMonths": 23,
+    "originalCents": 385053,
+    "minimumCents": 522574
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 121672,
+    "splitInterestCents": 1224,
+    "amortizedCents": 7828,
+    "basePaymentCents": 522574
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5029303,
+    "aprHundredths": 3191,
+    "paymentCents": 551872,
+    "freq": "BIANNUAL",
+    "termMonths": 165,
+    "originalCents": 37287100,
+    "minimumCents": 969719
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 802425,
+    "amortizedCents": 6044939,
+    "basePaymentCents": 969719
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1580609,
+    "aprHundredths": 1835,
+    "paymentCents": 569324,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 95,
+    "originalCents": 34747060,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 557239,
+    "splitInterestCents": 12085,
+    "amortizedCents": 347387,
+    "basePaymentCents": 347387
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8436084,
+    "aprHundredths": 1733,
+    "paymentCents": 887682,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 340,
+    "originalCents": 41276850,
+    "minimumCents": 568216
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 826766,
+    "splitInterestCents": 60916,
+    "amortizedCents": 300306,
+    "basePaymentCents": 568216
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1885995,
+    "aprHundredths": 721,
+    "paymentCents": 742049,
+    "freq": "ANNUAL",
+    "termMonths": 62,
+    "originalCents": 26699601,
+    "minimumCents": 547964
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 606069,
+    "splitInterestCents": 135980,
+    "amortizedCents": 6548441,
+    "basePaymentCents": 547964
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1435528,
+    "aprHundredths": 2870,
+    "paymentCents": 706168,
+    "freq": "WEEKLY",
+    "termMonths": 74,
+    "originalCents": 42354917,
+    "minimumCents": 805656
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 698245,
+    "splitInterestCents": 7923,
+    "amortizedCents": 281945,
+    "basePaymentCents": 805656
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5096258,
+    "aprHundredths": 1842,
+    "paymentCents": 799795,
+    "freq": "ANNUAL",
+    "termMonths": 267,
+    "originalCents": 44980287,
+    "minimumCents": 861181
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 938731,
+    "amortizedCents": 8491252,
+    "basePaymentCents": 861181
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2217990,
+    "aprHundredths": 304,
+    "paymentCents": 743997,
+    "freq": "QUARTERLY",
+    "termMonths": 147,
+    "originalCents": 4088621,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 727140,
+    "splitInterestCents": 16857,
+    "amortizedCents": 100253,
+    "basePaymentCents": 100253
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5518729,
+    "aprHundredths": 3031,
+    "paymentCents": 124853,
+    "freq": "QUARTERLY",
+    "termMonths": 214,
+    "originalCents": 31572526,
+    "minimumCents": 153435
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 418182,
+    "amortizedCents": 2405868,
+    "basePaymentCents": 153435
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3212918,
+    "aprHundredths": 929,
+    "paymentCents": 678821,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 316,
+    "originalCents": 26955944,
+    "minimumCents": 12688
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 666384,
+    "splitInterestCents": 12437,
+    "amortizedCents": 114287,
+    "basePaymentCents": 12688
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4100198,
+    "aprHundredths": 2287,
+    "paymentCents": 620111,
+    "freq": null,
+    "termMonths": 335,
+    "originalCents": 12818060,
+    "minimumCents": 640479
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 541968,
+    "splitInterestCents": 78143,
+    "amortizedCents": 244729,
+    "basePaymentCents": 640479
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8096868,
+    "aprHundredths": 379,
+    "paymentCents": 171730,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 291,
+    "originalCents": 49797647,
+    "minimumCents": 6949
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 158944,
+    "splitInterestCents": 12786,
+    "amortizedCents": 130885,
+    "basePaymentCents": 6949
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 771495,
+    "aprHundredths": 1845,
+    "paymentCents": 362420,
+    "freq": "WEEKLY",
+    "termMonths": 20,
+    "originalCents": 37189678,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 359683,
+    "splitInterestCents": 2737,
+    "amortizedCents": 497584,
+    "basePaymentCents": 497584
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6415981,
+    "aprHundredths": 102,
+    "paymentCents": 764759,
+    "freq": "ANNUAL",
+    "termMonths": 283,
+    "originalCents": 43232253,
+    "minimumCents": 692377
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 699316,
+    "splitInterestCents": 65443,
+    "amortizedCents": 2039941,
+    "basePaymentCents": 692377
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4627496,
+    "aprHundredths": 195,
+    "paymentCents": 186519,
+    "freq": "MONTHLY",
+    "termMonths": 370,
+    "originalCents": 43616093,
+    "minimumCents": 925634
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 178999,
+    "splitInterestCents": 7520,
+    "amortizedCents": 156942,
+    "basePaymentCents": 925634
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9815555,
+    "aprHundredths": 2149,
+    "paymentCents": 691261,
+    "freq": "BIWEEKLY",
+    "termMonths": 375,
+    "originalCents": 20169821,
+    "minimumCents": 508908
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 610132,
+    "splitInterestCents": 81129,
+    "amortizedCents": 166918,
+    "basePaymentCents": 508908
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 576244,
+    "aprHundredths": 2932,
+    "paymentCents": 139758,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 393,
+    "originalCents": 29295301,
+    "minimumCents": 325188
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 132718,
+    "splitInterestCents": 7040,
+    "amortizedCents": 357917,
+    "basePaymentCents": 325188
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9803209,
+    "aprHundredths": 619,
+    "paymentCents": 584953,
+    "freq": "BIANNUAL",
+    "termMonths": 42,
+    "originalCents": 32700577,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 281544,
+    "splitInterestCents": 303409,
+    "amortizedCents": 5267458,
+    "basePaymentCents": 5267458
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5955626,
+    "aprHundredths": 79,
+    "paymentCents": 805659,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 460,
+    "originalCents": 19055844,
+    "minimumCents": 285006
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 803699,
+    "splitInterestCents": 1960,
+    "amortizedCents": 24011,
+    "basePaymentCents": 285006
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1905489,
+    "aprHundredths": 1890,
+    "paymentCents": 171737,
+    "freq": "BIANNUAL",
+    "termMonths": 468,
+    "originalCents": 35178660,
+    "minimumCents": 299921
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 180069,
+    "amortizedCents": 3327289,
+    "basePaymentCents": 299921
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2841775,
+    "aprHundredths": 2501,
+    "paymentCents": 786244,
+    "freq": "WEEKLY",
+    "termMonths": 64,
+    "originalCents": 45571047,
+    "minimumCents": 641591
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 772576,
+    "splitInterestCents": 13668,
+    "amortizedCents": 298091,
+    "basePaymentCents": 641591
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9334519,
+    "aprHundredths": 1227,
+    "paymentCents": 213863,
+    "freq": "BIWEEKLY",
+    "termMonths": 342,
+    "originalCents": 30848572,
+    "minimumCents": 857274
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 169811,
+    "splitInterestCents": 44052,
+    "amortizedCents": 150168,
+    "basePaymentCents": 857274
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4171118,
+    "aprHundredths": 1589,
+    "paymentCents": 343606,
+    "freq": null,
+    "termMonths": 155,
+    "originalCents": 32157341,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 288373,
+    "splitInterestCents": 55233,
+    "amortizedCents": 489535,
+    "basePaymentCents": 489535
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6729691,
+    "aprHundredths": 1951,
+    "paymentCents": 779152,
+    "freq": "ANNUAL",
+    "termMonths": 321,
+    "originalCents": 18707523,
+    "minimumCents": 100699
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1312963,
+    "amortizedCents": 3679754,
+    "basePaymentCents": 100699
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1689479,
+    "aprHundredths": 2214,
+    "paymentCents": 688597,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 136,
+    "originalCents": 3955340,
+    "minimumCents": 481436
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 673012,
+    "splitInterestCents": 15585,
+    "amortizedCents": 39759,
+    "basePaymentCents": 481436
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4334574,
+    "aprHundredths": 441,
+    "paymentCents": 204098,
+    "freq": "MONTHLY",
+    "termMonths": 128,
+    "originalCents": 15157415,
+    "minimumCents": 716654
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 188168,
+    "splitInterestCents": 15930,
+    "amortizedCents": 148658,
+    "basePaymentCents": 716654
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 108685,
+    "aprHundredths": 748,
+    "paymentCents": 570169,
+    "freq": "QUARTERLY",
+    "termMonths": 429,
+    "originalCents": 25627574,
+    "minimumCents": 391711
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 568137,
+    "splitInterestCents": 2032,
+    "amortizedCents": 515692,
+    "basePaymentCents": 391711
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 517579,
+    "aprHundredths": 3321,
+    "paymentCents": 112416,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 371,
+    "originalCents": 30659706,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 105254,
+    "splitInterestCents": 7162,
+    "amortizedCents": 424269,
+    "basePaymentCents": 424269
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9384644,
+    "aprHundredths": 1551,
+    "paymentCents": 405384,
+    "freq": "QUARTERLY",
+    "termMonths": 390,
+    "originalCents": 34265671,
+    "minimumCents": 588858
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 41494,
+    "splitInterestCents": 363890,
+    "amortizedCents": 1338173,
+    "basePaymentCents": 588858
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3045487,
+    "aprHundredths": 1760,
+    "paymentCents": 752924,
+    "freq": "MONTHLY",
+    "termMonths": 413,
+    "originalCents": 17301491,
+    "minimumCents": 968598
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 708257,
+    "splitInterestCents": 44667,
+    "amortizedCents": 254377,
+    "basePaymentCents": 968598
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8878101,
+    "aprHundredths": 3141,
+    "paymentCents": 439306,
+    "freq": "BIWEEKLY",
+    "termMonths": 384,
+    "originalCents": 31085570,
+    "minimumCents": 376095
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 332052,
+    "splitInterestCents": 107254,
+    "amortizedCents": 375555,
+    "basePaymentCents": 376095
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5908190,
+    "aprHundredths": 3417,
+    "paymentCents": 294061,
+    "freq": "MONTHLY",
+    "termMonths": 94,
+    "originalCents": 33486161,
+    "minimumCents": 75183
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 125825,
+    "splitInterestCents": 168236,
+    "amortizedCents": 1026851,
+    "basePaymentCents": 75183
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 818964,
+    "aprHundredths": 2389,
+    "paymentCents": 668935,
+    "freq": "BIWEEKLY",
+    "termMonths": 390,
+    "originalCents": 24513585,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 661410,
+    "splitInterestCents": 7525,
+    "amortizedCents": 225341,
+    "basePaymentCents": 225341
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6736886,
+    "aprHundredths": 2915,
+    "paymentCents": 516594,
+    "freq": "QUARTERLY",
+    "termMonths": 141,
+    "originalCents": 31141090,
+    "minimumCents": 785011
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 25643,
+    "splitInterestCents": 490951,
+    "amortizedCents": 2355769,
+    "basePaymentCents": 785011
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2491438,
+    "aprHundredths": 2990,
+    "paymentCents": 462752,
+    "freq": "BIANNUAL",
+    "termMonths": 54,
+    "originalCents": 48433330,
+    "minimumCents": 182732
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 90282,
+    "splitInterestCents": 372470,
+    "amortizedCents": 10132314,
+    "basePaymentCents": 182732
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5302690,
+    "aprHundredths": 3342,
+    "paymentCents": 733511,
+    "freq": "MONTHLY",
+    "termMonths": 206,
+    "originalCents": 33388461,
+    "minimumCents": 606436
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 585831,
+    "splitInterestCents": 147680,
+    "amortizedCents": 933123,
+    "basePaymentCents": 606436
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 291594,
+    "aprHundredths": 393,
+    "paymentCents": 610340,
+    "freq": "ANNUAL",
+    "termMonths": 272,
+    "originalCents": 15839525,
+    "minimumCents": 753767
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 598880,
+    "splitInterestCents": 11460,
+    "amortizedCents": 1058767,
+    "basePaymentCents": 753767
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4093055,
+    "aprHundredths": 994,
+    "paymentCents": 896343,
+    "freq": "MONTHLY",
+    "termMonths": 240,
+    "originalCents": 44145131,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 862439,
+    "splitInterestCents": 33904,
+    "amortizedCents": 424257,
+    "basePaymentCents": 424257
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4952408,
+    "aprHundredths": 276,
+    "paymentCents": 804539,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 182,
+    "originalCents": 5842932,
+    "minimumCents": 249140
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 798844,
+    "splitInterestCents": 5695,
+    "amortizedCents": 19655,
+    "basePaymentCents": 249140
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1064425,
+    "aprHundredths": 3185,
+    "paymentCents": 557736,
+    "freq": "BIANNUAL",
+    "termMonths": 201,
+    "originalCents": 2980935,
+    "minimumCents": 336903
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 388226,
+    "splitInterestCents": 169510,
+    "amortizedCents": 477856,
+    "basePaymentCents": 336903
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6131370,
+    "aprHundredths": 3093,
+    "paymentCents": 944324,
+    "freq": "QUARTERLY",
+    "termMonths": 78,
+    "originalCents": 49658581,
+    "minimumCents": 542825
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 470216,
+    "splitInterestCents": 474108,
+    "amortizedCents": 4486888,
+    "basePaymentCents": 542825
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8272688,
+    "aprHundredths": 3250,
+    "paymentCents": 736186,
+    "freq": "BIWEEKLY",
+    "termMonths": 78,
+    "originalCents": 15979078,
+    "minimumCents": 962032
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 632777,
+    "splitInterestCents": 103409,
+    "amortizedCents": 227630,
+    "basePaymentCents": 962032
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4912052,
+    "aprHundredths": 778,
+    "paymentCents": 821399,
+    "freq": "BIANNUAL",
+    "termMonths": 435,
+    "originalCents": 45181175,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 630320,
+    "splitInterestCents": 191079,
+    "amortizedCents": 1873071,
+    "basePaymentCents": 1873071
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9423766,
+    "aprHundredths": 2925,
+    "paymentCents": 491322,
+    "freq": null,
+    "termMonths": 116,
+    "originalCents": 47910429,
+    "minimumCents": 186520
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 261618,
+    "splitInterestCents": 229704,
+    "amortizedCents": 1243948,
+    "basePaymentCents": 186520
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9686083,
+    "aprHundredths": 85,
+    "paymentCents": 319331,
+    "freq": "MONTHLY",
+    "termMonths": 6,
+    "originalCents": 39327437,
+    "minimumCents": 255711
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 312470,
+    "splitInterestCents": 6861,
+    "amortizedCents": 6570832,
+    "basePaymentCents": 255711
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1632077,
+    "aprHundredths": 3100,
+    "paymentCents": 152199,
+    "freq": "BIWEEKLY",
+    "termMonths": 218,
+    "originalCents": 24360588,
+    "minimumCents": 960076
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 132740,
+    "splitInterestCents": 19459,
+    "amortizedCents": 291537,
+    "basePaymentCents": 960076
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7451175,
+    "aprHundredths": 2549,
+    "paymentCents": 993273,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 462,
+    "originalCents": 33680976,
+    "minimumCents": 668936
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 914135,
+    "splitInterestCents": 79138,
+    "amortizedCents": 357741,
+    "basePaymentCents": 668936
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3846260,
+    "aprHundredths": 2013,
+    "paymentCents": 155266,
+    "freq": "BIANNUAL",
+    "termMonths": 447,
+    "originalCents": 40009567,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 387126,
+    "amortizedCents": 4029994,
+    "basePaymentCents": 4029994
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9432134,
+    "aprHundredths": 1145,
+    "paymentCents": 438466,
+    "freq": null,
+    "termMonths": 147,
+    "originalCents": 36891320,
+    "minimumCents": 906108
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 348468,
+    "splitInterestCents": 89998,
+    "amortizedCents": 467837,
+    "basePaymentCents": 906108
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2530511,
+    "aprHundredths": 769,
+    "paymentCents": 857277,
+    "freq": "BIANNUAL",
+    "termMonths": 80,
+    "originalCents": 32839704,
+    "minimumCents": 301877
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 759979,
+    "splitInterestCents": 97298,
+    "amortizedCents": 3257138,
+    "basePaymentCents": 301877
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1982464,
+    "aprHundredths": 395,
+    "paymentCents": 542107,
+    "freq": "QUARTERLY",
+    "termMonths": 184,
+    "originalCents": 13214214,
+    "minimumCents": 860340
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 522530,
+    "splitInterestCents": 19577,
+    "amortizedCents": 289419,
+    "basePaymentCents": 860340
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8943907,
+    "aprHundredths": 1541,
+    "paymentCents": 875972,
+    "freq": "BIANNUAL",
+    "termMonths": 104,
+    "originalCents": 32212792,
+    "minimumCents": 605319
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 186844,
+    "splitInterestCents": 689128,
+    "amortizedCents": 3462281,
+    "basePaymentCents": 605319
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5401526,
+    "aprHundredths": 3093,
+    "paymentCents": 913917,
+    "freq": "QUARTERLY",
+    "termMonths": 15,
+    "originalCents": 43657951,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 496244,
+    "splitInterestCents": 417673,
+    "amortizedCents": 10857435,
+    "basePaymentCents": 10857435
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 264952,
+    "aprHundredths": 2177,
+    "paymentCents": 384621,
+    "freq": "BIWEEKLY",
+    "termMonths": 228,
+    "originalCents": 1651977,
+    "minimumCents": 239371
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 382403,
+    "splitInterestCents": 2218,
+    "amortizedCents": 14061,
+    "basePaymentCents": 239371
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2236300,
+    "aprHundredths": 3171,
+    "paymentCents": 766719,
+    "freq": "MONTHLY",
+    "termMonths": 140,
+    "originalCents": 21303761,
+    "minimumCents": 334956
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 707625,
+    "splitInterestCents": 59094,
+    "amortizedCents": 577952,
+    "basePaymentCents": 334956
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8299347,
+    "aprHundredths": 1022,
+    "paymentCents": 739255,
+    "freq": "MONTHLY",
+    "termMonths": 55,
+    "originalCents": 32505233,
+    "minimumCents": 884620
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 668572,
+    "splitInterestCents": 70683,
+    "amortizedCents": 742657,
+    "basePaymentCents": 884620
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7921062,
+    "aprHundredths": 1288,
+    "paymentCents": 822124,
+    "freq": "QUARTERLY",
+    "termMonths": 196,
+    "originalCents": 24067990,
+    "minimumCents": 16718
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 567066,
+    "splitInterestCents": 255058,
+    "amortizedCents": 888192,
+    "basePaymentCents": 16718
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5927723,
+    "aprHundredths": 853,
+    "paymentCents": 458121,
+    "freq": "MONTHLY",
+    "termMonths": 101,
+    "originalCents": 32121637,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 415985,
+    "splitInterestCents": 42136,
+    "amortizedCents": 446828,
+    "basePaymentCents": 446828
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4306612,
+    "aprHundredths": 949,
+    "paymentCents": 137809,
+    "freq": null,
+    "termMonths": 100,
+    "originalCents": 21401085,
+    "minimumCents": 377925
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 103751,
+    "splitInterestCents": 34058,
+    "amortizedCents": 310476,
+    "basePaymentCents": 377925
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9607920,
+    "aprHundredths": 3408,
+    "paymentCents": 319333,
+    "freq": "MONTHLY",
+    "termMonths": 301,
+    "originalCents": 1707966,
+    "minimumCents": 492044
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 46468,
+    "splitInterestCents": 272865,
+    "amortizedCents": 48517,
+    "basePaymentCents": 492044
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8214013,
+    "aprHundredths": 2026,
+    "paymentCents": 175633,
+    "freq": "WEEKLY",
+    "termMonths": 314,
+    "originalCents": 24068339,
+    "minimumCents": 98752
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 143630,
+    "splitInterestCents": 32003,
+    "amortizedCents": 94248,
+    "basePaymentCents": 98752
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7158160,
+    "aprHundredths": 881,
+    "paymentCents": 159296,
+    "freq": "WEEKLY",
+    "termMonths": 416,
+    "originalCents": 39626024,
+    "minimumCents": 532219
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 147168,
+    "splitInterestCents": 12128,
+    "amortizedCents": 70466,
+    "basePaymentCents": 532219
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8650911,
+    "aprHundredths": 3086,
+    "paymentCents": 756827,
+    "freq": "MONTHLY",
+    "termMonths": 260,
+    "originalCents": 15742074,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 534354,
+    "splitInterestCents": 222473,
+    "amortizedCents": 405384,
+    "basePaymentCents": 405384
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8045457,
+    "aprHundredths": 3285,
+    "paymentCents": 217766,
+    "freq": "MONTHLY",
+    "termMonths": 168,
+    "originalCents": 16131813,
+    "minimumCents": 732275
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 220244,
+    "amortizedCents": 446386,
+    "basePaymentCents": 732275
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3565674,
+    "aprHundredths": 1370,
+    "paymentCents": 488134,
+    "freq": "WEEKLY",
+    "termMonths": 192,
+    "originalCents": 5940305,
+    "minimumCents": 893669
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 478740,
+    "splitInterestCents": 9394,
+    "amortizedCents": 17625,
+    "basePaymentCents": 893669
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6240242,
+    "aprHundredths": 1824,
+    "paymentCents": 645623,
+    "freq": "MONTHLY",
+    "termMonths": 254,
+    "originalCents": 32414080,
+    "minimumCents": 243157
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 550771,
+    "splitInterestCents": 94852,
+    "amortizedCents": 503608,
+    "basePaymentCents": 243157
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 57188,
+    "aprHundredths": 3100,
+    "paymentCents": 741210,
+    "freq": "ANNUAL",
+    "termMonths": 345,
+    "originalCents": 16229385,
+    "minimumCents": 646339
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 723482,
+    "splitInterestCents": 17728,
+    "amortizedCents": 5033109,
+    "basePaymentCents": 646339
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5928942,
+    "aprHundredths": 1336,
+    "paymentCents": 550638,
+    "freq": null,
+    "termMonths": 67,
+    "originalCents": 35276030,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 484629,
+    "splitInterestCents": 66009,
+    "amortizedCents": 749862,
+    "basePaymentCents": 749862
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5772623,
+    "aprHundredths": 215,
+    "paymentCents": 148294,
+    "freq": "BIWEEKLY",
+    "termMonths": 437,
+    "originalCents": 28161403,
+    "minimumCents": 227652
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 143520,
+    "splitInterestCents": 4774,
+    "amortizedCents": 42897,
+    "basePaymentCents": 227652
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7353501,
+    "aprHundredths": 1510,
+    "paymentCents": 401483,
+    "freq": "ANNUAL",
+    "termMonths": 32,
+    "originalCents": 41575362,
+    "minimumCents": 200188
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1110379,
+    "amortizedCents": 18239255,
+    "basePaymentCents": 200188
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5350204,
+    "aprHundredths": 2266,
+    "paymentCents": 635733,
+    "freq": "BIANNUAL",
+    "termMonths": 223,
+    "originalCents": 3851716,
+    "minimumCents": 341650
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 29555,
+    "splitInterestCents": 606178,
+    "amortizedCents": 444784,
+    "basePaymentCents": 341650
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1339092,
+    "aprHundredths": 3291,
+    "paymentCents": 316258,
+    "freq": null,
+    "termMonths": 281,
+    "originalCents": 28161560,
+    "minimumCents": 936633
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 279533,
+    "splitInterestCents": 36725,
+    "amortizedCents": 772716,
+    "basePaymentCents": 936633
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9033078,
+    "aprHundredths": 1893,
+    "paymentCents": 715936,
+    "freq": "QUARTERLY",
+    "termMonths": 251,
+    "originalCents": 45376193,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 288446,
+    "splitInterestCents": 427490,
+    "amortizedCents": 2192520,
+    "basePaymentCents": 2192520
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1611334,
+    "aprHundredths": 1633,
+    "paymentCents": 243277,
+    "freq": "BIWEEKLY",
+    "termMonths": 280,
+    "originalCents": 3760668,
+    "minimumCents": 485343
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 233157,
+    "splitInterestCents": 10120,
+    "amortizedCents": 24160,
+    "basePaymentCents": 485343
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3865798,
+    "aprHundredths": 2403,
+    "paymentCents": 182610,
+    "freq": "BIWEEKLY",
+    "termMonths": 191,
+    "originalCents": 46442123,
+    "minimumCents": 138526
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 146881,
+    "splitInterestCents": 35729,
+    "amortizedCents": 438967,
+    "basePaymentCents": 138526
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2764867,
+    "aprHundredths": 2628,
+    "paymentCents": 859231,
+    "freq": "QUARTERLY",
+    "termMonths": 269,
+    "originalCents": 8571803,
+    "minimumCents": 24526
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 677579,
+    "splitInterestCents": 181652,
+    "amortizedCents": 565008,
+    "basePaymentCents": 24526
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9521431,
+    "aprHundredths": 1161,
+    "paymentCents": 633907,
+    "freq": "BIWEEKLY",
+    "termMonths": 5,
+    "originalCents": 23057456,
+    "minimumCents": 860341
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 591390,
+    "splitInterestCents": 42517,
+    "amortizedCents": 2152710,
+    "basePaymentCents": 860341
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2225214,
+    "aprHundredths": 3189,
+    "paymentCents": 428703,
+    "freq": "BIANNUAL",
+    "termMonths": 281,
+    "originalCents": 8042542,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 73893,
+    "splitInterestCents": 354810,
+    "amortizedCents": 1283610,
+    "basePaymentCents": 1283610
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7908703,
+    "aprHundredths": 2355,
+    "paymentCents": 280260,
+    "freq": "ANNUAL",
+    "termMonths": 19,
+    "originalCents": 2584712,
+    "minimumCents": 853369
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1862500,
+    "amortizedCents": 1764912,
+    "basePaymentCents": 853369
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7061691,
+    "aprHundredths": 2313,
+    "paymentCents": 327977,
+    "freq": "MONTHLY",
+    "termMonths": 150,
+    "originalCents": 22996016,
+    "minimumCents": 61640
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 191863,
+    "splitInterestCents": 136114,
+    "amortizedCents": 470068,
+    "basePaymentCents": 61640
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3232458,
+    "aprHundredths": 3444,
+    "paymentCents": 794059,
+    "freq": "MONTHLY",
+    "termMonths": 97,
+    "originalCents": 26663903,
+    "minimumCents": 370106
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 701287,
+    "splitInterestCents": 92772,
+    "amortizedCents": 817813,
+    "basePaymentCents": 370106
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5525875,
+    "aprHundredths": 1753,
+    "paymentCents": 424794,
+    "freq": "QUARTERLY",
+    "termMonths": 130,
+    "originalCents": 23831540,
+    "minimumCents": 997901
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 182623,
+    "splitInterestCents": 242171,
+    "amortizedCents": 1240589,
+    "basePaymentCents": 997901
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7471890,
+    "aprHundredths": 1445,
+    "paymentCents": 902202,
+    "freq": "BIWEEKLY",
+    "termMonths": 392,
+    "originalCents": 12567567,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 860676,
+    "splitInterestCents": 41526,
+    "amortizedCents": 70484,
+    "basePaymentCents": 70484
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9913244,
+    "aprHundredths": 987,
+    "paymentCents": 144384,
+    "freq": "ANNUAL",
+    "termMonths": 285,
+    "originalCents": 41903659,
+    "minimumCents": 493278
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 978437,
+    "amortizedCents": 4618260,
+    "basePaymentCents": 493278
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2431591,
+    "aprHundredths": 1687,
+    "paymentCents": 522569,
+    "freq": "BIWEEKLY",
+    "termMonths": 250,
+    "originalCents": 22862834,
+    "minimumCents": 651364
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 506792,
+    "splitInterestCents": 15777,
+    "amortizedCents": 152938,
+    "basePaymentCents": 651364
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 96327,
+    "aprHundredths": 735,
+    "paymentCents": 832998,
+    "freq": null,
+    "termMonths": 57,
+    "originalCents": 26462965,
+    "minimumCents": 617045
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 832408,
+    "splitInterestCents": 590,
+    "amortizedCents": 551418,
+    "basePaymentCents": 617045
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4698454,
+    "aprHundredths": 3400,
+    "paymentCents": 751808,
+    "freq": "BIANNUAL",
+    "termMonths": 444,
+    "originalCents": 2529272,
+    "minimumCents": 651485
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 798737,
+    "amortizedCents": 429980,
+    "basePaymentCents": 651485
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5634731,
+    "aprHundredths": 2658,
+    "paymentCents": 569446,
+    "freq": "ANNUAL",
+    "termMonths": 72,
+    "originalCents": 2980705,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1497711,
+    "amortizedCents": 1046751,
+    "basePaymentCents": 1046751
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1142537,
+    "aprHundredths": 2822,
+    "paymentCents": 960074,
+    "freq": "ANNUAL",
+    "termMonths": 175,
+    "originalCents": 9510761,
+    "minimumCents": 750972
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 637650,
+    "splitInterestCents": 322424,
+    "amortizedCents": 2750006,
+    "basePaymentCents": 750972
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2244760,
+    "aprHundredths": 1651,
+    "paymentCents": 961899,
+    "freq": "QUARTERLY",
+    "termMonths": 340,
+    "originalCents": 45467684,
+    "minimumCents": 158065
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 869247,
+    "splitInterestCents": 92652,
+    "amortizedCents": 1896313,
+    "basePaymentCents": 158065
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8468009,
+    "aprHundredths": 1917,
+    "paymentCents": 743995,
+    "freq": null,
+    "termMonths": 250,
+    "originalCents": 4576014,
+    "minimumCents": 526482
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 608719,
+    "splitInterestCents": 135276,
+    "amortizedCents": 74519,
+    "basePaymentCents": 526482
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9697167,
+    "aprHundredths": 505,
+    "paymentCents": 669058,
+    "freq": "MONTHLY",
+    "termMonths": 74,
+    "originalCents": 11070096,
+    "minimumCents": 321285
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 628249,
+    "splitInterestCents": 40809,
+    "amortizedCents": 174408,
+    "basePaymentCents": 321285
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2693961,
+    "aprHundredths": 3196,
+    "paymentCents": 774406,
+    "freq": "QUARTERLY",
+    "termMonths": 23,
+    "originalCents": 37963419,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 559159,
+    "splitInterestCents": 215247,
+    "amortizedCents": 6603688,
+    "basePaymentCents": 6603688
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6385358,
+    "aprHundredths": 3045,
+    "paymentCents": 708000,
+    "freq": "BIWEEKLY",
+    "termMonths": 425,
+    "originalCents": 33869771,
+    "minimumCents": 868996
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 633218,
+    "splitInterestCents": 74782,
+    "amortizedCents": 396676,
+    "basePaymentCents": 868996
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7784373,
+    "aprHundredths": 1596,
+    "paymentCents": 286965,
+    "freq": "BIWEEKLY",
+    "termMonths": 341,
+    "originalCents": 23872993,
+    "minimumCents": 22575
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 239181,
+    "splitInterestCents": 47784,
+    "amortizedCents": 148153,
+    "basePaymentCents": 22575
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1044917,
+    "aprHundredths": 518,
+    "paymentCents": 538196,
+    "freq": "ANNUAL",
+    "termMonths": 126,
+    "originalCents": 49956768,
+    "minimumCents": 127921
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 484069,
+    "splitInterestCents": 54127,
+    "amortizedCents": 6071227,
+    "basePaymentCents": 127921
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6639251,
+    "aprHundredths": 844,
+    "paymentCents": 450190,
+    "freq": "ANNUAL",
+    "termMonths": 155,
+    "originalCents": 43323706,
+    "minimumCents": 79934
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 560353,
+    "amortizedCents": 5614773,
+    "basePaymentCents": 79934
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4581288,
+    "aprHundredths": 194,
+    "paymentCents": 91656,
+    "freq": "BIANNUAL",
+    "termMonths": 167,
+    "originalCents": 40733865,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 47218,
+    "splitInterestCents": 44438,
+    "amortizedCents": 1668273,
+    "basePaymentCents": 1668273
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5245305,
+    "aprHundredths": 3052,
+    "paymentCents": 917819,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 167,
+    "originalCents": 5550609,
+    "minimumCents": 227656
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 851116,
+    "splitInterestCents": 66703,
+    "amortizedCents": 71638,
+    "basePaymentCents": 227656
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4501946,
+    "aprHundredths": 1920,
+    "paymentCents": 694451,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 211,
+    "originalCents": 23155233,
+    "minimumCents": 682609
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 658435,
+    "splitInterestCents": 36016,
+    "amortizedCents": 191890,
+    "basePaymentCents": 682609
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1170497,
+    "aprHundredths": 660,
+    "paymentCents": 327146,
+    "freq": "WEEKLY",
+    "termMonths": 34,
+    "originalCents": 42739007,
+    "minimumCents": 234231
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 325660,
+    "splitInterestCents": 1486,
+    "amortizedCents": 318891,
+    "basePaymentCents": 234231
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9444466,
+    "aprHundredths": 721,
+    "paymentCents": 921730,
+    "freq": null,
+    "termMonths": 95,
+    "originalCents": 32742354,
+    "minimumCents": 268672
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 864985,
+    "splitInterestCents": 56745,
+    "amortizedCents": 453334,
+    "basePaymentCents": 268672
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8896440,
+    "aprHundredths": 3048,
+    "paymentCents": 858516,
+    "freq": "BIWEEKLY",
+    "termMonths": 316,
+    "originalCents": 349494,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 754222,
+    "splitInterestCents": 104294,
+    "amortizedCents": 4099,
+    "basePaymentCents": 4099
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5673822,
+    "aprHundredths": 1585,
+    "paymentCents": 838980,
+    "freq": "ANNUAL",
+    "termMonths": 288,
+    "originalCents": 44499109,
+    "minimumCents": 96672
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 899301,
+    "amortizedCents": 7265815,
+    "basePaymentCents": 96672
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4900947,
+    "aprHundredths": 598,
+    "paymentCents": 377917,
+    "freq": "WEEKLY",
+    "termMonths": 116,
+    "originalCents": 38547851,
+    "minimumCents": 275243
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 372281,
+    "splitInterestCents": 5636,
+    "amortizedCents": 100969,
+    "basePaymentCents": 275243
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5518771,
+    "aprHundredths": 3270,
+    "paymentCents": 699073,
+    "freq": "ANNUAL",
+    "termMonths": 286,
+    "originalCents": 6915001,
+    "minimumCents": 692496
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1804638,
+    "amortizedCents": 2263752,
+    "basePaymentCents": 692496
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6513628,
+    "aprHundredths": 2795,
+    "paymentCents": 790153,
+    "freq": "MONTHLY",
+    "termMonths": 132,
+    "originalCents": 16527934,
+    "minimumCents": 752924
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 638440,
+    "splitInterestCents": 151713,
+    "amortizedCents": 404318,
+    "basePaymentCents": 752924
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9295457,
+    "aprHundredths": 1883,
+    "paymentCents": 620111,
+    "freq": "BIANNUAL",
+    "termMonths": 434,
+    "originalCents": 15644696,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 875167,
+    "amortizedCents": 1475214,
+    "basePaymentCents": 1475214
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9002502,
+    "aprHundredths": 1911,
+    "paymentCents": 280266,
+    "freq": "BIWEEKLY",
+    "termMonths": 157,
+    "originalCents": 45369956,
+    "minimumCents": 117042
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 214098,
+    "splitInterestCents": 66168,
+    "amortizedCents": 363621,
+    "basePaymentCents": 117042
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6280489,
+    "aprHundredths": 3127,
+    "paymentCents": 394384,
+    "freq": "MONTHLY",
+    "termMonths": 258,
+    "originalCents": 7109987,
+    "minimumCents": 452263
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 230725,
+    "splitInterestCents": 163659,
+    "amortizedCents": 185518,
+    "basePaymentCents": 452263
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9404193,
+    "aprHundredths": 423,
+    "paymentCents": 266714,
+    "freq": null,
+    "termMonths": 126,
+    "originalCents": 20621134,
+    "minimumCents": 915030
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 233564,
+    "splitInterestCents": 33150,
+    "amortizedCents": 202970,
+    "basePaymentCents": 915030
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8318838,
+    "aprHundredths": 2204,
+    "paymentCents": 102537,
+    "freq": "BIWEEKLY",
+    "termMonths": 9,
+    "originalCents": 42738632,
+    "minimumCents": 980323
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 32019,
+    "splitInterestCents": 70518,
+    "amortizedCents": 2332217,
+    "basePaymentCents": 980323
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7706273,
+    "aprHundredths": 1336,
+    "paymentCents": 154153,
+    "freq": "QUARTERLY",
+    "termMonths": 443,
+    "originalCents": 38395063,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 257390,
+    "amortizedCents": 1292387,
+    "basePaymentCents": 1292387
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7999231,
+    "aprHundredths": 3489,
+    "paymentCents": 363133,
+    "freq": "BIWEEKLY",
+    "termMonths": 179,
+    "originalCents": 22703421,
+    "minimumCents": 643666
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 255789,
+    "splitInterestCents": 107344,
+    "amortizedCents": 306401,
+    "basePaymentCents": 643666
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2119168,
+    "aprHundredths": 3041,
+    "paymentCents": 801868,
+    "freq": "ANNUAL",
+    "termMonths": 333,
+    "originalCents": 4442871,
+    "minimumCents": 135733
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 157429,
+    "splitInterestCents": 644439,
+    "amortizedCents": 1351875,
+    "basePaymentCents": 135733
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1990787,
+    "aprHundredths": 1541,
+    "paymentCents": 799801,
+    "freq": "ANNUAL",
+    "termMonths": 26,
+    "originalCents": 13208248,
+    "minimumCents": 577981
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 493021,
+    "splitInterestCents": 306780,
+    "amortizedCents": 8167069,
+    "basePaymentCents": 577981
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6612533,
+    "aprHundredths": 3004,
+    "paymentCents": 800638,
+    "freq": "BIWEEKLY",
+    "termMonths": 396,
+    "originalCents": 47068899,
+    "minimumCents": 165152
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 724238,
+    "splitInterestCents": 76400,
+    "amortizedCents": 543855,
+    "basePaymentCents": 165152
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4990207,
+    "aprHundredths": 2508,
+    "paymentCents": 553827,
+    "freq": "QUARTERLY",
+    "termMonths": 29,
+    "originalCents": 6587048,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 240941,
+    "splitInterestCents": 312886,
+    "amortizedCents": 906452,
+    "basePaymentCents": 906452
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5751921,
+    "aprHundredths": 2016,
+    "paymentCents": 739374,
+    "freq": null,
+    "termMonths": 474,
+    "originalCents": 13409193,
+    "minimumCents": 416987
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 642742,
+    "splitInterestCents": 96632,
+    "amortizedCents": 225358,
+    "basePaymentCents": 416987
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1268167,
+    "aprHundredths": 1863,
+    "paymentCents": 784173,
+    "freq": "BIWEEKLY",
+    "termMonths": 117,
+    "originalCents": 43031012,
+    "minimumCents": 611186
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 775086,
+    "splitInterestCents": 9087,
+    "amortizedCents": 368415,
+    "basePaymentCents": 611186
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1573520,
+    "aprHundredths": 311,
+    "paymentCents": 902204,
+    "freq": "BIWEEKLY",
+    "termMonths": 31,
+    "originalCents": 41903563,
+    "minimumCents": 362417
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 900322,
+    "splitInterestCents": 1882,
+    "amortizedCents": 651196,
+    "basePaymentCents": 362417
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1259797,
+    "aprHundredths": 1188,
+    "paymentCents": 65540,
+    "freq": "BIANNUAL",
+    "termMonths": 225,
+    "originalCents": 15066106,
+    "minimumCents": 676748
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 74832,
+    "amortizedCents": 1007363,
+    "basePaymentCents": 676748
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2244662,
+    "aprHundredths": 1931,
+    "paymentCents": 377921,
+    "freq": "QUARTERLY",
+    "termMonths": 158,
+    "originalCents": 44785699,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 269560,
+    "splitInterestCents": 108361,
+    "amortizedCents": 2355637,
+    "basePaymentCents": 2355637
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4705639,
+    "aprHundredths": 297,
+    "paymentCents": 706048,
+    "freq": "QUARTERLY",
+    "termMonths": 49,
+    "originalCents": 36891267,
+    "minimumCents": 445174
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 671109,
+    "splitInterestCents": 34939,
+    "amortizedCents": 2453914,
+    "basePaymentCents": 445174
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3077407,
+    "aprHundredths": 953,
+    "paymentCents": 794777,
+    "freq": null,
+    "termMonths": 42,
+    "originalCents": 25335015,
+    "minimumCents": 764761
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 770337,
+    "splitInterestCents": 24440,
+    "amortizedCents": 711768,
+    "basePaymentCents": 764761
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7802700,
+    "aprHundredths": 696,
+    "paymentCents": 616326,
+    "freq": "WEEKLY",
+    "termMonths": 88,
+    "originalCents": 42842539,
+    "minimumCents": 81050
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 605882,
+    "splitInterestCents": 10444,
+    "amortizedCents": 143619,
+    "basePaymentCents": 81050
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6502503,
+    "aprHundredths": 1658,
+    "paymentCents": 815417,
+    "freq": "WEEKLY",
+    "termMonths": 220,
+    "originalCents": 16521814,
+    "minimumCents": 771338
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 794684,
+    "splitInterestCents": 20733,
+    "amortizedCents": 55343,
+    "basePaymentCents": 771338
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9639831,
+    "aprHundredths": 905,
+    "paymentCents": 257664,
+    "freq": "MONTHLY",
+    "termMonths": 284,
+    "originalCents": 44437267,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 184964,
+    "splitInterestCents": 72700,
+    "amortizedCents": 380134,
+    "basePaymentCents": 380134
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3917197,
+    "aprHundredths": 2443,
+    "paymentCents": 732282,
+    "freq": "ANNUAL",
+    "termMonths": 389,
+    "originalCents": 32059771,
+    "minimumCents": 835073
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 956971,
+    "amortizedCents": 7839391,
+    "basePaymentCents": 835073
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7939341,
+    "aprHundredths": 724,
+    "paymentCents": 604604,
+    "freq": "WEEKLY",
+    "termMonths": 316,
+    "originalCents": 8633382,
+    "minimumCents": 961902
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 593550,
+    "splitInterestCents": 11054,
+    "amortizedCents": 14123,
+    "basePaymentCents": 961902
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7928240,
+    "aprHundredths": 960,
+    "paymentCents": 754879,
+    "freq": "BIANNUAL",
+    "termMonths": 229,
+    "originalCents": 27047846,
+    "minimumCents": 410015
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 374323,
+    "splitInterestCents": 380556,
+    "amortizedCents": 1561152,
+    "basePaymentCents": 410015
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6495305,
+    "aprHundredths": 1883,
+    "paymentCents": 868995,
+    "freq": "BIANNUAL",
+    "termMonths": 455,
+    "originalCents": 28649006,
+    "minimumCents": 442495
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 257462,
+    "splitInterestCents": 611533,
+    "amortizedCents": 2700198,
+    "basePaymentCents": 442495
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7236210,
+    "aprHundredths": 2371,
+    "paymentCents": 995231,
+    "freq": "WEEKLY",
+    "termMonths": 127,
+    "originalCents": 33485818,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 962237,
+    "splitInterestCents": 32994,
+    "amortizedCents": 166305,
+    "basePaymentCents": 166305
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6005815,
+    "aprHundredths": 2528,
+    "paymentCents": 713984,
+    "freq": null,
+    "termMonths": 215,
+    "originalCents": 49956998,
+    "minimumCents": 899401
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 587461,
+    "splitInterestCents": 126523,
+    "amortizedCents": 1064464,
+    "basePaymentCents": 899401
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9861814,
+    "aprHundredths": 1377,
+    "paymentCents": 887693,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 447,
+    "originalCents": 148326,
+    "minimumCents": 988134
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 831111,
+    "splitInterestCents": 56582,
+    "amortizedCents": 856,
+    "basePaymentCents": 988134
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9131961,
+    "aprHundredths": 1630,
+    "paymentCents": 841649,
+    "freq": "WEEKLY",
+    "termMonths": 144,
+    "originalCents": 24458007,
+    "minimumCents": 778435
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 813024,
+    "splitInterestCents": 28625,
+    "amortizedCents": 89340,
+    "basePaymentCents": 778435
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4560508,
+    "aprHundredths": 1387,
+    "paymentCents": 987415,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 134,
+    "originalCents": 43329656,
+    "minimumCents": 543933
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 961059,
+    "splitInterestCents": 26356,
+    "amortizedCents": 318364,
+    "basePaymentCents": 543933
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 662681,
+    "aprHundredths": 2902,
+    "paymentCents": 459960,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 299,
+    "originalCents": 14669997,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 451947,
+    "splitInterestCents": 8013,
+    "amortizedCents": 177519,
+    "basePaymentCents": 177519
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9920391,
+    "aprHundredths": 338,
+    "paymentCents": 747065,
+    "freq": "ANNUAL",
+    "termMonths": 74,
+    "originalCents": 40886833,
+    "minimumCents": 675633
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 411756,
+    "splitInterestCents": 335309,
+    "amortizedCents": 7642940,
+    "basePaymentCents": 675633
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4151581,
+    "aprHundredths": 2471,
+    "paymentCents": 824071,
+    "freq": "QUARTERLY",
+    "termMonths": 355,
+    "originalCents": 27381858,
+    "minimumCents": 532341
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 567607,
+    "splitInterestCents": 256464,
+    "amortizedCents": 1692949,
+    "basePaymentCents": 532341
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 29293,
+    "aprHundredths": 1585,
+    "paymentCents": 975700,
+    "freq": "MONTHLY",
+    "termMonths": 184,
+    "originalCents": 739095,
+    "minimumCents": 758785
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 975313,
+    "splitInterestCents": 387,
+    "amortizedCents": 10721,
+    "basePaymentCents": 758785
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4451772,
+    "aprHundredths": 10,
+    "paymentCents": 63470,
+    "freq": "MONTHLY",
+    "termMonths": 122,
+    "originalCents": 28801709,
+    "minimumCents": 636576
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 63099,
+    "splitInterestCents": 371,
+    "amortizedCents": 237292,
+    "basePaymentCents": 636576
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8663298,
+    "aprHundredths": 2307,
+    "paymentCents": 529153,
+    "freq": "QUARTERLY",
+    "termMonths": 52,
+    "originalCents": 41026297,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 29497,
+    "splitInterestCents": 499656,
+    "amortizedCents": 3850527,
+    "basePaymentCents": 3850527
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6495340,
+    "aprHundredths": 2341,
+    "paymentCents": 548683,
+    "freq": "WEEKLY",
+    "termMonths": 202,
+    "originalCents": 4186213,
+    "minimumCents": 487420
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 519441,
+    "splitInterestCents": 29242,
+    "amortizedCents": 19223,
+    "basePaymentCents": 487420
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6728462,
+    "aprHundredths": 519,
+    "paymentCents": 772577,
+    "freq": "WEEKLY",
+    "termMonths": 397,
+    "originalCents": 35142704,
+    "minimumCents": 956046
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 765861,
+    "splitInterestCents": 6716,
+    "amortizedCents": 42765,
+    "basePaymentCents": 956046
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9529790,
+    "aprHundredths": 1015,
+    "paymentCents": 331045,
+    "freq": "BIANNUAL",
+    "termMonths": 42,
+    "originalCents": 8725044,
+    "minimumCents": 726414
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 483637,
+    "amortizedCents": 1511961,
+    "basePaymentCents": 726414
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7979679,
+    "aprHundredths": 3407,
+    "paymentCents": 488133,
+    "freq": "ANNUAL",
+    "termMonths": 453,
+    "originalCents": 2529303,
+    "minimumCents": 803831
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 2718677,
+    "amortizedCents": 861746,
+    "basePaymentCents": 803831
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2080139,
+    "aprHundredths": 1366,
+    "paymentCents": 309685,
+    "freq": "BIANNUAL",
+    "termMonths": 101,
+    "originalCents": 13896559,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 167612,
+    "splitInterestCents": 142073,
+    "amortizedCents": 1406643,
+    "basePaymentCents": 1406643
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9755823,
+    "aprHundredths": 1599,
+    "paymentCents": 354605,
+    "freq": "BIANNUAL",
+    "termMonths": 268,
+    "originalCents": 29490412,
+    "minimumCents": 90816
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 779978,
+    "amortizedCents": 2434175,
+    "basePaymentCents": 90816
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 486971,
+    "aprHundredths": 1658,
+    "paymentCents": 350577,
+    "freq": "ANNUAL",
+    "termMonths": 67,
+    "originalCents": 36696096,
+    "minimumCents": 79933
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 269837,
+    "splitInterestCents": 80740,
+    "amortizedCents": 10112404,
+    "basePaymentCents": 79933
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9307788,
+    "aprHundredths": 1363,
+    "paymentCents": 470560,
+    "freq": "BIANNUAL",
+    "termMonths": 284,
+    "originalCents": 26017639,
+    "minimumCents": 26485
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 634326,
+    "amortizedCents": 1856868,
+    "basePaymentCents": 26485
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2470697,
+    "aprHundredths": 696,
+    "paymentCents": 696403,
+    "freq": "BIANNUAL",
+    "termMonths": 285,
+    "originalCents": 45863639,
+    "minimumCents": 307613
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 610423,
+    "splitInterestCents": 85980,
+    "amortizedCents": 1979220,
+    "basePaymentCents": 307613
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3514262,
+    "aprHundredths": 1384,
+    "paymentCents": 719723,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 324,
+    "originalCents": 3754161,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 699457,
+    "splitInterestCents": 20266,
+    "amortizedCents": 22183,
+    "basePaymentCents": 22183
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8084444,
+    "aprHundredths": 208,
+    "paymentCents": 583004,
+    "freq": "QUARTERLY",
+    "termMonths": 372,
+    "originalCents": 1999852,
+    "minimumCents": 288913
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 540965,
+    "splitInterestCents": 42039,
+    "amortizedCents": 21923,
+    "basePaymentCents": 288913
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9464017,
+    "aprHundredths": 2819,
+    "paymentCents": 300634,
+    "freq": "WEEKLY",
+    "termMonths": 298,
+    "originalCents": 29233653,
+    "minimumCents": 182735
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 249328,
+    "splitInterestCents": 51306,
+    "amortizedCents": 158628,
+    "basePaymentCents": 182735
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3388673,
+    "aprHundredths": 963,
+    "paymentCents": 415156,
+    "freq": "MONTHLY",
+    "termMonths": 193,
+    "originalCents": 47033144,
+    "minimumCents": 844719
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 387962,
+    "splitInterestCents": 27194,
+    "amortizedCents": 480092,
+    "basePaymentCents": 844719
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6150974,
+    "aprHundredths": 2157,
+    "paymentCents": 114247,
+    "freq": "MONTHLY",
+    "termMonths": 21,
+    "originalCents": 22954330,
+    "minimumCents": 466652
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 3683,
+    "splitInterestCents": 110564,
+    "amortizedCents": 1321994,
+    "basePaymentCents": 466652
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6046077,
+    "aprHundredths": 481,
+    "paymentCents": 966653,
+    "freq": null,
+    "termMonths": 177,
+    "originalCents": 39076965,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 942418,
+    "splitInterestCents": 24235,
+    "amortizedCents": 308699,
+    "basePaymentCents": 308699
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1690655,
+    "aprHundredths": 1917,
+    "paymentCents": 310402,
+    "freq": "MONTHLY",
+    "termMonths": 129,
+    "originalCents": 29525886,
+    "minimumCents": 979609
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 283394,
+    "splitInterestCents": 27008,
+    "amortizedCents": 541812,
+    "basePaymentCents": 979609
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4638723,
+    "aprHundredths": 3068,
+    "paymentCents": 71409,
+    "freq": "QUARTERLY",
+    "termMonths": 420,
+    "originalCents": 45181281,
+    "minimumCents": 217764
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 355790,
+    "amortizedCents": 3465516,
+    "basePaymentCents": 217764
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6912681,
+    "aprHundredths": 530,
+    "paymentCents": 483390,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 255,
+    "originalCents": 9114971,
+    "minimumCents": 779153
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 468124,
+    "splitInterestCents": 15266,
+    "amortizedCents": 29805,
+    "basePaymentCents": 779153
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8585137,
+    "aprHundredths": 1315,
+    "paymentCents": 355322,
+    "freq": "WEEKLY",
+    "termMonths": 433,
+    "originalCents": 2821453,
+    "minimumCents": 34294
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 333612,
+    "splitInterestCents": 21710,
+    "amortizedCents": 7198,
+    "basePaymentCents": 34294
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8974533,
+    "aprHundredths": 272,
+    "paymentCents": 73358,
+    "freq": "WEEKLY",
+    "termMonths": 40,
+    "originalCents": 154381,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 68664,
+    "splitInterestCents": 4694,
+    "amortizedCents": 934,
+    "basePaymentCents": 934
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6240230,
+    "aprHundredths": 2412,
+    "paymentCents": 932727,
+    "freq": "QUARTERLY",
+    "termMonths": 245,
+    "originalCents": 27443626,
+    "minimumCents": 311517
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 556441,
+    "splitInterestCents": 376286,
+    "amortizedCents": 1668565,
+    "basePaymentCents": 311517
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5233000,
+    "aprHundredths": 1774,
+    "paymentCents": 909169,
+    "freq": "QUARTERLY",
+    "termMonths": 390,
+    "originalCents": 21492042,
+    "minimumCents": 757666
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 677085,
+    "splitInterestCents": 232084,
+    "amortizedCents": 956566,
+    "basePaymentCents": 757666
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8057779,
+    "aprHundredths": 2327,
+    "paymentCents": 870947,
+    "freq": "QUARTERLY",
+    "termMonths": 402,
+    "originalCents": 25335081,
+    "minimumCents": 639761
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 402186,
+    "splitInterestCents": 468761,
+    "amortizedCents": 1474623,
+    "basePaymentCents": 639761
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6787003,
+    "aprHundredths": 512,
+    "paymentCents": 253042,
+    "freq": null,
+    "termMonths": 43,
+    "originalCents": 34753073,
+    "minimumCents": 987296
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 224084,
+    "splitInterestCents": 28958,
+    "amortizedCents": 886335,
+    "basePaymentCents": 987296
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3377488,
+    "aprHundredths": 830,
+    "paymentCents": 204092,
+    "freq": null,
+    "termMonths": 46,
+    "originalCents": 2584741,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 180731,
+    "splitInterestCents": 23361,
+    "amortizedCents": 65795,
+    "basePaymentCents": 65795
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8494660,
+    "aprHundredths": 789,
+    "paymentCents": 409173,
+    "freq": "BIWEEKLY",
+    "termMonths": 305,
+    "originalCents": 37963120,
+    "minimumCents": 736184
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 383395,
+    "splitInterestCents": 25778,
+    "amortizedCents": 133176,
+    "basePaymentCents": 736184
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6885955,
+    "aprHundredths": 2806,
+    "paymentCents": 222508,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 175,
+    "originalCents": 2626803,
+    "minimumCents": 247186
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 142000,
+    "splitInterestCents": 80508,
+    "amortizedCents": 31246,
+    "basePaymentCents": 247186
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8505765,
+    "aprHundredths": 1298,
+    "paymentCents": 807732,
+    "freq": "QUARTERLY",
+    "termMonths": 168,
+    "originalCents": 5417235,
+    "minimumCents": 409168
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 531720,
+    "splitInterestCents": 276012,
+    "amortizedCents": 211092,
+    "basePaymentCents": 409168
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 506473,
+    "aprHundredths": 215,
+    "paymentCents": 768548,
+    "freq": "QUARTERLY",
+    "termMonths": 430,
+    "originalCents": 44005772,
+    "minimumCents": 257670
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 765826,
+    "splitInterestCents": 2722,
+    "amortizedCents": 441788,
+    "basePaymentCents": 257670
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7139844,
+    "aprHundredths": 796,
+    "paymentCents": 984226,
+    "freq": null,
+    "termMonths": 346,
+    "originalCents": 14322232,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 936865,
+    "splitInterestCents": 47361,
+    "amortizedCents": 105738,
+    "basePaymentCents": 105738
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1046149,
+    "aprHundredths": 645,
+    "paymentCents": 199078,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 53,
+    "originalCents": 7012451,
+    "minimumCents": 126088
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 196266,
+    "splitInterestCents": 2812,
+    "amortizedCents": 76113,
+    "basePaymentCents": 126088
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 439434,
+    "aprHundredths": 3198,
+    "paymentCents": 944449,
+    "freq": "BIWEEKLY",
+    "termMonths": 329,
+    "originalCents": 4929931,
+    "minimumCents": 237295
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 939044,
+    "splitInterestCents": 5405,
+    "amortizedCents": 60648,
+    "basePaymentCents": 237295
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1912648,
+    "aprHundredths": 2895,
+    "paymentCents": 422849,
+    "freq": "ANNUAL",
+    "termMonths": 477,
+    "originalCents": 3169949,
+    "minimumCents": 708842
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 553712,
+    "amortizedCents": 917735,
+    "basePaymentCents": 708842
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8546089,
+    "aprHundredths": 994,
+    "paymentCents": 308451,
+    "freq": null,
+    "termMonths": 455,
+    "originalCents": 47556383,
+    "minimumCents": 633902
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 237661,
+    "splitInterestCents": 70790,
+    "amortizedCents": 403380,
+    "basePaymentCents": 633902
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1982390,
+    "aprHundredths": 1072,
+    "paymentCents": 663203,
+    "freq": "QUARTERLY",
+    "termMonths": 13,
+    "originalCents": 11362269,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 610075,
+    "splitInterestCents": 53128,
+    "amortizedCents": 3033401,
+    "basePaymentCents": 3033401
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6298765,
+    "aprHundredths": 2077,
+    "paymentCents": 760854,
+    "freq": null,
+    "termMonths": 186,
+    "originalCents": 39430967,
+    "minimumCents": 309563
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 651833,
+    "splitInterestCents": 109021,
+    "amortizedCents": 711735,
+    "basePaymentCents": 309563
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7400974,
+    "aprHundredths": 516,
+    "paymentCents": 143552,
+    "freq": "QUARTERLY",
+    "termMonths": 4,
+    "originalCents": 13207924,
+    "minimumCents": 716653
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 48079,
+    "splitInterestCents": 95473,
+    "amortizedCents": 13378306,
+    "basePaymentCents": 716653
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3917266,
+    "aprHundredths": 1862,
+    "paymentCents": 779146,
+    "freq": "ANNUAL",
+    "termMonths": 377,
+    "originalCents": 17733231,
+    "minimumCents": 321404
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 49751,
+    "splitInterestCents": 729395,
+    "amortizedCents": 3318602,
+    "basePaymentCents": 321404
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9697206,
+    "aprHundredths": 1523,
+    "paymentCents": 756953,
+    "freq": null,
+    "termMonths": 354,
+    "originalCents": 48885065,
+    "minimumCents": 284178
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 633879,
+    "splitInterestCents": 123074,
+    "amortizedCents": 627657,
+    "basePaymentCents": 284178
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5525952,
+    "aprHundredths": 99,
+    "paymentCents": 512686,
+    "freq": "BIANNUAL",
+    "termMonths": 298,
+    "originalCents": 47806769,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 485333,
+    "splitInterestCents": 27353,
+    "amortizedCents": 1081685,
+    "basePaymentCents": 1081685
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1033825,
+    "aprHundredths": 1001,
+    "paymentCents": 530268,
+    "freq": "ANNUAL",
+    "termMonths": 184,
+    "originalCents": 46149991,
+    "minimumCents": 484235
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 426782,
+    "splitInterestCents": 103486,
+    "amortizedCents": 6070977,
+    "basePaymentCents": 484235
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 909461,
+    "aprHundredths": 1192,
+    "paymentCents": 210791,
+    "freq": "WEEKLY",
+    "termMonths": 11,
+    "originalCents": 2139375,
+    "minimumCents": 409298
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 208706,
+    "splitInterestCents": 2085,
+    "amortizedCents": 47118,
+    "basePaymentCents": 409298
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9228484,
+    "aprHundredths": 3499,
+    "paymentCents": 710072,
+    "freq": "WEEKLY",
+    "termMonths": 264,
+    "originalCents": 11069939,
+    "minimumCents": 883783
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 647975,
+    "splitInterestCents": 62097,
+    "amortizedCents": 74523,
+    "basePaymentCents": 883783
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8963434,
+    "aprHundredths": 687,
+    "paymentCents": 204099,
+    "freq": "WEEKLY",
+    "termMonths": 255,
+    "originalCents": 3462125,
+    "minimumCents": 27198
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 192257,
+    "splitInterestCents": 11842,
+    "amortizedCents": 5960,
+    "basePaymentCents": 27198
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5714045,
+    "aprHundredths": 1616,
+    "paymentCents": 384615,
+    "freq": "BIANNUAL",
+    "termMonths": 187,
+    "originalCents": 36250868,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 461695,
+    "amortizedCents": 3218503,
+    "basePaymentCents": 3218503
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9932821,
+    "aprHundredths": 1486,
+    "paymentCents": 283062,
+    "freq": "WEEKLY",
+    "termMonths": 376,
+    "originalCents": 31670205,
+    "minimumCents": 235470
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 254677,
+    "splitInterestCents": 28385,
+    "amortizedCents": 91379,
+    "basePaymentCents": 235470
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6591793,
+    "aprHundredths": 2788,
+    "paymentCents": 274528,
+    "freq": "BIWEEKLY",
+    "termMonths": 250,
+    "originalCents": 46058763,
+    "minimumCents": 997067
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 203844,
+    "splitInterestCents": 70684,
+    "amortizedCents": 495420,
+    "basePaymentCents": 997067
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9432166,
+    "aprHundredths": 3421,
+    "paymentCents": 299804,
+    "freq": "ANNUAL",
+    "termMonths": 382,
+    "originalCents": 49074008,
+    "minimumCents": 538919
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 3226744,
+    "amortizedCents": 16789586,
+    "basePaymentCents": 538919
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5460195,
+    "aprHundredths": 2156,
+    "paymentCents": 861183,
+    "freq": "BIWEEKLY",
+    "termMonths": 76,
+    "originalCents": 5648104,
+    "minimumCents": 928820
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 815905,
+    "splitInterestCents": 45278,
+    "amortizedCents": 62951,
+    "basePaymentCents": 928820
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6103411,
+    "aprHundredths": 102,
+    "paymentCents": 133910,
+    "freq": "QUARTERLY",
+    "termMonths": 159,
+    "originalCents": 21011171,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 118346,
+    "splitInterestCents": 15564,
+    "amortizedCents": 424334,
+    "basePaymentCents": 424334
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2021517,
+    "aprHundredths": 1804,
+    "paymentCents": 215940,
+    "freq": "MONTHLY",
+    "termMonths": 353,
+    "originalCents": 48397566,
+    "minimumCents": 288080
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 185550,
+    "splitInterestCents": 30390,
+    "amortizedCents": 731349,
+    "basePaymentCents": 288080
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8299350,
+    "aprHundredths": 2478,
+    "paymentCents": 4874,
+    "freq": "MONTHLY",
+    "termMonths": 233,
+    "originalCents": 1902488,
+    "minimumCents": 685396
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 171382,
+    "amortizedCents": 39625,
+    "basePaymentCents": 685396
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 636002,
+    "aprHundredths": 2778,
+    "paymentCents": 183446,
+    "freq": "BIWEEKLY",
+    "termMonths": 289,
+    "originalCents": 45704684,
+    "minimumCents": 75311
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 176651,
+    "splitInterestCents": 6795,
+    "amortizedCents": 488968,
+    "basePaymentCents": 75311
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6357366,
+    "aprHundredths": 1927,
+    "paymentCents": 895620,
+    "freq": "WEEKLY",
+    "termMonths": 64,
+    "originalCents": 36604919,
+    "minimumCents": 379881
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 872061,
+    "splitInterestCents": 23559,
+    "amortizedCents": 211602,
+    "basePaymentCents": 379881
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 936196,
+    "aprHundredths": 3209,
+    "paymentCents": 733391,
+    "freq": null,
+    "termMonths": 300,
+    "originalCents": 8237600,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 708356,
+    "splitInterestCents": 25035,
+    "amortizedCents": 220367,
+    "basePaymentCents": 220367
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6404852,
+    "aprHundredths": 817,
+    "paymentCents": 397450,
+    "freq": "BIANNUAL",
+    "termMonths": 308,
+    "originalCents": 20322555,
+    "minimumCents": 345554
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 135812,
+    "splitInterestCents": 261638,
+    "amortizedCents": 953983,
+    "basePaymentCents": 345554
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8663246,
+    "aprHundredths": 1179,
+    "paymentCents": 505715,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 337,
+    "originalCents": 35470953,
+    "minimumCents": 628043
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 463157,
+    "splitInterestCents": 42558,
+    "amortizedCents": 180904,
+    "basePaymentCents": 628043
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3017577,
+    "aprHundredths": 1141,
+    "paymentCents": 926867,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 79,
+    "originalCents": 39041277,
+    "minimumCents": 444332
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 912521,
+    "splitInterestCents": 14346,
+    "amortizedCents": 351972,
+    "basePaymentCents": 444332
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5975163,
+    "aprHundredths": 393,
+    "paymentCents": 571277,
+    "freq": "WEEKLY",
+    "termMonths": 51,
+    "originalCents": 13110750,
+    "minimumCents": 167828
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 566761,
+    "splitInterestCents": 4516,
+    "amortizedCents": 64439,
+    "basePaymentCents": 167828
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 928985,
+    "aprHundredths": 1008,
+    "paymentCents": 937358,
+    "freq": "WEEKLY",
+    "termMonths": 276,
+    "originalCents": 7986890,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 935557,
+    "splitInterestCents": 1801,
+    "amortizedCents": 17177,
+    "basePaymentCents": 17177
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 11013,
+    "aprHundredths": 1780,
+    "paymentCents": 408057,
+    "freq": "BIANNUAL",
+    "termMonths": 66,
+    "originalCents": 43950114,
+    "minimumCents": 526484
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 407077,
+    "splitInterestCents": 980,
+    "amortizedCents": 6427835,
+    "basePaymentCents": 526484
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2099673,
+    "aprHundredths": 1510,
+    "paymentCents": 296018,
+    "freq": "ANNUAL",
+    "termMonths": 433,
+    "originalCents": 39918667,
+    "minimumCents": 258782
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 317051,
+    "amortizedCents": 6066107,
+    "basePaymentCents": 258782
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9471169,
+    "aprHundredths": 2457,
+    "paymentCents": 676745,
+    "freq": "ANNUAL",
+    "termMonths": 158,
+    "originalCents": 42251659,
+    "minimumCents": 851423
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 2327066,
+    "amortizedCents": 11014504,
+    "basePaymentCents": 851423
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1280531,
+    "aprHundredths": 1021,
+    "paymentCents": 857278,
+    "freq": "BIWEEKLY",
+    "termMonths": 422,
+    "originalCents": 46191652,
+    "minimumCents": 924919
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 852249,
+    "splitInterestCents": 5029,
+    "amortizedCents": 186581,
+    "basePaymentCents": 924919
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9384679,
+    "aprHundredths": 61,
+    "paymentCents": 221791,
+    "freq": "WEEKLY",
+    "termMonths": 83,
+    "originalCents": 349442,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 220690,
+    "splitInterestCents": 1101,
+    "amortizedCents": 991,
+    "basePaymentCents": 991
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1455111,
+    "aprHundredths": 1872,
+    "paymentCents": 63596,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 121,
+    "originalCents": 8341060,
+    "minimumCents": 696279
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 52246,
+    "splitInterestCents": 11350,
+    "amortizedCents": 76772,
+    "basePaymentCents": 696279
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2127501,
+    "aprHundredths": 1179,
+    "paymentCents": 905270,
+    "freq": "WEEKLY",
+    "termMonths": 248,
+    "originalCents": 8140062,
+    "minimumCents": 437355
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 900446,
+    "splitInterestCents": 4824,
+    "amortizedCents": 20229,
+    "basePaymentCents": 437355
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5909383,
+    "aprHundredths": 3038,
+    "paymentCents": 783059,
+    "freq": "BIANNUAL",
+    "termMonths": 211,
+    "originalCents": 12567736,
+    "minimumCents": 342886
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 897635,
+    "amortizedCents": 1922666,
+    "basePaymentCents": 342886
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 537146,
+    "aprHundredths": 648,
+    "paymentCents": 221793,
+    "freq": "WEEKLY",
+    "termMonths": 59,
+    "originalCents": 21400992,
+    "minimumCents": 51750
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 221124,
+    "splitInterestCents": 669,
+    "amortizedCents": 97692,
+    "basePaymentCents": 51750
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4451734,
+    "aprHundredths": 899,
+    "paymentCents": 495111,
+    "freq": "ANNUAL",
+    "termMonths": 252,
+    "originalCents": 48196393,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 94900,
+    "splitInterestCents": 400211,
+    "amortizedCents": 5182927,
+    "basePaymentCents": 5182927
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4275949,
+    "aprHundredths": 858,
+    "paymentCents": 143543,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 358,
+    "originalCents": 17106560,
+    "minimumCents": 52593
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 128256,
+    "splitInterestCents": 15287,
+    "amortizedCents": 66307,
+    "basePaymentCents": 52593
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4757051,
+    "aprHundredths": 3318,
+    "paymentCents": 201025,
+    "freq": null,
+    "termMonths": 441,
+    "originalCents": 8474439,
+    "minimumCents": 264765
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 69493,
+    "splitInterestCents": 131532,
+    "amortizedCents": 234320,
+    "basePaymentCents": 264765
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1591766,
+    "aprHundredths": 190,
+    "paymentCents": 942498,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 240,
+    "originalCents": 30562255,
+    "minimumCents": 370106
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 941238,
+    "splitInterestCents": 1260,
+    "amortizedCents": 76558,
+    "basePaymentCents": 370106
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1404891,
+    "aprHundredths": 1897,
+    "paymentCents": 69333,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 327,
+    "originalCents": 6483402,
+    "minimumCents": 216652
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 58229,
+    "splitInterestCents": 11104,
+    "amortizedCents": 51545,
+    "basePaymentCents": 216652
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7120305,
+    "aprHundredths": 2874,
+    "paymentCents": 726418,
+    "freq": "QUARTERLY",
+    "termMonths": 220,
+    "originalCents": 13444914,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 214824,
+    "splitInterestCents": 511594,
+    "amortizedCents": 972154,
+    "basePaymentCents": 972154
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4991424,
+    "aprHundredths": 1370,
+    "paymentCents": 60407,
+    "freq": "WEEKLY",
+    "termMonths": 42,
+    "originalCents": 32839758,
+    "minimumCents": 18667
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 47257,
+    "splitInterestCents": 13150,
+    "amortizedCents": 227375,
+    "basePaymentCents": 18667
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 947262,
+    "aprHundredths": 2405,
+    "paymentCents": 639757,
+    "freq": "ANNUAL",
+    "termMonths": 173,
+    "originalCents": 44109264,
+    "minimumCents": 522455
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 411940,
+    "splitInterestCents": 227817,
+    "amortizedCents": 11154138,
+    "basePaymentCents": 522455
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5486878,
+    "aprHundredths": 161,
+    "paymentCents": 875966,
+    "freq": "WEEKLY",
+    "termMonths": 312,
+    "originalCents": 15937374,
+    "minimumCents": 851423
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 874267,
+    "splitInterestCents": 1699,
+    "amortizedCents": 14429,
+    "basePaymentCents": 851423
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1241488,
+    "aprHundredths": 1049,
+    "paymentCents": 410011,
+    "freq": "ANNUAL",
+    "termMonths": 141,
+    "originalCents": 25237874,
+    "minimumCents": 249137
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 279779,
+    "splitInterestCents": 130232,
+    "amortizedCents": 3793356,
+    "basePaymentCents": 249137
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 263658,
+    "aprHundredths": 505,
+    "paymentCents": 178826,
+    "freq": "MONTHLY",
+    "termMonths": 213,
+    "originalCents": 4832801,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 177716,
+    "splitInterestCents": 1110,
+    "amortizedCents": 34402,
+    "basePaymentCents": 34402
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2900417,
+    "aprHundredths": 197,
+    "paymentCents": 155391,
+    "freq": "BIWEEKLY",
+    "termMonths": 219,
+    "originalCents": 48104983,
+    "minimumCents": 393542
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 153193,
+    "splitInterestCents": 2198,
+    "amortizedCents": 120627,
+    "basePaymentCents": 393542
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3553228,
+    "aprHundredths": 2717,
+    "paymentCents": 325190,
+    "freq": "ANNUAL",
+    "termMonths": 255,
+    "originalCents": 15059927,
+    "minimumCents": 167830
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 965412,
+    "amortizedCents": 4118245,
+    "basePaymentCents": 167830
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9757057,
+    "aprHundredths": 3366,
+    "paymentCents": 646345,
+    "freq": "ANNUAL",
+    "termMonths": 151,
+    "originalCents": 23678308,
+    "minimumCents": 184687
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 3284225,
+    "amortizedCents": 8157859,
+    "basePaymentCents": 184687
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 537152,
+    "aprHundredths": 3205,
+    "paymentCents": 112415,
+    "freq": "ANNUAL",
+    "termMonths": 66,
+    "originalCents": 11557099,
+    "minimumCents": 440421
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 172157,
+    "amortizedCents": 4565079,
+    "basePaymentCents": 440421
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6424399,
+    "aprHundredths": 2683,
+    "paymentCents": 131828,
+    "freq": "BIWEEKLY",
+    "termMonths": 8,
+    "originalCents": 36208870,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 65533,
+    "splitInterestCents": 66295,
+    "amortizedCents": 2333160,
+    "basePaymentCents": 2333160
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 936131,
+    "aprHundredths": 1494,
+    "paymentCents": 379880,
+    "freq": null,
+    "termMonths": 168,
+    "originalCents": 4826659,
+    "minimumCents": 755717
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 368225,
+    "splitInterestCents": 11655,
+    "amortizedCents": 68684,
+    "basePaymentCents": 755717
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6241473,
+    "aprHundredths": 3455,
+    "paymentCents": 263530,
+    "freq": "QUARTERLY",
+    "termMonths": 65,
+    "originalCents": 37420091,
+    "minimumCents": 321403
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 539107,
+    "amortizedCents": 3855160,
+    "basePaymentCents": 321403
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5087891,
+    "aprHundredths": 1831,
+    "paymentCents": 385857,
+    "freq": "ANNUAL",
+    "termMonths": 14,
+    "originalCents": 32901200,
+    "minimumCents": 940422
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 931593,
+    "amortizedCents": 38925410,
+    "basePaymentCents": 940422
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8592341,
+    "aprHundredths": 3107,
+    "paymentCents": 975580,
+    "freq": "ANNUAL",
+    "termMonths": 248,
+    "originalCents": 8042741,
+    "minimumCents": 925636
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 2669640,
+    "amortizedCents": 2507424,
+    "basePaymentCents": 925636
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2139855,
+    "aprHundredths": 1103,
+    "paymentCents": 906109,
+    "freq": null,
+    "termMonths": 428,
+    "originalCents": 28259112,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 886440,
+    "splitInterestCents": 19669,
+    "amortizedCents": 265028,
+    "basePaymentCents": 265028
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2042206,
+    "aprHundredths": 112,
+    "paymentCents": 529157,
+    "freq": "ANNUAL",
+    "termMonths": 254,
+    "originalCents": 5063383,
+    "minimumCents": 61636
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 506284,
+    "splitInterestCents": 22873,
+    "amortizedCents": 271920,
+    "basePaymentCents": 61636
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5751891,
+    "aprHundredths": 2480,
+    "paymentCents": 432733,
+    "freq": null,
+    "termMonths": 313,
+    "originalCents": 2200842,
+    "minimumCents": 666982
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 313861,
+    "splitInterestCents": 118872,
+    "amortizedCents": 45560,
+    "basePaymentCents": 666982
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2049428,
+    "aprHundredths": 3401,
+    "paymentCents": 405265,
+    "freq": "MONTHLY",
+    "termMonths": 383,
+    "originalCents": 23149092,
+    "minimumCents": 654149
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 347181,
+    "splitInterestCents": 58084,
+    "amortizedCents": 656099,
+    "basePaymentCents": 654149
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7178903,
+    "aprHundredths": 1937,
+    "paymentCents": 171732,
+    "freq": "MONTHLY",
+    "termMonths": 374,
+    "originalCents": 38005084,
+    "minimumCents": 958123
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 55853,
+    "splitInterestCents": 115879,
+    "amortizedCents": 615007,
+    "basePaymentCents": 958123
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5322246,
+    "aprHundredths": 1640,
+    "paymentCents": 395621,
+    "freq": "WEEKLY",
+    "termMonths": 95,
+    "originalCents": 10095366,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 378835,
+    "splitInterestCents": 16786,
+    "amortizedCents": 43811,
+    "basePaymentCents": 43811
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3486250,
+    "aprHundredths": 3185,
+    "paymentCents": 24529,
+    "freq": "BIANNUAL",
+    "termMonths": 38,
+    "originalCents": 40697995,
+    "minimumCents": 247061
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 555185,
+    "amortizedCents": 11023088,
+    "basePaymentCents": 247061
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7498568,
+    "aprHundredths": 714,
+    "paymentCents": 10739,
+    "freq": null,
+    "termMonths": 463,
+    "originalCents": 26365416,
+    "minimumCents": 917820
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 44616,
+    "amortizedCents": 167626,
+    "basePaymentCents": 917820
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9112502,
+    "aprHundredths": 1965,
+    "paymentCents": 431497,
+    "freq": null,
+    "termMonths": 85,
+    "originalCents": 43658087,
+    "minimumCents": 893673
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 282280,
+    "splitInterestCents": 149217,
+    "amortizedCents": 955019,
+    "basePaymentCents": 893673
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3798826,
+    "aprHundredths": 1134,
+    "paymentCents": 928825,
+    "freq": null,
+    "termMonths": 379,
+    "originalCents": 48202567,
+    "minimumCents": 493157
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 892926,
+    "splitInterestCents": 35899,
+    "amortizedCents": 468783,
+    "basePaymentCents": 493157
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 193962,
+    "aprHundredths": 3332,
+    "paymentCents": 711904,
+    "freq": "MONTHLY",
+    "termMonths": 99,
+    "originalCents": 8042857,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 706518,
+    "splitInterestCents": 5386,
+    "amortizedCents": 239217,
+    "basePaymentCents": 239217
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1990852,
+    "aprHundredths": 3298,
+    "paymentCents": 739255,
+    "freq": "WEEKLY",
+    "termMonths": 89,
+    "originalCents": 6970498,
+    "minimumCents": 505713
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 726628,
+    "splitInterestCents": 12627,
+    "amortizedCents": 48428,
+    "basePaymentCents": 505713
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9893720,
+    "aprHundredths": 570,
+    "paymentCents": 267429,
+    "freq": "ANNUAL",
+    "termMonths": 375,
+    "originalCents": 2432140,
+    "minimumCents": 749142
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 563942,
+    "amortizedCents": 168927,
+    "basePaymentCents": 749142
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2822260,
+    "aprHundredths": 2781,
+    "paymentCents": 118280,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 43,
+    "originalCents": 27345790,
+    "minimumCents": 856437
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 85577,
+    "splitInterestCents": 32703,
+    "amortizedCents": 503992,
+    "basePaymentCents": 856437
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7615802,
+    "aprHundredths": 3373,
+    "paymentCents": 366202,
+    "freq": "BIANNUAL",
+    "termMonths": 383,
+    "originalCents": 17398862,
+    "minimumCents": 48684
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1284405,
+    "amortizedCents": 2934455,
+    "basePaymentCents": 48684
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2979773,
+    "aprHundredths": 1110,
+    "paymentCents": 173682,
+    "freq": "WEEKLY",
+    "termMonths": 63,
+    "originalCents": 3601300,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 167321,
+    "splitInterestCents": 6361,
+    "amortizedCents": 17420,
+    "basePaymentCents": 17420
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5733600,
+    "aprHundredths": 1555,
+    "paymentCents": 120948,
+    "freq": "BIWEEKLY",
+    "termMonths": 323,
+    "originalCents": 10326066,
+    "minimumCents": 338984
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 86657,
+    "splitInterestCents": 34291,
+    "amortizedCents": 62723,
+    "basePaymentCents": 338984
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3486294,
+    "aprHundredths": 539,
+    "paymentCents": 579213,
+    "freq": "QUARTERLY",
+    "termMonths": 252,
+    "originalCents": 29100250,
+    "minimumCents": 75189
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 532235,
+    "splitInterestCents": 46978,
+    "amortizedCents": 580812,
+    "basePaymentCents": 75189
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6522061,
+    "aprHundredths": 1234,
+    "paymentCents": 194329,
+    "freq": "ANNUAL",
+    "termMonths": 139,
+    "originalCents": 4729038,
+    "minimumCents": 3765
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 804822,
+    "amortizedCents": 775506,
+    "basePaymentCents": 3765
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6768763,
+    "aprHundredths": 92,
+    "paymentCents": 523290,
+    "freq": "BIANNUAL",
+    "termMonths": 256,
+    "originalCents": 14127396,
+    "minimumCents": 282346
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 492154,
+    "splitInterestCents": 31136,
+    "amortizedCents": 362860,
+    "basePaymentCents": 282346
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1513724,
+    "aprHundredths": 40,
+    "paymentCents": 600698,
+    "freq": "BIWEEKLY",
+    "termMonths": 68,
+    "originalCents": 29100422,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 600465,
+    "splitInterestCents": 233,
+    "amortizedCents": 200224,
+    "basePaymentCents": 200224
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7060526,
+    "aprHundredths": 108,
+    "paymentCents": 368280,
+    "freq": "BIWEEKLY",
+    "termMonths": 92,
+    "originalCents": 28320570,
+    "minimumCents": 461906
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 365347,
+    "splitInterestCents": 2933,
+    "amortizedCents": 148307,
+    "basePaymentCents": 461906
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6424419,
+    "aprHundredths": 1548,
+    "paymentCents": 45890,
+    "freq": "MONTHLY",
+    "termMonths": 187,
+    "originalCents": 40204905,
+    "minimumCents": 308455
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 82875,
+    "amortizedCents": 570566,
+    "basePaymentCents": 308455
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5460183,
+    "aprHundredths": 3421,
+    "paymentCents": 880712,
+    "freq": "BIWEEKLY",
+    "termMonths": 63,
+    "originalCents": 8766992,
+    "minimumCents": 272575
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 808869,
+    "splitInterestCents": 71843,
+    "amortizedCents": 138449,
+    "basePaymentCents": 272575
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1142594,
+    "aprHundredths": 361,
+    "paymentCents": 782345,
+    "freq": "MONTHLY",
+    "termMonths": 370,
+    "originalCents": 24032527,
+    "minimumCents": 870112
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 778908,
+    "splitInterestCents": 3437,
+    "amortizedCents": 107761,
+    "basePaymentCents": 870112
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2986934,
+    "aprHundredths": 174,
+    "paymentCents": 256831,
+    "freq": null,
+    "termMonths": 19,
+    "originalCents": 46344897,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 252500,
+    "splitInterestCents": 4331,
+    "amortizedCents": 2474727,
+    "basePaymentCents": 2474727
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6697788,
+    "aprHundredths": 2266,
+    "paymentCents": 514641,
+    "freq": "BIWEEKLY",
+    "termMonths": 429,
+    "originalCents": 23733882,
+    "minimumCents": 310407
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 456267,
+    "splitInterestCents": 58374,
+    "amortizedCents": 206915,
+    "basePaymentCents": 310407
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5128156,
+    "aprHundredths": 2197,
+    "paymentCents": 326031,
+    "freq": "BIWEEKLY",
+    "termMonths": 33,
+    "originalCents": 15686576,
+    "minimumCents": 598751
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 282698,
+    "splitInterestCents": 43333,
+    "amortizedCents": 291716,
+    "basePaymentCents": 598751
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3486315,
+    "aprHundredths": 1920,
+    "paymentCents": 225700,
+    "freq": "ANNUAL",
+    "termMonths": 71,
+    "originalCents": 18866710,
+    "minimumCents": 670885
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 669372,
+    "amortizedCents": 5561062,
+    "basePaymentCents": 670885
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4490747,
+    "aprHundredths": 1302,
+    "paymentCents": 481435,
+    "freq": "QUARTERLY",
+    "termMonths": 439,
+    "originalCents": 27339770,
+    "minimumCents": 990090
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 335261,
+    "splitInterestCents": 146174,
+    "amortizedCents": 898273,
+    "basePaymentCents": 990090
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 30560,
+    "aprHundredths": 1145,
+    "paymentCents": 995950,
+    "freq": "MONTHLY",
+    "termMonths": 434,
+    "originalCents": 46678908,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 995658,
+    "splitInterestCents": 292,
+    "amortizedCents": 452738,
+    "basePaymentCents": 452738
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6514800,
+    "aprHundredths": 1869,
+    "paymentCents": 228372,
+    "freq": "BIANNUAL",
+    "termMonths": 350,
+    "originalCents": 13444776,
+    "minimumCents": 49920
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 608808,
+    "amortizedCents": 1263514,
+    "basePaymentCents": 49920
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 791017,
+    "aprHundredths": 915,
+    "paymentCents": 430776,
+    "freq": "ANNUAL",
+    "termMonths": 479,
+    "originalCents": 33973131,
+    "minimumCents": 63469
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 358398,
+    "splitInterestCents": 72378,
+    "amortizedCents": 3205123,
+    "basePaymentCents": 63469
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 916606,
+    "aprHundredths": 2054,
+    "paymentCents": 247062,
+    "freq": "BIWEEKLY",
+    "termMonths": 351,
+    "originalCents": 21394752,
+    "minimumCents": 415873
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 239821,
+    "splitInterestCents": 7241,
+    "amortizedCents": 169444,
+    "basePaymentCents": 415873
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1573521,
+    "aprHundredths": 3380,
+    "paymentCents": 273294,
+    "freq": "WEEKLY",
+    "termMonths": 331,
+    "originalCents": 16855763,
+    "minimumCents": 171007
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 263066,
+    "splitInterestCents": 10228,
+    "amortizedCents": 109573,
+    "basePaymentCents": 171007
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7646421,
+    "aprHundredths": 2303,
+    "paymentCents": 930775,
+    "freq": null,
+    "termMonths": 28,
+    "originalCents": 13993655,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 784027,
+    "splitInterestCents": 146748,
+    "amortizedCents": 650691,
+    "basePaymentCents": 650691
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6044844,
+    "aprHundredths": 1742,
+    "paymentCents": 190545,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 177,
+    "originalCents": 48494943,
+    "minimumCents": 698231
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 146670,
+    "splitInterestCents": 43875,
+    "amortizedCents": 381477,
+    "basePaymentCents": 698231
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 428289,
+    "aprHundredths": 687,
+    "paymentCents": 627926,
+    "freq": "QUARTERLY",
+    "termMonths": 176,
+    "originalCents": 24221248,
+    "minimumCents": 558448
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 620570,
+    "splitInterestCents": 7356,
+    "amortizedCents": 656303,
+    "basePaymentCents": 558448
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9210094,
+    "aprHundredths": 1185,
+    "paymentCents": 880714,
+    "freq": "BIANNUAL",
+    "termMonths": 321,
+    "originalCents": 23873036,
+    "minimumCents": 157341
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 335016,
+    "splitInterestCents": 545698,
+    "amortizedCents": 1480627,
+    "basePaymentCents": 157341
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5126967,
+    "aprHundredths": 156,
+    "paymentCents": 563591,
+    "freq": "MONTHLY",
+    "termMonths": 163,
+    "originalCents": 49080018,
+    "minimumCents": 545890
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 556926,
+    "splitInterestCents": 6665,
+    "amortizedCents": 334327,
+    "basePaymentCents": 545890
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 467336,
+    "aprHundredths": 2874,
+    "paymentCents": 821275,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 472,
+    "originalCents": 42348770,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 815679,
+    "splitInterestCents": 5596,
+    "amortizedCents": 507133,
+    "basePaymentCents": 507133
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3338419,
+    "aprHundredths": 37,
+    "paymentCents": 366199,
+    "freq": "BIANNUAL",
+    "termMonths": 28,
+    "originalCents": 16911906,
+    "minimumCents": 503761
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 360023,
+    "splitInterestCents": 6176,
+    "amortizedCents": 3401177,
+    "basePaymentCents": 503761
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8741359,
+    "aprHundredths": 1315,
+    "paymentCents": 81888,
+    "freq": "QUARTERLY",
+    "termMonths": 381,
+    "originalCents": 1262000,
+    "minimumCents": 526478
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 287372,
+    "amortizedCents": 42182,
+    "basePaymentCents": 526478
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5790939,
+    "aprHundredths": 1359,
+    "paymentCents": 370230,
+    "freq": "WEEKLY",
+    "termMonths": 134,
+    "originalCents": 31634170,
+    "minimumCents": 936514
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 355096,
+    "splitInterestCents": 15134,
+    "amortizedCents": 105924,
+    "basePaymentCents": 936514
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1775994,
+    "aprHundredths": 1329,
+    "paymentCents": 749017,
+    "freq": "BIWEEKLY",
+    "termMonths": 136,
+    "originalCents": 4046835,
+    "minimumCents": 484230
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 739939,
+    "splitInterestCents": 9078,
+    "amortizedCents": 26596,
+    "basePaymentCents": 484230
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2530497,
+    "aprHundredths": 3216,
+    "paymentCents": 21341,
+    "freq": null,
+    "termMonths": 59,
+    "originalCents": 42098641,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 67817,
+    "amortizedCents": 1428257,
+    "basePaymentCents": 1428257
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2647737,
+    "aprHundredths": 3325,
+    "paymentCents": 421727,
+    "freq": "QUARTERLY",
+    "termMonths": 409,
+    "originalCents": 8474594,
+    "minimumCents": 958127
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 201634,
+    "splitInterestCents": 220093,
+    "amortizedCents": 704464,
+    "basePaymentCents": 958127
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2216866,
+    "aprHundredths": 2781,
+    "paymentCents": 719841,
+    "freq": null,
+    "termMonths": 89,
+    "originalCents": 49469712,
+    "minimumCents": 133778
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 668465,
+    "splitInterestCents": 51376,
+    "amortizedCents": 1318004,
+    "basePaymentCents": 133778
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7479042,
+    "aprHundredths": 1056,
+    "paymentCents": 362295,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 395,
+    "originalCents": 34161982,
+    "minimumCents": 269385
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 329387,
+    "splitInterestCents": 32908,
+    "amortizedCents": 155148,
+    "basePaymentCents": 269385
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8819535,
+    "aprHundredths": 1356,
+    "paymentCents": 726420,
+    "freq": "BIANNUAL",
+    "termMonths": 460,
+    "originalCents": 872824,
+    "minimumCents": 571404
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 128456,
+    "splitInterestCents": 597964,
+    "amortizedCents": 59559,
+    "basePaymentCents": 571404
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8427618,
+    "aprHundredths": 6,
+    "paymentCents": 626094,
+    "freq": null,
+    "termMonths": 148,
+    "originalCents": 48592668,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 625673,
+    "splitInterestCents": 421,
+    "amortizedCents": 329553,
+    "basePaymentCents": 329553
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 517638,
+    "aprHundredths": 1195,
+    "paymentCents": 411247,
+    "freq": "BIANNUAL",
+    "termMonths": 328,
+    "originalCents": 34362976,
+    "minimumCents": 573228
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 380318,
+    "splitInterestCents": 30929,
+    "amortizedCents": 2141184,
+    "basePaymentCents": 573228
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1756410,
+    "aprHundredths": 3141,
+    "paymentCents": 67378,
+    "freq": "BIWEEKLY",
+    "termMonths": 424,
+    "originalCents": 24416069,
+    "minimumCents": 742043
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 46159,
+    "splitInterestCents": 21219,
+    "amortizedCents": 294970,
+    "basePaymentCents": 742043
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2530537,
+    "aprHundredths": 2108,
+    "paymentCents": 947120,
+    "freq": null,
+    "termMonths": 383,
+    "originalCents": 14419384,
+    "minimumCents": 973746
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 902667,
+    "splitInterestCents": 44453,
+    "amortizedCents": 253622,
+    "basePaymentCents": 973746
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1572291,
+    "aprHundredths": 3301,
+    "paymentCents": 14761,
+    "freq": null,
+    "termMonths": 418,
+    "originalCents": 11265170,
+    "minimumCents": 598627
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 43251,
+    "amortizedCents": 309890,
+    "basePaymentCents": 598627
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 96295,
+    "aprHundredths": 1329,
+    "paymentCents": 286122,
+    "freq": null,
+    "termMonths": 473,
+    "originalCents": 40107119,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 285056,
+    "splitInterestCents": 1066,
+    "amortizedCents": 446626,
+    "basePaymentCents": 446626
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7986847,
+    "aprHundredths": 3257,
+    "paymentCents": 461905,
+    "freq": "BIANNUAL",
+    "termMonths": 371,
+    "originalCents": 37280896,
+    "minimumCents": 185401
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1300658,
+    "amortizedCents": 6071720,
+    "basePaymentCents": 185401
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1104679,
+    "aprHundredths": 1828,
+    "paymentCents": 734228,
+    "freq": "QUARTERLY",
+    "termMonths": 206,
+    "originalCents": 12372538,
+    "minimumCents": 883902
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 683744,
+    "splitInterestCents": 50484,
+    "amortizedCents": 592567,
+    "basePaymentCents": 883902
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 478538,
+    "aprHundredths": 436,
+    "paymentCents": 608507,
+    "freq": "BIWEEKLY",
+    "termMonths": 128,
+    "originalCents": 2493338,
+    "minimumCents": 670887
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 607705,
+    "splitInterestCents": 802,
+    "amortizedCents": 11260,
+    "basePaymentCents": 670887
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3221275,
+    "aprHundredths": 2505,
+    "paymentCents": 65428,
+    "freq": "BIANNUAL",
+    "termMonths": 463,
+    "originalCents": 22954141,
+    "minimumCents": 343606
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 403465,
+    "amortizedCents": 2875332,
+    "basePaymentCents": 343606
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5343052,
+    "aprHundredths": 1315,
+    "paymentCents": 800634,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 412,
+    "originalCents": 9644139,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 771359,
+    "splitInterestCents": 29275,
+    "amortizedCents": 53434,
+    "basePaymentCents": 53434
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5089151,
+    "aprHundredths": 379,
+    "paymentCents": 804537,
+    "freq": "WEEKLY",
+    "termMonths": 134,
+    "originalCents": 26699602,
+    "minimumCents": 337033
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 800828,
+    "splitInterestCents": 3709,
+    "amortizedCents": 56386,
+    "basePaymentCents": 337033
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9775351,
+    "aprHundredths": 2658,
+    "paymentCents": 378041,
+    "freq": "QUARTERLY",
+    "termMonths": 389,
+    "originalCents": 7756497,
+    "minimumCents": 237295
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 649572,
+    "amortizedCents": 515539,
+    "basePaymentCents": 237295
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2186106,
+    "aprHundredths": 2040,
+    "paymentCents": 422845,
+    "freq": "BIANNUAL",
+    "termMonths": 147,
+    "originalCents": 10284485,
+    "minimumCents": 685404
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 199862,
+    "splitInterestCents": 222983,
+    "amortizedCents": 1150489,
+    "basePaymentCents": 685404
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8487491,
+    "aprHundredths": 2197,
+    "paymentCents": 359230,
+    "freq": "MONTHLY",
+    "termMonths": 232,
+    "originalCents": 7207527,
+    "minimumCents": 430781
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 203838,
+    "splitInterestCents": 155392,
+    "amortizedCents": 133948,
+    "basePaymentCents": 430781
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1669976,
+    "aprHundredths": 1687,
+    "paymentCents": 727655,
+    "freq": "WEEKLY",
+    "termMonths": 353,
+    "originalCents": 5904505,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 722237,
+    "splitInterestCents": 5418,
+    "amortizedCents": 19291,
+    "basePaymentCents": 19291
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 849639,
+    "aprHundredths": 2624,
+    "paymentCents": 340933,
+    "freq": "QUARTERLY",
+    "termMonths": 68,
+    "originalCents": 10290396,
+    "minimumCents": 774403
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 285197,
+    "splitInterestCents": 55736,
+    "amortizedCents": 878877,
+    "basePaymentCents": 774403
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6092360,
+    "aprHundredths": 113,
+    "paymentCents": 752922,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 337,
+    "originalCents": 47611988,
+    "minimumCents": 751813
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 750054,
+    "splitInterestCents": 2868,
+    "amortizedCents": 82458,
+    "basePaymentCents": 751813
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4698450,
+    "aprHundredths": 1999,
+    "paymentCents": 495952,
+    "freq": null,
+    "termMonths": 276,
+    "originalCents": 10228780,
+    "minimumCents": 682731
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 417684,
+    "splitInterestCents": 78268,
+    "amortizedCents": 172196,
+    "basePaymentCents": 682731
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3056628,
+    "aprHundredths": 3342,
+    "paymentCents": 962026,
+    "freq": "WEEKLY",
+    "termMonths": 309,
+    "originalCents": 447032,
+    "minimumCents": 155273
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 942381,
+    "splitInterestCents": 19645,
+    "amortizedCents": 2874,
+    "basePaymentCents": 155273
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1385399,
+    "aprHundredths": 1316,
+    "paymentCents": 397455,
+    "freq": "QUARTERLY",
+    "termMonths": 152,
+    "originalCents": 15157537,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 351875,
+    "splitInterestCents": 45580,
+    "amortizedCents": 617090,
+    "basePaymentCents": 617090
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8436112,
+    "aprHundredths": 967,
+    "paymentCents": 770497,
+    "freq": "WEEKLY",
+    "termMonths": 241,
+    "originalCents": 28509257,
+    "minimumCents": 290870
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 754809,
+    "splitInterestCents": 15688,
+    "amortizedCents": 61917,
+    "basePaymentCents": 290870
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5186773,
+    "aprHundredths": 3195,
+    "paymentCents": 826024,
+    "freq": "ANNUAL",
+    "termMonths": 438,
+    "originalCents": 17538334,
+    "minimumCents": 794057
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1657174,
+    "amortizedCents": 5603694,
+    "basePaymentCents": 794057
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4716773,
+    "aprHundredths": 2392,
+    "paymentCents": 421015,
+    "freq": "QUARTERLY",
+    "termMonths": 36,
+    "originalCents": 23739923,
+    "minimumCents": 22451
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 138952,
+    "splitInterestCents": 282063,
+    "amortizedCents": 2828524,
+    "basePaymentCents": 22451
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4275903,
+    "aprHundredths": 878,
+    "paymentCents": 629878,
+    "freq": "MONTHLY",
+    "termMonths": 135,
+    "originalCents": 40204899,
+    "minimumCents": 337748
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 598593,
+    "splitInterestCents": 31285,
+    "amortizedCents": 469730,
+    "basePaymentCents": 337748
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1651624,
+    "aprHundredths": 2177,
+    "paymentCents": 415874,
+    "freq": null,
+    "termMonths": 199,
+    "originalCents": 33911585,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 385911,
+    "splitInterestCents": 29963,
+    "amortizedCents": 632893,
+    "basePaymentCents": 632893
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8604694,
+    "aprHundredths": 2436,
+    "paymentCents": 175636,
+    "freq": "BIANNUAL",
+    "termMonths": 143,
+    "originalCents": 44340042,
+    "minimumCents": 10854
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1048052,
+    "amortizedCents": 5766140,
+    "basePaymentCents": 10854
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5283101,
+    "aprHundredths": 348,
+    "paymentCents": 862420,
+    "freq": "MONTHLY",
+    "termMonths": 304,
+    "originalCents": 8828619,
+    "minimumCents": 606436
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 847099,
+    "splitInterestCents": 15321,
+    "amortizedCents": 43740,
+    "basePaymentCents": 606436
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 721269,
+    "aprHundredths": 2006,
+    "paymentCents": 934557,
+    "freq": "QUARTERLY",
+    "termMonths": 237,
+    "originalCents": 42543955,
+    "minimumCents": 429550
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 898385,
+    "splitInterestCents": 36172,
+    "amortizedCents": 2179230,
+    "basePaymentCents": 429550
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1905560,
+    "aprHundredths": 1459,
+    "paymentCents": 929538,
+    "freq": "BIWEEKLY",
+    "termMonths": 346,
+    "originalCents": 29233557,
+    "minimumCents": 387811
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 918845,
+    "splitInterestCents": 10693,
+    "amortizedCents": 166551,
+    "basePaymentCents": 387811
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8271440,
+    "aprHundredths": 3478,
+    "paymentCents": 831167,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 448,
+    "originalCents": 38651758,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 711300,
+    "splitInterestCents": 119867,
+    "amortizedCents": 560130,
+    "basePaymentCents": 560130
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8818349,
+    "aprHundredths": 2638,
+    "paymentCents": 383901,
+    "freq": "ANNUAL",
+    "termMonths": 236,
+    "originalCents": 34558002,
+    "minimumCents": 606436
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 2326280,
+    "amortizedCents": 9201573,
+    "basePaymentCents": 606436
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7186047,
+    "aprHundredths": 2820,
+    "paymentCents": 776357,
+    "freq": "BIWEEKLY",
+    "termMonths": 473,
+    "originalCents": 45565020,
+    "minimumCents": 177592
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 698416,
+    "splitInterestCents": 77941,
+    "amortizedCents": 494213,
+    "basePaymentCents": 177592
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2432844,
+    "aprHundredths": 1787,
+    "paymentCents": 236186,
+    "freq": null,
+    "termMonths": 213,
+    "originalCents": 26114700,
+    "minimumCents": 846795
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 199957,
+    "splitInterestCents": 36229,
+    "amortizedCents": 406329,
+    "basePaymentCents": 846795
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1806669,
+    "aprHundredths": 2501,
+    "paymentCents": 284288,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 303,
+    "originalCents": 4345409,
+    "minimumCents": 770504
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 265461,
+    "splitInterestCents": 18827,
+    "amortizedCents": 45368,
+    "basePaymentCents": 770504
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7166556,
+    "aprHundredths": 2505,
+    "paymentCents": 165032,
+    "freq": "ANNUAL",
+    "termMonths": 176,
+    "originalCents": 9114659,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1795222,
+    "amortizedCents": 2365969,
+    "basePaymentCents": 2365969
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2596243,
+    "aprHundredths": 2710,
+    "paymentCents": 4876,
+    "freq": "QUARTERLY",
+    "termMonths": 76,
+    "originalCents": 2097509,
+    "minimumCents": 31106
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 175895,
+    "amortizedCents": 176355,
+    "basePaymentCents": 31106
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 577385,
+    "aprHundredths": 1370,
+    "paymentCents": 101419,
+    "freq": "WEEKLY",
+    "termMonths": 88,
+    "originalCents": 46386839,
+    "minimumCents": 426873
+   },
+   "out": {
+    "periodsPerYear": 52,
+    "splitPrincipalCents": 99898,
+    "splitInterestCents": 1521,
+    "amortizedCents": 193059,
+    "basePaymentCents": 426873
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9794832,
+    "aprHundredths": 3075,
+    "paymentCents": 883903,
+    "freq": "BIWEEKLY",
+    "termMonths": 188,
+    "originalCents": 36020169,
+    "minimumCents": 325188
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 768060,
+    "splitInterestCents": 115843,
+    "amortizedCents": 429596,
+    "basePaymentCents": 325188
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8357934,
+    "aprHundredths": 837,
+    "paymentCents": 379873,
+    "freq": null,
+    "termMonths": 339,
+    "originalCents": 23636470,
+    "minimumCents": 771345
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 321576,
+    "splitInterestCents": 58297,
+    "amortizedCents": 182124,
+    "basePaymentCents": 771345
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3565696,
+    "aprHundredths": 1568,
+    "paymentCents": 441262,
+    "freq": "BIWEEKLY",
+    "termMonths": 236,
+    "originalCents": 17148605,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 419758,
+    "splitInterestCents": 21504,
+    "amortizedCents": 108441,
+    "basePaymentCents": 108441
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3995335,
+    "aprHundredths": 1486,
+    "paymentCents": 277202,
+    "freq": "QUARTERLY",
+    "termMonths": 365,
+    "originalCents": 19390065,
+    "minimumCents": 997182
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 128775,
+    "splitInterestCents": 148427,
+    "amortizedCents": 728852,
+    "basePaymentCents": 997182
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9990177,
+    "aprHundredths": 983,
+    "paymentCents": 370227,
+    "freq": "MONTHLY",
+    "termMonths": 110,
+    "originalCents": 251899,
+    "minimumCents": 301751
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 288391,
+    "splitInterestCents": 81836,
+    "amortizedCents": 3483,
+    "basePaymentCents": 301751
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8709535,
+    "aprHundredths": 1637,
+    "paymentCents": 624013,
+    "freq": "MONTHLY",
+    "termMonths": 307,
+    "originalCents": 8334808,
+    "minimumCents": 917819
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 505200,
+    "splitInterestCents": 118813,
+    "amortizedCents": 115504,
+    "basePaymentCents": 917819
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 382107,
+    "aprHundredths": 1937,
+    "paymentCents": 56499,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 342,
+    "originalCents": 17246139,
+    "minimumCents": 971798
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 53415,
+    "splitInterestCents": 3084,
+    "amortizedCents": 139763,
+    "basePaymentCents": 971798
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 263747,
+    "aprHundredths": 771,
+    "paymentCents": 311639,
+    "freq": "BIANNUAL",
+    "termMonths": 464,
+    "originalCents": 18282041,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 301472,
+    "splitInterestCents": 10167,
+    "amortizedCents": 745268,
+    "basePaymentCents": 745268
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4033171,
+    "aprHundredths": 1995,
+    "paymentCents": 352649,
+    "freq": "ANNUAL",
+    "termMonths": 292,
+    "originalCents": 4052937,
+    "minimumCents": 821284
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 804618,
+    "amortizedCents": 818966,
+    "basePaymentCents": 821284
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6111916,
+    "aprHundredths": 1336,
+    "paymentCents": 139636,
+    "freq": null,
+    "termMonths": 451,
+    "originalCents": 37280745,
+    "minimumCents": 294773
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 71590,
+    "splitInterestCents": 68046,
+    "amortizedCents": 417893,
+    "basePaymentCents": 294773
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8546075,
+    "aprHundredths": 3462,
+    "paymentCents": 544778,
+    "freq": null,
+    "termMonths": 400,
+    "originalCents": 19682496,
+    "minimumCents": 760856
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 298224,
+    "splitInterestCents": 246554,
+    "amortizedCents": 567847,
+    "basePaymentCents": 760856
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 1083995,
+    "aprHundredths": 3137,
+    "paymentCents": 899526,
+    "freq": "QUARTERLY",
+    "termMonths": 341,
+    "originalCents": 32219009,
+    "minimumCents": 678704
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 814514,
+    "splitInterestCents": 85012,
+    "amortizedCents": 2527238,
+    "basePaymentCents": 678704
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6189978,
+    "aprHundredths": 2040,
+    "paymentCents": 864253,
+    "freq": "ANNUAL",
+    "termMonths": 237,
+    "originalCents": 21492542,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1262756,
+    "amortizedCents": 4494156,
+    "basePaymentCents": 4494156
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 3221304,
+    "aprHundredths": 1507,
+    "paymentCents": 188472,
+    "freq": null,
+    "termMonths": 393,
+    "originalCents": 45370496,
+    "minimumCents": 730325
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 148018,
+    "splitInterestCents": 40454,
+    "amortizedCents": 574032,
+    "basePaymentCents": 730325
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5421122,
+    "aprHundredths": 2382,
+    "paymentCents": 435404,
+    "freq": "MONTHLY",
+    "termMonths": 333,
+    "originalCents": 24068129,
+    "minimumCents": 932735
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 327795,
+    "splitInterestCents": 107609,
+    "amortizedCents": 478440,
+    "basePaymentCents": 932735
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 9091760,
+    "aprHundredths": 2036,
+    "paymentCents": 397579,
+    "freq": "QUARTERLY",
+    "termMonths": 353,
+    "originalCents": 12726898,
+    "minimumCents": 602528
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 462771,
+    "amortizedCents": 649655,
+    "basePaymentCents": 602528
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 7537668,
+    "aprHundredths": 256,
+    "paymentCents": 993154,
+    "freq": "ANNUAL",
+    "termMonths": 125,
+    "originalCents": 12623161,
+    "minimumCents": 652197
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 800190,
+    "splitInterestCents": 192964,
+    "amortizedCents": 1446782,
+    "basePaymentCents": 652197
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5694521,
+    "aprHundredths": 1274,
+    "paymentCents": 1807,
+    "freq": "QUARTERLY",
+    "termMonths": 379,
+    "originalCents": 30597915,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 181370,
+    "amortizedCents": 993666,
+    "basePaymentCents": 993666
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 4268810,
+    "aprHundredths": 3229,
+    "paymentCents": 738140,
+    "freq": "SEMI_MONTHLY",
+    "termMonths": 7,
+    "originalCents": 47166410,
+    "minimumCents": 588984
+   },
+   "out": {
+    "periodsPerYear": 24,
+    "splitPrincipalCents": 680707,
+    "splitInterestCents": 57433,
+    "amortizedCents": 3718824,
+    "basePaymentCents": 588984
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 8056572,
+    "aprHundredths": 1605,
+    "paymentCents": 909294,
+    "freq": "ANNUAL",
+    "termMonths": 128,
+    "originalCents": 49469755,
+    "minimumCents": 971
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 1293080,
+    "amortizedCents": 9857013,
+    "basePaymentCents": 971
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6033732,
+    "aprHundredths": 1323,
+    "paymentCents": 832999,
+    "freq": "BIWEEKLY",
+    "termMonths": 94,
+    "originalCents": 26462625,
+    "minimumCents": 15481
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 802297,
+    "splitInterestCents": 30702,
+    "amortizedCents": 208792,
+    "basePaymentCents": 15481
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2725847,
+    "aprHundredths": 1657,
+    "paymentCents": 329930,
+    "freq": "BIWEEKLY",
+    "termMonths": 377,
+    "originalCents": 22508750,
+    "minimumCents": 911242
+   },
+   "out": {
+    "periodsPerYear": 26,
+    "splitPrincipalCents": 312558,
+    "splitInterestCents": 17372,
+    "amortizedCents": 144254,
+    "basePaymentCents": 911242
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 5771399,
+    "aprHundredths": 1257,
+    "paymentCents": 758905,
+    "freq": "BIANNUAL",
+    "termMonths": 166,
+    "originalCents": 34753250,
+    "minimumCents": 0
+   },
+   "out": {
+    "periodsPerYear": 2,
+    "splitPrincipalCents": 396173,
+    "splitInterestCents": 362732,
+    "amortizedCents": 2668466,
+    "basePaymentCents": 2668466
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2900414,
+    "aprHundredths": 1585,
+    "paymentCents": 567496,
+    "freq": "MONTHLY",
+    "termMonths": 418,
+    "originalCents": 6684662,
+    "minimumCents": 844718
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 529186,
+    "splitInterestCents": 38310,
+    "amortizedCents": 88661,
+    "basePaymentCents": 844718
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 6346226,
+    "aprHundredths": 1938,
+    "paymentCents": 573236,
+    "freq": "MONTHLY",
+    "termMonths": 69,
+    "originalCents": 37670875,
+    "minimumCents": 124857
+   },
+   "out": {
+    "periodsPerYear": 12,
+    "splitPrincipalCents": 470744,
+    "splitInterestCents": 102492,
+    "amortizedCents": 909479,
+    "basePaymentCents": 124857
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 2979730,
+    "aprHundredths": 645,
+    "paymentCents": 97517,
+    "freq": "ANNUAL",
+    "termMonths": 103,
+    "originalCents": 21046752,
+    "minimumCents": 151478
+   },
+   "out": {
+    "periodsPerYear": 1,
+    "splitPrincipalCents": 0,
+    "splitInterestCents": 192193,
+    "amortizedCents": 3155223,
+    "basePaymentCents": 151478
+   }
+  },
+  {
+   "in": {
+    "balanceCents": 400369,
+    "aprHundredths": 1435,
+    "paymentCents": 797962,
+    "freq": "QUARTERLY",
+    "termMonths": 331,
+    "originalCents": 40795443,
+    "minimumCents": 940422
+   },
+   "out": {
+    "periodsPerYear": 4,
+    "splitPrincipalCents": 783599,
+    "splitInterestCents": 14363,
+    "amortizedCents": 1494488,
+    "basePaymentCents": 940422
+   }
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"createdAt\" AS \"created_at!\" FROM \"InvestmentTransfer\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "created_at!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "65ef3fdfb46ff86cf71a44f2ea033d71486f930ab099b3e0e2390f34501a0f65"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT DISTINCT \"year\" AS \"year!: i64\" FROM \"InsurancePolicy\" ORDER BY \"year\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "year!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InsurancePolicy",
+            "name": "year"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "ec3af6e779934826885a0bea3660d4b28bdf3a0cfd5cba0a845b9e4456761fee"
+}

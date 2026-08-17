@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"type\" AS \"tx_type!: String\", \"budgetId\" AS budget_id\n           FROM \"Transaction\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "tx_type!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "budget_id",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "budgetId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      true
+    ]
+  },
+  "hash": "017b760591d7b92674cb9bc6b16d96a014a27e165389eea2fa506d4484be8637"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "avoir-money",
+  "productName": "Avoir Money",
+  "version": "1.0.9",
+  "private": true,
+  "description": "Personal finance, self-hosted.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never",
+    "release": "electron-builder --publish always"
+  },
+  "devDependencies": {
+    "electron": "^43.4.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.avoir.money",
+    "productName": "Avoir Money",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "lancefaul",
+        "repo": "avoir-money"
+      }
+    ],
+    "files": [
+      "main.js",
+      "preload.js",
+      "updater.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../rust/target/release/avoir-server",
+        "to": "bin/avoir-server"
+      },
+      {
+        "from": "../apps/web/dist",
+        "to": "web"
+      },
+      {
+        "from": "icons",
+        "to": "icons"
+      }
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "pacman"
+      ],
+      "category": "Office;Finance",
+      "icon": "icons",
+      "synopsis": "Personal finance, self-hosted",
+      "description": "Personal finance tracking: accounts, budgets, recurring bills, investments and debts. Runs entirely on your machine.",
+      "desktop": {
+        "StartupWMClass": "avoir-money"
+      }
+    }
+  },
+  "homepage": "https://github.com/lancefaul/avoir-money",
+  "author": {
+    "name": "lancefaul",
+    "email": "redactedprivate@proton.me"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  }
+}

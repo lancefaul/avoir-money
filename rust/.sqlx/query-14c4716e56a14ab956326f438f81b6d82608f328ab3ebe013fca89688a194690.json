@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"YearPlan\" (\"id\",\"year\",\"status\",\"createdAt\",\"updatedAt\")\n           VALUES (?,?, 'DRAFT', ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "14c4716e56a14ab956326f438f81b6d82608f328ab3ebe013fca89688a194690"
+}

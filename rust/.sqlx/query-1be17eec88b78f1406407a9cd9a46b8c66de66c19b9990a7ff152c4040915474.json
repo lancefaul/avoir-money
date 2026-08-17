@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"TransactionDescription\" (\"id\",\"name\",\"createdAt\")\n           VALUES (?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "1be17eec88b78f1406407a9cd9a46b8c66de66c19b9990a7ff152c4040915474"
+}

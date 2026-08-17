@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"BudgetGoal\"\n             (\"id\",\"name\",\"type\",\"targetAmount\",\"currentAmount\",\"budgetId\",\"deadline\",\n              \"createdAt\",\"updatedAt\")\n           VALUES (?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 9
+    },
+    "nullable": []
+  },
+  "hash": "24243c64f4bdece74544760641e22798a12097b9a9121b23e14d02d16d275d98"
+}

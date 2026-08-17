@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Debt\"\n             (\"id\",\"name\",\"type\",\"originalBalance\",\"currentBalance\",\"apr\",\"minimumPayment\",\n              \"frequency\",\"startDate\",\"linkedExpenseId\",\"linkedAccountId\",\"paidOff\",\"note\",\n              \"createdAt\",\"updatedAt\",\"maturityDate\",\"termMonths\",\"managementUrl\",\"escrowEnabled\")\n           VALUES (?,?,?,?,?,?,?,?,?,?,?,0,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 18
+    },
+    "nullable": []
+  },
+  "hash": "47b15e64f3fca1731ff3264023f69d3518c223f9b8db7f453eef9a6ce09ffd63"
+}

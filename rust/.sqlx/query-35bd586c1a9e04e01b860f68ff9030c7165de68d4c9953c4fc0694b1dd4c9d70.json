@@ -1,0 +1,57 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT cb.\"id\" AS \"id!\", cb.\"budgetId\" AS \"budget_id!\",\n                  cb.\"doneForYear\" AS \"done!: i64\",\n                  (SELECT count(*) FROM \"BudgetExpenseLink\" l\n                    WHERE l.\"categoryBudgetId\" = cb.\"id\") AS \"links!: i64\"\n             FROM \"CategoryBudget\" cb\n            WHERE (?1 IS NULL OR cb.\"yearPlanId\" = ?1)\n              AND (?2 = 1 OR cb.\"removedAt\" IS NULL)",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "budget_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "done!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "doneForYear"
+          }
+        }
+      },
+      {
+        "name": "links!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "35bd586c1a9e04e01b860f68ff9030c7165de68d4c9953c4fc0694b1dd4c9d70"
+}

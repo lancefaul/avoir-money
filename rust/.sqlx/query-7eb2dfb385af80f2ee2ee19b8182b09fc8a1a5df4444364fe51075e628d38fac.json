@@ -1,0 +1,242 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"name\" AS \"name!\", \"type\" AS \"type!\",\n                  \"originalBalance\" AS \"original_balance!: i64\",\n                  \"currentBalance\" AS \"current_balance!: i64\", \"apr\" AS \"apr!: i64\",\n                  \"minimumPayment\" AS \"minimum_payment!: i64\", \"frequency\" AS \"frequency!\",\n                  \"startDate\" AS \"start_date!\", \"maturityDate\" AS \"maturity_date: String\",\n                  \"termMonths\" AS \"term_months: i64\",\n                  \"linkedExpenseId\" AS \"linked_expense_id: String\",\n                  \"linkedAccountId\" AS \"linked_account_id: String\",\n                  \"paidOff\" AS \"paid_off!: i64\", \"escrowEnabled\" AS \"escrow_enabled!: i64\",\n                  \"note\" AS \"note: String\", \"managementUrl\" AS \"management_url: String\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"Debt\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "type!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "original_balance!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "originalBalance"
+          }
+        }
+      },
+      {
+        "name": "current_balance!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "currentBalance"
+          }
+        }
+      },
+      {
+        "name": "apr!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "apr"
+          }
+        }
+      },
+      {
+        "name": "minimum_payment!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "minimumPayment"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "start_date!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "maturity_date: String",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "maturityDate"
+          }
+        }
+      },
+      {
+        "name": "term_months: i64",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "termMonths"
+          }
+        }
+      },
+      {
+        "name": "linked_expense_id: String",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "linkedExpenseId"
+          }
+        }
+      },
+      {
+        "name": "linked_account_id: String",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "linkedAccountId"
+          }
+        }
+      },
+      {
+        "name": "paid_off!: i64",
+        "ordinal": 13,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "paidOff"
+          }
+        }
+      },
+      {
+        "name": "escrow_enabled!: i64",
+        "ordinal": 14,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "escrowEnabled"
+          }
+        }
+      },
+      {
+        "name": "note: String",
+        "ordinal": 15,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "note"
+          }
+        }
+      },
+      {
+        "name": "management_url: String",
+        "ordinal": 16,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "managementUrl"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 17,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 18,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "7eb2dfb385af80f2ee2ee19b8182b09fc8a1a5df4444364fe51075e628d38fac"
+}

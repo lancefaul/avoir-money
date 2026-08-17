@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"frequency\" AS \"frequency!: String\" FROM \"Expense\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "frequency!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "bca10d8a7078135ff9f6cb6dc074bb36f51ba89a378c89ea29673ac1ad1d80da"
+}

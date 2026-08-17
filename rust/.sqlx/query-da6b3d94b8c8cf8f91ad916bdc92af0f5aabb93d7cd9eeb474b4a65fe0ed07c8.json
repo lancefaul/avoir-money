@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"enabled\" AS \"enabled!: i64\", \"path\" AS \"path!\",\n                  \"frequency\" AS \"frequency!\", \"retentionCount\" AS \"retention!: i64\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"BackupConfig\" LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "enabled!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "enabled"
+          }
+        }
+      },
+      {
+        "name": "path!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "path"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "retention!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "retentionCount"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BackupConfig",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "da6b3d94b8c8cf8f91ad916bdc92af0f5aabb93d7cd9eeb474b4a65fe0ed07c8"
+}

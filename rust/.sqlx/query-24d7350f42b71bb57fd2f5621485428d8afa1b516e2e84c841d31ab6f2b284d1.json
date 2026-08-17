@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"UtilityService\"\n              SET \"serviceType\" = COALESCE(?, \"serviceType\"),\n                  \"metering\" = COALESCE(?, \"metering\"),\n                  \"updatedAt\" = ?\n            WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "24d7350f42b71bb57fd2f5621485428d8afa1b516e2e84c841d31ab6f2b284d1"
+}

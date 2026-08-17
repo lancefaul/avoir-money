@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\", \"dueDate\" AS \"due!: String\",\n                  \"expectedAmount\" AS \"expected!: i64\"\n           FROM \"ScheduledTransaction\"\n           WHERE \"sourceType\" = ? AND \"sourceId\" = ? AND \"status\" = 'PENDING'\n             AND \"dueDate\" >= ? AND \"dueDate\" <= ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "due!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "expected!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c67a246fb2ed3bfb26cba02009f8f87a779d7688510f670b9cae74abecee10b7"
+}

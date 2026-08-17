@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO txn (id, account_id, type, date, created_at, net_amount)\n         VALUES (?, 'acct-checking', 'EXPENSE', '2026-02-01', '2026-02-01T00:00:00', ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "2ecacb0c776a296bc2b9e79c0e6338f9ce02463ecfcfbeb2ad88acc2e0d47760"
+}

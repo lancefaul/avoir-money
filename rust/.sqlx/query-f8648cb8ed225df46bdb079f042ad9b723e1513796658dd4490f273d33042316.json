@@ -1,0 +1,33 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT e.\"budgetId\" AS \"budget_id!\",\n                  SUM(s.\"expectedAmount\") AS \"total!: i64\"\n             FROM \"ScheduledTransaction\" s\n             JOIN \"Expense\" e ON e.\"id\" = s.\"expenseId\"\n            WHERE s.\"sourceType\" = 'EXPENSE'\n              AND s.\"dueDate\" >= ?1 AND s.\"dueDate\" <= ?2\n            GROUP BY e.\"budgetId\"",
+  "describe": {
+    "columns": [
+      {
+        "name": "budget_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "total!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "f8648cb8ed225df46bdb079f042ad9b723e1513796658dd4490f273d33042316"
+}

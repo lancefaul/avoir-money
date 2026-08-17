@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"deletedAt\" AS \"deleted_at: String\" FROM \"Budget\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "deleted_at: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "deletedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "ea344172e00b827e88052ae552a01711d49bbae51d20eff2446953b0845d89b5"
+}

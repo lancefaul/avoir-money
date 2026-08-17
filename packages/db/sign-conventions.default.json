@@ -1,0 +1,19 @@
+{
+  "expense": {
+    "positiveMeaning": "money_out",
+    "negativeMeaning": "refund"
+  },
+  "income": {
+    "positiveMeaning": "money_in",
+    "negativeMeaning": "flip_sign"
+  },
+  "transfer": {
+    "positiveMeaning": "withdrawal"
+  },
+  "trade": {
+    "positiveMeaning": "buy"
+  },
+  "refund": {
+    "positiveMeaning": "money_in"
+  }
+}

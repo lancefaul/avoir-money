@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"Wallet\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "6de88641387281cab64d99fba38b6a8203d6bea8b90f6e3f9569eeff2883ac2e"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"type\" FROM \"PaySchedule\" ORDER BY \"isDefault\" DESC, \"createdAt\" ASC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "type",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "type"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "f970bb39f0f00c66b575d952f9ac302b90c7799ddda96f476c15218bc2f3a0ab"
+}

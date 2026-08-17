@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"UtilityService\"\n            WHERE \"providerId\" = ? ORDER BY \"serviceType\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "93d9706901e59ed4ec28bc14d466b232b18562fea22b585533d7ad4840da6390"
+}

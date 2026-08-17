@@ -1,0 +1,146 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"amount\" AS \"amount!: i64\", \"frequency\" AS \"frequency!\",\n                      \"dueDay\" AS \"due_day: i64\", \"dueWeekday\" AS \"due_weekday: i64\",\n                      \"dueOrdinal\" AS \"due_ordinal: i64\",\n                      \"amountSchedule\" AS \"schedule: String\",\n                      \"startDate\" AS \"start: String\", \"endDate\" AS \"end: String\",\n                      \"pausedUntil\" AS \"paused: String\", \"skipWeekend\" AS \"skip!: i64\"\n                 FROM \"Expense\"\n                WHERE \"frequency\" <> 'ONE_TIME' AND \"archivedAt\" IS NULL\n                  AND (?1 IS NULL OR \"id\" = ?1)",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "due_day: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueDay"
+          }
+        }
+      },
+      {
+        "name": "due_weekday: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueWeekday"
+          }
+        }
+      },
+      {
+        "name": "due_ordinal: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "dueOrdinal"
+          }
+        }
+      },
+      {
+        "name": "schedule: String",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amountSchedule"
+          }
+        }
+      },
+      {
+        "name": "start: String",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end: String",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "paused: String",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "skip!: i64",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "skipWeekend"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "03f63085932d88f83b72737d0dea2fbc3246a02468a581472254dc82b43a6a40"
+}

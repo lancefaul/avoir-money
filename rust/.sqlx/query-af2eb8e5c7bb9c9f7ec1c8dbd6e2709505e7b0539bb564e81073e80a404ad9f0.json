@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" FROM \"CategoryBudget\" WHERE \"yearPlanId\" = ?1 AND \"budgetId\" = ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "af2eb8e5c7bb9c9f7ec1c8dbd6e2709505e7b0539bb564e81073e80a404ad9f0"
+}

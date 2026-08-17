@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT COALESCE(SUM(\"amount\"), 0) AS \"total!: i64\"\n             FROM \"Transaction\"\n            WHERE \"type\" = 'EXPENSE' AND \"budgetId\" = ?1\n              AND \"date\" >= ?2 AND \"date\" <= ?3",
+  "describe": {
+    "columns": [
+      {
+        "name": "total!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "8abbb1500d8867c9e851d5ba1b7a1eb4addce347d9bfac1745210139a497d2d2"
+}

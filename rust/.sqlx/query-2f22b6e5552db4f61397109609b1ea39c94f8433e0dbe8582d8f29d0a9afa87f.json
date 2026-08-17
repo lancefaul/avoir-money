@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"BudgetGroup\" SET \"name\" = COALESCE(?, \"name\"), \"color\" = COALESCE(?, \"color\")\n            WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "2f22b6e5552db4f61397109609b1ea39c94f8433e0dbe8582d8f29d0a9afa87f"
+}

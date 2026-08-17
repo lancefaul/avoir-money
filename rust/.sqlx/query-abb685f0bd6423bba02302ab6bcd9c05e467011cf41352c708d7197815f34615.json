@@ -1,0 +1,45 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"budgetId\" AS \"budget_id!\", t.\"type\" AS \"ty!\",\n                  SUM(t.\"amount\") AS \"total!: i64\"\n             FROM \"Transaction\" t\n            WHERE t.\"budgetId\" IS NOT NULL\n              AND t.\"type\" IN ('EXPENSE', 'REFUND')\n              AND t.\"date\" >= ?1 AND t.\"date\" < ?2\n              AND NOT EXISTS (SELECT 1 FROM \"Transaction\" c WHERE c.\"parentId\" = t.\"id\")\n            GROUP BY t.\"budgetId\", t.\"type\"",
+  "describe": {
+    "columns": [
+      {
+        "name": "budget_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "total!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "abb685f0bd6423bba02302ab6bcd9c05e467011cf41352c708d7197815f34615"
+}

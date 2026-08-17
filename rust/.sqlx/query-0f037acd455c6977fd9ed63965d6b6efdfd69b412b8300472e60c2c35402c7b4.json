@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Income\" SET \"pausedUntil\" = NULL,\n                     \"startDate\" = CASE WHEN ?1 = 1 THEN ?2 ELSE \"startDate\" END,\n                     \"updatedAt\" = ?3 WHERE \"id\" = ?4",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "0f037acd455c6977fd9ed63965d6b6efdfd69b412b8300472e60c2c35402c7b4"
+}

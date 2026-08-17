@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT e.\"amount\" AS \"amount!: i64\", e.\"frequency\" AS \"frequency!\",\n                  e.\"amountSchedule\" AS \"schedule: String\",\n                  e.\"pausedUntil\" AS \"paused: String\", e.\"archivedAt\" AS \"archived: String\"\n             FROM \"BudgetExpenseLink\" l\n             JOIN \"Expense\" e ON e.\"id\" = l.\"expenseId\"\n            WHERE l.\"categoryBudgetId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "amount!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "schedule: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amountSchedule"
+          }
+        }
+      },
+      {
+        "name": "paused: String",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "archived: String",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "archivedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "437759faba1d6d7ca9c38cfaad14c41b998d5359006294271cfe239355699d57"
+}

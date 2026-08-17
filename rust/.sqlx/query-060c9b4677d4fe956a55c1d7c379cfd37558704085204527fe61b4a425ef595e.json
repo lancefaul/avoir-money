@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"UtilityService\"\n             (\"id\",\"providerId\",\"serviceType\",\"metering\",\"expenseId\",\"createdAt\",\"updatedAt\")\n           VALUES (?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "060c9b4677d4fe956a55c1d7c379cfd37558704085204527fe61b4a425ef595e"
+}

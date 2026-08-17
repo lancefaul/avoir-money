@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT MIN(\"date\") AS \"earliest: String\"\n             FROM \"Transaction\" WHERE \"type\" IN ('TRADE','INCOME')",
+  "describe": {
+    "columns": [
+      {
+        "name": "earliest: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "cf2eb47f03892578c07da6f23e46205642ff1b33648b450503e7989a40ce9b2f"
+}

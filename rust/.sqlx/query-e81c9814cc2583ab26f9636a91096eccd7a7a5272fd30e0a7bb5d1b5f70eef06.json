@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Transaction\"\n              SET \"amount\" = ?1, \"netAmount\" = ?1,\n                  \"preTaxAmount\" = ?2, \"taxAmount\" = ?3, \"taxRate\" = ?4,\n                  \"budgetId\" = CASE WHEN ?5 THEN ?6 ELSE \"budgetId\" END,\n                  \"note\" = CASE WHEN ?7 THEN ?8 ELSE \"note\" END\n            WHERE \"id\" = ?9",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 9
+    },
+    "nullable": []
+  },
+  "hash": "e81c9814cc2583ab26f9636a91096eccd7a7a5272fd30e0a7bb5d1b5f70eef06"
+}

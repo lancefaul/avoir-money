@@ -1,0 +1,28 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT COALESCE(SUM(\"principalAmount\"), 0) AS \"principal!: i64\",\n                  COALESCE(SUM(\"interestAmount\"), 0) AS \"interest!: i64\"\n             FROM \"DebtPayment\" WHERE \"debtId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "principal!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "interest!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "aa0e9cbc5fd1e89487585ad8e29c8c4c7a2bd77b26af46195eb500b8b2f08354"
+}

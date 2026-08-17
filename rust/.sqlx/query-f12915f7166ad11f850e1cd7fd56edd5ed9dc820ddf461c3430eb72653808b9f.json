@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Account\" SET \"balance\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "f12915f7166ad11f850e1cd7fd56edd5ed9dc820ddf461c3430eb72653808b9f"
+}
