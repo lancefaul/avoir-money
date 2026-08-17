@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"providerId\" AS \"provider_id!\",\n                  \"serviceType\" AS \"service_type!\", \"metering\" AS \"metering!\",\n                  \"expenseId\" AS \"expense_id: String\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"UtilityService\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "provider_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "providerId"
+          }
+        }
+      },
+      {
+        "name": "service_type!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "serviceType"
+          }
+        }
+      },
+      {
+        "name": "metering!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "metering"
+          }
+        }
+      },
+      {
+        "name": "expense_id: String",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "expenseId"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "246e5a03b5aa0dc990f638ac227514bfe21dc588a07cd2cc7348ca505516ff33"
+}

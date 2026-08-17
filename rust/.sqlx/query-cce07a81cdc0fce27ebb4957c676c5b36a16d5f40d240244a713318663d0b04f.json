@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\", \"currentBalance\" AS \"balance!: i64\",\n                  \"apr\" AS \"apr!: i64\"\n           FROM \"Debt\" WHERE \"linkedExpenseId\" = ? AND \"paidOff\" = 0 LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "balance!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "currentBalance"
+          }
+        }
+      },
+      {
+        "name": "apr!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Debt",
+            "name": "apr"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "cce07a81cdc0fce27ebb4957c676c5b36a16d5f40d240244a713318663d0b04f"
+}

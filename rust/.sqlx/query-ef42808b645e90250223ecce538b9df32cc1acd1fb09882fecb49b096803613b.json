@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"sessionId\" AS \"session_id!\",\n                  \"statementRowId\" AS \"statement_row_id!\", \"transactionId\" AS \"transaction_id!\",\n                  \"matchType\" AS \"match_type!\", \"createdAt\" AS \"created_at!\"\n             FROM \"ReconciliationMatch\" WHERE \"sessionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "session_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "sessionId"
+          }
+        }
+      },
+      {
+        "name": "statement_row_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "statementRowId"
+          }
+        }
+      },
+      {
+        "name": "transaction_id!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "transactionId"
+          }
+        }
+      },
+      {
+        "name": "match_type!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "matchType"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationMatch",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "ef42808b645e90250223ecce538b9df32cc1acd1fb09882fecb49b096803613b"
+}

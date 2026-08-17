@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"ticker\", \"type\" AS \"ty!\" FROM \"InvestmentHolding\"",
+  "describe": {
+    "columns": [
+      {
+        "name": "ticker",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "ticker"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "type"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      true,
+      false
+    ]
+  },
+  "hash": "947fc9ed47976364f1b0067a91b5c818e3078feb60175042e5b45bc64f1ce193"
+}

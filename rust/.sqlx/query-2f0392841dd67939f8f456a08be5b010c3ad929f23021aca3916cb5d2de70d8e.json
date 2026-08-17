@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"TradeDetail\"\n                 (\"id\",\"transactionId\",\"direction\",\"assetType\",\"ticker\",\"quantity\",\n                  \"unitPrice\",\"bitcoinUnit\",\"custodianId\",\"walletId\")\n               VALUES (?,?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "2f0392841dd67939f8f456a08be5b010c3ad929f23021aca3916cb5d2de70d8e"
+}

@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"amount\" AS \"amount!: i64\", \"frequency\" AS \"frequency!\",\n                  \"activeMonths\" AS \"active_months: String\",\n                  \"manualOverride\" AS \"manual!: i64\", \"effectiveDate\" AS \"effective!\"\n             FROM \"BudgetVersion\" WHERE \"categoryBudgetId\" = ?\n            ORDER BY \"effectiveDate\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "amount!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "active_months: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "activeMonths"
+          }
+        }
+      },
+      {
+        "name": "manual!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "manualOverride"
+          }
+        }
+      },
+      {
+        "name": "effective!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "effectiveDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "8c270b44ddee4921766949b575663f48aecf105074206161183c3d31304b0bf2"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"BudgetGroup\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "e72988d9ede5f6c8a2abc25fb4c42e95abfbd097d134202362588819bc5138ac"
+}

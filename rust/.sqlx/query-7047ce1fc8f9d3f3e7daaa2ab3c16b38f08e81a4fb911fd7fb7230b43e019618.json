@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"EscrowRecord\" WHERE \"id\" = ?1 AND \"debtId\" = ?2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "7047ce1fc8f9d3f3e7daaa2ab3c16b38f08e81a4fb911fd7fb7230b43e019618"
+}

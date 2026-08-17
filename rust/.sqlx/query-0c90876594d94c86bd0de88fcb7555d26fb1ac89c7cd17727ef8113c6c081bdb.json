@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"ScheduledTransaction\" SET \"status\" = 'SKIPPED'\n            WHERE \"sourceType\" = ? AND \"sourceId\" = ? AND \"status\" = 'PENDING'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "0c90876594d94c86bd0de88fcb7555d26fb1ac89c7cd17727ef8113c6c081bdb"
+}

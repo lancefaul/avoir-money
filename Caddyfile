@@ -1,0 +1,36 @@
+app.budget.home {
+	tls internal
+
+	handle /api/* {
+		reverse_proxy host.docker.internal:5174
+	}
+
+	handle {
+		reverse_proxy host.docker.internal:5173
+	}
+}
+
+ds.budget.home {
+	tls internal
+
+	handle {
+		reverse_proxy host.docker.internal:3002
+	}
+}
+
+dev.budget.home {
+	tls internal
+
+	handle /api/* {
+		reverse_proxy host.docker.internal:5184
+	}
+
+	handle {
+		reverse_proxy host.docker.internal:5183
+	}
+}
+
+http://budget.home:8080 {
+	root * /data/caddy/pki/authorities/local
+	file_server
+}

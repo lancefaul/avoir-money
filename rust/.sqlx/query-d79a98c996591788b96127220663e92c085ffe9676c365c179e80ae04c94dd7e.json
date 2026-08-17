@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"EscrowRecord\"\n             (\"id\",\"debtId\",\"monthlyAmount\",\"periodStartDate\",\"periodEndDate\",\n              \"createdAt\",\"updatedAt\")\n           VALUES (?1,?2,?3,?4,?5,?6,?6)\n           ON CONFLICT (\"debtId\",\"periodStartDate\") DO UPDATE SET\n             \"monthlyAmount\" = ?3, \"periodEndDate\" = ?5, \"updatedAt\" = ?6",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "d79a98c996591788b96127220663e92c085ffe9676c365c179e80ae04c94dd7e"
+}

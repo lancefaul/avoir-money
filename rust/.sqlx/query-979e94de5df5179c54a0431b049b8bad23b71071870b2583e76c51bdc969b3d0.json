@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"quantity\" AS \"quantity!: String\" FROM \"InvestmentHolding\"\n            WHERE \"type\" = ?\n              AND (\"custodianId\" IS ?)\n              AND (\"walletId\" IS ?)\n              AND (\"ticker\" IS ?)\n            LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "quantity!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "979e94de5df5179c54a0431b049b8bad23b71071870b2583e76c51bdc969b3d0"
+}

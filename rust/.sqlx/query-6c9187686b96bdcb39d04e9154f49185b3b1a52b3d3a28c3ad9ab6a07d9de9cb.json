@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Custodian\" (\"id\",\"name\",\"managementUrl\",\"createdAt\",\"updatedAt\")\n           VALUES (?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "6c9187686b96bdcb39d04e9154f49185b3b1a52b3d3a28c3ad9ab6a07d9de9cb"
+}

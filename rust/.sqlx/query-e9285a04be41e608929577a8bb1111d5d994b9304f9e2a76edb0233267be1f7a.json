@@ -1,0 +1,194 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"name\" AS \"name!\", \"amount\" AS \"amount!: i64\",\n                  \"frequency\" AS \"frequency!\", \"budgetId\" AS \"budget_id!\",\n                  \"accountId\" AS \"account_id: String\",\n                  \"amountSchedule\" AS \"amount_schedule: String\",\n                  \"startDate\" AS \"start_date: String\", \"endDate\" AS \"end_date: String\",\n                  \"pausedUntil\" AS \"paused_until: String\", \"archivedAt\" AS \"archived_at: String\",\n                  \"note\" AS \"note: String\", \"managementUrl\" AS \"management_url: String\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"Income\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "budget_id!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "account_id: String",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "amount_schedule: String",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "amountSchedule"
+          }
+        }
+      },
+      {
+        "name": "start_date: String",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "startDate"
+          }
+        }
+      },
+      {
+        "name": "end_date: String",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "endDate"
+          }
+        }
+      },
+      {
+        "name": "paused_until: String",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "archived_at: String",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "archivedAt"
+          }
+        }
+      },
+      {
+        "name": "note: String",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "note"
+          }
+        }
+      },
+      {
+        "name": "management_url: String",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "managementUrl"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 13,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 14,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "e9285a04be41e608929577a8bb1111d5d994b9304f9e2a76edb0233267be1f7a"
+}

@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"date\" AS \"date!\", \"amount\" AS \"amount!: i64\"\n             FROM \"Transaction\"\n            WHERE \"type\" = 'EXPENSE' AND \"expenseId\" IS NULL\n              AND \"date\" >= ?1 AND \"date\" <= ?2\n              AND (\"purchaseGroupId\" IS NULL OR \"accountId\" IS NULL)",
+  "describe": {
+    "columns": [
+      {
+        "name": "date!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "056a894916a60203d9c2faf0c714702e8449fdeb57bca165c1e2a4b76e5b4439"
+}

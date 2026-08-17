@@ -1,0 +1,7 @@
+{
+  "kiroAgent.configureMCP": "Disabled",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "ENABLE_TOOL_SEARCH": "true",
+  "typescript.autoClosingTags": false
+}

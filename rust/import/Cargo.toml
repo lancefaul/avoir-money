@@ -1,0 +1,19 @@
+[package]
+name = "avoir-import"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+chrono = "0.4"
+# The schema comes from the app's own migrations, never from a copy. See the
+# comment at the call site.
+avoir-db = { path = "../db" }
+sqlx = { version = "0.9", features = ["runtime-tokio", "sqlite", "chrono"] }
+tokio = { workspace = true }
+serde_json = { workspace = true }
+rust_decimal = { workspace = true }
+anyhow = { workspace = true }

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"quantity\" AS \"quantity!: String\" FROM \"InvestmentHolding\"\n            WHERE \"type\" = 'BITCOIN' AND \"walletId\" = ? AND \"ticker\" IS NULL LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "quantity!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "31772221f2396c71e759eba0fc1918c32690bffd16ec462f209a991dd14244b8"
+}

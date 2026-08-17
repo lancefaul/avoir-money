@@ -1,0 +1,25 @@
+# Keep the sqlx macros OFFLINE by default.
+#
+# Without this, `cargo check`/`clippy` let the sqlx macros do their own dotenv
+# lookup, which resolves the REPO-ROOT `.env` — and that names PRODUCTION
+# Postgres, not the SQLite build database in `rust/.env`. On 2026-08-10 a
+# routine `cargo clippy --workspace` opened a connection to the live financial
+# database and produced 213 errors; nothing was written, and only because every
+# query uses `?` placeholders that Postgres rejects at parse time. "It only ever
+# fails to parse" is not a property to depend on.
+#
+# `[env]` does NOT override an already-set variable, which is what makes this
+# safe rather than merely convenient: `cargo sqlx prepare` sets
+# `SQLX_OFFLINE=false` for its own child, so regenerating `.sqlx` still verifies
+# against the real schema.
+#
+# ADR-034 warns that offline mode fails in two indistinguishable ways — a
+# genuine schema error and a forgotten `cargo sqlx prepare` both surface as a
+# build failure. Regenerating `.sqlx` after any query or schema change is a
+# standing obligation, not an optional step.
+#
+# This file is recorded in ERRORS.md as the fix for that incident and was found
+# missing from the repository on 2026-08-11, so the fix had never actually been
+# in place. Do not delete it.
+[env]
+SQLX_OFFLINE = "true"

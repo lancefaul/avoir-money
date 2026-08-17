@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"ScheduledTransaction\"\n           SET \"transactionId\" = ?, \"actualAmount\" = ?, \"status\" = ?\n           WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "0c089fe7ff9f7776970e5d1980a0b78d052ba629fbc9e1e4843b93977ea70e51"
+}

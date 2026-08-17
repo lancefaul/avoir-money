@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\" FROM \"PayPeriod\"\n           WHERE \"scheduleId\" = ? AND \"year\" = ? AND \"periodNum\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "ce7d215af23d70fae454c5e3d29e32176020b17badc490c8abed4c99977e6106"
+}

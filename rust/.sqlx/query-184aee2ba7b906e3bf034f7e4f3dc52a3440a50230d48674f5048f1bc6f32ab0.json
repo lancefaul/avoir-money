@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"InvestmentHolding\"\n            WHERE \"type\" = 'BITCOIN' AND \"walletId\" = ? LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "184aee2ba7b906e3bf034f7e4f3dc52a3440a50230d48674f5048f1bc6f32ab0"
+}

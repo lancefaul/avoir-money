@@ -1,0 +1,158 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"billDate\" AS \"bill_date!\", \"usage\" AS \"usage: String\",\n                  \"cost\" AS \"cost!: i64\", \"unitCost\" AS \"unit_cost: String\",\n                  \"details\" AS \"details: String\", \"createdAt\" AS \"created_at!\",\n                  \"convenienceFee\" AS \"convenience_fee: i64\",\n                  \"convenienceFeeType\" AS \"convenience_fee_type: String\",\n                  \"otherFees\" AS \"other_fees: i64\", \"dueDate\" AS \"due_date: String\",\n                  \"serviceId\" AS \"service_id!\"\n             FROM \"UtilityReading\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "bill_date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "billDate"
+          }
+        }
+      },
+      {
+        "name": "usage: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "usage"
+          }
+        }
+      },
+      {
+        "name": "cost!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "cost"
+          }
+        }
+      },
+      {
+        "name": "unit_cost: String",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "unitCost"
+          }
+        }
+      },
+      {
+        "name": "details: String",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "details"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "convenience_fee: i64",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "convenienceFee"
+          }
+        }
+      },
+      {
+        "name": "convenience_fee_type: String",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "convenienceFeeType"
+          }
+        }
+      },
+      {
+        "name": "other_fees: i64",
+        "ordinal": 9,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "otherFees"
+          }
+        }
+      },
+      {
+        "name": "due_date: String",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "service_id!",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "serviceId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "33c2c030ca007e692504715ad02029a4b722d0cbebf99af79b93b245f146482a"
+}

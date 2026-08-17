@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"ReconciliationSession\" SET \"statementEndingBalance\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "fc4ee338b9f0da600689f25b096a9b171c80178d1b16515183d8cca2e72f8c59"
+}

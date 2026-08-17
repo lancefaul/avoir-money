@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 504" preserveAspectRatio="none">
+  <!-- Base -->
+  <rect width="800" height="504" fill="#1B6B4B"/>
+  <!-- Row 1 diamonds (top) -->
+  <polygon points="0,0 100,126 0,252" fill="#2D8C3E"/>
+  <polygon points="0,0 200,0 100,126" fill="#4BA84A"/>
+  <polygon points="200,0 100,126 200,252" fill="#1A7A45"/>
+  <polygon points="200,0 400,0 300,126" fill="#6BBF45"/>
+  <polygon points="400,0 300,126 400,252" fill="#3A9E48"/>
+  <polygon points="400,0 600,0 500,126" fill="#8BD44A"/>
+  <polygon points="600,0 500,126 600,252" fill="#2D8040"/>
+  <polygon points="600,0 800,0 700,126" fill="#4DAA4E"/>
+  <polygon points="800,0 700,126 800,252" fill="#1A6838"/>
+  <!-- Row 2 diamonds (middle) -->
+  <polygon points="100,126 200,252 100,378" fill="#176B50"/>
+  <polygon points="100,126 300,126 200,252" fill="#3D9A42"/>
+  <polygon points="300,126 200,252 300,378" fill="#0D5A48"/>
+  <polygon points="300,126 500,126 400,252" fill="#2B8545"/>
+  <polygon points="500,126 400,252 500,378" fill="#0A5050"/>
+  <polygon points="500,126 700,126 600,252" fill="#1D7048"/>
+  <polygon points="700,126 600,252 700,378" fill="#084545"/>
+  <polygon points="700,126 800,252 800,378" fill="#0D5555"/>
+  <!-- Row 3 diamonds (bottom) -->
+  <polygon points="0,252 200,252 100,378" fill="#0F5E4A"/>
+  <polygon points="0,252 100,378 0,504" fill="#0A4A42"/>
+  <polygon points="200,252 100,378 200,504" fill="#084040"/>
+  <polygon points="200,252 400,252 300,378" fill="#126650"/>
+  <polygon points="400,252 300,378 400,504" fill="#065050"/>
+  <polygon points="400,252 600,252 500,378" fill="#0A5555"/>
+  <polygon points="600,252 500,378 600,504" fill="#064848"/>
+  <polygon points="600,252 800,252 700,378" fill="#085858"/>
+  <polygon points="800,252 700,378 800,504" fill="#044040"/>
+  <!-- Bottom row -->
+  <polygon points="100,378 200,504 0,504" fill="#063838"/>
+  <polygon points="100,378 300,378 200,504" fill="#0A4848"/>
+  <polygon points="300,378 400,504 200,504" fill="#053535"/>
+  <polygon points="300,378 500,378 400,504" fill="#084242"/>
+  <polygon points="500,378 600,504 400,504" fill="#043030"/>
+  <polygon points="500,378 700,378 600,504" fill="#063C3C"/>
+  <polygon points="700,378 800,504 600,504" fill="#032828"/>
+  <polygon points="700,378 800,378 800,504" fill="#053535"/>
+  <!-- Diagonal streak overlay -->
+  <polygon points="0,50 350,0 800,180 450,280 0,200" fill="rgba(90,170,60,0.2)"/>
+  <polygon points="50,0 250,0 500,100 200,150" fill="rgba(120,190,50,0.15)"/>
+</svg>

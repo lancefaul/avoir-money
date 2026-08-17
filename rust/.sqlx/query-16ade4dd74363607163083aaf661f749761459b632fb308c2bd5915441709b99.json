@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"endDate\" FROM \"PayPeriod\"\n            WHERE \"startDate\" >= ?1 AND \"startDate\" <= ?2\n            ORDER BY \"startDate\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "endDate",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "endDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "16ade4dd74363607163083aaf661f749761459b632fb308c2bd5915441709b99"
+}

@@ -1,0 +1,146 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"id\" AS \"id!\", t.\"date\" AS \"date!\", t.\"name\" AS \"name!\",\n                  t.\"amount\" AS \"amount!: i64\", t.\"netAmount\" AS \"net_amount!: i64\",\n                  t.\"type\" AS \"tx_type!\", t.\"toAccountId\" AS to_account_id,\n                  t.\"expenseId\" AS expense_id, t.\"incomeId\" AS income_id,\n                  d.\"direction\" AS trade_direction, t.\"note\"\n             FROM \"Transaction\" t\n             LEFT JOIN \"TradeDetail\" d ON d.\"transactionId\" = t.\"id\"\n            WHERE t.\"parentId\" IS NULL\n              AND t.\"date\" >= ?2 AND t.\"date\" <= ?3\n              AND (t.\"accountId\" = ?1 OR (t.\"toAccountId\" = ?1 AND t.\"type\" = 'TRANSFER'))\n              AND t.\"netAmount\" <> 0\n            ORDER BY t.\"date\" ASC, t.\"createdAt\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "net_amount!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "netAmount"
+          }
+        }
+      },
+      {
+        "name": "tx_type!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "to_account_id",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "toAccountId"
+          }
+        }
+      },
+      {
+        "name": "expense_id",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "expenseId"
+          }
+        }
+      },
+      {
+        "name": "income_id",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "incomeId"
+          }
+        }
+      },
+      {
+        "name": "trade_direction",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "direction"
+          }
+        }
+      },
+      {
+        "name": "note",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "note"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "c71ec538591fa1add48fcefb1b588b08a914801721254cf4fca1490ab6e95ac4"
+}

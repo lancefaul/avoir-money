@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"filepath\" AS \"filepath!\" FROM \"Backup\"\n            WHERE \"status\" = 'COMPLETED' AND \"source\" = ?\n            ORDER BY \"createdAt\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "filepath!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "filepath"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "3a79f6be93d054339ed0f46f5df6b71c213d3e620a3f058e0ebdec99a74b4959"
+}

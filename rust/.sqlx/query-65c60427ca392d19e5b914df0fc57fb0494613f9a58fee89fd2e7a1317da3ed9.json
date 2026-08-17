@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"UtilityProvider\" (\"id\",\"name\",\"createdAt\",\"updatedAt\") VALUES (?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "65c60427ca392d19e5b914df0fc57fb0494613f9a58fee89fd2e7a1317da3ed9"
+}

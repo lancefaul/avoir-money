@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"ReconciliationSession\"\n             (\"id\",\"accountId\",\"periodStart\",\"periodEnd\",\"statementEndingBalance\",\n              \"status\",\"residualAtClose\",\"createdAt\",\"updatedAt\")\n           VALUES (?, ?, ?, ?, ?, 'DRAFT', 0, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "eaa88b2d3d3171479dcfde5020b1d55678fccf5a8c831d74d2cd073a30937e88"
+}

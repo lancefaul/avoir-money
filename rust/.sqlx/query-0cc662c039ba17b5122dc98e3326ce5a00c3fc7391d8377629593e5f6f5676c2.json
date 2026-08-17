@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"type\" AS \"ty!\", \"fromHoldingId\" AS \"from_id!\", \"toHoldingId\" AS \"to_id!\",\n                  \"quantity\" AS \"quantity!\", \"feeBtc\" AS fee_btc,\n                  \"feeTransactionId\" AS fee_tx_id\n             FROM \"InvestmentTransfer\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "ty!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "from_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "fromHoldingId"
+          }
+        }
+      },
+      {
+        "name": "to_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "toHoldingId"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "fee_btc",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "feeBtc"
+          }
+        }
+      },
+      {
+        "name": "fee_tx_id",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "feeTransactionId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "0cc662c039ba17b5122dc98e3326ce5a00c3fc7391d8377629593e5f6f5676c2"
+}

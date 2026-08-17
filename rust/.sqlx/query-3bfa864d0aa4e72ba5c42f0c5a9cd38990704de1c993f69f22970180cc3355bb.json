@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!: String\", \"quantity\" AS \"quantity!: String\",\n                  \"costBasis\" AS \"cost_basis: i64\"\n           FROM \"InvestmentHolding\"\n           WHERE \"type\" = ?\n             AND (\"custodianId\" IS ? OR (?  IS NULL AND \"custodianId\" IS NULL))\n             AND (\"walletId\" IS ? OR (? IS NULL AND \"walletId\" IS NULL))\n             AND (\"ticker\" IS ?)\n           LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "quantity!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "cost_basis: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "costBasis"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": [
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "3bfa864d0aa4e72ba5c42f0c5a9cd38990704de1c993f69f22970180cc3355bb"
+}

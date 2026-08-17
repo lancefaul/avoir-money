@@ -1,0 +1,122 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"parentId\" AS \"parent_id!\", \"amount\" AS \"amount!: i64\",\n                  \"budgetId\" AS budget_id, \"preTaxAmount\" AS \"pre_tax: i64\",\n                  \"taxAmount\" AS \"tax: i64\", \"taxRate\" AS \"rate: i64\",\n                  \"note\", \"createdAt\" AS \"created_at!\"\n             FROM \"Transaction\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "parent_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "parentId"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "budget_id",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "pre_tax: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "preTaxAmount"
+          }
+        }
+      },
+      {
+        "name": "tax: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "taxAmount"
+          }
+        }
+      },
+      {
+        "name": "rate: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "taxRate"
+          }
+        }
+      },
+      {
+        "name": "note",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "note"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "b062208d9fa532945e13e1258c584b126e66ca290c0b9bc9f62461d28053ed3d"
+}

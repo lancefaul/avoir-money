@@ -1,0 +1,22 @@
+
+ RUN  v4.1.2 /home/lancefaul/Documents/Projects/budget-tracker/apps/api
+
+stdout | src/routes/transactions.pagination.property.test.ts > Feature: lazy-load-transactions, Property 4: Response structure completeness > every response has the required top-level fields and transaction shape
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `40P01`. Message: `ERROR: deadlock detected
+DETAIL: Process 1930 waits for AccessExclusiveLock on relation 17504 of database 16384; blocked by process 1932.
+Process 1932 waits for RowExclusiveLock on relation 17256 of database 16384; blocked by process 1930.
+HINT: See server log for query details.`
+
+ ❯ src/routes/transactions.pagination.property.test.ts (5 tests | 2 failed) 3504ms
+     × hasMore is false when returned count < limit, and true means more exist 1090ms
+     × every response has the required top-level fields and transaction shape 1212ms
+
+ Test Files  1 failed | 109 passed (110)
+      Tests  2 failed | 1015 passed | 3 skipped (1020)
+   Start at  16:37:00
+   Duration  36.65s (transform 644ms, setup 2.76s, import 5.76s, tests 22.57s, environment 4ms)
+
