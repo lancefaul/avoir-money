@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"Income\"\n                WHERE ((?1 = 1 AND \"archivedAt\" IS NOT NULL)\n                    OR (?1 = 0 AND \"archivedAt\" IS NULL))\n                  AND (?2 IS NULL OR \"frequency\" = ?2)\n                ORDER BY \"name\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "026ba659bcb478c6b951ca09d81680bacfd5289b3654c03e8a962bf0a7c18dd6"
+}

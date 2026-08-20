@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"monthlyAmount\" AS \"amount!: i64\" FROM \"EscrowRecord\"\n            WHERE \"debtId\" = ?\n            ORDER BY \"periodStartDate\" DESC, \"createdAt\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "amount!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "EscrowRecord",
+            "name": "monthlyAmount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "3c343a9450f50aaa3fcd188cd6a9eefaa32c004ede8e70f7903675922c604a9b"
+}

@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT COALESCE(SUM(\"amount\"), 0) AS \"total!: i64\"\n             FROM \"Transaction\" WHERE \"parentId\" = ?1 AND \"id\" <> ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "total!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "60bd96939770a012fb8d73a6b744b42e4114d86df01b9d005c61ea669580d5db"
+}

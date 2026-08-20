@@ -1,0 +1,158 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"accountId\" AS \"account_id!\",\n                  \"periodStart\" AS \"period_start!\", \"periodEnd\" AS \"period_end!\",\n                  \"statementEndingBalance\" AS \"statement_ending_balance!: i64\",\n                  \"status\" AS \"status!\", \"residualAtClose\" AS \"residual_at_close!: i64\",\n                  \"reconciledAt\" AS reconciled_at,\n                  \"adjustmentTransactionId\" AS adjustment_transaction_id,\n                  \"adjustmentReason\" AS adjustment_reason,\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"ReconciliationSession\"\n            WHERE (?1 IS NULL OR \"accountId\" = ?1)\n              AND (?2 IS NULL OR \"status\" = ?2)\n            ORDER BY \"periodEnd\" DESC, \"createdAt\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "account_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "period_start!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "periodStart"
+          }
+        }
+      },
+      {
+        "name": "period_end!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "periodEnd"
+          }
+        }
+      },
+      {
+        "name": "statement_ending_balance!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "statementEndingBalance"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "residual_at_close!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "residualAtClose"
+          }
+        }
+      },
+      {
+        "name": "reconciled_at",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "reconciledAt"
+          }
+        }
+      },
+      {
+        "name": "adjustment_transaction_id",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "adjustmentTransactionId"
+          }
+        }
+      },
+      {
+        "name": "adjustment_reason",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "adjustmentReason"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ReconciliationSession",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "c5a9628857803db6037b42df7174c896c9fcf36683dd6355b190443c675e1a40"
+}

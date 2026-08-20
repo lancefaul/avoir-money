@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"DebtPayment\"\n             (\"id\",\"debtId\",\"transactionId\",\"principalAmount\",\"interestAmount\",\"date\",\"createdAt\")\n           VALUES (?, ?, ?, ?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "08e93e35acba1c71c9bf151d7c42fb243d1f1df23ea0ec48b7ef8773aa6b25a8"
+}

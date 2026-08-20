@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"InvestmentSnapshot\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "cbaf6a66cb107b8a4528bbeba11383e2c3a513eb7966fdc4f90980425b2e4ecf"
+}

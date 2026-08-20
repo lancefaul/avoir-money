@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT OR IGNORE INTO \"ReconciliationMatch\"\n                 (\"id\",\"sessionId\",\"statementRowId\",\"transactionId\",\"matchType\",\"createdAt\")\n               VALUES (?, ?, ?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "d2036a69f7e12860d21645d3355966dec26cb6f138c7e58839c154f9c89695da"
+}

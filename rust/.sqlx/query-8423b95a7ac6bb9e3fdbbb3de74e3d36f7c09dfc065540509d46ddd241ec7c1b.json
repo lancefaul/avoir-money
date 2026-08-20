@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Account\"\n              SET \"name\" = ?, \"type\" = ?, \"balance\" = ?, \"openingBalance\" = ?,\n                  \"hasRewards\" = ?, \"earnsInterest\" = ?, \"interestRate\" = ?,\n                  \"interestRateType\" = ?, \"brand\" = ?, \"updatedAt\" = ?\n            WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 11
+    },
+    "nullable": []
+  },
+  "hash": "8423b95a7ac6bb9e3fdbbb3de74e3d36f7c09dfc065540509d46ddd241ec7c1b"
+}

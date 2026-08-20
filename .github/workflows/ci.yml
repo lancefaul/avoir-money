@@ -1,0 +1,458 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm --filter @budget-tracker/db exec prisma generate
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+  test:
+    runs-on: ubuntu-latest
+    # 20, not 8. Measured on 2026-08-09: this job takes 7m08s, 7m59s and 8m07s
+    # on three consecutive runs of the same suite — one of them succeeded with
+    # a single second to spare and the next was killed by the 8-minute limit.
+    # A job timeout reports as `cancelled`, not `failed`, which is why it reads
+    # as someone having stopped the run rather than as a CI problem.
+    #
+    # This is the ERRORS.md "gated job" entry one level up: `e2e` is `needs:`
+    # -gated behind this job, so every time the coin lands wrong, e2e does not
+    # run at all. The suite is ~2,081 tests and will only grow, so the budget
+    # needs headroom rather than a number the suite has already caught up with.
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: budget
+          POSTGRES_PASSWORD: budget
+          POSTGRES_DB: budget_tracker_test
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U budget"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://budget:budget@localhost:5433/budget_tracker_test
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm --filter @budget-tracker/db exec prisma generate
+
+      - name: Restore Turbo cache
+        uses: actions/cache@v5
+        with:
+          path: .turbo/cache
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-
+
+      - name: Apply database migrations
+        run: pnpm --filter @budget-tracker/db exec prisma migrate deploy
+
+      # Two suites (backups.upload, dump-validation) shell out to
+      # `docker exec <container> pg_dump` because the app's restore path does.
+      # GitHub generates the service container's name, so it has to be
+      # discovered and handed to the tests rather than assumed — locally the
+      # default `budget-tracker-db-test` still applies.
+      - name: Resolve the Postgres container name
+        run: |
+          name=$(docker ps --filter "ancestor=postgres:16" --format '{{.Names}}' | head -n1)
+          if [ -z "$name" ]; then
+            echo "::error::No postgres:16 service container found" >&2
+            docker ps
+            exit 1
+          fi
+          echo "Postgres service container: $name"
+          echo "BACKUP_DB_CONTAINER=$name" >> "$GITHUB_ENV"
+
+      - name: Run tests with coverage
+        run: pnpm test
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: test
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: budget
+          POSTGRES_PASSWORD: budget
+          POSTGRES_DB: budget_tracker_test
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U budget"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://budget:budget@localhost:5433/budget_tracker_test
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm --filter @budget-tracker/db exec prisma generate
+
+      - name: Apply database migrations
+        run: pnpm --filter @budget-tracker/db exec prisma migrate deploy
+
+      - name: Seed test database for e2e
+        run: pnpm --filter @budget-tracker/db exec tsx prisma/e2e-seed.ts
+
+      - name: Build workspace packages
+        run: pnpm build
+
+      - name: Install Playwright browsers
+        run: pnpm --filter @budget-tracker/web exec playwright install --with-deps
+
+      - name: Run E2E tests
+        run: pnpm --filter @budget-tracker/web exec playwright test
+
+  # The Rust port's tests. Added 2026-08-09: rust/ had ~81 tests protecting the
+  # ledger, the balance chain and the money types, and NONE of them ran in CI —
+  # the workflow predates the tree, so every Rust push was landing unverified.
+  #
+  # This now covers `avoir-server` too, which is a workspace member — the whole
+  # backend, including the HTTP surface the desktop shell talks to.
+  rust:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: rust
+    env:
+      # Build against the committed .sqlx metadata rather than a live database
+      # (ADR-034). Verified locally: the crates build with the database deleted.
+      SQLX_OFFLINE: 'true'
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust
+
+      - name: Formatting
+        run: cargo fmt --check
+
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+
+      - name: Tests
+        run: cargo test --workspace
+
+      # Parse the Rust API's REAL responses with the frontend's REAL Zod
+      # schemas — the coupling between the two stacks that OUTLIVES `apps/api`.
+      #
+      # This could not run in CI until 2026-08-11, and the reason is worth
+      # keeping: the check needs a production-SHAPED database, because every
+      # other test builds its own fixture and therefore asserts against data
+      # shaped the way its author imagined. The only such database was an import
+      # of the real one — one person's complete financial history — which is not
+      # going into a hosted runner to satisfy a gate. It was briefly wired in
+      # pointing at a path that existed on one machine, never passed once, and
+      # held this job red until it was noticed.
+      #
+      # What changed is that the fixture is now BUILT from the API instead of
+      # imported. `build-fixture.mjs` drives the same scenario the differential
+      # harness verifies, against the Rust backend alone — no Postgres, no
+      # TypeScript, no Docker — and leaves a database with every table
+      # `acceptance.rs` samples non-empty. Reusing that scenario rather than a
+      # second list is deliberate: a shape the harness has checked is a shape the
+      # fixture contains, and neither can drift without the diff reporting it.
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Install dependencies
+        working-directory: .
+        run: pnpm install --frozen-lockfile
+      - name: Build the shared schemas
+        working-directory: .
+        run: pnpm --filter @budget-tracker/core build
+
+      # `cargo test --workspace` builds test binaries, not necessarily the
+      # `avoir-server` bin the fixture step runs, so it is built explicitly
+      # rather than assumed present.
+      - name: Build the server binary
+        run: cargo build -p avoir-server
+
+      - name: Build a fixture from the API
+        working-directory: .
+        run: |
+          set -euo pipefail
+          WORK=/tmp/avoir-fixture
+          rm -rf "$WORK" && mkdir -p "$WORK"
+          TOKEN="fixture-$RANDOM$RANDOM"
+          AVOIR_DATA_DIR="$WORK" AVOIR_TOKEN="$TOKEN" \
+            setsid rust/target/debug/avoir-server > "$WORK/rs.json" 2> "$WORK/rs.err" &
+          for _ in $(seq 1 80); do [ -s "$WORK/rs.json" ] && break; sleep 0.25; done
+          PORT="$(node -p "require('$WORK/rs.json').port")"
+          RS_BASE="http://127.0.0.1:$PORT/api/v1" RS_KEY="$TOKEN" \
+            node tools/differential/build-fixture.mjs
+          # Killed by group: the server is a setsid leader and `$!` names only
+          # the outermost process.
+          pkill -x avoir-server || true
+
+      - name: Response shapes match the frontend's schemas
+        run: |
+          # The acceptance test doubles as the dump generator and exits non-zero
+          # on `/category-budgets`, which legitimately 400s without a year-plan
+          # query parameter. The dump is still written, and `validate-shapes` is
+          # the gate — a route that genuinely broke either fails to parse or goes
+          # missing from the dump, and both are reported.
+          ACCEPTANCE_DB=/tmp/avoir-fixture/avoir.db ACCEPTANCE_DUMP=/tmp/shapes.json \
+            cargo test -p avoir-api --test acceptance -- --ignored every_read_endpoint || true
+          test -s /tmp/shapes.json || { echo "no dump was written"; exit 1; }
+          ACCEPTANCE_DUMP=/tmp/shapes.json node api/tests/validate-shapes.mjs
+
+  # The Electron shell.
+  #
+  # This replaces the old `desktop` job, which built the Tauri crate and existed
+  # for one test driving a real invoke through Tauri's mock runtime and the app's
+  # capability config. That boundary no longer exists.
+  #
+  # **The class of bug it guarded against very much does.** On 2026-08-10 the
+  # shell set the backend token in the CHILD process's environment and not its
+  # own, so the renderer authenticated with a fallback key, every request came
+  # back 401, and the app rendered empty pages over a database with 2,546 rows in
+  # it. Nothing errored. Both sides passed their own tests, because the fault was
+  # in the wiring between them.
+  #
+  # What this covers: the shell parses, and the server enforces the token
+  # contract the shell depends on (401 without, 200 with).
+  #
+  # What it does NOT cover, stated plainly: the renderer actually receiving the
+  # token. That needs a real Electron process and a display server. It is guarded
+  # at RUNTIME instead — `verifyBackend` in main.js performs an authenticated
+  # request and refuses to open a window unless it returns 200.
+  electron:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SQLX_OFFLINE: 'true'
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust
+
+      - name: Shell parses
+        run: |
+          node --check electron/main.js
+          node --check electron/preload.js
+          node --check electron/updater.js
+
+      # The updater's history reconciliation cannot be observed without a second
+      # launch, which is why it shipped inverted (2026-08-12) and why nothing
+      # here noticed. These run it directly.
+      - name: Updater history reconciliation
+        run: node --test electron/updater.test.mjs
+
+      # ADR-036 made this project the owner of Chromium's behaviour, not just
+      # its security updates. Nothing else here can observe the bundled engine,
+      # which is how Electron went ten majors stale inside one milestone and
+      # cost eight hours of diagnosis for a one-line fix.
+      - name: Electron currency
+        run: bash scripts/check-electron-currency.sh
+
+      - name: Build the backend
+        working-directory: rust
+        run: cargo build -p avoir-server
+
+      - name: The token contract the shell relies on
+        run: |
+          set -euo pipefail
+          export AVOIR_DATA_DIR="$(mktemp -d)"
+          export AVOIR_TOKEN="ci-$RANDOM$RANDOM"
+          rust/target/debug/avoir-server > /tmp/server.json 2>/tmp/server.err &
+          for _ in $(seq 1 50); do [ -s /tmp/server.json ] && break; sleep 0.2; done
+          PORT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/server.json','utf8')).port)")
+          echo "backend on $PORT"
+          NO_TOKEN=$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORT/api/v1/accounts")
+          WITH_TOKEN=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $AVOIR_TOKEN" "http://127.0.0.1:$PORT/api/v1/accounts")
+          echo "no token: $NO_TOKEN   with token: $WITH_TOKEN"
+          [ "$NO_TOKEN" = "401" ] || { echo "::error::an unauthenticated request was not refused"; exit 1; }
+          [ "$WITH_TOKEN" = "200" ] || { echo "::error::the shell's own credentials were rejected - the 2026-08-10 failure"; exit 1; }
+
+  # ── Windows ────────────────────────────────────────────────────────────────
+  #
+  # Builds the backend NATIVELY on Windows rather than cross-compiling from
+  # Linux. `libsqlite3-sys` compiles bundled C SQLite, so a cross build needs a
+  # mingw toolchain on the builder; a native runner needs nothing and removes
+  # cross-compilation from the picture entirely.
+  #
+  # This is the port's only continuous signal. There is no Windows machine in
+  # the loop, so without this the first indication that Windows broke would be
+  # someone booting a VM — which is exactly how Electron went ten majors stale
+  # and how the update pipeline stayed untested for a milestone.
+  #
+  # Deliberately NOT `needs:`-gated behind another job. ERRORS.md records two
+  # weeks of e2e regressions hidden behind a red `test`, and a platform whose
+  # only signal is downstream of an unrelated failure has no signal at all.
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      SQLX_OFFLINE: 'true'
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust
+
+      # The question this whole job exists to answer: does 58k lines of Rust
+      # compile for Windows? Only two functions in the tree are platform-gated
+      # (`try_lock_exclusive`, `watch_parent` in server/src/main.rs), and one
+      # already carries a `cfg(not(unix))` branch.
+      - name: Build the backend
+        working-directory: rust
+        run: cargo build -p avoir-server
+
+      - name: Backend tests
+        working-directory: rust
+        run: cargo test --workspace
+
+      # Same contract the Linux `electron` job asserts. Kept as its own step
+      # rather than shared, because the failure it guards — the shell setting
+      # the token in the CHILD environment and not its own — is a per-platform
+      # process-spawning question, and PowerShell spawns differently.
+      - name: The token contract on Windows
+        shell: pwsh
+        run: |
+          $env:AVOIR_DATA_DIR = New-Item -ItemType Directory -Path (Join-Path $env:TEMP "avoir-$(Get-Random)") | Select-Object -ExpandProperty FullName
+          $env:AVOIR_TOKEN = "ci-$(Get-Random)"
+          $p = Start-Process -FilePath "rust/target/debug/avoir-server.exe" -PassThru -RedirectStandardOutput server.json -RedirectStandardError server.err -NoNewWindow
+          foreach ($i in 1..50) { if ((Test-Path server.json) -and (Get-Item server.json).Length -gt 0) { break }; Start-Sleep -Milliseconds 200 }
+          $port = (Get-Content server.json -Raw | ConvertFrom-Json).port
+          Write-Host "backend on $port"
+          $noToken = (Invoke-WebRequest -Uri "http://127.0.0.1:$port/api/v1/accounts" -SkipHttpErrorCheck).StatusCode
+          $withToken = (Invoke-WebRequest -Uri "http://127.0.0.1:$port/api/v1/accounts" -Headers @{ Authorization = "Bearer $($env:AVOIR_TOKEN)" } -SkipHttpErrorCheck).StatusCode
+          Write-Host "no token: $noToken   with token: $withToken"
+          Stop-Process -Id $p.Id -Force
+          if ($noToken -ne 401) { Write-Error "an unauthenticated request was not refused"; exit 1 }
+          if ($withToken -ne 200) { Write-Error "the shell's own credentials were rejected"; exit 1 }
+
+      # Packaging is where Windows-specific config fails — a missing .ico, an
+      # NSIS option the Linux path never exercises. `--publish never` so this
+      # builds the artifact without creating a release.
+      # Orphan protection, and Windows is the ONLY platform where this is the
+      # sole mechanism — PDEATHSIG and the getppid poll are both unix-only, so
+      # if the pipe does not work here, a crashed shell leaves a backend holding
+      # the database lock and the next launch is refused with no way to recover
+      # short of finding the process by hand.
+      #
+      # Asserts both directions. Without the negative case, a backend that
+      # exited on startup for any reason would pass the positive one.
+      - name: Supervision pipe
+        shell: pwsh
+        run: node .github/scripts/supervision-pipe.mjs rust/target/debug/avoir-server.exe
+
+      - name: Package
+        run: |
+          npm ci --prefix electron
+          npx --prefix electron electron-builder --win --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: electron/dist/*.exe
+          if-no-files-found: error
+
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Audit dependencies
+        # xlsx has no free patch (SheetJS moved to paid model) — known accepted risk, see MEMORY.md
+        # Ignored: GHSA-4r6h-8v6p-xvw6 (xlsx prototype pollution), GHSA-5pgg-2g8v-p4x9 (xlsx ReDoS)
+        run: node scripts/check-audit.mjs

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"PaySchedule\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "2a8cdd92701a3e388077e50598e7d412ef4e53674f955e43a5e327c85f78be55"
+}

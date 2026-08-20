@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT b.\"walletId\" AS \"wallet_id!\", b.\"quantity\" AS \"quantity!: String\",\n                  b.\"bitcoinUnit\" AS \"unit!: String\", t.\"type\" AS \"tx_type!\",\n                  t.\"amount\" AS \"amount!: i64\"\n             FROM \"BitcoinPaymentDetail\" b\n             JOIN \"Transaction\" t ON t.\"id\" = b.\"transactionId\"\n            WHERE b.\"transactionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "wallet_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "quantity!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "unit!: String",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      },
+      {
+        "name": "tx_type!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "8f173cbca324c3e2c5bce76062f0aafdfddc1bd63e2ae988165fa1412609af36"
+}

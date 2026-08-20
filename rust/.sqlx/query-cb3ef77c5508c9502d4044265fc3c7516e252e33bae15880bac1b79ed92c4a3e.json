@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Income\" SET \"pausedUntil\" = ?, \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "cb3ef77c5508c9502d4044265fc3c7516e252e33bae15880bac1b79ed92c4a3e"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"rawLine\" AS \"raw_line!\" FROM \"StatementRow\" WHERE \"sessionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "raw_line!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "rawLine"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "3ee075881249e1bb30f60e3a5db69eac6747ea2efc391e6fb562d7261bd06b95"
+}

@@ -1,0 +1,35 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT\n             COALESCE(SUM(\"amount\") FILTER (WHERE \"type\" = 'INCOME'), 0) AS \"income!: i64\",\n             COALESCE(SUM(\"netAmount\") FILTER (WHERE \"type\" = 'EXPENSE'), 0) AS \"spend!: i64\",\n             COALESCE(SUM(\"netAmount\") FILTER (WHERE \"type\" = 'REFUND'), 0) AS \"refund!: i64\"\n           FROM \"Transaction\"\n          WHERE \"parentId\" IS NULL AND \"date\" >= ?1 AND \"date\" <= ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "income!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "spend!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": "Expression"
+      },
+      {
+        "name": "refund!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "871702953766e990385a1fdbc9e3cfee09ea07b08d5c5ced767d32f87435729e"
+}

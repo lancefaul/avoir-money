@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT COUNT(*) FROM \"UtilityService\"\n            WHERE \"providerId\" = ? AND \"serviceType\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "COUNT(*)",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "37ae82a8fe1ac1ee6403df28d3c2b97d7237a06e4543ab71c27a0fc2465c8dbf"
+}

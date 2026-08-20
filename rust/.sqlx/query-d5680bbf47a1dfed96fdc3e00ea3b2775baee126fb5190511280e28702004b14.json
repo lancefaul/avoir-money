@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT cb.\"budgetId\" AS \"budget_id!\"\n             FROM \"CategoryBudget\" cb\n             JOIN \"Budget\" b ON b.\"id\" = cb.\"budgetId\"\n            WHERE cb.\"yearPlanId\" = ? AND cb.\"removedAt\" IS NULL",
+  "describe": {
+    "columns": [
+      {
+        "name": "budget_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "budgetId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "d5680bbf47a1dfed96fdc3e00ea3b2775baee126fb5190511280e28702004b14"
+}

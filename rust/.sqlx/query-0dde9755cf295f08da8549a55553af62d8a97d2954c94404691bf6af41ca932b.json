@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"PaySchedule\"\n             (\"id\",\"name\",\"type\",\"anchorDate\",\"firstPayDay\",\"secondPayDay\",\"isDefault\",\n              \"createdAt\",\"updatedAt\")\n           VALUES (?,?,?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 9
+    },
+    "nullable": []
+  },
+  "hash": "0dde9755cf295f08da8549a55553af62d8a97d2954c94404691bf6af41ca932b"
+}

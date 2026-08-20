@@ -1,0 +1,134 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT l.\"id\" AS \"id!\", l.\"expenseId\" AS \"expense_id!\", l.\"createdAt\" AS \"created!\",\n                  l.\"categoryBudgetId\" AS \"cb_id!\",\n                  e.\"name\" AS \"name!\", e.\"amount\" AS \"amount!: i64\",\n                  e.\"frequency\" AS \"frequency!\", e.\"amountSchedule\" AS \"schedule: String\",\n                  e.\"pausedUntil\" AS \"paused: String\", e.\"archivedAt\" AS \"archived: String\"\n             FROM \"BudgetExpenseLink\" l\n             JOIN \"Expense\" e ON e.\"id\" = l.\"expenseId\"\n            WHERE l.\"categoryBudgetId\" = ?\n            ORDER BY e.\"name\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetExpenseLink",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "expense_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetExpenseLink",
+            "name": "expenseId"
+          }
+        }
+      },
+      {
+        "name": "created!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetExpenseLink",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "cb_id!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetExpenseLink",
+            "name": "categoryBudgetId"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "frequency!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "schedule: String",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "amountSchedule"
+          }
+        }
+      },
+      {
+        "name": "paused: String",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "pausedUntil"
+          }
+        }
+      },
+      {
+        "name": "archived: String",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "archivedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "8295e990ee5c411b6335b4dff0d7408a1768fa7f11f3dd10435dc14cd9e70cf3"
+}

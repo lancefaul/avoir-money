@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"date\" AS \"date!\", d.\"walletId\" AS wallet_id,\n                  d.\"quantity\" AS \"quantity!\", d.\"direction\" AS \"direction!\",\n                  d.\"bitcoinUnit\" AS unit\n             FROM \"Transaction\" t\n             JOIN \"TradeDetail\" d ON d.\"transactionId\" = t.\"id\"\n            WHERE t.\"type\" = 'TRADE' AND d.\"assetType\" = 'Bitcoin'\n            ORDER BY t.\"date\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "date!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "wallet_id",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "direction!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "direction"
+          }
+        }
+      },
+      {
+        "name": "unit",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "TradeDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "3b99188658271e2646db9b751b60fc8f070a82ec15b3614dea12077585843efc"
+}

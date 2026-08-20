@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT s.\"expenseId\" AS \"expense_id!\", r.\"cost\" AS \"cost!: i64\",\n                  r.\"convenienceFee\" AS \"fee: i64\",\n                  r.\"convenienceFeeType\" AS \"fee_type: String\",\n                  r.\"otherFees\" AS \"other: i64\",\n                  r.\"dueDate\" AS \"due_date: String\", r.\"billDate\" AS \"bill_date!\"\n             FROM \"UtilityReading\" r\n             JOIN \"UtilityService\" s ON s.\"id\" = r.\"serviceId\"\n            WHERE s.\"expenseId\" IS NOT NULL",
+  "describe": {
+    "columns": [
+      {
+        "name": "expense_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityService",
+            "name": "expenseId"
+          }
+        }
+      },
+      {
+        "name": "cost!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "cost"
+          }
+        }
+      },
+      {
+        "name": "fee: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "convenienceFee"
+          }
+        }
+      },
+      {
+        "name": "fee_type: String",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "convenienceFeeType"
+          }
+        }
+      },
+      {
+        "name": "other: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "otherFees"
+          }
+        }
+      },
+      {
+        "name": "due_date: String",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "bill_date!",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "billDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "c9eba1aa755ebc26f0cc0742b57524b124fc2fa83b737453ff54618dc724de47"
+}

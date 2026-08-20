@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"BackupConfig\"\n             (\"id\",\"enabled\",\"path\",\"frequency\",\"retentionCount\",\"createdAt\",\"updatedAt\")\n           VALUES (?, 0, ?, 'DAILY', 7, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "6c5cdd20f0f054668762a8ed9215a26c214043ee222f5ba8b83972c0431f537b"
+}

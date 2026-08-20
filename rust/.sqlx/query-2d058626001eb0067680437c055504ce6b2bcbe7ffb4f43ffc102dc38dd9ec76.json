@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"startDate\" FROM \"PayPeriod\"\n            WHERE \"startDate\" >= ?1 AND \"startDate\" <= ?2\n            ORDER BY \"startDate\" ASC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "startDate",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "startDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "2d058626001eb0067680437c055504ce6b2bcbe7ffb4f43ffc102dc38dd9ec76"
+}

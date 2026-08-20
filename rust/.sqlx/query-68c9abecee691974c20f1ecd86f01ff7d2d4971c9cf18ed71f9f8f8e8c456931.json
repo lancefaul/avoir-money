@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"Transaction\"\n                 (\"id\",\"parentId\",\"type\",\"name\",\"amount\",\"netAmount\",\"date\",\"createdAt\",\n                  \"imported\",\"isCashBack\",\"accountId\",\"budgetId\",\"note\")\n               VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 0, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 11
+    },
+    "nullable": []
+  },
+  "hash": "68c9abecee691974c20f1ecd86f01ff7d2d4971c9cf18ed71f9f8f8e8c456931"
+}

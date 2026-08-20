@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"InvestmentHolding\" WHERE \"custodianId\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "6d15fbb1e3572ad040442a609f15e3047361d7259dbd0848af5db71bef660a42"
+}

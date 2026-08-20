@@ -1,0 +1,182 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"name\" AS \"name!\", \"type\" AS \"type!\",\n                  \"balance\" AS \"balance!: i64\", \"openingBalance\" AS \"opening_balance!: i64\",\n                  \"archived\" AS \"archived!: i64\", \"hasRewards\" AS \"has_rewards!: i64\",\n                  \"parentAccountId\" AS \"parent_account_id: String\",\n                  \"earnsInterest\" AS \"earns_interest!: i64\",\n                  \"interestRate\" AS \"interest_rate!: i64\",\n                  \"interestRateType\" AS \"interest_rate_type!\", \"brand\" AS \"brand: String\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n           FROM \"Account\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "type!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "balance!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "balance"
+          }
+        }
+      },
+      {
+        "name": "opening_balance!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "openingBalance"
+          }
+        }
+      },
+      {
+        "name": "archived!: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "archived"
+          }
+        }
+      },
+      {
+        "name": "has_rewards!: i64",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "hasRewards"
+          }
+        }
+      },
+      {
+        "name": "parent_account_id: String",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "parentAccountId"
+          }
+        }
+      },
+      {
+        "name": "earns_interest!: i64",
+        "ordinal": 8,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "earnsInterest"
+          }
+        }
+      },
+      {
+        "name": "interest_rate!: i64",
+        "ordinal": 9,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "interestRate"
+          }
+        }
+      },
+      {
+        "name": "interest_rate_type!",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "interestRateType"
+          }
+        }
+      },
+      {
+        "name": "brand: String",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "brand"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 13,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "1b4c2b5609910322d80dee024d00d17fd0b20aa76f8bf1e70b559938bb913ad5"
+}

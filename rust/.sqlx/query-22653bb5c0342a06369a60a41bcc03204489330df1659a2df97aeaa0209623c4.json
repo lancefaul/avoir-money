@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"postedDate\" AS \"posted_date!\",\n                  \"transactionDate\" AS \"transaction_date!\",\n                  \"description\" AS \"description!\", \"amount\" AS \"amount!: i64\"\n             FROM \"StatementRow\" WHERE \"sessionId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "posted_date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "postedDate"
+          }
+        }
+      },
+      {
+        "name": "transaction_date!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "transactionDate"
+          }
+        }
+      },
+      {
+        "name": "description!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "description"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "StatementRow",
+            "name": "amount"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "22653bb5c0342a06369a60a41bcc03204489330df1659a2df97aeaa0209623c4"
+}

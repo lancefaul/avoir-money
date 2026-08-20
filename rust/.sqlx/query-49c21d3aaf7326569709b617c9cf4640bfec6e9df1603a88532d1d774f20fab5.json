@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT count(*) FROM \"InvestmentTransfer\"\n            WHERE \"fromHoldingId\" = ?1 OR \"toHoldingId\" = ?1",
+  "describe": {
+    "columns": [
+      {
+        "name": "count(*)",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "49c21d3aaf7326569709b617c9cf4640bfec6e9df1603a88532d1d774f20fab5"
+}

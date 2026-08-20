@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"BitcoinPaymentDetail\"\n                 (\"id\",\"transactionId\",\"walletId\",\"quantity\",\"unitPrice\",\"bitcoinUnit\",\"incomeType\")\n               VALUES (?,?,?,?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "7e060274fcb830fe45974cf752bc6175325293885a714723530e0c8fa9ad6ca0"
+}

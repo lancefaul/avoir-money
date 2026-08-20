@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"StatementRow\"\n                 (\"id\",\"sessionId\",\"postedDate\",\"transactionDate\",\"description\",\n                  \"amount\",\"rawLine\",\"createdAt\")\n               VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 8
+    },
+    "nullable": []
+  },
+  "hash": "076ddfcee1910719b540b929c165ee0bd2d46dd2299f9f7f8ec9338de1fbf1ea"
+}

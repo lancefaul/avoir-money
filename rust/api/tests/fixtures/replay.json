@@ -1,0 +1,3663 @@
+{
+  "note": "Generated alongside refusals.json. The FULL sequence with bindings left symbolic, so a single backend can rebuild the state and re-check every refusal — including the ones that need state, which are the interesting ones. Do not hand-edit.",
+  "generated": "2026-08-12",
+  "steps": [
+    {
+      "name": "create budget group",
+      "method": "POST",
+      "path": "/budgets/groups",
+      "body": {
+        "name": "Bills",
+        "color": "#334155"
+      },
+      "bind": "group",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create budget",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "name": "Groceries",
+        "groupId": "$group"
+      },
+      "bind": "budget",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create a second budget",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "name": "Fuel",
+        "groupId": "$group"
+      },
+      "bind": "budget2",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "list budgets",
+      "method": "GET",
+      "path": "/budgets",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "rename a budget",
+      "method": "PUT",
+      "path": "/budgets/$budget2",
+      "body": {
+        "name": "Petrol"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "list budget groups",
+      "method": "GET",
+      "path": "/budgets/groups",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a checking account",
+      "method": "POST",
+      "path": "/accounts",
+      "body": {
+        "name": "Checking",
+        "type": "Checking",
+        "balance": 1000
+      },
+      "bind": "checking",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create a card",
+      "method": "POST",
+      "path": "/accounts",
+      "body": {
+        "name": "Card",
+        "type": "Credit Card",
+        "balance": 0
+      },
+      "bind": "card",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "rename an account",
+      "method": "PUT",
+      "path": "/accounts/$checking",
+      "body": {
+        "name": "Main Checking"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "read the account back",
+      "method": "GET",
+      "path": "/accounts/$checking",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create an expense",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Groceries",
+        "type": "EXPENSE",
+        "amount": 45.67,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$checking",
+        "budgetId": "$budget"
+      },
+      "bind": "tx1",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create an income",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Paycheck",
+        "type": "INCOME",
+        "amount": 2500,
+        "date": "2026-03-02T00:00:00.000Z",
+        "accountId": "$checking"
+      },
+      "bind": "tx2",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create a refund",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Return",
+        "type": "REFUND",
+        "amount": 12.34,
+        "date": "2026-03-03T00:00:00.000Z",
+        "accountId": "$checking",
+        "budgetId": "$budget"
+      },
+      "bind": "tx3",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "edit the middle transaction",
+      "method": "PUT",
+      "path": "/transactions/$tx2",
+      "body": {
+        "amount": 2600
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the account balance after the edit",
+      "method": "GET",
+      "path": "/accounts/$checking",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the whole ledger after the edit",
+      "method": "GET",
+      "path": "/transactions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "split a transaction across budgets",
+      "method": "POST",
+      "path": "/transactions/$tx1/children",
+      "body": {
+        "preTaxAmount": 20,
+        "taxRate": 8.25,
+        "budgetId": "$budget"
+      },
+      "bind": "child",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "a second line on the same purchase",
+      "method": "POST",
+      "path": "/transactions/$tx1/children",
+      "body": {
+        "preTaxAmount": 10,
+        "taxAmount": 0.83,
+        "budgetId": "$budget2"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "the allocations and what is left",
+      "method": "GET",
+      "path": "/transactions/$tx1/children",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "edit a line",
+      "method": "PUT",
+      "path": "/transactions/$tx1/children/$child",
+      "body": {
+        "preTaxAmount": 15
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "lines may not exceed the parent",
+      "method": "POST",
+      "path": "/transactions/$tx1/children",
+      "body": {
+        "preTaxAmount": 9999,
+        "budgetId": "$budget"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Child amount exceeds remaining amount of 18.6",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "remove a line",
+      "method": "DELETE",
+      "path": "/transactions/$tx1/children/$child",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "split a purchase across two accounts",
+      "method": "POST",
+      "path": "/purchases",
+      "body": {
+        "name": "Big shop",
+        "date": "2026-03-04T00:00:00.000Z",
+        "amount": 100,
+        "budgetId": "$budget",
+        "payments": [
+          {
+            "accountId": "$checking",
+            "amount": 60
+          },
+          {
+            "accountId": "$card",
+            "amount": 40
+          }
+        ]
+      },
+      "bind": "purchase",
+      "bindField": "purchaseGroupId",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "the ledger with a split in it",
+      "method": "GET",
+      "path": "/transactions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the card ledger sees its own leg",
+      "method": "GET",
+      "path": "/transactions?accountId=$card",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "re-split the same purchase",
+      "method": "PUT",
+      "path": "/purchases/$purchase/payments",
+      "body": {
+        "payments": [
+          {
+            "accountId": "$checking",
+            "amount": 25
+          },
+          {
+            "accountId": "$card",
+            "amount": 75
+          }
+        ]
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "balances after the re-split",
+      "method": "GET",
+      "path": "/accounts",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a recurring expense",
+      "method": "POST",
+      "path": "/expenses",
+      "body": {
+        "name": "Internet",
+        "amount": 89.99,
+        "frequency": "MONTHLY",
+        "budgetId": "$budget",
+        "accountId": "$checking",
+        "dueDay": 15
+      },
+      "bind": "expense",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "change the amount",
+      "method": "PUT",
+      "path": "/expenses/$expense",
+      "body": {
+        "amount": 94.99
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "pause it",
+      "method": "POST",
+      "path": "/expenses/$expense/pause",
+      "body": {
+        "duration": 2,
+        "unit": "months"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "resume it",
+      "method": "POST",
+      "path": "/expenses/$expense/resume",
+      "body": {
+        "immediately": true
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "archive it",
+      "method": "POST",
+      "path": "/expenses/$expense/archive",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "deleting an archived expense is refused",
+      "method": "DELETE",
+      "path": "/expenses/$expense",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "Cannot delete an archived source. Restore it first.",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "restore it",
+      "method": "POST",
+      "path": "/expenses/$expense/restore",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "list expenses",
+      "method": "GET",
+      "path": "/expenses",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a savings goal",
+      "method": "POST",
+      "path": "/goals",
+      "body": {
+        "name": "Emergency fund",
+        "type": "SAVINGS",
+        "targetAmount": 5000,
+        "budgetId": "$budget"
+      },
+      "bind": "goal",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "put money against it",
+      "method": "PUT",
+      "path": "/goals/$goal",
+      "body": {
+        "currentAmount": 250
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "list goals",
+      "method": "GET",
+      "path": "/goals",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a debt",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "Auto Loan",
+        "type": "AUTO_LOAN",
+        "originalBalance": 24000,
+        "currentBalance": 18000,
+        "apr": 5.9,
+        "minimumPayment": 415,
+        "frequency": "MONTHLY",
+        "startDate": "2024-01-01T00:00:00.000Z",
+        "termMonths": 60
+      },
+      "bind": "debt",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create a mortgage that survives the run",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "Mortgage",
+        "type": "MORTGAGE",
+        "originalBalance": 250000,
+        "currentBalance": 231500,
+        "apr": 3.25,
+        "minimumPayment": 1088.02,
+        "frequency": "MONTHLY",
+        "startDate": "2021-06-01T00:00:00.000Z",
+        "termMonths": 360
+      },
+      "bind": "mortgage",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "the mortgage amortization",
+      "method": "GET",
+      "path": "/debts/$mortgage/amortization",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "its escrow records",
+      "method": "GET",
+      "path": "/debts/$mortgage/escrow",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the debt as served",
+      "method": "GET",
+      "path": "/debts/$debt",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "its amortization",
+      "method": "GET",
+      "path": "/debts/$debt/amortization",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "correct the balance",
+      "method": "PUT",
+      "path": "/debts/$debt",
+      "body": {
+        "currentBalance": 17500
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "debt summary",
+      "method": "GET",
+      "path": "/debts/summary",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a description",
+      "method": "POST",
+      "path": "/descriptions",
+      "body": {
+        "name": "Corner Shop"
+      },
+      "bind": "description",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "list descriptions",
+      "method": "GET",
+      "path": "/descriptions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a pay schedule",
+      "method": "POST",
+      "path": "/pay-schedules",
+      "body": {
+        "name": "Main job",
+        "type": "BIWEEKLY",
+        "anchorDate": "2026-01-02T00:00:00.000Z",
+        "isDefault": true
+      },
+      "bind": "paySchedule",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "generate its pay periods",
+      "method": "POST",
+      "path": "/pay-schedules/$paySchedule/generate",
+      "body": {
+        "rangeStart": "2026-01-01T00:00:00.000Z",
+        "rangeEnd": "2026-12-31T00:00:00.000Z"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the pay periods",
+      "method": "GET",
+      "path": "/pay-periods",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a year plan",
+      "method": "POST",
+      "path": "/year-plans",
+      "body": {
+        "year": 2026
+      },
+      "bind": "yearPlan",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "allocate a budget inside it",
+      "method": "POST",
+      "path": "/category-budgets",
+      "body": {
+        "yearPlanId": "$yearPlan",
+        "budgetId": "$budget",
+        "amount": 400,
+        "frequency": "MONTHLY",
+        "effectiveMonth": 1
+      },
+      "bind": "categoryBudget",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "the allocations",
+      "method": "GET",
+      "path": "/category-budgets?yearPlanId=$yearPlan",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "its history",
+      "method": "GET",
+      "path": "/category-budgets/$categoryBudget/history",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "raise the allocation",
+      "method": "PUT",
+      "path": "/category-budgets/$categoryBudget",
+      "body": {
+        "amount": 450
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the year plan as served",
+      "method": "GET",
+      "path": "/year-plans/$yearPlan",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create an insurance policy",
+      "method": "POST",
+      "path": "/healthcare/policies",
+      "body": {
+        "type": "MEDICAL",
+        "year": 2026,
+        "employer": "Acme",
+        "premium": 240,
+        "deductibleLimit": 3000,
+        "oopmLimit": 6000,
+        "metadata": {}
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": {
+        "policy": "id",
+        "policyBudget": "budgetId"
+      },
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "the budget the policy created",
+      "method": "GET",
+      "path": "/budgets",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the policy as served",
+      "method": "GET",
+      "path": "/healthcare/policies/$policy",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "what has been paid against it",
+      "method": "GET",
+      "path": "/healthcare/policies/$policy/transactions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a recurring income",
+      "method": "POST",
+      "path": "/income",
+      "body": {
+        "name": "Salary",
+        "amount": 2500,
+        "frequency": "BIWEEKLY",
+        "budgetId": "$budget",
+        "accountId": "$card"
+      },
+      "bind": "income",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "the income list",
+      "method": "GET",
+      "path": "/income",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "pause the income",
+      "method": "POST",
+      "path": "/income/$income/pause",
+      "body": {
+        "duration": 1,
+        "unit": "months"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "and resume it",
+      "method": "POST",
+      "path": "/income/$income/resume",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "create a custodian",
+      "method": "POST",
+      "path": "/investments/custodians",
+      "body": {
+        "name": "Fidelity"
+      },
+      "bind": "custodian",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "buy a stock",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Buy AAPL",
+        "type": "TRADE",
+        "amount": 1000,
+        "date": "2026-03-02T00:00:00.000Z",
+        "accountId": "$card",
+        "tradeMetadata": {
+          "direction": "BUY",
+          "assetType": "Stock",
+          "ticker": "AAPL",
+          "unitPrice": 100,
+          "quantity": 10,
+          "custodianId": "$custodian"
+        }
+      },
+      "bind": "trade",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "holdings after the buy",
+      "method": "GET",
+      "path": "/investments",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the trade as served",
+      "method": "GET",
+      "path": "/transactions?type=TRADE",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "sell some of it back",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Sell AAPL",
+        "type": "TRADE",
+        "amount": 400,
+        "date": "2026-03-03T00:00:00.000Z",
+        "accountId": "$card",
+        "tradeMetadata": {
+          "direction": "SELL",
+          "assetType": "Stock",
+          "ticker": "AAPL",
+          "unitPrice": 100,
+          "quantity": 4,
+          "custodianId": "$custodian"
+        }
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "holdings after the sell",
+      "method": "GET",
+      "path": "/investments",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "reject: sell more than is held",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Sell too much",
+        "type": "TRADE",
+        "amount": 9999,
+        "date": "2026-03-04T00:00:00.000Z",
+        "accountId": "$card",
+        "tradeMetadata": {
+          "direction": "SELL",
+          "assetType": "Stock",
+          "ticker": "AAPL",
+          "unitPrice": 100,
+          "quantity": 99,
+          "custodianId": "$custodian"
+        }
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Insufficient holdings: have 6, trying to sell 99",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "delete the trade",
+      "method": "DELETE",
+      "path": "/transactions/$trade",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "holdings after the trade is deleted",
+      "method": "GET",
+      "path": "/investments",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "delete the description",
+      "method": "DELETE",
+      "path": "/descriptions/$description",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "delete the goal",
+      "method": "DELETE",
+      "path": "/goals/$goal",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "delete the debt",
+      "method": "DELETE",
+      "path": "/debts/$debt",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "delete the recurring expense",
+      "method": "DELETE",
+      "path": "/expenses/$expense",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "delete the split purchase",
+      "method": "DELETE",
+      "path": "/purchases/$purchase",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "balances after the split is deleted",
+      "method": "GET",
+      "path": "/accounts",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "delete a transaction",
+      "method": "DELETE",
+      "path": "/transactions/$tx1",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "Cannot delete transaction with child line items. Remove children first.",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "the balance returns",
+      "method": "GET",
+      "path": "/accounts/$checking",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "delete an account that still has rows",
+      "method": "DELETE",
+      "path": "/accounts/$checking",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 204
+    },
+    {
+      "name": "what is left",
+      "method": "GET",
+      "path": "/accounts",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "and the ledger",
+      "method": "GET",
+      "path": "/transactions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "a transaction with no date",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Undated",
+        "type": "EXPENSE",
+        "amount": 50,
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "a negative amount",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Negative",
+        "type": "EXPENSE",
+        "amount": -50,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "legs that do not sum to the purchase",
+      "method": "POST",
+      "path": "/purchases",
+      "body": {
+        "name": "Mismatched",
+        "date": "2026-03-05T00:00:00.000Z",
+        "amount": 100,
+        "budgetId": "$budget",
+        "payments": [
+          {
+            "accountId": "$card",
+            "amount": 60
+          }
+        ]
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "payments",
+            "message": "payment legs must sum to the amount 100.00 (got 60.00)"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "create a utility provider",
+      "method": "POST",
+      "path": "/utilities/providers",
+      "body": {
+        "name": "City Power"
+      },
+      "bind": "provider",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "create a metered electric service on it",
+      "method": "POST",
+      "path": "/utilities/providers/$provider/services",
+      "body": {
+        "serviceType": "ELECTRIC",
+        "metering": "METERED"
+      },
+      "bind": "service",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "record a reading against the service",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "$service",
+        "billDate": "2026-03-01T00:00:00.000Z",
+        "dueDate": "2026-03-20T00:00:00.000Z",
+        "usage": 850,
+        "cost": 142.5,
+        "unitCost": 0.1676,
+        "convenienceFee": 2.5,
+        "convenienceFeeType": "dollar"
+      },
+      "bind": "reading",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "a second, unmetered service",
+      "method": "POST",
+      "path": "/utilities/providers/$provider/services",
+      "body": {
+        "serviceType": "GARBAGE",
+        "metering": "UNMETERED"
+      },
+      "bind": "service2",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "a reading with no usage, on the unmetered service",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "$service2",
+        "billDate": "2026-03-02T00:00:00.000Z",
+        "cost": 41
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "list utility providers",
+      "method": "GET",
+      "path": "/utilities/providers",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the services on the provider",
+      "method": "GET",
+      "path": "/utilities/providers/$provider/services",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "list readings",
+      "method": "GET",
+      "path": "/utilities/readings",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "update the reading cost",
+      "method": "PUT",
+      "path": "/utilities/readings/$reading",
+      "body": {
+        "cost": 150
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "rename the provider",
+      "method": "PUT",
+      "path": "/utilities/providers/$provider",
+      "body": {
+        "name": "City Power & Light"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "switch the service to unmetered",
+      "method": "PUT",
+      "path": "/utilities/services/$service",
+      "body": {
+        "metering": "UNMETERED"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the generated schedule for a future period",
+      "method": "GET",
+      "path": "/scheduled-transactions?periodStart=2026-09-01T00:00:00.000Z&periodEnd=2026-10-31T00:00:00.000Z",
+      "body": null,
+      "bind": "sched",
+      "bindField": "0.id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "snooze the first occurrence",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/snooze",
+      "body": {
+        "days": 3
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "mark it paid",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/pay",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": null
+    },
+    {
+      "name": "the schedule after paying",
+      "method": "GET",
+      "path": "/scheduled-transactions?periodStart=2026-09-01T00:00:00.000Z&periodEnd=2026-10-31T00:00:00.000Z",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "start a reconciliation on the checking account",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "accountId": "$card",
+        "periodStart": "2026-03-01T00:00:00.000Z",
+        "periodEnd": "2026-03-31T00:00:00.000Z",
+        "statementEndingBalance": 1500
+      },
+      "bind": "recon",
+      "bindField": "id",
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "list reconciliations",
+      "method": "GET",
+      "path": "/reconciliations",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the session as served",
+      "method": "GET",
+      "path": "/reconciliations/$recon",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "move the cutoff and the anchor",
+      "method": "PATCH",
+      "path": "/reconciliations/$recon",
+      "body": {
+        "periodEnd": "2026-04-05T00:00:00.000Z",
+        "statementEndingBalance": 1650
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "the session after the patch",
+      "method": "GET",
+      "path": "/reconciliations/$recon",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 200
+    },
+    {
+      "name": "an account that does not exist",
+      "method": "GET",
+      "path": "/accounts/nope",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Account not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "deleting something twice",
+      "method": "DELETE",
+      "path": "/goals/$goal",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Budget goal not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget with no name",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "groupId": "$group"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget with a null name",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "name": null,
+        "groupId": "$group"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget with an empty name",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "name": "",
+        "groupId": "$group"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget with a number for a name",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "name": 42,
+        "groupId": "$group"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: entirely empty body",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: account with no name",
+      "method": "POST",
+      "path": "/accounts",
+      "body": {
+        "type": "Checking",
+        "balance": 0
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: account with a string balance",
+      "method": "POST",
+      "path": "/accounts",
+      "body": {
+        "name": "Stringly",
+        "type": "Checking",
+        "balance": "100"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: account with an unknown type",
+      "method": "POST",
+      "path": "/accounts",
+      "body": {
+        "name": "Mystery",
+        "type": "Trebuchet",
+        "balance": 0
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "reject: transaction with an unknown type",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Wrong type",
+        "type": "GIFT",
+        "amount": 10,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "type",
+            "message": "Invalid enum value. Expected 'EXPENSE' | 'INCOME' | 'TRANSFER' | 'REFUND' | 'TRADE', received 'GIFT'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: transaction with a lowercase type",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Case matters",
+        "type": "expense",
+        "amount": 10,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "type",
+            "message": "Invalid enum value. Expected 'EXPENSE' | 'INCOME' | 'TRANSFER' | 'REFUND' | 'TRADE', received 'expense'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: transaction amount beyond any bound",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Astronomical",
+        "type": "EXPENSE",
+        "amount": 1000000000000000,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: transaction with a NaN amount",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Not a number",
+        "type": "EXPENSE",
+        "amount": "NaN",
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: transaction with an unparseable date",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Bad date",
+        "type": "EXPENSE",
+        "amount": 10,
+        "date": "the third of never",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "date",
+            "message": "Invalid date"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: expense with an unknown frequency",
+      "method": "POST",
+      "path": "/expenses",
+      "body": {
+        "name": "Fortnightly-ish",
+        "amount": 10,
+        "frequency": "WHENEVER",
+        "budgetId": "$budget"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "frequency",
+            "message": "Invalid enum value. Expected 'ONE_TIME' | 'WEEKLY' | 'BIWEEKLY' | 'SEMI_MONTHLY' | 'MONTHLY' | 'QUARTERLY' | 'BIANNUAL' | 'ANNUAL', received 'WHENEVER'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: expense with a day of month of 45",
+      "method": "POST",
+      "path": "/expenses",
+      "body": {
+        "name": "The 45th",
+        "amount": 10,
+        "frequency": "MONTHLY",
+        "dayOfMonth": 45,
+        "budgetId": "$budget"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "reject: expense with a day of month of 0",
+      "method": "POST",
+      "path": "/expenses",
+      "body": {
+        "name": "The 0th",
+        "amount": 10,
+        "frequency": "MONTHLY",
+        "dayOfMonth": 0,
+        "budgetId": "$budget"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": 201
+    },
+    {
+      "name": "reject: transaction on an account that does not exist",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Orphan",
+        "type": "EXPENSE",
+        "amount": 10,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "clzz00000000000000000000"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget in a group that does not exist",
+      "method": "POST",
+      "path": "/budgets",
+      "body": {
+        "name": "Homeless",
+        "groupId": "clzz00000000000000000000"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": null
+    },
+    {
+      "name": "reject: expense against a budget that does not exist",
+      "method": "POST",
+      "path": "/expenses",
+      "body": {
+        "name": "Unbudgeted",
+        "amount": 10,
+        "frequency": "MONTHLY",
+        "budgetId": "clzz00000000000000000000"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": null
+    },
+    {
+      "name": "reject: GET an absent account",
+      "method": "GET",
+      "path": "/accounts/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Account not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: GET an absent debt",
+      "method": "GET",
+      "path": "/debts/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Debt not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent account",
+      "method": "PUT",
+      "path": "/accounts/clzz00000000000000000000",
+      "body": {
+        "name": "Ghost"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Account not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent budget",
+      "method": "PUT",
+      "path": "/budgets/clzz00000000000000000000",
+      "body": {
+        "name": "Ghost"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Budget not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent account",
+      "method": "DELETE",
+      "path": "/accounts/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Account not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent transaction",
+      "method": "DELETE",
+      "path": "/transactions/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Transaction not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: amortization for an absent debt",
+      "method": "GET",
+      "path": "/debts/clzz00000000000000000000/amortization",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Debt not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: TRANSFER with no destination",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "To nowhere",
+        "type": "TRANSFER",
+        "amount": 10,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Transfers require a toAccountId",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: TRANSFER to the account it came from",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "To itself",
+        "type": "TRANSFER",
+        "amount": 10,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card",
+        "toAccountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "From and to accounts must be different",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: TRADE with no trade detail",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Bare trade",
+        "type": "TRADE",
+        "amount": 100,
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "tradeMetadata",
+            "message": "Trade metadata is required for TRADE transactions"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a cursor that is not an id",
+      "method": "GET",
+      "path": "/transactions?cursor=not-a-cursor",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Invalid cursor: transaction not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a negative page size",
+      "method": "GET",
+      "path": "/transactions?limit=-1",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "limit",
+            "message": "Number must be greater than 0"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a page size of zero",
+      "method": "GET",
+      "path": "/transactions?limit=0",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "limit",
+            "message": "Number must be greater than 0"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: an absurd page size",
+      "method": "GET",
+      "path": "/transactions?limit=1000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "limit",
+            "message": "Number must be less than or equal to 500"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a page size that is not a number",
+      "method": "GET",
+      "path": "/transactions?limit=lots",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "limit",
+            "message": "Expected number, received nan"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: an unknown sort order",
+      "method": "GET",
+      "path": "/transactions?sortOrder=sideways",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "sortOrder",
+            "message": "Invalid enum value. Expected 'newest' | 'oldest', received 'sideways'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: an unknown transaction type filter",
+      "method": "GET",
+      "path": "/transactions?type=GIFT",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "type",
+            "message": "Invalid enum value. Expected 'EXPENSE' | 'INCOME' | 'TRANSFER' | 'REFUND' | 'TRADE', received 'GIFT'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: GET an absent policy",
+      "method": "GET",
+      "path": "/healthcare/policies/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Insurance policy not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent policy",
+      "method": "PUT",
+      "path": "/healthcare/policies/clzz00000000000000000000",
+      "body": {
+        "employer": "Ghost"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Insurance policy not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: transactions for an absent policy",
+      "method": "GET",
+      "path": "/healthcare/policies/clzz00000000000000000000/transactions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Insurance policy not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: policy whose OOPM is below its deductible",
+      "method": "POST",
+      "path": "/healthcare/policies",
+      "body": {
+        "type": "MEDICAL",
+        "year": 2026,
+        "employer": "Backwards",
+        "premium": 100,
+        "deductibleLimit": 5000,
+        "oopmLimit": 1000,
+        "metadata": {}
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "oopmLimit",
+            "message": "OOPM limit must be >= deductible limit"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: policy with an unknown type",
+      "method": "POST",
+      "path": "/healthcare/policies",
+      "body": {
+        "type": "DENTAL_ISH",
+        "year": 2026,
+        "employer": "Acme",
+        "premium": 100,
+        "deductibleLimit": 1000,
+        "oopmLimit": 2000,
+        "metadata": {}
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "type",
+            "message": "Invalid enum value. Expected 'MEDICAL' | 'DENTAL' | 'VISION', received 'DENTAL_ISH'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: policy with no metadata",
+      "method": "POST",
+      "path": "/healthcare/policies",
+      "body": {
+        "type": "MEDICAL",
+        "year": 2026,
+        "employer": "Acme",
+        "premium": 100,
+        "deductibleLimit": 1000,
+        "oopmLimit": 2000
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "metadata",
+            "message": "Invalid input"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent budget",
+      "method": "DELETE",
+      "path": "/budgets/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Budget not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a budget group that already exists",
+      "method": "POST",
+      "path": "/budgets/groups",
+      "body": {
+        "name": "Bills",
+        "color": "#334155"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "Group already exists",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget group with no name",
+      "method": "POST",
+      "path": "/budgets/groups",
+      "body": {
+        "color": "#334155"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: budget group with an empty name",
+      "method": "POST",
+      "path": "/budgets/groups",
+      "body": {
+        "name": "",
+        "color": "#334155"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent debt",
+      "method": "PUT",
+      "path": "/debts/clzz00000000000000000000",
+      "body": {
+        "name": "Ghost"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Debt not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent debt",
+      "method": "DELETE",
+      "path": "/debts/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Debt not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: debt with no name",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "type": "CREDIT_CARD",
+        "currentBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: debt with an unknown type",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "Odd",
+        "type": "PAWN_SHOP",
+        "currentBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: debt with a string balance",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "Stringly",
+        "type": "CREDIT_CARD",
+        "currentBalance": "100"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: GET services for an absent provider",
+      "method": "GET",
+      "path": "/utilities/providers/clzz00000000000000000000/services",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Provider not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent provider",
+      "method": "PUT",
+      "path": "/utilities/providers/clzz00000000000000000000",
+      "body": {
+        "name": "Ghost Power"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Provider not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent provider",
+      "method": "DELETE",
+      "path": "/utilities/providers/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Provider not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: provider with no name",
+      "method": "POST",
+      "path": "/utilities/providers",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: provider with an empty name",
+      "method": "POST",
+      "path": "/utilities/providers",
+      "body": {
+        "name": ""
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a provider name that already exists",
+      "method": "POST",
+      "path": "/utilities/providers",
+      "body": {
+        "name": "City Power & Light"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "A provider with this name already exists",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: service on an absent provider",
+      "method": "POST",
+      "path": "/utilities/providers/clzz00000000000000000000/services",
+      "body": {
+        "serviceType": "WATER",
+        "metering": "METERED"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Provider not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: service with an unknown type",
+      "method": "POST",
+      "path": "/utilities/providers/$provider/services",
+      "body": {
+        "serviceType": "PLASMA",
+        "metering": "METERED"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "serviceType",
+            "message": "Invalid enum value. Expected 'ELECTRIC' | 'GAS' | 'WATER' | 'GARBAGE' | 'SEWAGE' | 'INTERNET' | 'CELLULAR', received 'PLASMA'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: service with an unknown metering",
+      "method": "POST",
+      "path": "/utilities/providers/$provider/services",
+      "body": {
+        "serviceType": "WATER",
+        "metering": "GUESSED"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "metering",
+            "message": "Invalid enum value. Expected 'METERED' | 'UNMETERED', received 'GUESSED'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a second service of the same type on one provider",
+      "method": "POST",
+      "path": "/utilities/providers/$provider/services",
+      "body": {
+        "serviceType": "ELECTRIC",
+        "metering": "METERED"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "This provider already has a service of this type",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent service",
+      "method": "PUT",
+      "path": "/utilities/services/clzz00000000000000000000",
+      "body": {
+        "metering": "METERED"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Service not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent service",
+      "method": "DELETE",
+      "path": "/utilities/services/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Service not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: deleting a provider that still has services",
+      "method": "DELETE",
+      "path": "/utilities/providers/$provider",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "Cannot delete provider that has active services",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: deleting a service that still has readings",
+      "method": "DELETE",
+      "path": "/utilities/services/$service",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "Cannot delete service that has associated readings",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: reading against an absent service",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "clzz00000000000000000000",
+        "billDate": "2026-04-01T00:00:00.000Z",
+        "cost": 10
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Service not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: reading with a negative cost",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "clzz00000000000000000000",
+        "billDate": "2026-04-01T00:00:00.000Z",
+        "cost": -10
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "cost",
+            "message": "Number must be greater than or equal to 0"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: reading with no cost",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "clzz00000000000000000000",
+        "billDate": "2026-04-01T00:00:00.000Z"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "cost",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: reading with an unparseable bill date",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "clzz00000000000000000000",
+        "billDate": "last Tuesday",
+        "cost": 10
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "billDate",
+            "message": "Invalid date"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: reading with an unknown convenience fee type",
+      "method": "POST",
+      "path": "/utilities/readings",
+      "body": {
+        "serviceId": "clzz00000000000000000000",
+        "billDate": "2026-04-01T00:00:00.000Z",
+        "cost": 10,
+        "convenienceFee": 1,
+        "convenienceFeeType": "goats"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "convenienceFeeType",
+            "message": "Invalid enum value. Expected 'dollar' | 'percent', received 'goats'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PUT an absent reading",
+      "method": "PUT",
+      "path": "/utilities/readings/clzz00000000000000000000",
+      "body": {
+        "cost": 12
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reading not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: DELETE an absent reading",
+      "method": "DELETE",
+      "path": "/utilities/readings/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reading not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: pay an absent occurrence",
+      "method": "POST",
+      "path": "/scheduled-transactions/clzz00000000000000000000/pay",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Scheduled transaction not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: snooze an absent occurrence",
+      "method": "POST",
+      "path": "/scheduled-transactions/clzz00000000000000000000/snooze",
+      "body": {
+        "days": 3
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Scheduled transaction not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: skip an absent occurrence",
+      "method": "POST",
+      "path": "/scheduled-transactions/clzz00000000000000000000/skip",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Scheduled transaction not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: snooze by zero days",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/snooze",
+      "body": {
+        "days": 0
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "days",
+            "message": "Number must be greater than or equal to 1"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: snooze by a negative number of days",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/snooze",
+      "body": {
+        "days": -5
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "days",
+            "message": "Number must be greater than or equal to 1"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: snooze by a fractional number of days",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/snooze",
+      "body": {
+        "days": 1.5
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: snooze with no days at all",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/snooze",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: the schedule with no period at all",
+      "method": "GET",
+      "path": "/scheduled-transactions",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: the schedule with only a start",
+      "method": "GET",
+      "path": "/scheduled-transactions?periodStart=2026-09-01T00:00:00.000Z",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "periodEnd",
+            "message": "Invalid date"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: the schedule with an unparseable period",
+      "method": "GET",
+      "path": "/scheduled-transactions?periodStart=whenever&periodEnd=2026-10-31T00:00:00.000Z",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "periodStart",
+            "message": "Invalid date"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: the schedule with an unknown source type",
+      "method": "GET",
+      "path": "/scheduled-transactions?periodStart=2026-09-01T00:00:00.000Z&periodEnd=2026-10-31T00:00:00.000Z&sourceType=WISHES",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "sourceType",
+            "message": "Invalid enum value. Expected 'EXPENSE' | 'INCOME', received 'WISHES'"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: paying something already paid",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/pay",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": null,
+      "expectOk": null
+    },
+    {
+      "name": "reject: skipping something already paid",
+      "method": "POST",
+      "path": "/scheduled-transactions/$sched/skip",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "Cannot skip a paid scheduled transaction",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: GET an absent session",
+      "method": "GET",
+      "path": "/reconciliations/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reconciliation session not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: PATCH an absent session",
+      "method": "PATCH",
+      "path": "/reconciliations/clzz00000000000000000000",
+      "body": {
+        "statementEndingBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reconciliation session not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: close an absent session",
+      "method": "POST",
+      "path": "/reconciliations/clzz00000000000000000000/close",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reconciliation session not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: match on an absent session",
+      "method": "POST",
+      "path": "/reconciliations/clzz00000000000000000000/match",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reconciliation session not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: adjustment on an absent session",
+      "method": "POST",
+      "path": "/reconciliations/clzz00000000000000000000/adjustment",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: abandon an absent session",
+      "method": "POST",
+      "path": "/reconciliations/clzz00000000000000000000/abandon",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Reconciliation session not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: delete a match on an absent session",
+      "method": "DELETE",
+      "path": "/reconciliations/clzz00000000000000000000/matches/clzz00000000000000000000",
+      "body": null,
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Match not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a session on an account that does not exist",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "accountId": "clzz00000000000000000000",
+        "periodStart": "2026-05-01T00:00:00.000Z",
+        "periodEnd": "2026-05-31T00:00:00.000Z",
+        "statementEndingBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 404,
+        "error": "Account not found",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a session whose period ends before it starts",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "accountId": "$card",
+        "periodStart": "2026-05-31T00:00:00.000Z",
+        "periodEnd": "2026-05-01T00:00:00.000Z",
+        "statementEndingBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "periodEnd",
+            "message": "periodEnd must be on or after periodStart"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a session with no ending balance",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "accountId": "$card",
+        "periodStart": "2026-05-01T00:00:00.000Z",
+        "periodEnd": "2026-05-31T00:00:00.000Z"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "statementEndingBalance",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a session with no account",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "periodStart": "2026-05-01T00:00:00.000Z",
+        "periodEnd": "2026-05-31T00:00:00.000Z",
+        "statementEndingBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a session with an unparseable period",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "accountId": "$card",
+        "periodStart": "springtime",
+        "periodEnd": "2026-05-31T00:00:00.000Z",
+        "statementEndingBalance": 100
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "periodStart",
+            "message": "Invalid date"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a second draft on an account that already has one",
+      "method": "POST",
+      "path": "/reconciliations",
+      "body": {
+        "accountId": "$card",
+        "periodStart": "2026-06-01T00:00:00.000Z",
+        "periodEnd": "2026-06-30T00:00:00.000Z",
+        "statementEndingBalance": 200
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 409,
+        "error": "This account already has a draft reconciliation",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: merging transactions that do not exist",
+      "method": "POST",
+      "path": "/reconciliations/$recon/merge",
+      "body": {
+        "transactionIds": ["clzz00000000000000000000", "clzz00000000000000000000"],
+        "statementRowId": "clzz00000000000000000000"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "reject: a match naming a statement row that is not in this session",
+      "method": "POST",
+      "path": "/reconciliations/$recon/matches",
+      "body": {
+        "statementRowId": "clzz00000000000000000000",
+        "transactionIds": ["clzz00000000000000000000"]
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: transaction with no amount",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "name": "Amountless",
+        "type": "EXPENSE",
+        "date": "2026-03-01T00:00:00.000Z",
+        "accountId": "$card"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "amount",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: recurring expense with no amount",
+      "method": "POST",
+      "path": "/expenses",
+      "body": {
+        "name": "Freebie",
+        "frequency": "MONTHLY",
+        "budgetId": "$budget",
+        "accountId": "$card",
+        "dueDay": 15
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "amount",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: purchase with no amount",
+      "method": "POST",
+      "path": "/purchases",
+      "body": {
+        "name": "Priceless",
+        "date": "2026-03-04T00:00:00.000Z",
+        "budgetId": "$budget",
+        "payments": [
+          {
+            "accountId": "$card",
+            "amount": 40
+          }
+        ]
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: purchase leg with no amount",
+      "method": "POST",
+      "path": "/purchases",
+      "body": {
+        "name": "Legless",
+        "date": "2026-03-04T00:00:00.000Z",
+        "amount": 40,
+        "budgetId": "$budget",
+        "payments": [
+          {
+            "accountId": "$card"
+          }
+        ]
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: goal with no target",
+      "method": "POST",
+      "path": "/goals",
+      "body": {
+        "name": "Aimless",
+        "type": "SAVINGS",
+        "budgetId": "$budget"
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "targetAmount",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: year plan with no year",
+      "method": "POST",
+      "path": "/year-plans",
+      "body": {},
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "year",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: category budget with no amount",
+      "method": "POST",
+      "path": "/category-budgets",
+      "body": {
+        "yearPlanId": "$yearPlan",
+        "budgetId": "$budget",
+        "frequency": "MONTHLY",
+        "effectiveMonth": 1
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "amount",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: policy with no premium",
+      "method": "POST",
+      "path": "/healthcare/policies",
+      "body": {
+        "type": "MEDICAL",
+        "year": 2026,
+        "employer": "Acme",
+        "deductibleLimit": 1000,
+        "oopmLimit": 2000,
+        "metadata": {}
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "premium",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: policy with no year",
+      "method": "POST",
+      "path": "/healthcare/policies",
+      "body": {
+        "type": "MEDICAL",
+        "employer": "Acme",
+        "premium": 100,
+        "deductibleLimit": 1000,
+        "oopmLimit": 2000,
+        "metadata": {}
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": [
+          {
+            "field": "year",
+            "message": "Required"
+          }
+        ]
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: debt with no original balance",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "Vague Loan",
+        "type": "CREDIT_CARD",
+        "currentBalance": 500,
+        "apr": 19.99,
+        "minimumPayment": 25
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: debt with no minimum payment",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "No Minimum",
+        "type": "CREDIT_CARD",
+        "currentBalance": 500,
+        "originalBalance": 500,
+        "apr": 19.99
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    },
+    {
+      "name": "silent-zero: debt with no APR",
+      "method": "POST",
+      "path": "/debts",
+      "body": {
+        "name": "Free Money",
+        "type": "CREDIT_CARD",
+        "currentBalance": 500,
+        "originalBalance": 500,
+        "minimumPayment": 25
+      },
+      "bind": null,
+      "bindField": null,
+      "binds": null,
+      "expect": {
+        "status": 400,
+        "error": "Validation failed",
+        "details": null
+      },
+      "expectOk": null
+    }
+  ]
+}

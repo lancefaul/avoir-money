@@ -1,0 +1,122 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"filename\" AS \"filename!\", \"filepath\" AS \"filepath!\",\n                  \"sizeBytes\" AS \"size!: i64\", \"status\" AS \"status!\", \"source\" AS \"source!\",\n                  \"error\", \"completedAt\" AS completed_at, \"createdAt\" AS \"created_at!\"\n             FROM \"Backup\" ORDER BY \"createdAt\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "filename!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "filename"
+          }
+        }
+      },
+      {
+        "name": "filepath!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "filepath"
+          }
+        }
+      },
+      {
+        "name": "size!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "sizeBytes"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "source!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "source"
+          }
+        }
+      },
+      {
+        "name": "error",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "error"
+          }
+        }
+      },
+      {
+        "name": "completed_at",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "completedAt"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Backup",
+            "name": "createdAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false
+    ]
+  },
+  "hash": "edf70c04c799fc094b8b29427bef46338344e4f4f2d58478adf3e3af031913ff"
+}

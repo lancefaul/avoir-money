@@ -1,0 +1,21 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT count(*) FROM \"CategoryBudget\"\n                WHERE \"yearPlanId\" = ?1 AND \"budgetId\" = ?2",
+  "describe": {
+    "columns": [
+      {
+        "name": "count(*)",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "d50963421dfa56e53b34dc4ec77226d073e7ad73ceedda584f3eb9c1ed4779a7"
+}

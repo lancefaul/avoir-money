@@ -1,0 +1,22 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+#
+# PROVENANCE (2026-08-09): both seeds below were produced by DELIBERATE mutation
+# testing, not by a bug in correct code. They are kept because they are minimal
+# reproductions of the two defect classes this suite exists to catch, and
+# replaying them on every run is cheap, genuine coverage:
+#
+#   - the single Transfer case exposes a balance hook that rebuilds only the
+#     source account and ignores the transfer destination (ADR-018's bug);
+#   - the Create/Transfer/UpdateAmount case exposes netAmount drifting from
+#     amount, which the balance invariant alone cannot see (ADR-013's bug —
+#     see the ERRORS.md entry on invariants blind to matching errors).
+#
+# Both pass against the current implementation. Do not read them as historical
+# production failures.
+cc dbd95820783f765877edb81f12af11b06c3a005fffac8090475ddcb5661f365f # shrinks to ops = [Transfer { from: 1, to: 0, amount: 1, day: 1 }], openings = [0, 0, 0]
+cc 07ac1f70c1ae55fcca8e9124185afef0bebd01d526f59f9e8d92ea41caf1eaf2 # shrinks to ops = [Create { account: 0, kind: 0, amount: 0, day: 1 }, Create { account: 0, kind: 0, amount: 0, day: 1 }, Create { account: 0, kind: 0, amount: 0, day: 1 }, Create { account: 0, kind: 0, amount: 0, day: 1 }, Create { account: 0, kind: 0, amount: -732, day: 18 }, Transfer { from: 1, to: 2, amount: 62935, day: 23 }, UpdateAmount { index: 5, amount: 209079 }], openings = [-140820, -97153, 135780]

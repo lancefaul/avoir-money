@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT b.\"accountId\" AS \"account_id!\",\n                  b.\"openingBalance\" AS \"opening!: i64\", b.\"closingBalance\" AS \"closing!: i64\",\n                  b.\"totalIncome\" AS \"income!: i64\", b.\"totalExpenses\" AS \"expenses!: i64\",\n                  a.\"name\" AS account_name\n             FROM \"BalanceSnapshot\" b\n             LEFT JOIN \"Account\" a ON a.\"id\" = b.\"accountId\"\n            WHERE b.\"payPeriodId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "opening!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "openingBalance"
+          }
+        }
+      },
+      {
+        "name": "closing!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "closingBalance"
+          }
+        }
+      },
+      {
+        "name": "income!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "totalIncome"
+          }
+        }
+      },
+      {
+        "name": "expenses!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BalanceSnapshot",
+            "name": "totalExpenses"
+          }
+        }
+      },
+      {
+        "name": "account_name",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Account",
+            "name": "name"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "b7ace7dfa5f5edf0408f925a7945fe2bed594ee81ec625b5f914f585010c2fc8"
+}

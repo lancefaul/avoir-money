@@ -1,0 +1,206 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT s.\"id\" AS \"id!\", s.\"sourceType\" AS \"source_type!\", s.\"sourceId\" AS \"source_id!\",\n                  s.\"dueDate\" AS \"due!\", s.\"expectedAmount\" AS \"expected!: i64\",\n                  s.\"status\" AS \"status!\", s.\"snoozedUntil\" AS snoozed,\n                  e.\"name\" AS expense_name, e.\"budgetId\" AS expense_budget,\n                  e.\"accountId\" AS expense_account, e.\"isAutomatic\" AS \"expense_auto: i64\",\n                  e.\"frequency\" AS expense_freq,\n                  i.\"name\" AS income_name, i.\"budgetId\" AS income_budget,\n                  i.\"accountId\" AS income_account, i.\"frequency\" AS income_freq\n             FROM \"ScheduledTransaction\" s\n             LEFT JOIN \"Expense\" e ON e.\"id\" = s.\"expenseId\"\n             LEFT JOIN \"Income\" i ON i.\"id\" = s.\"incomeId\"\n            WHERE s.\"status\" IN ('PENDING', 'SNOOZED', 'PARTIAL')\n              AND s.\"dueDate\" <= ?\n            -- ASC, and a tie-break, to match what the reference returns. The\n            -- reference's `findMany` has **no `orderBy` at all**, so its order\n            -- is whatever Postgres gives — in practice insertion order, which\n            -- for generated schedule rows is ascending by `dueDate`. This was\n            -- DESC and produced the same sixteen rows exactly reversed.\n            --\n            -- Not user-visible: `sortTransactionLog` re-sorts every entry by\n            -- date on the frontend, so nothing rendered was ever wrong. Changed\n            -- because an unexplained difference is one somebody re-investigates\n            -- later, and matching costs a word.\n            --\n            -- `id` breaks a tie the reference leaves open: two schedule rows can\n            -- share a `dueDate` — an expense and an income on the same day — and\n            -- without it their relative order is undefined on both sides, the\n            -- same non-total ordering that made the transaction list reshuffle\n            -- between renders.\n            ORDER BY s.\"dueDate\" ASC, s.\"id\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "source_type!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceType"
+          }
+        }
+      },
+      {
+        "name": "source_id!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "sourceId"
+          }
+        }
+      },
+      {
+        "name": "due!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "dueDate"
+          }
+        }
+      },
+      {
+        "name": "expected!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "expectedAmount"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "status"
+          }
+        }
+      },
+      {
+        "name": "snoozed",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "ScheduledTransaction",
+            "name": "snoozedUntil"
+          }
+        }
+      },
+      {
+        "name": "expense_name",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "expense_budget",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "expense_account",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "expense_auto: i64",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "isAutomatic"
+          }
+        }
+      },
+      {
+        "name": "expense_freq",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Expense",
+            "name": "frequency"
+          }
+        }
+      },
+      {
+        "name": "income_name",
+        "ordinal": 12,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "income_budget",
+        "ordinal": 13,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "income_account",
+        "ordinal": 14,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "income_freq",
+        "ordinal": 15,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Income",
+            "name": "frequency"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "9b24cba6feef8e71fe81f680194cc6d3a0a697387c2f8b5447eb585f115981ec"
+}

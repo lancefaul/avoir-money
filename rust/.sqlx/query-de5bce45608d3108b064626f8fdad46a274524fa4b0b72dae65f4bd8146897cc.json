@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"walletId\" AS wallet_id, \"type\" AS \"holding_type!: String\"\n           FROM \"InvestmentHolding\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "wallet_id",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "holding_type!: String",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "type"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true,
+      false
+    ]
+  },
+  "hash": "de5bce45608d3108b064626f8fdad46a274524fa4b0b72dae65f4bd8146897cc"
+}
