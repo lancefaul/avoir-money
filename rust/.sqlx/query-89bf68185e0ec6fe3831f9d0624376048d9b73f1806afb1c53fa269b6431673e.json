@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"type\" AS \"ty!\", \"name\" AS \"name!\", \"amount\" AS \"amount!: i64\",\n                  \"date\" AS \"date!\", \"accountId\" AS account_id,\n                  \"payPeriodId\" AS pay_period_id, \"parentId\" AS parent_id\n             FROM \"Transaction\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "ty!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "date!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "accountId"
+          }
+        }
+      },
+      {
+        "name": "pay_period_id",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "payPeriodId"
+          }
+        }
+      },
+      {
+        "name": "parent_id",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "parentId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "89bf68185e0ec6fe3831f9d0624376048d9b73f1806afb1c53fa269b6431673e"
+}

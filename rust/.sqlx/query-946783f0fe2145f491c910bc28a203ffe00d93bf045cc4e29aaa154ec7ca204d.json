@@ -1,0 +1,112 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"id\" AS \"id!\", t.\"type\" AS \"ty!\", t.\"createdAt\" AS \"created_at!\",\n                      t.\"quantity\" AS \"quantity!\", t.\"ticker\",\n                      t.\"feeAmount\" AS fee_amount, t.\"feeBtc\" AS fee_btc,\n                      COALESCE(fw.\"name\", fc.\"name\", 'Unknown') AS \"from_name!\",\n                      COALESCE(tw.\"name\", tc.\"name\", 'Unknown') AS \"to_name!\"\n                 FROM \"InvestmentTransfer\" t\n                 LEFT JOIN \"InvestmentHolding\" fh ON fh.\"id\" = t.\"fromHoldingId\"\n                 LEFT JOIN \"Wallet\" fw ON fw.\"id\" = fh.\"walletId\"\n                 LEFT JOIN \"Custodian\" fc ON fc.\"id\" = fh.\"custodianId\"\n                 LEFT JOIN \"InvestmentHolding\" th ON th.\"id\" = t.\"toHoldingId\"\n                 LEFT JOIN \"Wallet\" tw ON tw.\"id\" = th.\"walletId\"\n                 LEFT JOIN \"Custodian\" tc ON tc.\"id\" = th.\"custodianId\"\n                WHERE (?1 IS NULL OR t.\"type\" = ?1)\n                  AND (?2 IS NULL OR t.\"createdAt\" < ?2\n                       OR (t.\"createdAt\" = ?2 AND t.\"id\" < ?3))\n                ORDER BY t.\"createdAt\" DESC, t.\"id\" DESC\n                LIMIT ?4",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "ticker",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "ticker"
+          }
+        }
+      },
+      {
+        "name": "fee_amount",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "feeAmount"
+          }
+        }
+      },
+      {
+        "name": "fee_btc",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentTransfer",
+            "name": "feeBtc"
+          }
+        }
+      },
+      {
+        "name": "from_name!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": "Expression"
+      },
+      {
+        "name": "to_name!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "946783f0fe2145f491c910bc28a203ffe00d93bf045cc4e29aaa154ec7ca204d"
+}

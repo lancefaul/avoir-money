@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"walletId\" AS wallet_id, \"quantity\" AS \"quantity!\"\n             FROM \"InvestmentHolding\" WHERE \"type\" = 'BITCOIN'",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "wallet_id",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "f591897d03e8badd77dc420cb1a4abcbd326ae94304b19373bc27935b9d9c29f"
+}

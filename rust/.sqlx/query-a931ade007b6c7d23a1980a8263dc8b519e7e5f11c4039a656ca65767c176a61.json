@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"UiPreference\" (\"key\",\"value\",\"updatedAt\") VALUES (?,?,?)\n           ON CONFLICT(\"key\") DO UPDATE SET \"value\" = excluded.\"value\",\n                                            \"updatedAt\" = excluded.\"updatedAt\"",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "a931ade007b6c7d23a1980a8263dc8b519e7e5f11c4039a656ca65767c176a61"
+}

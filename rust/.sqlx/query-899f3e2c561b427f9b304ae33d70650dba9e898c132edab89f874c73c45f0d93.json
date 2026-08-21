@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"highWaterMark\" AS \"hwm!: i64\" FROM \"CategoryBudget\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "hwm!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "CategoryBudget",
+            "name": "highWaterMark"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "899f3e2c561b427f9b304ae33d70650dba9e898c132edab89f874c73c45f0d93"
+}

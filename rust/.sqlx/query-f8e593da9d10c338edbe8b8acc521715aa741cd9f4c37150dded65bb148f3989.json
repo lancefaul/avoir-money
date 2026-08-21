@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"endDate\" FROM \"PayPeriod\"\n            WHERE \"scheduleId\" = ?1 AND \"endDate\" < ?2\n            ORDER BY \"endDate\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "endDate",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "endDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "f8e593da9d10c338edbe8b8acc521715aa741cd9f4c37150dded65bb148f3989"
+}

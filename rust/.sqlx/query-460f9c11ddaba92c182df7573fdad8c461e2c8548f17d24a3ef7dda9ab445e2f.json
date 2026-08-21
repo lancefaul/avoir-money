@@ -1,0 +1,45 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"budgetId\" AS \"budget_id!\", t.\"amount\" AS \"amount!: i64\",\n                  COALESCE((SELECT SUM(c.\"amount\") FROM \"Transaction\" c\n                             WHERE c.\"parentId\" = t.\"id\"), 0) AS \"children!: i64\"\n             FROM \"Transaction\" t\n            WHERE t.\"budgetId\" IS NOT NULL AND t.\"type\" = 'EXPENSE'\n              AND t.\"date\" >= ?1 AND t.\"date\" < ?2\n              AND EXISTS (SELECT 1 FROM \"Transaction\" c WHERE c.\"parentId\" = t.\"id\")",
+  "describe": {
+    "columns": [
+      {
+        "name": "budget_id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "children!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "460f9c11ddaba92c182df7573fdad8c461e2c8548f17d24a3ef7dda9ab445e2f"
+}

@@ -1,0 +1,1337 @@
+{
+ "generatedBy": "packages/core/dist",
+ "exhaustive": true,
+ "count": 80,
+ "withIssues": 65,
+ "vectors": [
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "EXPENSE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "INCOME",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRANSFER",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRANSFER transactions; use the transfer endpoint"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "REFUND",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata should only be provided for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": false,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "accountId",
+     "message": "A funding account is required for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": false,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "tradeMetadata",
+     "message": "Trade metadata is required for TRADE transactions"
+    },
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": false
+   },
+   "out": []
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": false,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": false
+   },
+   "out": [
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  },
+  {
+   "in": {
+    "type": "TRADE",
+    "hasFundingAccount": true,
+    "hasTradeMetadata": true,
+    "hasBitcoinMetadata": true,
+    "isCashBack": true
+   },
+   "out": [
+    {
+     "path": "isCashBack",
+     "message": "Cash back can only be set on INCOME transactions"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Bitcoin metadata is not allowed for TRADE transactions; use tradeMetadata"
+    },
+    {
+     "path": "bitcoinMetadata",
+     "message": "Cannot provide both bitcoinMetadata and accountId"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"Income\" WHERE \"budgetId\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "6ad8ee7aa4d6d8bb4f0089cb25e6c57b239e7ca2f06327d0c376e766433f04bc"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"PayPeriod\" (\"id\",\"scheduleId\",\"startDate\",\"endDate\",\"payDate\",\n                                        \"year\",\"periodNum\")\n               VALUES (?1,?2,?3,?4,?5,?6,?7)\n               ON CONFLICT(\"scheduleId\",\"year\",\"periodNum\") DO UPDATE SET\n                 \"startDate\" = ?3, \"endDate\" = ?4, \"payDate\" = ?5",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "baf7050dccc2ed57611bbf4ec6ae2be25c5dc7d970491c82b7a1397f641199ac"
+}

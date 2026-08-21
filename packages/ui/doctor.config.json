@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "react-doctor/no-derived-useState": "off",
+    "react-doctor/no-event-handler": "off",
+    "react-doctor/no-chain-state-updates": "off",
+    "react-doctor/prefer-useReducer": "off",
+    "react-doctor/rerender-state-only-in-handlers": "off",
+    "react-doctor/no-derived-state": "off",
+    "react-doctor/exhaustive-deps": "off",
+    "react-doctor/no-cascading-set-state": "off",
+    "react-doctor/prefer-tag-over-role": "off",
+    "react-doctor/no-autofocus": "off",
+    "react-doctor/no-noninteractive-tabindex": "off",
+    "react-doctor/prefer-html-dialog": "off",
+    "react-doctor/click-events-have-key-events": "off",
+    "react-doctor/no-static-element-interactions": "off",
+    "react-doctor/no-adjust-state-on-prop-change": "off",
+    "react-doctor/no-giant-component": "off",
+    "react-doctor/only-export-components": "off",
+    "react-doctor/no-multi-comp": "off",
+    "react-doctor/no-generic-handler-names": "off",
+    "react-doctor/no-inline-exhaustive-style": "off",
+    "react-doctor/no-effect-chain": "off",
+    "react-doctor/js-cache-property-access": "off",
+    "react-doctor/prefer-use-effect-event": "off",
+    "react-doctor/no-reset-all-state-on-prop-change": "off",
+    "react-doctor/control-has-associated-label": "off",
+    "deslop/unused-export": "off"
+  }
+}

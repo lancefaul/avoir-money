@@ -1,0 +1,158 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT h.\"id\" AS \"id!\", h.\"name\" AS \"name!\", h.\"ticker\",\n                  h.\"type\" AS \"ty!\", h.\"quantity\" AS \"quantity!\",\n                  h.\"costBasis\" AS \"cost_basis: i64\",\n                  h.\"custodianId\" AS custodian_id, h.\"walletId\" AS wallet_id,\n                  h.\"createdAt\" AS \"created_at!\", h.\"updatedAt\" AS \"updated_at!\",\n                  c.\"name\" AS custodian_name, w.\"name\" AS wallet_name\n             FROM \"InvestmentHolding\" h\n             LEFT JOIN \"Custodian\" c ON c.\"id\" = h.\"custodianId\"\n             LEFT JOIN \"Wallet\" w ON w.\"id\" = h.\"walletId\"\n            ORDER BY h.\"name\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "ticker",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "ticker"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "cost_basis: i64",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "costBasis"
+          }
+        }
+      },
+      {
+        "name": "custodian_id",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "custodianId"
+          }
+        }
+      },
+      {
+        "name": "wallet_id",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 9,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "updatedAt"
+          }
+        }
+      },
+      {
+        "name": "custodian_name",
+        "ordinal": 10,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Custodian",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "wallet_name",
+        "ordinal": 11,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Wallet",
+            "name": "name"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "a6d313d99a14f517c23484218637bd443e94bc761791177585da06a8d7abd37b"
+}

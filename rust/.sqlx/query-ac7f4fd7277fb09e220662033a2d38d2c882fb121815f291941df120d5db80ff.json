@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"endDate\" AS \"end_date!: String\" FROM \"PayPeriod\"\n           WHERE \"scheduleId\" = ? ORDER BY \"endDate\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "end_date!: String",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "endDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "ac7f4fd7277fb09e220662033a2d38d2c882fb121815f291941df120d5db80ff"
+}

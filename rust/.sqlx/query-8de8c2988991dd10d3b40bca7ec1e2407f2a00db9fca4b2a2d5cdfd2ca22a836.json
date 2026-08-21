@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"payDate\" AS \"pay_date!\"\n             FROM \"PayPeriod\"\n            WHERE (?1 IS NULL OR \"scheduleId\" = ?1)\n              AND (?2 IS NULL OR \"payDate\" >= ?2)\n              AND (?3 IS NULL OR \"payDate\" <= ?3)\n            ORDER BY \"payDate\" DESC\n            LIMIT ?4",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "pay_date!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PayPeriod",
+            "name": "payDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "8de8c2988991dd10d3b40bca7ec1e2407f2a00db9fca4b2a2d5cdfd2ca22a836"
+}

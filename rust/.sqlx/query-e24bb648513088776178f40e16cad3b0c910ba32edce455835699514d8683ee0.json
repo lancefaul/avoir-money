@@ -1,0 +1,122 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\", \"name\" AS \"name!\", \"type\" AS \"ty!\",\n                  \"targetAmount\" AS \"target!: i64\", \"currentAmount\" AS \"current!: i64\",\n                  \"budgetId\" AS budget_id, \"deadline\",\n                  \"createdAt\" AS \"created_at!\", \"updatedAt\" AS \"updated_at!\"\n             FROM \"BudgetGoal\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "name!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "ty!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "target!: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "targetAmount"
+          }
+        }
+      },
+      {
+        "name": "current!: i64",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "currentAmount"
+          }
+        }
+      },
+      {
+        "name": "budget_id",
+        "ordinal": 5,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "budgetId"
+          }
+        }
+      },
+      {
+        "name": "deadline",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "deadline"
+          }
+        }
+      },
+      {
+        "name": "created_at!",
+        "ordinal": 7,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "createdAt"
+          }
+        }
+      },
+      {
+        "name": "updated_at!",
+        "ordinal": 8,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGoal",
+            "name": "updatedAt"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "e24bb648513088776178f40e16cad3b0c910ba32edce455835699514d8683ee0"
+}

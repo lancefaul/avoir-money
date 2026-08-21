@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" FROM \"InvestmentHolding\"\n            WHERE \"walletId\" = ? AND \"type\" = 'BITCOIN' ORDER BY \"createdAt\" ASC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "InvestmentHolding",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "be7f020ec7f08106fb5a5c65f61c5173ac82ebcac2f243d3c407fd7af0f3f7b5"
+}

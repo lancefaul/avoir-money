@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Budget\"\n              SET \"name\" = COALESCE(?1, \"name\"),\n                  \"icon\" = CASE WHEN ?2 = 1 THEN ?3 ELSE \"icon\" END,\n                  \"groupId\" = COALESCE(?4, \"groupId\")\n            WHERE \"id\" = ?5",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "46364bb5682840b0e859e7257c75d9e6811c27396cf356695dc9336f44dc1a59"
+}

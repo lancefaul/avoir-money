@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"expenseId\" AS expense_id, \"incomeId\" AS income_id,\n                  \"amount\" AS \"amount!: i64\", \"date\" AS \"date!: String\",\n                  \"occurrenceDate\" AS occurrence_date\n           FROM \"Transaction\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "expense_id",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "expenseId"
+          }
+        }
+      },
+      {
+        "name": "income_id",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "incomeId"
+          }
+        }
+      },
+      {
+        "name": "amount!: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "amount"
+          }
+        }
+      },
+      {
+        "name": "date!: String",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "occurrence_date",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "occurrenceDate"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      true,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "2cf61c2e5b5a0ead91c29ef8187b77d6bf5ea431daaff873f481b4acaac4bb16"
+}

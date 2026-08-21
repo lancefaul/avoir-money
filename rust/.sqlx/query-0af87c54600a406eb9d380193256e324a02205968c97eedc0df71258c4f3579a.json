@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM \"BudgetExpenseLink\" WHERE \"expenseId\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "0af87c54600a406eb9d380193256e324a02205968c97eedc0df71258c4f3579a"
+}

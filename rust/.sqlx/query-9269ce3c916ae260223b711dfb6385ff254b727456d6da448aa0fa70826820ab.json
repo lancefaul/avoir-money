@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"UtilityReading\"\n            WHERE (?1 IS NULL OR \"serviceId\" = ?1)\n              AND (?2 IS NULL OR \"billDate\" >= ?2)\n              AND (?3 IS NULL OR \"billDate\" <= ?3)\n            ORDER BY \"billDate\" DESC",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "UtilityReading",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "9269ce3c916ae260223b711dfb6385ff254b727456d6da448aa0fa70826820ab"
+}

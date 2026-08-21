@@ -1,0 +1,160 @@
+# Publish a release to the PUBLIC artifacts repository.
+#
+# ── The token distinction, which is the whole point of ADR-039 ──
+#
+# There are two tokens in this story and confusing them is how the original
+# design went wrong. The APP needs none: it reads a public repository
+# anonymously, which is exactly why the releases live in `avoir-money` rather
+# than here. The PUBLISHER needs one, because it writes a release to a
+# repository that is not the one running the workflow, and GitHub's built-in
+# `GITHUB_TOKEN` is scoped to this repo only. That token lives in Actions
+# secrets and never enters a build artifact.
+#
+# If `RELEASE_TOKEN` is ever embedded in the app instead, the reason for the
+# separate repository disappears and so does the security property.
+#
+# ── Why a tag, and why the tag is not the source of the version ──
+#
+# `electron-builder` reads the version from `electron/package.json`, not from
+# the tag. They are checked against each other below rather than assumed equal:
+# a tag that disagrees with the manifest produces a release nobody receives,
+# and that failure is invisible from the outside (see
+# `scripts/check-update-manifest.sh` for why).
+#
+# ── Not covered here, stated so it is not mistaken for covered ──
+#
+# Nothing in CI proves the app can APPLY an update. That needs an older
+# AppImage installed on a real machine, a newer one published, and a launch.
+# What this proves is that the manifest and the artifact agree, so a client
+# reading the manifest asks for a file it can verify.
+
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  # Buildable without tagging, so the pipeline can be exercised without
+  # publishing anything. `publish` defaults to false; a manual run has to opt in.
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Upload to the public releases repo'
+        type: boolean
+        default: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      SQLX_OFFLINE: 'true'
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      # The tag is the trigger and `package.json` is the source of truth, so a
+      # disagreement is caught before anything is built rather than after
+      # something is published.
+      - name: The tag agrees with package.json
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          pkg="$(node -p "require('./electron/package.json').version")"
+          if [[ "$tag" != "$pkg" ]]; then
+            echo "tag v$tag disagrees with electron/package.json $pkg" >&2
+            echo "electron-builder uses package.json, so this tag would publish $pkg." >&2
+            exit 1
+          fi
+          echo "v$tag ✓"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # extraResources pulls both of these in, so they are built before
+      # electron-builder runs rather than by it.
+      - name: Build the backend
+        run: cargo build --release --bin avoir-server --manifest-path rust/Cargo.toml
+
+      # The trailing `...` means "and its dependencies", which is `core` and
+      # `ui` — verified rather than assumed, because the three filter forms are
+      # easy to confuse and only this one selects all three.
+      #
+      # NOT a bare `--filter @budget-tracker/web`, which builds neither
+      # dependency. And NOT `pnpm build`: that is the whole workspace, which
+      # drags in `@budget-tracker/db` — the Prisma package the Rust backend
+      # replaced. Its build needs a database the release runner has no reason to
+      # provide, and it failed the first dry-run of this workflow for exactly
+      # that reason. Nothing the AppImage ships comes from it.
+      - name: Build the web app
+        run: pnpm --filter @budget-tracker/web... build
+
+      - name: Install electron dependencies
+        working-directory: electron
+        run: npm ci
+
+      # `--publish never` here even on a tag: the artifact is verified BEFORE it
+      # is uploaded. Publishing and then checking would leave a broken release
+      # visible to clients in between, and the failure mode is one nobody can
+      # see from outside.
+      # AppImage ONLY, and that is a decision rather than a workaround for the
+      # build failing.
+      #
+      # `canSelfUpdate()` returns false for a package-managed install: /opt
+      # belongs to pacman or dpkg, and writing there behind the package manager
+      # leaves it describing a version that is not installed. So a published
+      # `.pacman` can never be delivered by the updater and serves nobody — the
+      # people who install that way update through their package manager, which
+      # is the correct answer on Linux.
+      #
+      # It also happens to be the target that fails here: `fpm` needs
+      # `libarchive-tools`, which an Ubuntu runner does not carry. Installing it
+      # would make the build pass and publish an artifact with no route to a
+      # user, which is worse than not building it.
+      #
+      # `pnpm dist` locally still builds both, because that is where the pacman
+      # package is actually installed from.
+      - name: Package
+        working-directory: electron
+        run: npm run dist -- --linux AppImage
+
+      - name: The manifest describes the artifact
+        run: bash scripts/check-update-manifest.sh
+
+      - name: Publish to the public releases repo
+        if: startsWith(github.ref, 'refs/tags/v') || inputs.publish
+        working-directory: electron
+        env:
+          # A PAT with `contents: write` on lancefaul/avoir-money, and nothing
+          # else. Not `GITHUB_TOKEN`, which cannot write to another repository.
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          if [[ -z "${GH_TOKEN:-}" ]]; then
+            echo "RELEASE_TOKEN is not set — see ADR-039." >&2
+            exit 1
+          fi
+          npm run release
+
+      # Kept regardless of whether anything was published, so a dispatch run is
+      # still useful and a failed publish still leaves the artifact to inspect.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: linux-${{ github.ref_name }}
+          path: |
+            electron/dist/*.AppImage
+            electron/dist/*.pacman
+            electron/dist/latest-linux.yml
+          retention-days: 14

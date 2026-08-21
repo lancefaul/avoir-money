@@ -1,0 +1,971 @@
+{
+ "generatedBy": "packages/core/dist",
+ "count": 12,
+ "cases": [
+  {
+   "name": "twin already matched",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-06-20",
+      "name": "Coffee Shop",
+      "amount": 4.5
+     }
+    ],
+    "matched": [
+     {
+      "id": "M1",
+      "date": "2026-06-18",
+      "name": "COFFEE SHOP",
+      "amount": 4.5
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": true,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "twin too far away",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-06-20",
+      "name": "Coffee Shop",
+      "amount": 4.5
+     }
+    ],
+    "matched": [
+     {
+      "id": "M1",
+      "date": "2026-05-01",
+      "name": "COFFEE SHOP",
+      "amount": 4.5
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "repeated identity",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-06-20",
+      "name": "Gym",
+      "amount": 39.99
+     },
+     {
+      "id": "L2",
+      "date": "2026-06-20",
+      "name": "Gym",
+      "amount": 39.99
+     }
+    ],
+    "matched": [
+     {
+      "id": "M1",
+      "date": "2026-06-01",
+      "name": "Something Else",
+      "amount": 10
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     },
+     {
+      "id": "L2",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "within the grace window",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-06-28",
+      "name": "Hardware Store",
+      "amount": 82.14
+     }
+    ],
+    "matched": [
+     {
+      "id": "M1",
+      "date": "2026-06-01",
+      "name": "Other",
+      "amount": 5
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_pending",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "too old to be pending",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-05-02",
+      "name": "Hardware Store",
+      "amount": 82.14
+     }
+    ],
+    "matched": [
+     {
+      "id": "M1",
+      "date": "2026-06-01",
+      "name": "Other",
+      "amount": 5
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "same net, different gross",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-06-20",
+      "name": "Store",
+      "amount": 20,
+      "gross": 25
+     }
+    ],
+    "matched": [
+     {
+      "id": "M1",
+      "date": "2026-06-19",
+      "name": "Store",
+      "amount": 20,
+      "gross": 30
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "a run of five re-entered rows",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L0",
+      "date": "2026-06-10",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "L1",
+      "date": "2026-06-11",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "L2",
+      "date": "2026-06-12",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "L3",
+      "date": "2026-06-13",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "L4",
+      "date": "2026-06-14",
+      "name": "Vendor 4",
+      "amount": 14
+     }
+    ],
+    "matched": [
+     {
+      "id": "M0",
+      "date": "2026-05-10",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "M1",
+      "date": "2026-05-11",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "M2",
+      "date": "2026-05-12",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "M3",
+      "date": "2026-05-13",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "M4",
+      "date": "2026-05-14",
+      "name": "Vendor 4",
+      "amount": 14
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L0",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L1",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L2",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L3",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L4",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     }
+    ],
+    "runs": [
+     {
+      "rows": [
+       "L0",
+       "L1",
+       "L2",
+       "L3",
+       "L4"
+      ],
+      "start": "2026-05-10",
+      "end": "2026-05-14",
+      "total": 60
+     }
+    ]
+   }
+  },
+  {
+   "name": "four twinned rows is below the threshold",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L0",
+      "date": "2026-06-10",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "L1",
+      "date": "2026-06-11",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "L2",
+      "date": "2026-06-12",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "L3",
+      "date": "2026-06-13",
+      "name": "Vendor 3",
+      "amount": 13
+     }
+    ],
+    "matched": [
+     {
+      "id": "M0",
+      "date": "2026-05-10",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "M1",
+      "date": "2026-05-11",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "M2",
+      "date": "2026-05-12",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "M3",
+      "date": "2026-05-13",
+      "name": "Vendor 3",
+      "amount": 13
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L0",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     },
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     },
+     {
+      "id": "L2",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     },
+     {
+      "id": "L3",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  },
+  {
+   "name": "two separate re-entered periods",
+   "in": {
+    "leftovers": [
+     {
+      "id": "A0",
+      "date": "2026-06-10",
+      "name": "V0",
+      "amount": 10
+     },
+     {
+      "id": "A1",
+      "date": "2026-06-11",
+      "name": "V1",
+      "amount": 11
+     },
+     {
+      "id": "A2",
+      "date": "2026-06-12",
+      "name": "V2",
+      "amount": 12
+     },
+     {
+      "id": "A3",
+      "date": "2026-06-13",
+      "name": "V3",
+      "amount": 13
+     },
+     {
+      "id": "A4",
+      "date": "2026-06-14",
+      "name": "V4",
+      "amount": 14
+     },
+     {
+      "id": "B0",
+      "date": "2026-06-20",
+      "name": "W0",
+      "amount": 20
+     },
+     {
+      "id": "B1",
+      "date": "2026-06-21",
+      "name": "W1",
+      "amount": 21
+     },
+     {
+      "id": "B2",
+      "date": "2026-06-22",
+      "name": "W2",
+      "amount": 22
+     },
+     {
+      "id": "B3",
+      "date": "2026-06-23",
+      "name": "W3",
+      "amount": 23
+     },
+     {
+      "id": "B4",
+      "date": "2026-06-24",
+      "name": "W4",
+      "amount": 24
+     }
+    ],
+    "matched": [
+     {
+      "id": "AM0",
+      "date": "2026-01-10",
+      "name": "V0",
+      "amount": 10
+     },
+     {
+      "id": "AM1",
+      "date": "2026-01-11",
+      "name": "V1",
+      "amount": 11
+     },
+     {
+      "id": "AM2",
+      "date": "2026-01-12",
+      "name": "V2",
+      "amount": 12
+     },
+     {
+      "id": "AM3",
+      "date": "2026-01-13",
+      "name": "V3",
+      "amount": 13
+     },
+     {
+      "id": "AM4",
+      "date": "2026-01-14",
+      "name": "V4",
+      "amount": 14
+     },
+     {
+      "id": "BM0",
+      "date": "2026-05-10",
+      "name": "W0",
+      "amount": 20
+     },
+     {
+      "id": "BM1",
+      "date": "2026-05-11",
+      "name": "W1",
+      "amount": 21
+     },
+     {
+      "id": "BM2",
+      "date": "2026-05-12",
+      "name": "W2",
+      "amount": 22
+     },
+     {
+      "id": "BM3",
+      "date": "2026-05-13",
+      "name": "W3",
+      "amount": 23
+     },
+     {
+      "id": "BM4",
+      "date": "2026-05-14",
+      "name": "W4",
+      "amount": 24
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "A0",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "A1",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "A2",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "A3",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "A4",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "B0",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "B1",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "B2",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "B3",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "B4",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     }
+    ],
+    "runs": [
+     {
+      "rows": [
+       "A0",
+       "A1",
+       "A2",
+       "A3",
+       "A4"
+      ],
+      "start": "2026-01-10",
+      "end": "2026-01-14",
+      "total": 60
+     },
+     {
+      "rows": [
+       "B0",
+       "B1",
+       "B2",
+       "B3",
+       "B4"
+      ],
+      "start": "2026-05-10",
+      "end": "2026-05-14",
+      "total": 110
+     }
+    ]
+   }
+  },
+  {
+   "name": "a run beats the pending window",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L0",
+      "date": "2026-06-29",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "L1",
+      "date": "2026-06-29",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "L2",
+      "date": "2026-06-29",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "L3",
+      "date": "2026-06-29",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "L4",
+      "date": "2026-06-29",
+      "name": "Vendor 4",
+      "amount": 14
+     }
+    ],
+    "matched": [
+     {
+      "id": "M0",
+      "date": "2026-05-10",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "M1",
+      "date": "2026-05-11",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "M2",
+      "date": "2026-05-12",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "M3",
+      "date": "2026-05-13",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "M4",
+      "date": "2026-05-14",
+      "name": "Vendor 4",
+      "amount": 14
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L0",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L1",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L2",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L3",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L4",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     }
+    ],
+    "runs": [
+     {
+      "rows": [
+       "L0",
+       "L1",
+       "L2",
+       "L3",
+       "L4"
+      ],
+      "start": "2026-05-10",
+      "end": "2026-05-14",
+      "total": 60
+     }
+    ]
+   }
+  },
+  {
+   "name": "nearest twin wins over the first one seen",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L0",
+      "date": "2026-06-10",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "L1",
+      "date": "2026-06-11",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "L2",
+      "date": "2026-06-12",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "L3",
+      "date": "2026-06-13",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "L4",
+      "date": "2026-06-14",
+      "name": "Vendor 4",
+      "amount": 14
+     }
+    ],
+    "matched": [
+     {
+      "id": "FAR0",
+      "date": "2026-01-01",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "NEAR0",
+      "date": "2026-05-20",
+      "name": "Vendor 0",
+      "amount": 10
+     },
+     {
+      "id": "FAR1",
+      "date": "2026-01-02",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "NEAR1",
+      "date": "2026-05-21",
+      "name": "Vendor 1",
+      "amount": 11
+     },
+     {
+      "id": "FAR2",
+      "date": "2026-01-03",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "NEAR2",
+      "date": "2026-05-22",
+      "name": "Vendor 2",
+      "amount": 12
+     },
+     {
+      "id": "FAR3",
+      "date": "2026-01-04",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "NEAR3",
+      "date": "2026-05-23",
+      "name": "Vendor 3",
+      "amount": 13
+     },
+     {
+      "id": "FAR4",
+      "date": "2026-01-05",
+      "name": "Vendor 4",
+      "amount": 14
+     },
+     {
+      "id": "NEAR4",
+      "date": "2026-05-24",
+      "name": "Vendor 4",
+      "amount": 14
+     }
+    ],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L0",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L1",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L2",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L3",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     },
+     {
+      "id": "L4",
+      "kind": "duplicate_in_app",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": true
+     }
+    ],
+    "runs": [
+     {
+      "rows": [
+       "L0",
+       "L1",
+       "L2",
+       "L3",
+       "L4"
+      ],
+      "start": "2026-05-20",
+      "end": "2026-05-24",
+      "total": 60
+     }
+    ]
+   }
+  },
+  {
+   "name": "no matched rows",
+   "in": {
+    "leftovers": [
+     {
+      "id": "L1",
+      "date": "2026-06-20",
+      "name": "Gym",
+      "amount": 39.99
+     }
+    ],
+    "matched": [],
+    "endDate": "2026-06-30",
+    "pendingGraceDays": 5,
+    "duplicateWindowDays": 7,
+    "run": {}
+   },
+   "out": {
+    "verdicts": [
+     {
+      "id": "L1",
+      "kind": "missing_in_bank_phantom",
+      "duplicateOfMatched": false,
+      "inDuplicateRun": false
+     }
+    ],
+    "runs": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"id\" AS \"id!\" FROM \"Budget\"\n                        WHERE \"name\" = 'Uncategorized' AND \"isSystem\" = 1 LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "977ebf2a7d957b026bff68fe1b5f98dbb9bd90b6ab38d3aa3c25dd4a0a6deff3"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"isSystem\" AS \"is_system!: i64\" FROM \"Budget\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "is_system!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "isSystem"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "928a9c0c5c1958d8f20a029a014d1c9f9296c3889cff792e2832ab48541572e2"
+}

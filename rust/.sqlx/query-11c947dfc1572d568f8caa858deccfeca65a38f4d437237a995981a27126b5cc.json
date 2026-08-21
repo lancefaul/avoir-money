@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"date\" AS \"date!\", d.\"walletId\" AS \"wallet_id!\",\n                  d.\"quantity\" AS \"quantity!\", d.\"bitcoinUnit\" AS \"unit!\"\n             FROM \"Transaction\" t\n             JOIN \"BitcoinPaymentDetail\" d ON d.\"transactionId\" = t.\"id\"\n            WHERE t.\"type\" = 'INCOME'\n            ORDER BY t.\"date\" ASC",
+  "describe": {
+    "columns": [
+      {
+        "name": "date!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "date"
+          }
+        }
+      },
+      {
+        "name": "wallet_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "walletId"
+          }
+        }
+      },
+      {
+        "name": "quantity!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "quantity"
+          }
+        }
+      },
+      {
+        "name": "unit!",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BitcoinPaymentDetail",
+            "name": "bitcoinUnit"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "11c947dfc1572d568f8caa858deccfeca65a38f4d437237a995981a27126b5cc"
+}

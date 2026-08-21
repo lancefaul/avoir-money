@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"type\" AS \"ty!\", \"anchorDate\" AS \"anchor!\",\n                  \"firstPayDay\" AS \"first: i64\", \"secondPayDay\" AS \"second: i64\"\n             FROM \"PaySchedule\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "ty!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "type"
+          }
+        }
+      },
+      {
+        "name": "anchor!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "anchorDate"
+          }
+        }
+      },
+      {
+        "name": "first: i64",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "firstPayDay"
+          }
+        }
+      },
+      {
+        "name": "second: i64",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "PaySchedule",
+            "name": "secondPayDay"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "0cc70a8ffc749ebabd4353f404b04218664dce860290adcd56b2eb0794706535"
+}

@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT t.\"netAmount\" AS \"net!: i64\",\n                  b.\"id\" AS \"budget_id!\", b.\"name\" AS \"budget_name!\",\n                  g.\"name\" AS group_name, g.\"color\" AS group_color\n             FROM \"Transaction\" t\n             JOIN \"Expense\" e ON e.\"id\" = t.\"expenseId\"\n             JOIN \"Budget\" b ON b.\"id\" = e.\"budgetId\"\n             LEFT JOIN \"BudgetGroup\" g ON g.\"id\" = b.\"groupId\"\n            WHERE t.\"expenseId\" IS NOT NULL\n              AND (?1 IS NULL OR t.\"payPeriodId\" = ?1)\n              AND (?2 IS NULL OR t.\"date\" >= ?2)\n              AND (?3 IS NULL OR t.\"date\" <= ?3)\n              AND (?4 IS NULL OR g.\"name\" = ?4)",
+  "describe": {
+    "columns": [
+      {
+        "name": "net!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "Transaction",
+            "name": "netAmount"
+          }
+        }
+      },
+      {
+        "name": "budget_id!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "name": "budget_name!",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "Budget",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "group_name",
+        "ordinal": 3,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGroup",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "name": "group_color",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetGroup",
+            "name": "color"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "cb19a2d03a6b314cda474b20ecc12a99ccb7885751c9c3636dca328993ab1859"
+}

@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"categoryBudgetId\" AS \"id!\" FROM \"BudgetExpenseLink\" WHERE \"expenseId\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id!",
+        "ordinal": 0,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "BudgetExpenseLink",
+            "name": "categoryBudgetId"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "3ea88341e7272b517e499e520293297ef7c1e32717d775db34e43350d57bf61c"
+}

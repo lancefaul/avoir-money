@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Expense\" SET \"archivedAt\" = ?, \"updatedAt\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "3262a0bbe7613885e4450fb963eeb12a1e90b3475262d336c6696833425df466"
+}

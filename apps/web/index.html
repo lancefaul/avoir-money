@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      The SAME mark the title bar and brand lockup render. Chromium sets the
+      window icon from the page favicon when one is present, so this is not
+      merely a browser-tab detail: in the desktop app it overrides the icon
+      the shell passes to BrowserWindow. It pointed at the retired
+      rounded-square serif A until 2026-08-12, which is why the launcher
+      showed the current mark while the running window and its launch
+      feedback showed the old one.
+    -->
+    <link rel="icon" href="/avoir-app-icon-round.png" />
+    <title>Avoir Money</title>
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="root" style="height: 100%"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

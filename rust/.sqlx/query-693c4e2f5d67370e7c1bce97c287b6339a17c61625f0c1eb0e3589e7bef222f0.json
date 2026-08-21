@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"manualOverride\" AS \"manual!: i64\" FROM \"BudgetVersion\"\n            WHERE \"categoryBudgetId\" = ? ORDER BY \"effectiveDate\" DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "manual!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "BudgetVersion",
+            "name": "manualOverride"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "693c4e2f5d67370e7c1bce97c287b6339a17c61625f0c1eb0e3589e7bef222f0"
+}

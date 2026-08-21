@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"EscrowRecord\" SET\n             \"monthlyAmount\" = ?1,\n             \"periodStartDate\" = COALESCE(?2, \"periodStartDate\"),\n             \"periodEndDate\" = COALESCE(?3, \"periodEndDate\"),\n             \"updatedAt\" = ?4\n           WHERE \"id\" = ?5 AND \"debtId\" = ?6",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "ef7422b25e05d9fee5a13504e461aec82c3b7f6c66a29df2f466cad36f927656"
+}

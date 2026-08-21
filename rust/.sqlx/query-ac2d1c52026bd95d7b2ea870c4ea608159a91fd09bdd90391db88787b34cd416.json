@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "UPDATE \"Transaction\" SET \"note\" = ? WHERE \"id\" = ?",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "ac2d1c52026bd95d7b2ea870c4ea608159a91fd09bdd90391db88787b34cd416"
+}

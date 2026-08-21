@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO \"BudgetGroup\" (\"id\",\"name\",\"color\",\"createdAt\") VALUES (?,?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "181a2ef6161d23d36de6e1c62a1fb05b045a686b2a57a7f6f19492b1f1f13cfe"
+}

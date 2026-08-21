@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT \"year\" AS \"year!: i64\", \"status\" AS \"status!\" FROM \"YearPlan\" WHERE \"id\" = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "year!: i64",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "YearPlan",
+            "name": "year"
+          }
+        }
+      },
+      {
+        "name": "status!",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "YearPlan",
+            "name": "status"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "92fd6ca7cdd274546a466efecb6ccaf6e60221bfe84bdbb6675b779b6cbf3cba"
+}
